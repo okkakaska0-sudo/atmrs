@@ -89,13 +89,14 @@ mkdir -p build_intel
 cd build_intel
 
 # Configure with Intel specific settings
-echo "🔧 Configuring for Intel x64..."
+echo "🔧 Configuring for Intel x64 ONLY..."
 cmake .. \
     -DCMAKE_OSX_ARCHITECTURES=x86_64 \
     -DCMAKE_OSX_DEPLOYMENT_TARGET=11.0 \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_PREFIX_PATH="$HOMEBREW_PREFIX" \
-    -DCMAKE_VERBOSE_MAKEFILE=ON
+    -DCMAKE_VERBOSE_MAKEFILE=ON \
+    -DJUCE_BUILD_UNIVERSAL_BINARY=OFF
 
 if [[ $? -ne 0 ]]; then
     echo "❌ CMake configuration failed!"
