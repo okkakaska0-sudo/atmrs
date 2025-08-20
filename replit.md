@@ -4,6 +4,29 @@
 
 This is a professional audio plugin project that implements real-time pitch correction (AutoTune) functionality using JUCE framework. The plugin provides multiple pitch correction modes including Classic, Hard, and AI-powered correction using CREPE/DDSP models. It features a comprehensive GUI with parameter controls for speed, amount, key/scale selection, and mode switching. The project is designed to create VST3 and AU plugins for macOS with a professional interface similar to industry-standard pitch correction tools.
 
+## 🚀 Quick Start Instructions for New Repository Clone
+
+**CRITICAL: This project is macOS-only. Do NOT attempt Linux builds.**
+
+### Step 1: Install macOS Dependencies
+```bash
+# Install Homebrew dependencies
+brew install eigen onnxruntime rubberband pkg-config cmake
+```
+
+### Step 2: Build Plugin
+```bash
+cd /path/to/project
+./build_simple.sh
+```
+
+### Current Status
+- ✅ All dependencies found and configured for macOS
+- ✅ Eigen3: `/usr/local/Cellar/eigen/3.4.0_1/include/eigen3`  
+- ✅ ONNX Runtime: `/usr/local/Cellar/onnxruntime/1.22.2_1/`
+- ✅ Rubber Band: `/usr/local/Cellar/rubberband/4.0.0/`
+- ✅ Build configuration: `CMakeLists_macos_working.txt` (auto-detects libraries)
+
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
@@ -13,8 +36,8 @@ Critical requirement: Do NOT simplify the plugin - preserve ALL functionality in
 - All mathematical libraries (Eigen3, Kiss FFT, libsamplerate)
 - Rubber Band Library integration
 - Full VST3 and AU plugin format support
-Build environment: Cross-platform build on Replit with full macOS compatibility preservation
-Migration status: ✅ COMPLETED - Plugin fully configured for macOS with ALL dependencies installed via Homebrew. Ready for full functionality build including ONNX Runtime, Eigen3, and Rubber Band libraries.
+Build environment: macOS ONLY - never attempt Linux/Replit builds
+Migration status: ✅ COMPLETED - Plugin fully configured for macOS with ALL dependencies installed via Homebrew.
 
 ## System Architecture
 
@@ -66,5 +89,24 @@ Migration status: ✅ COMPLETED - Plugin fully configured for macOS with ALL dep
 ### Development Tools
 - **Xcode**: Primary development environment for macOS plugin development
 - **Terminal Build Scripts**: Automated build process via `./build_simple.sh` command
+
+## 🎯 For AI Assistant: Project Context
+
+**IMPORTANT CONTEXT:**
+- This project builds ONLY on macOS with native tools
+- All dependencies are installed via Homebrew at specific paths
+- Use `CMakeLists_macos_working.txt` configuration (auto-detects libraries)
+- Run `./find_dependencies.sh` to verify library locations
+- Build script: `./build_simple.sh` (fixes macOS-specific paths)
+
+**NEVER:**
+- Attempt Linux builds or Replit compilation
+- Simplify functionality or remove AI features
+- Use generic dependency paths - use discovered Homebrew paths
+
+**CURRENT BUILD FILES:**
+- Primary config: `CMakeLists_macos_working.txt` 
+- Build script: `build_simple.sh`
+- Dependency finder: `find_dependencies.sh`
 
 The architecture supports professional-grade real-time audio processing with multiple correction modes, AI-enhanced pitch detection, and a modern user interface designed to compete with industry-standard pitch correction tools like Antares Auto-Tune.
