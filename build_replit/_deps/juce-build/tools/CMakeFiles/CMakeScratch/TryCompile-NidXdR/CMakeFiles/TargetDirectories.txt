@@ -1,3 +1,0 @@
-/home/runner/workspace/build_replit/_deps/juce-build/tools/CMakeFiles/CMakeScratch/TryCompile-NidXdR/CMakeFiles/cmTC_cb784.dir
-/home/runner/workspace/build_replit/_deps/juce-build/tools/CMakeFiles/CMakeScratch/TryCompile-NidXdR/CMakeFiles/edit_cache.dir
-/home/runner/workspace/build_replit/_deps/juce-build/tools/CMakeFiles/CMakeScratch/TryCompile-NidXdR/CMakeFiles/rebuild_cache.dir
