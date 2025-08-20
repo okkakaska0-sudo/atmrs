@@ -39,27 +39,27 @@ find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
         /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Headers
 )
 
-# Find ONNX Runtime - using discovered paths
+# Find ONNX Runtime - using correct Homebrew paths
 find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
     PATHS 
-        /usr/local/Cellar/onnxruntime/1.22.2_1/include
-        /usr/local/include
         /usr/local/opt/onnxruntime/include
+        /usr/local/include
         /usr/local/Cellar/onnxruntime/*/include
-        /opt/homebrew/include
         /opt/homebrew/opt/onnxruntime/include
+        /opt/homebrew/include
         /opt/homebrew/Cellar/onnxruntime/*/include
+    NO_DEFAULT_PATH
 )
 find_library(ONNXRUNTIME_LIB onnxruntime
     NAMES onnxruntime libonnxruntime
     PATHS 
-        /usr/local/Cellar/onnxruntime/1.22.2_1/lib
-        /usr/local/lib
         /usr/local/opt/onnxruntime/lib
+        /usr/local/lib
         /usr/local/Cellar/onnxruntime/*/lib
-        /opt/homebrew/lib
         /opt/homebrew/opt/onnxruntime/lib
+        /opt/homebrew/lib
         /opt/homebrew/Cellar/onnxruntime/*/lib
+    NO_DEFAULT_PATH
 )
 
 # Find Rubber Band - using discovered paths

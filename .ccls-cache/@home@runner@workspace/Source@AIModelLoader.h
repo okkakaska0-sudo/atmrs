@@ -8,7 +8,18 @@
 #include <functional>
 
 #ifdef USE_ONNX
-#include <onnxruntime_cxx_api.h>
+  #ifdef __has_include
+    #if __has_include(<onnxruntime_cxx_api.h>)
+      #include <onnxruntime_cxx_api.h>
+      #define ONNX_AVAILABLE 1
+    #else
+      #define ONNX_AVAILABLE 0
+    #endif
+  #else
+    #define ONNX_AVAILABLE 0
+  #endif
+#else
+  #define ONNX_AVAILABLE 0
 #endif
 
 #ifdef USE_EIGEN

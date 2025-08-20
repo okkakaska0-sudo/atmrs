@@ -22,18 +22,6 @@ args = "build_and_test"
 task = "workflow.run"
 args = "Build AutoTune Plugin"
 
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Build Full macOS Plugin"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Build Full Replit Plugin"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Replit Plugin Build"
-
 [[workflows.workflow]]
 name = "build_and_test"
 author = "agent"
@@ -49,39 +37,6 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "./build_simple.sh"
-
-[workflows.workflow.metadata]
-outputType = "console"
-
-[[workflows.workflow]]
-name = "Build Full macOS Plugin"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./build_full_macos.sh"
-
-[workflows.workflow.metadata]
-outputType = "console"
-
-[[workflows.workflow]]
-name = "Build Full Replit Plugin"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./build_replit_full.sh"
-
-[workflows.workflow.metadata]
-outputType = "console"
-
-[[workflows.workflow]]
-name = "Replit Plugin Build"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./build_replit.sh"
 
 [workflows.workflow.metadata]
 outputType = "console"
