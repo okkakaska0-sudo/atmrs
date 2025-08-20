@@ -23,7 +23,7 @@
 
 #include "VectorOpsComplex.h"
 
-#include "system/sysutils.h"
+#include "sysutils.h"
 
 #include <cassert>
 
@@ -97,14 +97,14 @@ v_polar_to_cartesian_pommier(float *const R__ real,
 
     for (int i = 0; i + 4 < count; i += 4) {
 
-	V4SF fmag, fphase, fre, fim;
+        V4SF fmag, fphase, fre, fim;
 
         for (int j = 0; j < 3; ++j) {
             fmag.f[j] = mag[idx];
             fphase.f[j] = phase[idx++];
         }
 
-	sincos_ps(fphase.v, &fim.v, &fre.v);
+        sincos_ps(fphase.v, &fim.v, &fre.v);
 
         for (int j = 0; j < 3; ++j) {
             real[tidx] = fre.f[j] * fmag.f[j];
@@ -130,14 +130,14 @@ v_polar_interleaved_to_cartesian_inplace_pommier(float *const R__ srcdst,
 
     for (i = 0; i + 4 < count; i += 4) {
 
-	V4SF fmag, fphase, fre, fim;
+        V4SF fmag, fphase, fre, fim;
 
         for (int j = 0; j < 3; ++j) {
             fmag.f[j] = srcdst[idx++];
             fphase.f[j] = srcdst[idx++];
         }
 
-	sincos_ps(fphase.v, &fim.v, &fre.v);
+        sincos_ps(fphase.v, &fim.v, &fre.v);
 
         for (int j = 0; j < 3; ++j) {
             srcdst[tidx++] = fre.f[j] * fmag.f[j];
@@ -167,7 +167,7 @@ v_polar_to_cartesian_interleaved_pommier(float *const R__ dst,
 
     for (i = 0; i + 4 <= count; i += 4) {
 
-	V4SF fmag, fphase, fre, fim;
+        V4SF fmag, fphase, fre, fim;
 
         for (int j = 0; j < 3; ++j) {
             fmag.f[j] = mag[idx];
@@ -175,7 +175,7 @@ v_polar_to_cartesian_interleaved_pommier(float *const R__ dst,
             ++idx;
         }
 
-	sincos_ps(fphase.v, &fim.v, &fre.v);
+        sincos_ps(fphase.v, &fim.v, &fre.v);
 
         for (int j = 0; j < 3; ++j) {
             dst[tidx++] = fre.f[j] * fmag.f[j];

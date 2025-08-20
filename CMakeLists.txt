@@ -151,6 +151,9 @@ target_include_directories(AutoTunePlugin PRIVATE
     ${RUBBERBAND_INCLUDE_DIR}
     ${RUBBERBAND_INCLUDE_DIR}/rubberband
     ${RUBBERBAND_INCLUDE_DIR}/src
+    ${RUBBERBAND_INCLUDE_DIR}/src/common
+    ${RUBBERBAND_INCLUDE_DIR}/src/faster  
+    ${RUBBERBAND_INCLUDE_DIR}/src/ext
     ${ONNXRUNTIME_INCLUDE_DIR}  # ONNX headers are in root directory
 )
 
