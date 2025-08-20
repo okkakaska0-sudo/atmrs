@@ -34,6 +34,7 @@ cd /path/to/project
 2. **Исправлены КРИТИЧЕСКИЕ ошибки компиляции:**
    - ✅ **ModeSelector.cpp**: Добавлен default constructor в ModeConfig struct (блокировал сборку)
    - ✅ **Utils.cpp**: Исправлены type conversion warnings (`int` → `size_t` для array indexing)
+   - ✅ **PluginProcessor.h**: КРИТИЧЕСКОЕ - исправлен порядок объявления членов класса (uninitialized field)
    - ✅ **CMakeLists_macos_working.txt**: Отключены строгие warnings (juce_recommended_warning_flags)
    - ✅ **Deployment target**: Обновлен с 10.15 до 11.0 для совместимости с Sonoma 14.7.5
    - ✅ **build_simple.sh**: Исправлены права доступа (`chmod +x`)
@@ -78,14 +79,27 @@ struct ModeConfig {
 // СТАЛО: size_t index = static_cast<size_t>(indexFloat);
 ```
 
+**🚨 PluginProcessor.h (КРИТИЧЕСКОЕ - uninitialized field):**
+```cpp
+// БЫЛО (ОПАСНО):
+juce::AudioProcessorValueTreeState parameters;     // инициализируется 1-м
+Parameters pluginParameters;                       // инициализируется 2-м
+// Но parameters использует pluginParameters.createParameterLayout() = crash!
+
+// СТАЛО (БЕЗОПАСНО):
+Parameters pluginParameters;                       // инициализируется 1-м
+juce::AudioProcessorValueTreeState parameters;     // инициализируется 2-м
+```
+
 **🔧 CMakeLists_macos_working.txt:**
 - Отключены строгие warnings: `# juce::juce_recommended_warning_flags`
 - Deployment target: `10.15` → `11.0`
 
 **💡 ВАЖНО О WARNINGS:**
-- Compiler warnings НЕ блокируют сборку и НЕ влияют на качество звука
-- Type conversion warnings безопасны для audio плагинов
+- **Type conversion warnings** НЕ блокируют сборку и НЕ влияют на качество звука
+- **Uninitialized field warnings** ОЧЕНЬ ОПАСНЫ - могут crash программу и испортить звук
 - Eigen3 библиотека может показывать свои warnings (внешняя библиотека)
+- **ИСПРАВЛЕНО**: Критическая ошибка uninitialized field 'pluginParameters' устранена
 
 #### 💻 КОМАНДА ДЛЯ ЗАПУСКА:
 ```bash
