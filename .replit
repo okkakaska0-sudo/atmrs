@@ -16,19 +16,7 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "build_and_test"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
 args = "Build AutoTune Plugin"
-
-[[workflows.workflow]]
-name = "build_and_test"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./build_simple.sh"
 
 [[workflows.workflow]]
 name = "Build AutoTune Plugin"
@@ -39,4 +27,4 @@ outputType = "console"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "echo \"🍎 AutoTune Plugin - macOS Build Ready\" && echo \"📍 Current status: Project configured for macOS-only development\" && echo \"🚀 To build: Run './build_simple.sh' on your Mac at /Users/marselmacevans/Downloads/atmrs\" && echo \"✅ All dependencies installed via Homebrew\" && echo \"📦 ONNX Runtime: /usr/local/opt/onnxruntime\" && echo \"📊 Eigen3: /usr/local/include/eigen3\" && echo \"🎵 Rubber Band: /usr/local/lib/librubberband.dylib\" && echo \"🔧 Configuration: CMakeLists_macos_working.txt\" && echo \"\" && echo \"💡 This project runs only on macOS with native dependencies\""
+args = "./build_replit_macos_info.sh"
