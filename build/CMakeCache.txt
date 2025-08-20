@@ -26,6 +26,8 @@ AutoTunePlugin_SOURCE_DIR:STATIC=/Users/marselmacevans/Downloads/atmrs
 //Path to a program.
 CMAKE_ADDR2LINE:FILEPATH=CMAKE_ADDR2LINE-NOTFOUND
 
+CMAKE_APPLE_SILICON_PROCESSOR:BOOL=OFF
+
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
@@ -39,8 +41,7 @@ CMAKE_COLOR_MAKEFILE:BOOL=ON
 //CXX compiler
 CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
 
-//Flags used by the CXX compiler during all build types.
-CMAKE_CXX_FLAGS:STRING=
+CMAKE_CXX_FLAGS:STRING= -arch x86_64
 
 //Flags used by the CXX compiler during DEBUG builds.
 CMAKE_CXX_FLAGS_DEBUG:STRING=-g
@@ -57,8 +58,7 @@ CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 //C compiler
 CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
 
-//Flags used by the C compiler during all build types.
-CMAKE_C_FLAGS:STRING=
+CMAKE_C_FLAGS:STRING= -arch x86_64
 
 //Flags used by the C compiler during DEBUG builds.
 CMAKE_C_FLAGS_DEBUG:STRING=-g
@@ -75,8 +75,7 @@ CMAKE_C_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 //Path to a program.
 CMAKE_DLLTOOL:FILEPATH=CMAKE_DLLTOOL-NOTFOUND
 
-//Flags used by the linker during all build types.
-CMAKE_EXE_LINKER_FLAGS:STRING=
+CMAKE_EXE_LINKER_FLAGS:STRING= -arch x86_64
 
 //Flags used by the linker during DEBUG builds.
 CMAKE_EXE_LINKER_FLAGS_DEBUG:STRING=
@@ -108,9 +107,7 @@ CMAKE_LINKER:FILEPATH=/usr/bin/ld
 //Path to a program.
 CMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make
 
-//Flags used by the linker during the creation of modules during
-// all build types.
-CMAKE_MODULE_LINKER_FLAGS:STRING=
+CMAKE_MODULE_LINKER_FLAGS:STRING= -arch x86_64
 
 //Flags used by the linker during the creation of modules during
 // DEBUG builds.
@@ -137,12 +134,12 @@ CMAKE_OBJCOPY:FILEPATH=CMAKE_OBJCOPY-NOTFOUND
 //Path to a program.
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
-//Build architectures for OSX
-CMAKE_OSX_ARCHITECTURES:STRING=x86_64;arm64
+//macOS architecture
+CMAKE_OSX_ARCHITECTURES:STRING=x86_64
 
 //Minimum OS X version to target for deployment (at runtime); newer
 // APIs weak linked. Set to empty string for default value.
-CMAKE_OSX_DEPLOYMENT_TARGET:STRING=10.15
+CMAKE_OSX_DEPLOYMENT_TARGET:STRING=11.0
 
 //The product will be built against the headers and libraries located
 // inside the indicated SDK.
@@ -181,9 +178,7 @@ CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
 //Path to a program.
 CMAKE_READELF:FILEPATH=CMAKE_READELF-NOTFOUND
 
-//Flags used by the linker during the creation of shared libraries
-// during all build types.
-CMAKE_SHARED_LINKER_FLAGS:STRING=
+CMAKE_SHARED_LINKER_FLAGS:STRING= -arch x86_64
 
 //Flags used by the linker during the creation of shared libraries
 // during DEBUG builds.
@@ -238,10 +233,7 @@ CMAKE_TAPI:FILEPATH=/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolc
 // .SILENT directive, and all commands will be echoed to the console
 // during the make.  This is useful for debugging only. With Visual
 // Studio IDE projects all commands are done without /nologo.
-CMAKE_VERBOSE_MAKEFILE:BOOL=ON
-
-//Path to a file.
-EIGEN3_INCLUDE_DIR:PATH=/usr/local/include/eigen3
+CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Directory under which to collect all populated content
 FETCHCONTENT_BASE_DIR:PATH=/Users/marselmacevans/Downloads/atmrs/build/_deps
@@ -274,6 +266,8 @@ JUCE_BUILD_EXTRAS:BOOL=OFF
 
 JUCE_BUILD_HELPER_TOOLS:BOOL=OFF
 
+JUCE_BUILD_UNIVERSAL_BINARY:BOOL=OFF
+
 //Whether or not plugins should be installed to the system after
 // building
 JUCE_COPY_PLUGIN_AFTER_BUILD:BOOL=ON
@@ -294,33 +288,20 @@ JUCE_MODULES_ONLY:BOOL=OFF
 //Value Computed by CMake
 JUCE_SOURCE_DIR:STATIC=/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src
 
+JUCE_TARGET_ARCHITECTURE:STRING=x86_64
+
 //The location, relative to the install prefix, where juceaide
 // will be installed
 JUCE_TOOL_INSTALL_DIR:STRING=bin/JUCE-7.0.9
 
-//Path to a file.
-ONNXRUNTIME_INCLUDE_DIR:PATH=/usr/local/include/onnxruntime
+//Enable Eigen3 library
+USE_EIGEN:BOOL=ON
 
-//Path to a library.
-ONNXRUNTIME_LIB:FILEPATH=/usr/local/lib/libonnxruntime.dylib
+//Enable ONNX Runtime library
+USE_ONNX:BOOL=ON
 
-//No help, variable specified on the command line.
-ONNXRUNTIME_ROOT_PATH:UNINITIALIZED=/usr/local/opt/onnxruntime
-
-//Arguments to supply to pkg-config
-PKG_CONFIG_ARGN:STRING=
-
-//pkg-config executable
-PKG_CONFIG_EXECUTABLE:FILEPATH=/usr/local/bin/pkg-config
-
-//Path to a file.
-RUBBERBAND_INCLUDE_DIR:PATH=/usr/local/include
-
-//Path to a library.
-RUBBERBAND_LIB:FILEPATH=/usr/local/lib/librubberband.dylib
-
-//No help, variable specified on the command line.
-RUBBERBAND_LIBRARY:UNINITIALIZED=/usr/local/lib/librubberband.dylib
+//Enable Rubber Band library
+USE_RUBBERBAND:BOOL=ON
 
 //Path to a library.
 juce_found_AVFoundation:FILEPATH=/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/AVFoundation.framework
@@ -521,8 +502,6 @@ CMAKE_TAPI-ADVANCED:INTERNAL=1
 CMAKE_UNAME:INTERNAL=/usr/bin/uname
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
-//Details about finding PkgConfig
-FIND_PACKAGE_MESSAGE_DETAILS_PkgConfig:INTERNAL=[/usr/local/bin/pkg-config][v2.5.1()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
 //The path to the folder holding this file and other resources
@@ -531,8 +510,4 @@ JUCE_CMAKE_UTILS_DIR:INTERNAL=/Users/marselmacevans/Downloads/atmrs/build/_deps/
 JUCE_JUCEAIDE_NAME:INTERNAL=juceaide
 //The path to JUCE modules
 JUCE_MODULES_DIR:INTERNAL=/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules
-//ADVANCED property for variable: PKG_CONFIG_ARGN
-PKG_CONFIG_ARGN-ADVANCED:INTERNAL=1
-//ADVANCED property for variable: PKG_CONFIG_EXECUTABLE
-PKG_CONFIG_EXECUTABLE-ADVANCED:INTERNAL=1
 

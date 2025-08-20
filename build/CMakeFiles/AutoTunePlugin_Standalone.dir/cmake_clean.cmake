@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_Standalone/PkgInfo"
-  "AutoTunePlugin_artefacts/Release/Standalone/AutoTune Plugin.app/Contents/MacOS/AutoTune Plugin"
-  "AutoTunePlugin_artefacts/Release/Standalone/AutoTune Plugin.app/Contents/Resources/RecentFilesMenuTemplate.nib"
-  "AutoTunePlugin_artefacts/Release/Standalone/AutoTune Plugin.pdb"
+  "AutoTunePlugin_artefacts/Release/Standalone/Marsi AutoTune Pro.app/Contents/MacOS/Marsi AutoTune Pro"
+  "AutoTunePlugin_artefacts/Release/Standalone/Marsi AutoTune Pro.app/Contents/Resources/RecentFilesMenuTemplate.nib"
+  "AutoTunePlugin_artefacts/Release/Standalone/Marsi AutoTune Pro.pdb"
   "CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm.o"
   "CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm.o.d"
   "CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o"

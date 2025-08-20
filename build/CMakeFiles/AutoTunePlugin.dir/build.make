@@ -27,9 +27,6 @@
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -72,125 +69,17 @@ include CMakeFiles/AutoTunePlugin.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/AutoTunePlugin.dir/flags.make
 
+AutoTunePlugin_artefacts/JuceLibraryCode/JuceHeader.h: AutoTunePlugin_artefacts/JuceLibraryCode/Release/Defs.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating AutoTunePlugin_artefacts/JuceLibraryCode/JuceHeader.h"
+	_deps/juce-build/tools/extras/Build/juceaide/juceaide_artefacts/Debug/juceaide header /Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/JuceLibraryCode/Release/Defs.txt /Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/JuceLibraryCode/JuceHeader.h
+
 CMakeFiles/AutoTunePlugin.dir/codegen:
 .PHONY : CMakeFiles/AutoTunePlugin.dir/codegen
-
-CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
-CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp
-CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp
-
-CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp > CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.i
-
-CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.s
-
-CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
-CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp
-CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp
-
-CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp > CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.i
-
-CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.s
-
-CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
-CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp
-CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp
-
-CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp > CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.i
-
-CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.s
-
-CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
-CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/Parameters.cpp
-CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/Parameters.cpp
-
-CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/Parameters.cpp > CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.i
-
-CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/Parameters.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.s
-
-CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
-CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/PresetManager.cpp
-CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/PresetManager.cpp
-
-CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/PresetManager.cpp > CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.i
-
-CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/PresetManager.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.s
-
-CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
-CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/ModeSelector.cpp
-CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/ModeSelector.cpp
-
-CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/ModeSelector.cpp > CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.i
-
-CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/ModeSelector.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.s
-
-CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
-CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/Utils.cpp
-CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/Utils.cpp
-
-CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/Utils.cpp > CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.i
-
-CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/Utils.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.s
-
-CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
-CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/LookAndFeel.cpp
-CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/LookAndFeel.cpp
-
-CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/LookAndFeel.cpp > CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.i
-
-CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/LookAndFeel.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.s
 
 CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.cpp
 CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.cpp
 
 CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.i: cmake_force
@@ -201,10 +90,528 @@ CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.s
 
+CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/LookAndFeel.cpp
+CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/LookAndFeel.cpp
+
+CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/LookAndFeel.cpp > CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/LookAndFeel.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/ModeSelector.cpp
+CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/ModeSelector.cpp
+
+CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/ModeSelector.cpp > CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/ModeSelector.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/Parameters.cpp
+CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/Parameters.cpp
+
+CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/Parameters.cpp > CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/Parameters.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp
+CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp
+
+CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp > CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp
+
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp > CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor_minimal.cpp
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor_minimal.cpp
+
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor_minimal.cpp > CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor_minimal.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp
+CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp
+
+CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp > CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/PresetManager.cpp
+CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/PresetManager.cpp
+
+CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/PresetManager.cpp > CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/PresetManager.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o: /Users/marselmacevans/Downloads/atmrs/Source/Utils.cpp
+CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o -c /Users/marselmacevans/Downloads/atmrs/Source/Utils.cpp
+
+CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/Source/Utils.cpp > CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/Source/Utils.cpp -o CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Allocators.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Allocators.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Allocators.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Allocators.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/FFT.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/FFT.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/FFT.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/FFT.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Log.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Log.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Log.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Log.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Profiler.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Profiler.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Profiler.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Profiler.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Resampler.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Resampler.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Resampler.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Resampler.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Thread.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Thread.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Thread.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/Thread.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/sysutils.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/sysutils.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/sysutils.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/common/sysutils.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Building C object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building C object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building C object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building C object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/speex/resample.c
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building C object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/speex/resample.c
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.i"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/speex/resample.c > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.s"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/ext/speex/resample.c -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.s
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/rubberband-c.cpp
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o -c /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/rubberband-c.cpp
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/rubberband-c.cpp > CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.i
+
+CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src/rubberband-c.cpp -o CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.s
+
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o: _deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.i: cmake_force
@@ -218,7 +625,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o: _deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.i: cmake_force
@@ -232,7 +639,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o: _deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.i: cmake_force
@@ -246,7 +653,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o: _deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.i: cmake_force
@@ -260,7 +667,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_ext
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o: _deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.i: cmake_force
@@ -274,7 +681,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_ba
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o: _deps/juce-src/modules/juce_graphics/juce_graphics.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_graphics/juce_graphics.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.i: cmake_force
@@ -288,7 +695,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o: _deps/juce-src/modules/juce_events/juce_events.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_events/juce_events.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.i: cmake_force
@@ -302,7 +709,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o: _deps/juce-src/modules/juce_core/juce_core.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_core/juce_core.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.i: cmake_force
@@ -316,7 +723,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.s: c
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o: _deps/juce-src/modules/juce_data_structures/juce_data_structures.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.i: cmake_force
@@ -330,7 +737,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_d
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o: _deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.i: cmake_force
@@ -344,7 +751,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audi
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o: _deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.i: cmake_force
@@ -358,7 +765,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o: _deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.i: cmake_force
@@ -372,7 +779,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_aud
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o: _deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_52) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.i: cmake_force
@@ -386,7 +793,7 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_aud
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o: CMakeFiles/AutoTunePlugin.dir/flags.make
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o: _deps/juce-src/modules/juce_dsp/juce_dsp.mm
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o: CMakeFiles/AutoTunePlugin.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_53) "Building CXX object CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o -MF CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o.d -o CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o -c /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_dsp/juce_dsp.mm
 
 CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.i: cmake_force
@@ -399,15 +806,44 @@ CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.s: cma
 
 # Object files for target AutoTunePlugin
 AutoTunePlugin_OBJECTS = \
-"CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o" \
-"CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o" \
-"CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o" \
-"CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o" \
-"CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o" \
-"CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o" \
-"CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o" \
-"CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o" \
 "CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o" \
+"CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o" \
 "CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o" \
 "CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o" \
 "CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o" \
@@ -426,44 +862,73 @@ AutoTunePlugin_OBJECTS = \
 # External object files for target AutoTunePlugin
 AutoTunePlugin_EXTERNAL_OBJECTS =
 
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/build.make
-AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Linking CXX static library \"AutoTunePlugin_artefacts/Release/libAutoTune Plugin_SharedCode.a\""
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/PresetManager.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/Source/Utils.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_ara.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors_lv2_libs.cpp.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_processors/juce_audio_processors.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_basics/juce_gui_basics.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_graphics/juce_graphics.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_events/juce_events.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_core/juce_core.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_data_structures/juce_data_structures.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_basics/juce_audio_basics.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_utils/juce_audio_utils.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_formats/juce_audio_formats.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_audio_devices/juce_audio_devices.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_dsp/juce_dsp.mm.o
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/build.make
+AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a: CMakeFiles/AutoTunePlugin.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_54) "Linking CXX static library \"AutoTunePlugin_artefacts/Release/libMarsi AutoTune Pro_SharedCode.a\""
 	$(CMAKE_COMMAND) -P CMakeFiles/AutoTunePlugin.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AutoTunePlugin.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
-CMakeFiles/AutoTunePlugin.dir/build: AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a
+CMakeFiles/AutoTunePlugin.dir/build: AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a
 .PHONY : CMakeFiles/AutoTunePlugin.dir/build
 
 CMakeFiles/AutoTunePlugin.dir/clean:
 	$(CMAKE_COMMAND) -P CMakeFiles/AutoTunePlugin.dir/cmake_clean.cmake
 .PHONY : CMakeFiles/AutoTunePlugin.dir/clean
 
-CMakeFiles/AutoTunePlugin.dir/depend:
+CMakeFiles/AutoTunePlugin.dir/depend: AutoTunePlugin_artefacts/JuceLibraryCode/JuceHeader.h
 	cd /Users/marselmacevans/Downloads/atmrs/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/marselmacevans/Downloads/atmrs /Users/marselmacevans/Downloads/atmrs /Users/marselmacevans/Downloads/atmrs/build /Users/marselmacevans/Downloads/atmrs/build /Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/AutoTunePlugin.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/AutoTunePlugin.dir/depend
 

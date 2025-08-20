@@ -42,6 +42,14 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-build/cmake_install.cmake")
 endif()
 
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE STATIC_LIBRARY FILES "/Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/Release/libMarsi AutoTune Pro_SharedCode.a")
+  if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libMarsi AutoTune Pro_SharedCode.a" AND
+     NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libMarsi AutoTune Pro_SharedCode.a")
+    execute_process(COMMAND "/usr/bin/ranlib" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libMarsi AutoTune Pro_SharedCode.a")
+  endif()
+endif()
+
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)

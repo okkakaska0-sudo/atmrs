@@ -1110,31 +1110,31 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL"
-      binary: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL"
+      source: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-n3opck"
+      binary: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-n3opck"
     cmakeVariables:
       CMAKE_C_FLAGS: ""
       CMAKE_C_FLAGS_DEBUG: "-g"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
-      CMAKE_OSX_DEPLOYMENT_TARGET: "10.15"
+      CMAKE_OSX_ARCHITECTURES: "x86_64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
       CMAKE_OSX_SYSROOT: ""
     buildResult:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL'
+        Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-n3opck'
         
-        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bc9b6/fast
-        /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bc9b6.dir/build.make CMakeFiles/cmTC_bc9b6.dir/build
-        Building C object CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o
-        /usr/bin/cc   -arch x86_64 -arch arm64 -mmacosx-version-min=10.15   -v -Wl,-v -MD -MT CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_80589/fast
+        /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_80589.dir/build.make CMakeFiles/cmTC_80589.dir/build
+        Building C object CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o
+        /usr/bin/cc   -arch x86_64 -mmacosx-version-min=11.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c
         Apple clang version 16.0.0 (clang-1600.0.26.6)
-        Target: arm64-apple-darwin23.6.0
+        Target: x86_64-apple-darwin23.6.0
         Thread model: posix
         InstalledDir: /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-dfa75f/CMakeCCompilerABI-x86_64.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c
+         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-n3opck -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-n3opck -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c
         clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target x86_64-apple-darwin23.6.0
         ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
         ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
@@ -1146,26 +1146,13 @@ events:
          /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx10.15.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-7b7c6d/CMakeCCompilerABI-arm64.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c
-        clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target x86_64-apple-darwin23.6.0
-        ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
-        ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
-        #include "..." search starts here:
-        #include <...> search starts here:
-         /usr/local/include
-         /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include
-         /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
-         /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
-         /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
-        End of search list.
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo" -create -output CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-dfa75f/CMakeCCompilerABI-x86_64.o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-7b7c6d/CMakeCCompilerABI-arm64.o
-        Linking C executable cmTC_bc9b6
-        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc9b6.dir/link.txt --verbose=1
+        Linking C executable cmTC_80589
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80589.dir/link.txt --verbose=1
         Apple clang version 16.0.0 (clang-1600.0.26.6)
-        Target: arm64-apple-darwin23.6.0
+        Target: x86_64-apple-darwin23.6.0
         Thread model: posix
         InstalledDir: /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-e2ebff/CMakeCCompilerABI-x86_64.out -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -arch_multiple -final_output cmTC_bc9b6 -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
+         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_80589 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1115.7.3
         BUILD 23:50:35 Dec  5 2024
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -1178,21 +1165,7 @@ events:
         	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -no_deduplicate -dynamic -arch arm64 -platform_version macos 11.0.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-61f1f6/CMakeCCompilerABI-arm64.out -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -arch_multiple -final_output cmTC_bc9b6 -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
-        @(#)PROGRAM:ld PROJECT:ld-1115.7.3
-        BUILD 23:50:35 Dec  5 2024
-        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
-        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
-        LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
-        TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
-        Library search paths:
-        	/usr/local/lib
-        	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib
-        	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
-        Framework search paths:
-        	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo" -create -output cmTC_bc9b6 /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-e2ebff/CMakeCCompilerABI-x86_64.out /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-61f1f6/CMakeCCompilerABI-arm64.out
-        /usr/bin/cc  -arch x86_64 -arch arm64 -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -o cmTC_bc9b6
+        /usr/bin/cc  -arch x86_64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -o cmTC_80589
         
       exitCode: 0
   -
@@ -1202,8 +1175,8 @@ events:
       - "/usr/local/share/cmake/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     message: |
-      Effective list of requested architectures (possibly empty)  : "arm64;x86_64"
-      Effective list of architectures found in the ABI info binary: "arm64;x86_64"
+      Effective list of requested architectures (possibly empty)  : "x86_64"
+      Effective list of architectures found in the ABI info binary: "x86_64"
   -
     kind: "message-v1"
     backtrace:
@@ -1236,18 +1209,18 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL']
+        ignore line: [Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-n3opck']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bc9b6/fast]
-        ignore line: [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_bc9b6.dir/build.make CMakeFiles/cmTC_bc9b6.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o]
-        ignore line: [/usr/bin/cc   -arch x86_64 -arch arm64 -mmacosx-version-min=10.15   -v -Wl -v -MD -MT CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_80589/fast]
+        ignore line: [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_80589.dir/build.make CMakeFiles/cmTC_80589.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o]
+        ignore line: [/usr/bin/cc   -arch x86_64 -mmacosx-version-min=11.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -MF CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o.d -o CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
-        ignore line: [Target: arm64-apple-darwin23.6.0]
+        ignore line: [Target: x86_64-apple-darwin23.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
-        ignore line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-dfa75f/CMakeCCompilerABI-x86_64.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-n3opck -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-n3opck -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target x86_64-apple-darwin23.6.0]
         ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
@@ -1259,26 +1232,13 @@ events:
         ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx10.15.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCCompilerABI.c -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-iESqbL -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-7b7c6d/CMakeCCompilerABI-arm64.o -x c /usr/local/share/cmake/Modules/CMakeCCompilerABI.c]
-        ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target x86_64-apple-darwin23.6.0]
-        ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
-        ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
-        ignore line: [#include "..." search starts here:]
-        ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/local/include]
-        ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
-        ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
-        ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-        ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
-        ignore line: [End of search list.]
-        ignore line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo" -create -output CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-dfa75f/CMakeCCompilerABI-x86_64.o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-7b7c6d/CMakeCCompilerABI-arm64.o]
-        ignore line: [Linking C executable cmTC_bc9b6]
-        ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bc9b6.dir/link.txt --verbose=1]
+        ignore line: [Linking C executable cmTC_80589]
+        ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_80589.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
-        ignore line: [Target: arm64-apple-darwin23.6.0]
+        ignore line: [Target: x86_64-apple-darwin23.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-e2ebff/CMakeCCompilerABI-x86_64.out -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o -arch_multiple -final_output cmTC_bc9b6 -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_80589 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
           arg [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1288,22 +1248,19 @@ events:
           arg [x86_64] ==> ignore
           arg [-platform_version] ==> ignore
           arg [macos] ==> ignore
-          arg [10.15.0] ==> ignore
+          arg [11.0.0] ==> ignore
           arg [15.2] ==> ignore
           arg [-syslibroot] ==> ignore
           arg [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [/var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCCompilerABI-e2ebff/CMakeCCompilerABI-x86_64.out] ==> ignore
+          arg [cmTC_80589] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_bc9b6.dir/CMakeCCompilerABI.c.o] ==> ignore
-          arg [-arch_multiple] ==> ignore
-          arg [-final_output] ==> ignore
-          arg [cmTC_bc9b6] ==> ignore
+          arg [CMakeFiles/cmTC_80589.dir/CMakeCCompilerABI.c.o] ==> ignore
           arg [-lSystem] ==> lib [System]
           arg [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a] ==> lib [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
         linker tool for 'C': /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld
@@ -1346,34 +1303,33 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x"
-      binary: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x"
+      source: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-qEo55p"
+      binary: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-qEo55p"
     cmakeVariables:
       CMAKE_CXX_FLAGS: ""
       CMAKE_CXX_FLAGS_DEBUG: "-g"
       CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
       CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
-      CMAKE_OSX_DEPLOYMENT_TARGET: "10.15"
+      CMAKE_OSX_ARCHITECTURES: "x86_64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
       CMAKE_OSX_SYSROOT: ""
     buildResult:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x'
+        Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-qEo55p'
         
-        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_21c84/fast
-        /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_21c84.dir/build.make CMakeFiles/cmTC_21c84.dir/build
-        Building CXX object CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o
-        /usr/bin/c++   -arch x86_64 -arch arm64 -mmacosx-version-min=10.15   -v -Wl,-v -MD -MT CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_877c0/fast
+        /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_877c0.dir/build.make CMakeFiles/cmTC_877c0.dir/build
+        Building CXX object CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -arch x86_64 -mmacosx-version-min=11.0   -v -Wl,-v -MD -MT CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Apple clang version 16.0.0 (clang-1600.0.26.6)
-        Target: arm64-apple-darwin23.6.0
+        Target: x86_64-apple-darwin23.6.0
         Thread model: posix
         InstalledDir: /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
         clang++: warning: -Wl,-v: 'linker' input unused [-Wunused-command-line-argument]
         ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-        ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-b5e183/CMakeCXXCompilerABI-x86_64.o -x c++ /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-qEo55p -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-qEo55p -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target x86_64-apple-darwin23.6.0
         ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
         ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
@@ -1386,27 +1342,13 @@ events:
          /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
          /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
         End of search list.
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx10.15.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-2bc997/CMakeCXXCompilerABI-arm64.o -x c++ /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp
-        clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target x86_64-apple-darwin23.6.0
-        ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"
-        ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
-        #include "..." search starts here:
-        #include <...> search starts here:
-         /usr/local/include
-         /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1
-         /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include
-         /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include
-         /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include
-         /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)
-        End of search list.
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo" -create -output CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-b5e183/CMakeCXXCompilerABI-x86_64.o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-2bc997/CMakeCXXCompilerABI-arm64.o
-        Linking CXX executable cmTC_21c84
-        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21c84.dir/link.txt --verbose=1
+        Linking CXX executable cmTC_877c0
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_877c0.dir/link.txt --verbose=1
         Apple clang version 16.0.0 (clang-1600.0.26.6)
-        Target: arm64-apple-darwin23.6.0
+        Target: x86_64-apple-darwin23.6.0
         Thread model: posix
         InstalledDir: /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-a24c3d/CMakeCXXCompilerABI-x86_64.out -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -arch_multiple -final_output cmTC_21c84 -lc++ -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
+         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_877c0 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
         @(#)PROGRAM:ld PROJECT:ld-1115.7.3
         BUILD 23:50:35 Dec  5 2024
         configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
@@ -1419,21 +1361,7 @@ events:
         	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
         Framework search paths:
         	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -no_deduplicate -dynamic -arch arm64 -platform_version macos 11.0.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-1aeae4/CMakeCXXCompilerABI-arm64.out -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -arch_multiple -final_output cmTC_21c84 -lc++ -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a
-        @(#)PROGRAM:ld PROJECT:ld-1115.7.3
-        BUILD 23:50:35 Dec  5 2024
-        configured to support archs: armv6 armv7 armv7s arm64 arm64e arm64_32 i386 x86_64 x86_64h armv6m armv7k armv7m armv7em
-        will use ld-classic for: armv6 armv7 armv7s i386 armv6m armv7k armv7m armv7em
-        LTO support using: LLVM version 16.0.0 (static support for 29, runtime is 29)
-        TAPI support using: Apple TAPI version 16.0.0 (tapi-1600.0.11.9)
-        Library search paths:
-        	/usr/local/lib
-        	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib
-        	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/swift
-        Framework search paths:
-        	/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks
-         "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo" -create -output cmTC_21c84 /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-a24c3d/CMakeCXXCompilerABI-x86_64.out /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-1aeae4/CMakeCXXCompilerABI-arm64.out
-        /usr/bin/c++  -arch x86_64 -arch arm64 -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_21c84
+        /usr/bin/c++  -arch x86_64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -v -Wl,-v CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_877c0
         
       exitCode: 0
   -
@@ -1443,8 +1371,8 @@ events:
       - "/usr/local/share/cmake/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
       - "CMakeLists.txt:3 (project)"
     message: |
-      Effective list of requested architectures (possibly empty)  : "arm64;x86_64"
-      Effective list of architectures found in the ABI info binary: "arm64;x86_64"
+      Effective list of requested architectures (possibly empty)  : "x86_64"
+      Effective list of architectures found in the ABI info binary: "x86_64"
   -
     kind: "message-v1"
     backtrace:
@@ -1479,20 +1407,19 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(|\\.[a-rt-z][a-z]*|\\.s[a-np-z][a-z]*|\\.so[a-z]+)))("|,| |$)]
-        ignore line: [Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x']
+        ignore line: [Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-qEo55p']
         ignore line: []
-        ignore line: [Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_21c84/fast]
-        ignore line: [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_21c84.dir/build.make CMakeFiles/cmTC_21c84.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o]
-        ignore line: [/usr/bin/c++   -arch x86_64 -arch arm64 -mmacosx-version-min=10.15   -v -Wl -v -MD -MT CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_877c0/fast]
+        ignore line: [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_877c0.dir/build.make CMakeFiles/cmTC_877c0.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o]
+        ignore line: [/usr/bin/c++   -arch x86_64 -mmacosx-version-min=11.0   -v -Wl -v -MD -MT CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -MF CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o.d -o CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -c /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
-        ignore line: [Target: arm64-apple-darwin23.6.0]
+        ignore line: [Target: x86_64-apple-darwin23.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
         ignore line: [clang++: warning: -Wl -v: 'linker' input unused [-Wunused-command-line-argument]]
         ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/../include/c++/v1"]
-        ignore line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx10.15.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-b5e183/CMakeCXXCompilerABI-x86_64.o -x c++ /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple x86_64-apple-macosx11.0.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=all -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=2 -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu penryn -tune-cpu generic -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-qEo55p -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-qEo55p -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -x c++ /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target x86_64-apple-darwin23.6.0]
         ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
         ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
@@ -1505,27 +1432,13 @@ events:
         ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
         ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
         ignore line: [End of search list.]
-        ignore line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang" -cc1 -triple arm64-apple-macosx10.15.0 -Wundef-prefix=TARGET_OS_ -Wdeprecated-objc-isa-usage -Werror=deprecated-objc-isa-usage -Werror=implicit-function-declaration -emit-obj -mrelax-all -disable-free -clear-ast-before-backend -disable-llvm-verifier -discard-value-names -main-file-name CMakeCXXCompilerABI.cpp -mrelocation-model pic -pic-level 2 -mframe-pointer=non-leaf -fno-strict-return -ffp-contract=on -fno-rounding-math -funwind-tables=1 -fobjc-msgsend-selector-stubs -target-sdk-version=15.2 -fvisibility-inlines-hidden-static-local-var -fno-modulemap-allow-subdirectory-search -target-cpu apple-m1 -target-feature +v8.5a -target-feature +aes -target-feature +crc -target-feature +dotprod -target-feature +fp-armv8 -target-feature +fp16fml -target-feature +lse -target-feature +ras -target-feature +rcpc -target-feature +rdm -target-feature +sha2 -target-feature +sha3 -target-feature +neon -target-feature +zcm -target-feature +zcz -target-feature +fullfp16 -target-abi darwinpcs -debugger-tuning=lldb -target-linker-version 1115.7.3 -v -fcoverage-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x -resource-dir /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16 -dependency-file CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o.d -skip-unused-modulemap-deps -MT CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -sys-header-deps -isysroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -I/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1 -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include -internal-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include -internal-externc-isystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -Wno-reorder-init-list -Wno-implicit-int-float-conversion -Wno-c99-designator -Wno-final-dtor-non-final-class -Wno-extra-semi-stmt -Wno-misleading-indentation -Wno-quoted-include-in-framework-header -Wno-implicit-fallthrough -Wno-enum-enum-conversion -Wno-enum-float-conversion -Wno-elaborated-enum-base -Wno-reserved-identifier -Wno-gnu-folding-constant -fdeprecated-macro -fdebug-compilation-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-eRQU1x -ferror-limit 19 -stack-protector 1 -fstack-check -mdarwin-stkchk-strong-link -fblocks -fencode-extended-block-signature -fregister-global-dtors-with-atexit -fgnuc-version=4.2.1 -fno-cxx-modules -fcxx-exceptions -fexceptions -fmax-type-align=16 -fcommon -clang-vendor-feature=+disableNonDependentMemberExprInCurrentInstantiation -fno-odr-hash-protocols -clang-vendor-feature=+enableAggressiveVLAFolding -clang-vendor-feature=+revert09abecef7bbf -clang-vendor-feature=+thisNoAlignAttr -clang-vendor-feature=+thisNoNullAttr -clang-vendor-feature=+disableAtImportPrivateFrameworkInImplementationError -D__GCC_HAVE_DWARF2_CFI_ASM=1 -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-2bc997/CMakeCXXCompilerABI-arm64.o -x c++ /usr/local/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
-        ignore line: [clang -cc1 version 16.0.0 (clang-1600.0.26.6) default target x86_64-apple-darwin23.6.0]
-        ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/local/include"]
-        ignore line: [ignoring nonexistent directory "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"]
-        ignore line: [#include "..." search starts here:]
-        ignore line: [#include <...> search starts here:]
-        ignore line: [ /usr/local/include]
-        ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/c++/v1]
-        ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/include]
-        ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include]
-        ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include]
-        ignore line: [ /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks (framework directory)]
-        ignore line: [End of search list.]
-        ignore line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo" -create -output CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-b5e183/CMakeCXXCompilerABI-x86_64.o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-2bc997/CMakeCXXCompilerABI-arm64.o]
-        ignore line: [Linking CXX executable cmTC_21c84]
-        ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21c84.dir/link.txt --verbose=1]
+        ignore line: [Linking CXX executable cmTC_877c0]
+        ignore line: [/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_877c0.dir/link.txt --verbose=1]
         ignore line: [Apple clang version 16.0.0 (clang-1600.0.26.6)]
-        ignore line: [Target: arm64-apple-darwin23.6.0]
+        ignore line: [Target: x86_64-apple-darwin23.6.0]
         ignore line: [Thread model: posix]
         ignore line: [InstalledDir: /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin]
-        link line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 10.15.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o /var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-a24c3d/CMakeCXXCompilerABI-x86_64.out -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o -arch_multiple -final_output cmTC_21c84 -lc++ -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
+        link line: [ "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld" -demangle -lto_library /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/libLTO.dylib -dynamic -arch x86_64 -platform_version macos 11.0.0 15.2 -syslibroot /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk -mllvm -enable-linkonceodr-outlining -o cmTC_877c0 -L/usr/local/lib -search_paths_first -headerpad_max_install_names -v CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o -lc++ -lSystem /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
           arg [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld] ==> ignore
           arg [-demangle] ==> ignore
           arg [-lto_library] ==> ignore, skip following value
@@ -1535,22 +1448,19 @@ events:
           arg [x86_64] ==> ignore
           arg [-platform_version] ==> ignore
           arg [macos] ==> ignore
-          arg [10.15.0] ==> ignore
+          arg [11.0.0] ==> ignore
           arg [15.2] ==> ignore
           arg [-syslibroot] ==> ignore
           arg [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk] ==> ignore
           arg [-mllvm] ==> ignore
           arg [-enable-linkonceodr-outlining] ==> ignore
           arg [-o] ==> ignore
-          arg [/var/folders/5w/qs2t4gl96n71z70x6lf2hkwm0000gn/T/CMakeCXXCompilerABI-a24c3d/CMakeCXXCompilerABI-x86_64.out] ==> ignore
+          arg [cmTC_877c0] ==> ignore
           arg [-L/usr/local/lib] ==> dir [/usr/local/lib]
           arg [-search_paths_first] ==> ignore
           arg [-headerpad_max_install_names] ==> ignore
           arg [-v] ==> ignore
-          arg [CMakeFiles/cmTC_21c84.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
-          arg [-arch_multiple] ==> ignore
-          arg [-final_output] ==> ignore
-          arg [cmTC_21c84] ==> ignore
+          arg [CMakeFiles/cmTC_877c0.dir/CMakeCXXCompilerABI.cpp.o] ==> ignore
           arg [-lc++] ==> lib [c++]
           arg [-lSystem] ==> lib [System]
           arg [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a] ==> lib [/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/clang/16/lib/darwin/libclang_rt.osx.a]
@@ -3033,457 +2943,6 @@ events:
         - "/Network/Library/Frameworks"
         - "/System/Library/Frameworks"
   -
-    kind: "find-v1"
-    backtrace:
-      - "/usr/local/share/cmake/Modules/FindPkgConfig.cmake:69 (find_program)"
-      - "CMakeLists.txt:28 (find_package)"
-    mode: "program"
-    variable: "PKG_CONFIG_EXECUTABLE"
-    description: "pkg-config executable"
-    settings:
-      SearchFramework: "FIRST"
-      SearchAppBundle: "FIRST"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "pkg-config"
-      - "pkgconf"
-    candidate_directories:
-      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
-      - "/opt/homebrew/opt/openjdk@17/bin/"
-      - "/usr/local/bin/"
-      - "/System/Cryptexes/App/usr/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/sbin/"
-      - "/sbin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/Library/Apple/usr/bin/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/bin/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/sbin/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
-      - "/usr/local/bin/"
-      - "/usr/local/sbin/"
-      - "/usr/local/"
-      - "/usr/bin/"
-      - "/usr/sbin/"
-      - "/usr/"
-      - "/bin/"
-      - "/sbin/"
-      - "/usr/X11R6/bin/"
-      - "/usr/X11R6/sbin/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/bin/"
-      - "/usr/pkg/sbin/"
-      - "/usr/pkg/"
-      - "/opt/bin/"
-      - "/opt/sbin/"
-      - "/opt/"
-      - "/sw/bin/"
-      - "/sw/sbin/"
-      - "/sw/"
-      - "/opt/local/bin/"
-      - "/opt/local/sbin/"
-      - "/opt/local/"
-      - "/Users/marselmacevans/Applications/"
-      - "/Applications/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Applications/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Applications/"
-    searched_directories:
-      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/pkg-config"
-      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/pkgconf"
-      - "/opt/homebrew/opt/openjdk@17/bin/pkg-config"
-      - "/opt/homebrew/opt/openjdk@17/bin/pkgconf"
-    found: "/usr/local/bin/pkg-config"
-    search_context:
-      ENV{PATH}:
-        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/usr/local/bin"
-        - "/System/Cryptexes/App/usr/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/sbin"
-        - "/sbin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/Library/Apple/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-        - "/sw"
-        - "/opt/local"
-      CMAKE_SYSTEM_APPBUNDLE_PATH:
-        - "/Users/marselmacevans/Applications"
-        - "/Applications"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Applications"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Applications"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "CMakeLists.txt:43 (find_path)"
-    mode: "path"
-    variable: "ONNXRUNTIME_INCLUDE_DIR"
-    description: "Path to a file."
-    settings:
-      SearchFramework: "FIRST"
-      SearchAppBundle: "FIRST"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "onnxruntime_cxx_api.h"
-    candidate_directories:
-      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
-      - "/opt/homebrew/opt/openjdk@17/bin/"
-      - "/usr/local/bin/"
-      - "/System/Cryptexes/App/usr/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/sbin/"
-      - "/sbin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/"
-      - "/Library/Apple/usr/bin/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
-      - "/usr/local/include/"
-      - "/usr/local/"
-      - "/usr/include/"
-      - "/usr/"
-      - "/include/"
-      - "/usr/X11R6/include/"
-      - "/usr/X11R6/"
-      - "/usr/pkg/include/"
-      - "/usr/pkg/"
-      - "/opt/include/"
-      - "/opt/"
-      - "/sw/include/"
-      - "/sw/"
-      - "/opt/local/include/"
-      - "/opt/local/"
-      - "/usr/include/X11/"
-      - "/Users/marselmacevans/Library/Frameworks/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Library/Frameworks/"
-      - "/Library/Frameworks/"
-      - "/Network/Library/Frameworks/"
-      - "/System/Library/Frameworks/"
-      - "/usr/local/opt/onnxruntime/include/"
-      - "/usr/local/include/onnxruntime/"
-      - "/usr/local/include/"
-      - "/usr/local/Cellar/onnxruntime/1.22.2_1/include/"
-      - "/opt/homebrew/opt/onnxruntime/include/"
-      - "/opt/homebrew/include/onnxruntime/"
-      - "/opt/homebrew/include/"
-    searched_directories:
-      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/onnxruntime_cxx_api.h"
-      - "/opt/homebrew/opt/openjdk@17/bin/onnxruntime_cxx_api.h"
-      - "/usr/local/bin/onnxruntime_cxx_api.h"
-      - "/System/Cryptexes/App/usr/bin/onnxruntime_cxx_api.h"
-      - "/usr/bin/onnxruntime_cxx_api.h"
-      - "/bin/onnxruntime_cxx_api.h"
-      - "/usr/sbin/onnxruntime_cxx_api.h"
-      - "/sbin/onnxruntime_cxx_api.h"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin/onnxruntime_cxx_api.h"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin/onnxruntime_cxx_api.h"
-      - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin/onnxruntime_cxx_api.h"
-      - "/Library/Apple/usr/bin/onnxruntime_cxx_api.h"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/onnxruntime_cxx_api.h"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/onnxruntime_cxx_api.h"
-      - "/usr/local/include/onnxruntime_cxx_api.h"
-      - "/usr/local/onnxruntime_cxx_api.h"
-      - "/usr/include/onnxruntime_cxx_api.h"
-      - "/usr/onnxruntime_cxx_api.h"
-      - "/include/onnxruntime_cxx_api.h"
-      - "/usr/X11R6/include/onnxruntime_cxx_api.h"
-      - "/usr/X11R6/onnxruntime_cxx_api.h"
-      - "/usr/pkg/include/onnxruntime_cxx_api.h"
-      - "/usr/pkg/onnxruntime_cxx_api.h"
-      - "/opt/include/onnxruntime_cxx_api.h"
-      - "/opt/onnxruntime_cxx_api.h"
-      - "/sw/include/onnxruntime_cxx_api.h"
-      - "/sw/onnxruntime_cxx_api.h"
-      - "/opt/local/include/onnxruntime_cxx_api.h"
-      - "/opt/local/onnxruntime_cxx_api.h"
-      - "/usr/include/X11/onnxruntime_cxx_api.h"
-      - "/Users/marselmacevans/Library/Frameworks/onnxruntime_cxx_api.h"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks/onnxruntime_cxx_api.h"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks/onnxruntime_cxx_api.h"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/onnxruntime_cxx_api.h"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/onnxruntime_cxx_api.h"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Library/Frameworks/onnxruntime_cxx_api.h"
-      - "/Library/Frameworks/onnxruntime_cxx_api.h"
-      - "/Network/Library/Frameworks/onnxruntime_cxx_api.h"
-      - "/System/Library/Frameworks/onnxruntime_cxx_api.h"
-      - "/usr/local/opt/onnxruntime/include/onnxruntime_cxx_api.h"
-    found: "/usr/local/include/onnxruntime/"
-    search_context:
-      ENV{PATH}:
-        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/usr/local/bin"
-        - "/System/Cryptexes/App/usr/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/sbin"
-        - "/sbin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/Library/Apple/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-        - "/sw"
-        - "/opt/local"
-      CMAKE_SYSTEM_INCLUDE_PATH:
-        - "/usr/include/X11"
-      CMAKE_SYSTEM_FRAMEWORK_PATH:
-        - "~/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Library/Frameworks"
-        - "/Library/Frameworks"
-        - "/Network/Library/Frameworks"
-        - "/System/Library/Frameworks"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "CMakeLists.txt:54 (find_library)"
-    mode: "library"
-    variable: "ONNXRUNTIME_LIB"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "FIRST"
-      SearchAppBundle: "FIRST"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "onnxruntime"
-      - "onnxruntime"
-      - "libonnxruntime"
-      - "onnxruntime.dylib"
-      - "libonnxruntime.dylib"
-    candidate_directories:
-      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
-      - "/usr/local/bin/"
-      - "/System/Cryptexes/App/usr/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/sbin/"
-      - "/sbin/"
-      - "/Library/Apple/usr/bin/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-      - "/usr/lib/"
-      - "/usr/"
-      - "/opt/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Library/Frameworks/"
-      - "/Library/Frameworks/"
-      - "/System/Library/Frameworks/"
-      - "/usr/local/opt/onnxruntime/lib/"
-      - "/usr/local/lib/"
-      - "/usr/local/Cellar/onnxruntime/1.22.2_1/lib/"
-    searched_directories:
-      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
-      - "/usr/local/bin/"
-      - "/System/Cryptexes/App/usr/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/sbin/"
-      - "/sbin/"
-      - "/Library/Apple/usr/bin/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
-    found: "/usr/local/lib/libonnxruntime.dylib"
-    search_context:
-      ENV{PATH}:
-        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/usr/local/bin"
-        - "/System/Cryptexes/App/usr/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/sbin"
-        - "/sbin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/Library/Apple/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-        - "/sw"
-        - "/opt/local"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-      CMAKE_SYSTEM_FRAMEWORK_PATH:
-        - "~/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Library/Frameworks"
-        - "/Library/Frameworks"
-        - "/Network/Library/Frameworks"
-        - "/System/Library/Frameworks"
-  -
-    kind: "find-v1"
-    backtrace:
-      - "CMakeLists.txt:76 (find_library)"
-    mode: "library"
-    variable: "RUBBERBAND_LIB"
-    description: "Path to a library."
-    settings:
-      SearchFramework: "FIRST"
-      SearchAppBundle: "FIRST"
-      CMAKE_FIND_USE_CMAKE_PATH: true
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "rubberband"
-      - "rubberband"
-      - "librubberband"
-    candidate_directories:
-      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
-      - "/usr/local/bin/"
-      - "/System/Cryptexes/App/usr/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/sbin/"
-      - "/sbin/"
-      - "/Library/Apple/usr/bin/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
-      - "/usr/local/lib/"
-      - "/usr/local/"
-      - "/usr/lib/"
-      - "/usr/"
-      - "/opt/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Library/Frameworks/"
-      - "/Library/Frameworks/"
-      - "/System/Library/Frameworks/"
-      - "/usr/local/Cellar/rubberband/4.0.0/lib/"
-      - "/usr/local/lib/"
-      - "/usr/local/opt/rubberband/lib/"
-    searched_directories:
-      - "/Library/Frameworks/Python.framework/Versions/3.13/bin/"
-      - "/usr/local/bin/"
-      - "/System/Cryptexes/App/usr/bin/"
-      - "/usr/bin/"
-      - "/bin/"
-      - "/usr/sbin/"
-      - "/sbin/"
-      - "/Library/Apple/usr/bin/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/lib/"
-      - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/"
-    found: "/usr/local/lib/librubberband.dylib"
-    search_context:
-      ENV{PATH}:
-        - "/Library/Frameworks/Python.framework/Versions/3.13/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/opt/homebrew/opt/openjdk@17/bin"
-        - "/usr/local/bin"
-        - "/System/Cryptexes/App/usr/bin"
-        - "/usr/bin"
-        - "/bin"
-        - "/usr/sbin"
-        - "/sbin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin"
-        - "/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin"
-        - "/Library/Apple/usr/bin"
-      CMAKE_INSTALL_PREFIX: "/usr/local"
-      CMAKE_SYSTEM_PREFIX_PATH:
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr"
-        - "/"
-        - "/usr/local"
-        - "/usr/local"
-        - "/usr/X11R6"
-        - "/usr/pkg"
-        - "/opt"
-        - "/sw"
-        - "/opt/local"
-      CMAKE_SYSTEM_LIBRARY_PATH:
-        - "/usr/lib/X11"
-      CMAKE_SYSTEM_FRAMEWORK_PATH:
-        - "~/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/Network/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/System/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks"
-        - "/Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/Library/Frameworks"
-        - "/Library/Frameworks"
-        - "/Network/Library/Frameworks"
-        - "/System/Library/Frameworks"
-  -
     kind: "try_compile-v1"
     backtrace:
       - "/usr/local/share/cmake/Modules/Internal/CheckSourceCompiles.cmake:104 (try_compile)"
@@ -3496,32 +2955,32 @@ events:
       - "build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1321 (_juce_set_plugin_target_properties)"
       - "build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)"
       - "build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)"
-      - "CMakeLists.txt:129 (juce_add_plugin)"
+      - "CMakeLists.txt:99 (juce_add_plugin)"
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-ftGjDi"
-      binary: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-ftGjDi"
+      source: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-GBODhG"
+      binary: "/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-GBODhG"
     cmakeVariables:
-      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS: " -arch x86_64"
       CMAKE_C_FLAGS_DEBUG: "-g"
-      CMAKE_EXE_LINKER_FLAGS: ""
-      CMAKE_OSX_ARCHITECTURES: "x86_64;arm64"
-      CMAKE_OSX_DEPLOYMENT_TARGET: "10.15"
+      CMAKE_EXE_LINKER_FLAGS: " -arch x86_64"
+      CMAKE_OSX_ARCHITECTURES: "x86_64"
+      CMAKE_OSX_DEPLOYMENT_TARGET: "11.0"
       CMAKE_OSX_SYSROOT: ""
     buildResult:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-ftGjDi'
+        Change Dir: '/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-GBODhG'
         
-        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f89de/fast
-        /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_f89de.dir/build.make CMakeFiles/cmTC_f89de.dir/build
-        Building C object CMakeFiles/cmTC_f89de.dir/src.c.o
-        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch x86_64 -arch arm64 -mmacosx-version-min=10.15 -MD -MT CMakeFiles/cmTC_f89de.dir/src.c.o -MF CMakeFiles/cmTC_f89de.dir/src.c.o.d -o CMakeFiles/cmTC_f89de.dir/src.c.o -c /Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-ftGjDi/src.c
-        Linking C executable cmTC_f89de
-        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f89de.dir/link.txt --verbose=1
-        /usr/bin/cc  -arch x86_64 -arch arm64 -mmacosx-version-min=10.15 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/cmTC_f89de.dir/src.c.o -o cmTC_f89de
+        Run Build Command(s): /usr/local/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_93bb3/fast
+        /Volumes/MarselHard/Xcode/Xcode.app/Contents/Developer/usr/bin/make  -f CMakeFiles/cmTC_93bb3.dir/build.make CMakeFiles/cmTC_93bb3.dir/build
+        Building C object CMakeFiles/cmTC_93bb3.dir/src.c.o
+        /usr/bin/cc -DCMAKE_HAVE_LIBC_PTHREAD  -arch x86_64  -arch x86_64 -mmacosx-version-min=11.0 -MD -MT CMakeFiles/cmTC_93bb3.dir/src.c.o -MF CMakeFiles/cmTC_93bb3.dir/src.c.o.d -o CMakeFiles/cmTC_93bb3.dir/src.c.o -c /Users/marselmacevans/Downloads/atmrs/build/CMakeFiles/CMakeScratch/TryCompile-GBODhG/src.c
+        Linking C executable cmTC_93bb3
+        /usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTC_93bb3.dir/link.txt --verbose=1
+        /usr/bin/cc  -arch x86_64  -arch x86_64 -mmacosx-version-min=11.0 -Wl,-search_paths_first -Wl,-headerpad_max_install_names  -arch x86_64  CMakeFiles/cmTC_93bb3.dir/src.c.o -o cmTC_93bb3
         
       exitCode: 0
 ...

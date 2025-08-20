@@ -31,9 +31,6 @@ default_target: all
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -386,6 +383,30 @@ Source/PluginEditor.s: Source/PluginEditor.cpp.s
 Source/PluginEditor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.s
 .PHONY : Source/PluginEditor.cpp.s
+
+Source/PluginEditor_minimal.o: Source/PluginEditor_minimal.cpp.o
+.PHONY : Source/PluginEditor_minimal.o
+
+# target to build an object file
+Source/PluginEditor_minimal.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o
+.PHONY : Source/PluginEditor_minimal.cpp.o
+
+Source/PluginEditor_minimal.i: Source/PluginEditor_minimal.cpp.i
+.PHONY : Source/PluginEditor_minimal.i
+
+# target to preprocess a source file
+Source/PluginEditor_minimal.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.i
+.PHONY : Source/PluginEditor_minimal.cpp.i
+
+Source/PluginEditor_minimal.s: Source/PluginEditor_minimal.cpp.s
+.PHONY : Source/PluginEditor_minimal.s
+
+# target to generate assembly for a file
+Source/PluginEditor_minimal.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.s
+.PHONY : Source/PluginEditor_minimal.cpp.s
 
 Source/PluginProcessor.o: Source/PluginProcessor.cpp.o
 .PHONY : Source/PluginProcessor.o
@@ -1149,6 +1170,678 @@ _deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/_deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.s
 .PHONY : _deps/juce-src/modules/juce_gui_extra/juce_gui_extra.mm.s
 
+external/libs/rubberband-3.3.0/src/RubberBandStretcher.o: external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/RubberBandStretcher.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.o
+
+external/libs/rubberband-3.3.0/src/RubberBandStretcher.i: external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/RubberBandStretcher.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.i
+
+external/libs/rubberband-3.3.0/src/RubberBandStretcher.s: external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/RubberBandStretcher.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/RubberBandStretcher.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/Allocators.o: external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Allocators.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Allocators.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/Allocators.i: external/libs/rubberband-3.3.0/src/common/Allocators.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Allocators.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/Allocators.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Allocators.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/Allocators.s: external/libs/rubberband-3.3.0/src/common/Allocators.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Allocators.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/Allocators.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Allocators.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Allocators.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/BQResampler.o: external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/BQResampler.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/BQResampler.i: external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/BQResampler.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/BQResampler.s: external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/BQResampler.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/BQResampler.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/FFT.o: external/libs/rubberband-3.3.0/src/common/FFT.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/FFT.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/FFT.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/FFT.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/FFT.i: external/libs/rubberband-3.3.0/src/common/FFT.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/FFT.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/FFT.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/FFT.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/FFT.s: external/libs/rubberband-3.3.0/src/common/FFT.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/FFT.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/FFT.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/FFT.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/FFT.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/Log.o: external/libs/rubberband-3.3.0/src/common/Log.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Log.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/Log.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Log.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/Log.i: external/libs/rubberband-3.3.0/src/common/Log.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Log.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/Log.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Log.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/Log.s: external/libs/rubberband-3.3.0/src/common/Log.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Log.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/Log.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Log.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Log.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/Profiler.o: external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Profiler.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Profiler.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/Profiler.i: external/libs/rubberband-3.3.0/src/common/Profiler.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Profiler.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/Profiler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Profiler.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/Profiler.s: external/libs/rubberband-3.3.0/src/common/Profiler.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Profiler.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/Profiler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Profiler.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Profiler.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/Resampler.o: external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Resampler.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Resampler.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/Resampler.i: external/libs/rubberband-3.3.0/src/common/Resampler.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Resampler.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/Resampler.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Resampler.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/Resampler.s: external/libs/rubberband-3.3.0/src/common/Resampler.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Resampler.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/Resampler.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Resampler.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Resampler.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/StretchCalculator.o: external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/StretchCalculator.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/StretchCalculator.i: external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/StretchCalculator.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/StretchCalculator.s: external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/StretchCalculator.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/StretchCalculator.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/Thread.o: external/libs/rubberband-3.3.0/src/common/Thread.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Thread.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/Thread.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/Thread.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/Thread.i: external/libs/rubberband-3.3.0/src/common/Thread.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Thread.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/Thread.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/Thread.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/Thread.s: external/libs/rubberband-3.3.0/src/common/Thread.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Thread.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/Thread.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/Thread.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/Thread.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.o: external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.i: external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.s: external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/mathmisc.o: external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/mathmisc.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/mathmisc.i: external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/mathmisc.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/mathmisc.s: external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/mathmisc.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/mathmisc.cpp.s
+
+external/libs/rubberband-3.3.0/src/common/sysutils.o: external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/sysutils.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/common/sysutils.cpp.o
+
+external/libs/rubberband-3.3.0/src/common/sysutils.i: external/libs/rubberband-3.3.0/src/common/sysutils.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/sysutils.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/common/sysutils.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/common/sysutils.cpp.i
+
+external/libs/rubberband-3.3.0/src/common/sysutils.s: external/libs/rubberband-3.3.0/src/common/sysutils.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/sysutils.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/common/sysutils.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/common/sysutils.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/common/sysutils.cpp.s
+
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt.o: external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.o
+
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt.i: external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.i
+
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt.s: external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt.c.s
+
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.o: external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.o
+
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.i: external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.i
+
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.s: external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.c.s
+
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.o: external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.o
+
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.i: external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.i
+
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.s: external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.c.s
+
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.o: external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.o
+
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.i: external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.i
+
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.s: external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.c.s
+
+external/libs/rubberband-3.3.0/src/ext/speex/resample.o: external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/speex/resample.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o
+.PHONY : external/libs/rubberband-3.3.0/src/ext/speex/resample.c.o
+
+external/libs/rubberband-3.3.0/src/ext/speex/resample.i: external/libs/rubberband-3.3.0/src/ext/speex/resample.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/speex/resample.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/ext/speex/resample.c.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.i
+.PHONY : external/libs/rubberband-3.3.0/src/ext/speex/resample.c.i
+
+external/libs/rubberband-3.3.0/src/ext/speex/resample.s: external/libs/rubberband-3.3.0/src/ext/speex/resample.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/speex/resample.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/ext/speex/resample.c.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/ext/speex/resample.c.s
+.PHONY : external/libs/rubberband-3.3.0/src/ext/speex/resample.c.s
+
+external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.o: external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.o
+
+external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.i: external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.i
+
+external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.s: external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.cpp.s
+
+external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.o: external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.o
+
+external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.i: external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.i
+
+external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.s: external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.cpp.s
+
+external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.o: external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.o
+
+external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.i: external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.i
+
+external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.s: external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.cpp.s
+
+external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.o: external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.o
+
+external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.i: external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.i
+
+external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.s: external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.cpp.s
+
+external/libs/rubberband-3.3.0/src/faster/R2Stretcher.o: external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/R2Stretcher.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.o
+
+external/libs/rubberband-3.3.0/src/faster/R2Stretcher.i: external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/R2Stretcher.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.i
+
+external/libs/rubberband-3.3.0/src/faster/R2Stretcher.s: external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/R2Stretcher.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/R2Stretcher.cpp.s
+
+external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.o: external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.o
+
+external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.i: external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.i
+
+external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.s: external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.cpp.s
+
+external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.o: external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.o
+
+external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.i: external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.i
+
+external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.s: external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.cpp.s
+
+external/libs/rubberband-3.3.0/src/faster/StretcherProcess.o: external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherProcess.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.o
+
+external/libs/rubberband-3.3.0/src/faster/StretcherProcess.i: external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherProcess.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.i
+
+external/libs/rubberband-3.3.0/src/faster/StretcherProcess.s: external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherProcess.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/faster/StretcherProcess.cpp.s
+
+external/libs/rubberband-3.3.0/src/finer/R3Stretcher.o: external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/finer/R3Stretcher.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.o
+
+external/libs/rubberband-3.3.0/src/finer/R3Stretcher.i: external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/finer/R3Stretcher.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.i
+
+external/libs/rubberband-3.3.0/src/finer/R3Stretcher.s: external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/finer/R3Stretcher.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/finer/R3Stretcher.cpp.s
+
+external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.o: external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.o
+
+external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.i: external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.i
+
+external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.s: external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.cpp.s
+
+external/libs/rubberband-3.3.0/src/rubberband-c.o: external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/rubberband-c.o
+
+# target to build an object file
+external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o
+.PHONY : external/libs/rubberband-3.3.0/src/rubberband-c.cpp.o
+
+external/libs/rubberband-3.3.0/src/rubberband-c.i: external/libs/rubberband-3.3.0/src/rubberband-c.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/rubberband-c.i
+
+# target to preprocess a source file
+external/libs/rubberband-3.3.0/src/rubberband-c.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.i
+.PHONY : external/libs/rubberband-3.3.0/src/rubberband-c.cpp.i
+
+external/libs/rubberband-3.3.0/src/rubberband-c.s: external/libs/rubberband-3.3.0/src/rubberband-c.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/rubberband-c.s
+
+# target to generate assembly for a file
+external/libs/rubberband-3.3.0/src/rubberband-c.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/AutoTunePlugin.dir/build.make CMakeFiles/AutoTunePlugin.dir/external/libs/rubberband-3.3.0/src/rubberband-c.cpp.s
+.PHONY : external/libs/rubberband-3.3.0/src/rubberband-c.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -1185,6 +1878,9 @@ help:
 	@echo "... Source/PluginEditor.o"
 	@echo "... Source/PluginEditor.i"
 	@echo "... Source/PluginEditor.s"
+	@echo "... Source/PluginEditor_minimal.o"
+	@echo "... Source/PluginEditor_minimal.i"
+	@echo "... Source/PluginEditor_minimal.s"
 	@echo "... Source/PluginProcessor.o"
 	@echo "... Source/PluginProcessor.i"
 	@echo "... Source/PluginProcessor.s"
@@ -1272,6 +1968,90 @@ help:
 	@echo "... _deps/juce-src/modules/juce_gui_extra/juce_gui_extra.o"
 	@echo "... _deps/juce-src/modules/juce_gui_extra/juce_gui_extra.i"
 	@echo "... _deps/juce-src/modules/juce_gui_extra/juce_gui_extra.s"
+	@echo "... external/libs/rubberband-3.3.0/src/RubberBandStretcher.o"
+	@echo "... external/libs/rubberband-3.3.0/src/RubberBandStretcher.i"
+	@echo "... external/libs/rubberband-3.3.0/src/RubberBandStretcher.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Allocators.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Allocators.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Allocators.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/BQResampler.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/BQResampler.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/BQResampler.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/FFT.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/FFT.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/FFT.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Log.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Log.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Log.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Profiler.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Profiler.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Profiler.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Resampler.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Resampler.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Resampler.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/StretchCalculator.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/StretchCalculator.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/StretchCalculator.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Thread.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Thread.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/Thread.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/VectorOpsComplex.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/mathmisc.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/mathmisc.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/mathmisc.s"
+	@echo "... external/libs/rubberband-3.3.0/src/common/sysutils.o"
+	@echo "... external/libs/rubberband-3.3.0/src/common/sysutils.i"
+	@echo "... external/libs/rubberband-3.3.0/src/common/sysutils.s"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/getopt/getopt.o"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/getopt/getopt.i"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/getopt/getopt.s"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.o"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.i"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/getopt/getopt_long.s"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.o"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.i"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fft.s"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.o"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.i"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/kissfft/kiss_fftr.s"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/speex/resample.o"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/speex/resample.i"
+	@echo "... external/libs/rubberband-3.3.0/src/ext/speex/resample.s"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.o"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.i"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/AudioCurveCalculator.s"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.o"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.i"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/CompoundAudioCurve.s"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.o"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.i"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/HighFrequencyAudioCurve.s"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.o"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.i"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/PercussiveAudioCurve.s"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/R2Stretcher.o"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/R2Stretcher.i"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/R2Stretcher.s"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.o"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.i"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/SilentAudioCurve.s"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.o"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.i"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/StretcherChannelData.s"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/StretcherProcess.o"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/StretcherProcess.i"
+	@echo "... external/libs/rubberband-3.3.0/src/faster/StretcherProcess.s"
+	@echo "... external/libs/rubberband-3.3.0/src/finer/R3Stretcher.o"
+	@echo "... external/libs/rubberband-3.3.0/src/finer/R3Stretcher.i"
+	@echo "... external/libs/rubberband-3.3.0/src/finer/R3Stretcher.s"
+	@echo "... external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.o"
+	@echo "... external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.i"
+	@echo "... external/libs/rubberband-3.3.0/src/jni/RubberBandStretcherJNI.s"
+	@echo "... external/libs/rubberband-3.3.0/src/rubberband-c.o"
+	@echo "... external/libs/rubberband-3.3.0/src/rubberband-c.i"
+	@echo "... external/libs/rubberband-3.3.0/src/rubberband-c.s"
 .PHONY : help
 
 

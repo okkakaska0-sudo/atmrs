@@ -27,9 +27,6 @@
 
 .SUFFIXES: .hpux_make_needs_suffix_list
 
-# Produce verbose output by default.
-VERBOSE = 1
-
 # Command-line flag to silence nested $(MAKE).
 $(VERBOSE)MAKESILENT = -s
 
@@ -79,9 +76,9 @@ AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_Standalone/PkgInfo:
 CMakeFiles/AutoTunePlugin_Standalone.dir/codegen:
 .PHONY : CMakeFiles/AutoTunePlugin_Standalone.dir/codegen
 
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/Resources/RecentFilesMenuTemplate.nib: _deps/juce-src/extras/Build/CMake/RecentFilesMenuTemplate.nib
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content AutoTunePlugin_artefacts/Release/Standalone/AutoTune Plugin.app/Contents/Resources/RecentFilesMenuTemplate.nib"
-	$(CMAKE_COMMAND) -E copy /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/extras/Build/CMake/RecentFilesMenuTemplate.nib "AutoTunePlugin_artefacts/Release/Standalone/AutoTune Plugin.app/Contents/Resources/RecentFilesMenuTemplate.nib"
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/Resources/RecentFilesMenuTemplate.nib: _deps/juce-src/extras/Build/CMake/RecentFilesMenuTemplate.nib
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Copying OS X content AutoTunePlugin_artefacts/Release/Standalone/Marsi AutoTune Pro.app/Contents/Resources/RecentFilesMenuTemplate.nib"
+	$(CMAKE_COMMAND) -E copy /Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/extras/Build/CMake/RecentFilesMenuTemplate.nib "AutoTunePlugin_artefacts/Release/Standalone/Marsi AutoTune Pro.app/Contents/Resources/RecentFilesMenuTemplate.nib"
 
 CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o: CMakeFiles/AutoTunePlugin_Standalone.dir/flags.make
 CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o: _deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp
@@ -254,29 +251,28 @@ AutoTunePlugin_Standalone_OBJECTS = \
 # External object files for target AutoTunePlugin_Standalone
 AutoTunePlugin_Standalone_EXTERNAL_OBJECTS =
 
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm.o
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/build.make
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: AutoTunePlugin_artefacts/Release/libAutoTune\ Plugin_SharedCode.a
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: /usr/local/lib/libonnxruntime.dylib
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: /usr/local/lib/librubberband.dylib
-AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin: CMakeFiles/AutoTunePlugin_Standalone.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable \"AutoTunePlugin_artefacts/Release/Standalone/AutoTune Plugin.app/Contents/MacOS/AutoTune Plugin\""
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm.o
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/build.make
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: AutoTunePlugin_artefacts/Release/libMarsi\ AutoTune\ Pro_SharedCode.a
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: /Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/lib/libonnxruntime.1.16.3.dylib
+AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro: CMakeFiles/AutoTunePlugin_Standalone.dir/link.txt
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/marselmacevans/Downloads/atmrs/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable \"AutoTunePlugin_artefacts/Release/Standalone/Marsi AutoTune Pro.app/Contents/MacOS/Marsi AutoTune Pro\""
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/AutoTunePlugin_Standalone.dir/link.txt --verbose=$(VERBOSE)
-	/usr/local/bin/cmake -E copy /Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_Standalone/PkgInfo "/Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/Release/Standalone/AutoTune Plugin.app/Contents"
+	/usr/local/bin/cmake -E copy /Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_Standalone/PkgInfo "/Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/Release/Standalone/Marsi AutoTune Pro.app/Contents"
 
 # Rule to build all files generated by this target.
-CMakeFiles/AutoTunePlugin_Standalone.dir/build: AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/MacOS/AutoTune\ Plugin
-CMakeFiles/AutoTunePlugin_Standalone.dir/build: AutoTunePlugin_artefacts/Release/Standalone/AutoTune\ Plugin.app/Contents/Resources/RecentFilesMenuTemplate.nib
+CMakeFiles/AutoTunePlugin_Standalone.dir/build: AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/MacOS/Marsi\ AutoTune\ Pro
+CMakeFiles/AutoTunePlugin_Standalone.dir/build: AutoTunePlugin_artefacts/Release/Standalone/Marsi\ AutoTune\ Pro.app/Contents/Resources/RecentFilesMenuTemplate.nib
 .PHONY : CMakeFiles/AutoTunePlugin_Standalone.dir/build
 
 CMakeFiles/AutoTunePlugin_Standalone.dir/clean:
