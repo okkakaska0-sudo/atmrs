@@ -10,8 +10,22 @@ cp CMakeLists_macos_working.txt CMakeLists.txt
 mkdir -p build
 cd build
 
+# Find ONNX Runtime path (Intel vs Apple Silicon Mac)
+if [ -d "/opt/homebrew/opt/onnxruntime" ]; then
+    ONNX_PATH="/opt/homebrew/opt/onnxruntime"
+    HOMEBREW_PREFIX="/opt/homebrew"
+    echo "🍎 Detected Apple Silicon Mac"
+elif [ -d "/usr/local/opt/onnxruntime" ]; then
+    ONNX_PATH="/usr/local/opt/onnxruntime"
+    HOMEBREW_PREFIX="/usr/local"
+    echo "💻 Detected Intel Mac"
+else
+    echo "❌ ONNX Runtime not found! Run: brew install onnxruntime"
+    exit 1
+fi
+
 # Configure with CMake for macOS with ONNX Runtime
-echo "🔧 Configuring with ONNX Runtime at /usr/local/opt/onnxruntime..."
+echo "🔧 Configuring with ONNX Runtime at $ONNX_PATH..."
 cmake .. \
     -DCMAKE_BUILD_TYPE=Release \
     -DCMAKE_OSX_ARCHITECTURES="x86_64;arm64" \
@@ -20,10 +34,10 @@ cmake .. \
     -DJUCE_BUILD_EXAMPLES=OFF \
     -DJUCE_COPY_PLUGIN_AFTER_BUILD=ON \
     -DJUCE_BUILD_HELPER_TOOLS=OFF \
-    -DONNXRUNTIME_ROOT_PATH=/usr/local/opt/onnxruntime \
-    -DEIGEN3_INCLUDE_DIR=/usr/local/include/eigen3 \
-    -DRUBBERBAND_INCLUDE_DIR=/usr/local/include \
-    -DRUBBERBAND_LIBRARY=/usr/local/lib/librubberband.dylib \
+    -DONNXRUNTIME_ROOT_PATH="$ONNX_PATH" \
+    -DEIGEN3_INCLUDE_DIR="$HOMEBREW_PREFIX/include/eigen3" \
+    -DRUBBERBAND_INCLUDE_DIR="$HOMEBREW_PREFIX/include" \
+    -DRUBBERBAND_LIBRARY="$HOMEBREW_PREFIX/lib/librubberband.dylib" \
     -DCMAKE_VERBOSE_MAKEFILE=ON
 
 if [ $? -ne 0 ]; then
