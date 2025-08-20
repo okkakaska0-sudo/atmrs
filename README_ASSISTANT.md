@@ -1,183 +1,102 @@
-# 🤖 README ДЛЯ АССИСТЕНТА
+# ✅ AutoTune Plugin - Migration Complete
 
-## 🚨 КРИТИЧЕСКИ ВАЖНО ПРОЧИТАТЬ ПЕРЕД РАБОТОЙ
+## 🎯 PROJECT STATUS (August 20, 2025)
+- **Status**: Successfully migrated from Replit Agent to standard Replit
+- **Current Phase**: Fixing final compilation errors in AIModelLoader.cpp
+- **Platform**: macOS only (Intel Mac, Sonoma 14.7.5)
+- **Local Path**: `/Users/marselmacevans/Downloads/atmrs`
 
-### 📍 ТЕКУЩИЙ СТАТУС ПРОЕКТА
-**Дата:** 20 августа 2025  
-**Статус:** ГОТОВ К ФИНАЛЬНОЙ СБОРКЕ на macOS  
-**Пользователь:** macOS Sonoma 14.7.5 (23H527), Intel Mac
-**Путь:** `/Users/marselmacevans/Downloads/atmrs`
-**Прогресс:** ~99% завершено (исправлена последняя критическая ошибка)
+## 🔄 MIGRATION WORKFLOW
+**USER PREFERENCE**: Manual file copying (NO automation)
+1. **Edit**: Work in web-Replit or Desktop App
+2. **Copy**: Manually copy changed files to local Mac
+3. **Build**: Run `./build_simple.sh` on Mac
 
----
+## ✅ COMPLETED MIGRATION STEPS
 
-## 🎯 ЧТО ЭТО ЗА ПРОЕКТ
+### 1. Project Migration
+- ✅ Moved from Replit Agent to standard Replit environment  
+- ✅ All source files and configurations preserved
+- ✅ Build scripts updated for new environment
 
-**AutoTune Plugin** - профессиональный VST3/AU плагин для коррекции высоты тона с AI функциями
-- 🎵 Полная коррекция высоты тона (Classic, Hard режимы)
-- 🤖 AI модели: CREPE pitch detection, DDSP synthesis
-- 📊 Математические библиотеки: Eigen3, Kiss FFT
-- 🎛️ Профессиональный GUI на JUCE
-- 🍎 **ТОЛЬКО macOS** - никогда не пытайся собирать на Linux/Replit
+### 2. Dependency Configuration
+- ✅ Homebrew dependencies confirmed installed:
+  - ONNX Runtime: `/usr/local/opt/onnxruntime` 
+  - Eigen3: `/usr/local/include/eigen3`
+  - Rubber Band: `/usr/local/lib/librubberband.dylib`
 
----
+### 3. Critical Bug Fixes Applied
+- ✅ **ModeSelector.cpp**: Added default constructor (was blocking build)
+- ✅ **Utils.cpp**: Fixed type conversions (`int` → `size_t`)
+- ✅ **PluginProcessor.h**: Fixed member initialization order (critical crash fix)
+- ✅ **AIModelLoader.cpp**: Replaced non-existent `setNumThreads` method
+- ✅ **CMakeLists**: Updated deployment target 10.15 → 11.0
+- ✅ **build_simple.sh**: Fixed permissions and paths
 
-## ✅ ЧТО УЖЕ СДЕЛАНО
+### 4. Build Configuration
+- ✅ **Primary config**: `CMakeLists_macos_working.txt` (auto-detects Homebrew)
+- ✅ **Build script**: `./build_simple.sh` (updated for dependencies)
+- ✅ **Universal binary**: Supports both x86_64 and ARM64
 
-### 1. Зависимости установлены (через Homebrew на Mac пользователя):
-```
-✅ ONNX Runtime: /usr/local/opt/onnxruntime (AI модели)
-✅ Eigen3: /usr/local/include/eigen3 (математика)
-✅ Rubber Band: /usr/local/lib/librubberband.dylib (pitch shifting)
-```
+## 🔧 CURRENT WORK
+Fixing remaining JUCE namespace errors in AIModelLoader.cpp:
+- Replacing `std::lock_guard` with `juce::ScopedLock`
+- Correcting `juce::String` constructor calls  
+- Fixing type compatibility issues
 
-### 2. Исправлены критические ошибки:
-- ✅ **ModeSelector.cpp**: Добавлен default constructor в ModeConfig struct (БЛОКИРОВАЛ СБОРКУ)
-- ✅ **Utils.cpp**: Исправлены type conversion warnings (`int` → `size_t` для array indexing)
-- ✅ **PluginProcessor.h**: 🚨 КРИТИЧЕСКОЕ - исправлен порядок объявления (uninitialized field)
-- ✅ **CMakeLists_macos_working.txt**: Отключены строгие warnings, deployment target 10.15→11.0  
-- ✅ **build_simple.sh**: Исправлены права доступа (`chmod +x`)
-- ✅ ONNX Runtime пути в `CMakeLists_macos_working.txt`
-- ✅ JUCE namespace ошибки в `AIModelLoader.cpp`
-- ✅ Условные включения для ONNX в `AIModelLoader.h`
+## 🚫 ABANDONED APPROACHES
+- Automatic synchronization scripts (fswatch, rsync)
+- Replit Desktop App automation attempts
+- Web-based sync helper scripts
 
-### 3. Настроена сборка:
-- ✅ Обновлен `build_simple.sh` для работы с ONNX
-- ✅ Universal binary (x86_64 + ARM64)
-- ✅ Правильные пути к библиотекам
+**User clearly stated preference for simple manual copying**
 
----
+## 🎯 FOR NEW AI ASSISTANT
 
-## 🎯 ТЕКУЩИЙ МОМЕНТ
+### Critical Rules
+1. **macOS Only**: Never attempt Linux/Replit builds - project requires macOS frameworks
+2. **Manual Workflow**: User prefers copying files manually, NO automation scripts
+3. **Preserve All Features**: Keep all AI functionality (CREPE, DDSP, ONNX Runtime)
+4. **Use Homebrew Paths**: Dependencies auto-detected from `/usr/local/opt/` and `/usr/local/include/`
 
-**ГОТОВ К ЗАПУСКУ:** `./build_simple.sh` на Mac пользователя
-
-**Путь проекта на Mac:** `/Users/marselmacevans/Downloads/atmrs`
-
----
-
-## 📋 ОСТАВШИЕСЯ ЗАДАЧИ
-
-1. **Выполнить финальную сборку на macOS**
-2. Протестировать созданный плагин
-3. Убедиться что VST3/AU файлы работают в DAW
-
----
-
-## 🔍 ИЗВЕСТНЫЕ ПРОБЛЕМЫ
-
-- **LSP errors:** 38 errors в PluginProcessor.cpp и Parameters.cpp (остаточные после исправлений)
-- **Compiler warnings:** Возможны warnings в Eigen3 библиотеке (внешняя библиотека)
-- **НО:** ВСЕ критические блокеры компиляции исправлены!
-- **ВАЖНО:** Остаточные LSP errors НЕ блокируют сборку
-- **🚨 ИСПРАВЛЕНО:** Опасная ошибка uninitialized field 'pluginParameters' устранена
-- **Статус:** Готов к финальной сборке
-
----
-
-## 💻 КОМАНДЫ ДЛЯ ПОЛЬЗОВАТЕЛЯ
-
-### Финальная сборка:
+### Build Process
 ```bash
 cd /Users/marselmacevans/Downloads/atmrs
 ./build_simple.sh
 ```
 
-### Если ошибки с зависимостями:
-```bash
-brew install onnxruntime eigen rubberband cmake
+### User Preferences
+- Simple, everyday language (not technical)
+- Manual file management preferred
+- All AI features must be preserved
+- Build only on Mac (never Linux/Replit)
+
+## 📁 KEY FILES
+
+### Build Configuration
+- `CMakeLists_macos_working.txt` - Primary build config with auto-detected dependencies
+- `build_simple.sh` - Build script (updated for Homebrew paths)
+- `find_dependencies.sh` - Debug script to locate libraries
+
+### Source Files  
+- `Source/AIModelLoader.cpp` - Currently being fixed (JUCE namespace issues)
+- `Source/PitchCorrectionEngine.cpp` - Core processing (fixed)
+- `Source/PluginProcessor.cpp` - JUCE processor (fixed)
+- `Source/PluginEditor.cpp` - GUI components
+
+## 📊 PROGRESS STATUS
+```
+Migration: ████████████████████████████████ 100% COMPLETE
+Code Fixes: █████████████████████████▓▓▓▓▓ 85% (AIModelLoader.cpp in progress)  
+Ready to Build: ████████████████████████▓▓▓▓ 90%
 ```
 
----
+## 🎯 EXPECTED RESULT
+After fixing remaining compilation errors and running `./build_simple.sh`:
+- VST3 plugin for DAWs
+- AU plugin for Logic Pro/GarageBand  
+- Standalone application
+- All AI features functional
+- Universal binary for all Macs
 
-## 📁 КЛЮЧЕВЫЕ ФАЙЛЫ
-
-### Конфигурация сборки:
-- `CMakeLists_macos_working.txt` - основная конфигурация с ONNX путями
-- `build_simple.sh` - скрипт сборки (обновлен для ONNX)
-- `build_without_onnx.sh` - альтернатива без AI (если проблемы)
-
-### Исходный код:
-- `Source/PitchCorrectionEngine.cpp` - основная логика (исправлены типы)
-- `Source/AIModelLoader.cpp` - AI функции (есть LSP ошибки)
-- `Source/PluginProcessor.cpp` - JUCE процессор
-- `Source/PluginEditor.cpp` - GUI
-
----
-
-## 🚫 ЗАПРЕЩЕНО
-
-1. **НЕ собирай на Linux/Replit** - только macOS
-2. **НЕ упрощай функциональность** - сохраняй все AI возможности
-3. **НЕ удаляй зависимости** - ONNX Runtime обязателен
-4. **НЕ используй общие пути** - используй конкретные Homebrew пути
-
----
-
-## 🔧 ЕСЛИ НУЖНА ПОМОЩЬ
-
-### Пользователь может:
-1. Запустить `./build_simple.sh` для полной сборки
-2. Проверить `brew list | grep onnx` для проверки ONNX
-3. Использовать `./build_without_onnx.sh` если критические проблемы
-
-### Ассистент должен:
-1. Сначала прочитать этот файл полностью
-2. Проверить `replit.md` для дополнительного контекста
-3. НЕ начинать с нуля - продолжить с текущего момента
-4. Фокусироваться на финальной сборке, а не переделке
-
----
-
-## 📈 ПРОГРЕСС
-
-```
-[████████████████████▓▓] 95%
-
-✅ Архитектура проекта
-✅ Зависимости установлены  
-✅ Ошибки компиляции исправлены
-✅ Конфигурация сборки
-🔄 Финальная сборка (текущий этап)
-⏳ Тестирование плагина
-⏳ Деплой в DAW
-```
-
----
-
-## 🎉 ОЖИДАЕМЫЙ РЕЗУЛЬТАТ
-
-После `./build_simple.sh`:
-- 📁 VST3 плагин для DAW
-- 🎵 AU плагин для Logic Pro/GarageBand  
-- 🖥️ Standalone приложение
-- 🤖 Все AI функции работают
-- 🍎 Universal binary для всех Mac
-
-**ЦЕЛЬ:** Профессиональный AutoTune плагин готовый к использованию!
-
----
-
-## 📊 ДЕТАЛЬНАЯ ИСТОРИЯ ИЗМЕНЕНИЙ
-
-### 20 августа 2025:
-- **09:00-12:00**: Исправлены sign conversion warnings в PitchCorrectionEngine.cpp
-- **12:00-13:00**: Обновлены пути ONNX Runtime в CMakeLists_macos_working.txt
-- **13:00-14:00**: Исправлены JUCE namespace ошибки в AIModelLoader.cpp
-- **14:00-15:00**: Обновлен build_simple.sh для полной функциональности с ONNX
-- **15:00-16:00**: КРИТИЧЕСКИЕ ИСПРАВЛЕНИЯ - ModeSelector.cpp и Utils.cpp
-- **16:00-17:00**: 🚨 ФИНАЛЬНОЕ КРИТИЧЕСКОЕ ИСПРАВЛЕНИЕ - uninitialized field в PluginProcessor.h
-- **17:00**: Обновлена документация с полным состоянием
-
-### Основные проблемы решены:
-1. ❌ → ✅ **ModeSelector.cpp** не компилировался → Добавлен default constructor в ModeConfig
-2. ❌ → ✅ **Utils.cpp** type warnings блокировали сборку → Исправлены int→size_t conversions  
-3. ❌ → ✅ **🚨 PluginProcessor.h** uninitialized field (ОПАСНО!) → Исправлен порядок объявления членов
-4. ❌ → ✅ Строгие compiler warnings → Отключены в CMake
-5. ❌ → ✅ Deployment target несовместим → Обновлен для Sonoma 14.7.5
-6. ❌ → ✅ Не находил ONNX Runtime → Исправлены пути в CMake
-7. ❌ → ✅ Ошибки типов в коде → Добавлены static_cast
-8. ❌ → ✅ JUCE namespace конфликты → Добавлены using namespace
-9. ❌ → ✅ Неправильная конфигурация сборки → Обновлен build_simple.sh
-
-**СТАТУС: ГОТОВ К СБОРКЕ!** 🚀
+**PROJECT GOAL**: Professional AutoTune plugin ready for production use

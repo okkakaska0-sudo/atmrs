@@ -137,7 +137,7 @@ struct AIModelLoader::Impl
 };
 
 AIModelLoader::AIModelLoader()
-    : pImpl(std::make_unique<Impl>()),
+    : pImpl(std::unique_ptr<Impl>(new Impl)),
       currentQuality(ProcessingQuality::Standard),
       useMultiThreading(true),
       maxThreads(std::thread::hardware_concurrency()),
@@ -171,11 +171,11 @@ AIModelLoader::~AIModelLoader()
 
 bool AIModelLoader::loadCrepeModel(const juce::File& modelFile)
 {
-    std::lock_guard<std::mutex> lock(modelLock);
+    juce::ScopedLock lock(modelLock);
     
     if (!validateModelFile(modelFile, "crepe"))
     {
-        lastError = AIError(AIError::ModelNotFound, juce::String("CREPE model file not found or invalid"));
+        lastError = AIError(AIError::ModelNotFound, "CREPE model file not found or invalid");
         return false;
     }
     
@@ -195,18 +195,18 @@ bool AIModelLoader::loadCrepeModel(const juce::File& modelFile)
     }
     catch (const std::exception& e)
     {
-        lastError = AIError(AIError::ModelLoadFailed, juce::String("Failed to load CREPE model: ") + juce::String(e.what()));
+        lastError = AIError(AIError::ModelLoadFailed, "Failed to load CREPE model: " + juce::String(e.what()));
         return false;
     }
 }
 
 bool AIModelLoader::loadDDSPModel(const juce::File& modelFile)
 {
-    std::lock_guard<std::mutex> lock(modelLock);
+    juce::ScopedLock lock(modelLock);
     
     if (!validateModelFile(modelFile, "ddsp"))
     {
-        lastError = AIError(AIError::ModelNotFound, juce::String("DDSP model file not found or invalid"));
+        lastError = AIError(AIError::ModelNotFound, "DDSP model file not found or invalid");
         return false;
     }
     
@@ -225,7 +225,7 @@ bool AIModelLoader::loadDDSPModel(const juce::File& modelFile)
     }
     catch (const std::exception& e)
     {
-        lastError = AIError(AIError::ModelLoadFailed, juce::String("Failed to load DDSP model: ") + juce::String(e.what()));
+        lastError = AIError(AIError::ModelLoadFailed, "Failed to load DDSP model: " + juce::String(e.what()));
         return false;
     }
 }
@@ -239,7 +239,7 @@ AIModelLoader::PitchPrediction AIModelLoader::predictPitch(const float* audioBuf
 {
     if (!pImpl->crepeModel.loaded)
     {
-        lastError = AIError(AIError::ProcessingError, juce::String("CREPE model not loaded"));
+        lastError = AIError(AIError::ProcessingError, "CREPE model not loaded");
         return PitchPrediction();
     }
     
@@ -439,7 +439,7 @@ void AIModelLoader::setMaxThreads(int threads)
 
 void AIModelLoader::setupDefaultModelDirectory()
 {
-    auto userDocsDir = File::getSpecialLocation(File::userDocumentsDirectory);
+    auto userDocsDir = juce::File::getSpecialLocation(juce::File::userDocumentsDirectory);
     modelDirectory = userDocsDir.getChildFile("ProAutoTune").getChildFile("Models");
     
     if (!modelDirectory.exists())
@@ -448,7 +448,7 @@ void AIModelLoader::setupDefaultModelDirectory()
     }
 }
 
-bool AIModelLoader::validateModelFile(const File& file, const String& expectedType)
+bool AIModelLoader::validateModelFile(const juce::File& file, const juce::String& expectedType)
 {
     if (!file.existsAsFile())
         return false;
