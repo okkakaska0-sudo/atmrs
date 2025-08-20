@@ -159,7 +159,7 @@ target_include_directories(AutoTunePlugin PRIVATE
 
 message(STATUS "✅ Including all bundled library headers")
 
-# Link libraries
+# Link libraries to base target
 target_link_libraries(AutoTunePlugin
     PRIVATE
         juce::juce_audio_utils
@@ -172,7 +172,7 @@ target_link_libraries(AutoTunePlugin
         juce::juce_recommended_lto_flags
 )
 
-# Link bundled libraries  
+# Link bundled libraries to base target
 target_link_libraries(AutoTunePlugin PRIVATE ${ONNXRUNTIME_LIB})
 
 # Add macOS system frameworks for Rubber Band
@@ -181,6 +181,16 @@ if(APPLE)
         "-framework Accelerate"  # For vDSP functions used by Rubber Band
     )
 endif()
+
+# CRITICAL: Link libraries to each format target explicitly
+foreach(format IN ITEMS VST3 AU Standalone)
+    if(TARGET AutoTunePlugin_${format})
+        target_link_libraries(AutoTunePlugin_${format} PRIVATE ${ONNXRUNTIME_LIB})
+        if(APPLE)
+            target_link_libraries(AutoTunePlugin_${format} PRIVATE "-framework Accelerate")
+        endif()
+    endif()
+endforeach()
 
 # Add specific Rubber Band source files (based on official Makefile.macos)
 set(RUBBERBAND_SOURCES
