@@ -27,9 +27,7 @@ public:
     static float cubicInterpolation(float y0, float y1, float y2, float y3, float x);
     static float hermiteInterpolation(float y0, float y1, float y2, float y3, float x);
     
-    // Window functions
-    static void applyWindow(float* buffer, int numSamples, WindowType windowType);
-    
+    // Window type enumeration
     enum class WindowType
     {
         Rectangular,
@@ -38,6 +36,9 @@ public:
         Blackman,
         Kaiser
     };
+    
+    // Window functions
+    static void applyWindow(float* buffer, int numSamples, WindowType windowType);
     
     // FFT utilities
     static void computeFFT(const float* input, std::complex<float>* output, int size);

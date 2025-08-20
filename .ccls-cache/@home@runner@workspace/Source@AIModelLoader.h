@@ -5,6 +5,7 @@
 #include <memory>
 #include <vector>
 #include <string>
+#include <functional>
 
 #ifdef USE_ONNX
 #include <onnxruntime_cxx_api.h>

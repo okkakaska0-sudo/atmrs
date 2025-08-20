@@ -258,9 +258,8 @@ void AutoTuneAudioProcessorEditor::drawPitchDisplay(juce::Graphics& g, const juc
 void AutoTuneAudioProcessorEditor::drawLevelMeters(juce::Graphics& g, const juce::Rectangle<int>& area)
 {
     auto meterWidth = 20;
-    auto mutableArea = area;
-    auto inputMeterArea = mutableArea.removeFromLeft(meterWidth);
-    auto outputMeterArea = mutableArea.removeFromRight(meterWidth);
+    auto inputMeterArea = area.removeFromLeft(meterWidth);
+    auto outputMeterArea = area.removeFromRight(meterWidth);
     
     // Input meter
     g.setColour(juce::Colour(0xff333344));

@@ -11,8 +11,8 @@ AutoTuneAudioProcessor::AutoTuneAudioProcessor()
         .withOutput("Output", juce::AudioChannelSet::stereo(), true)
 #endif
     ),
-    parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
     pluginParameters(),
+    parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
     presetManager(parameters),
     pitchEngine(),
     modeSelector(),
@@ -44,22 +44,7 @@ AutoTuneAudioProcessor::~AutoTuneAudioProcessor()
     parameters.removeParameterListener(Parameters::SCALE_ID, this);
 }
 
-const juce::String AutoTuneAudioProcessor::getName() const
-{
-    return juce::String(JucePlugin_Name);
-}
-
 // Methods moved to header as inline functions
-
-int AutoTuneAudioProcessor::getCurrentProgram()
-{
-    return 0;
-}
-
-void AutoTuneAudioProcessor::setCurrentProgram(int index)
-{
-    juce::ignoreUnused(index);
-}
 
 const juce::String AutoTuneAudioProcessor::getProgramName(int index)
 {

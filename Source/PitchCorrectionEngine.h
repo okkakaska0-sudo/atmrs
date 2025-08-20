@@ -51,6 +51,11 @@ private:
     float pitchConfidence = 0.0f;
     float rmsLevel = 0.0f;
     
+    // JUCE components
+    std::unique_ptr<juce::dsp::FFT> fft;
+    std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+    juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+    
     // Autocorrelation-based pitch detection
     std::vector<float> autocorrelationBuffer;
     std::vector<float> windowedBuffer;

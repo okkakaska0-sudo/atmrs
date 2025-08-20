@@ -2,6 +2,7 @@
 
 #include <juce_dsp/juce_dsp.h>
 #include <juce_core/juce_core.h>
+#include <memory>
 #include <vector>
 #include <complex>
 
@@ -49,6 +50,11 @@ private:
     float currentPitch = 0.0f;
     float pitchConfidence = 0.0f;
     float rmsLevel = 0.0f;
+    
+    // JUCE components
+    std::unique_ptr<juce::dsp::FFT> fft;
+    std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+    juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
     
     // Autocorrelation-based pitch detection
     std::vector<float> autocorrelationBuffer;
