@@ -29,27 +29,44 @@ find_package(PkgConfig REQUIRED)
 
 # Find Eigen3
 find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
-    PATHS /usr/local/include/eigen3 /usr/local/opt/eigen/include/eigen3
+    PATHS 
+        /usr/local/include/eigen3 
+        /usr/local/opt/eigen/include/eigen3
+        /usr/local/Cellar/eigen/*/include/eigen3
     REQUIRED
 )
 
 # Find ONNX Runtime
 find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
-    PATHS /usr/local/opt/onnxruntime/include /usr/local/include
+    PATHS 
+        /usr/local/opt/onnxruntime/include
+        /usr/local/include
+        /usr/local/Cellar/onnxruntime/*/include
     REQUIRED
 )
 find_library(ONNXRUNTIME_LIB onnxruntime
-    PATHS /usr/local/opt/onnxruntime/lib /usr/local/lib
+    NAMES onnxruntime libonnxruntime
+    PATHS 
+        /usr/local/opt/onnxruntime/lib
+        /usr/local/lib
+        /usr/local/Cellar/onnxruntime/*/lib
     REQUIRED
 )
 
 # Find Rubber Band
 find_path(RUBBERBAND_INCLUDE_DIR rubberband/RubberBandStretcher.h
-    PATHS /usr/local/opt/rubberband/include /usr/local/include
+    PATHS 
+        /usr/local/opt/rubberband/include
+        /usr/local/include
+        /usr/local/Cellar/rubberband/*/include
     REQUIRED
 )
 find_library(RUBBERBAND_LIB rubberband
-    PATHS /usr/local/opt/rubberband/lib /usr/local/lib
+    NAMES rubberband librubberband
+    PATHS 
+        /usr/local/opt/rubberband/lib
+        /usr/local/lib
+        /usr/local/Cellar/rubberband/*/lib
     REQUIRED
 )
 

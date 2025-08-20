@@ -3,8 +3,8 @@
 echo "🎵 Building AutoTune Plugin with FULL macOS functionality..."
 echo "📦 Configuring build system..."
 
-# Use full macOS configuration with all dependencies
-cp CMakeLists_macos_full.txt CMakeLists.txt
+# Use working macOS configuration that finds all available dependencies
+cp CMakeLists_macos_working.txt CMakeLists.txt
 
 # Create build directory
 mkdir -p build
@@ -21,7 +21,7 @@ cmake .. \
 
 # Build the plugin
 echo "🔨 Building plugin..."
-cmake --build . --config Release --parallel $(nproc) || {
+cmake --build . --config Release --parallel $(sysctl -n hw.ncpu 2>/dev/null || echo 4) || {
     echo "❌ Build failed!"
     echo "📋 Showing error details..."
     exit 1
