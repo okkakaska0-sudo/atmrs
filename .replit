@@ -4,7 +4,7 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
-packages = ["cmake", "gcc", "pkg-config", "xorg.libX11", "xorg.libXinerama", "xorg.libXrandr", "xorg.libXcursor", "freetype", "alsa-lib", "mesa"]
+packages = ["cmake", "gcc", "pkg-config", "xorg.libX11", "xorg.libXinerama", "xorg.libXrandr", "xorg.libXcursor", "freetype", "alsa-lib", "mesa", "gnumake", "curl", "freeglut", "libjack2"]
 
 [workflows]
 runButton = "Project"
@@ -16,22 +16,11 @@ author = "agent"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "Build AutoTune Plugin"
+args = "build_and_test"
 
 [[workflows.workflow.tasks]]
 task = "workflow.run"
-args = "build_and_test"
-
-[[workflows.workflow]]
-name = "Build AutoTune Plugin"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "chmod +x build_simple.sh && ./build_simple.sh"
-
-[workflows.workflow.metadata]
-outputType = "console"
+args = "Build AutoTune Plugin"
 
 [[workflows.workflow]]
 name = "build_and_test"
@@ -40,3 +29,14 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "./build_simple.sh"
+
+[[workflows.workflow]]
+name = "Build AutoTune Plugin"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./build_simple.sh"
+
+[workflows.workflow.metadata]
+outputType = "console"

@@ -1,7 +1,7 @@
 # Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
-# file LICENSE.rst or https://cmake.org/licensing for details.
+# file Copyright.txt or https://cmake.org/licensing for details.
 
-cmake_minimum_required(VERSION 4.0.3)
+cmake_minimum_required(VERSION 3.31.6)
 
 # Reject any attempt to use a toolchain file. We must not use one because
 # we could be downloading it here. If the CMAKE_TOOLCHAIN_FILE environment
@@ -20,8 +20,8 @@ project(juce-populate NONE)
 include(ExternalProject)
 ExternalProject_Add(juce-populate
                      "UPDATE_DISCONNECTED" "False" "DOWNLOAD_EXTRACT_TIMESTAMP" "true" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "URL" "https://github.com/juce-framework/JUCE/archive/refs/tags/7.0.9.zip"
-                    SOURCE_DIR          "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src"
-                    BINARY_DIR          "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-build"
+                    SOURCE_DIR          "/home/runner/workspace/build/_deps/juce-src"
+                    BINARY_DIR          "/home/runner/workspace/build/_deps/juce-build"
                     CONFIGURE_COMMAND   ""
                     BUILD_COMMAND       ""
                     INSTALL_COMMAND     ""

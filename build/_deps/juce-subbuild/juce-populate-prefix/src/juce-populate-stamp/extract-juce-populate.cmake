@@ -1,12 +1,12 @@
 # Distributed under the OSI-approved BSD 3-Clause License.  See accompanying
-# file LICENSE.rst or https://cmake.org/licensing for details.
+# file Copyright.txt or https://cmake.org/licensing for details.
 
 cmake_minimum_required(VERSION ${CMAKE_VERSION}) # this file comes with cmake
 
 # Make file names absolute:
 #
-get_filename_component(filename "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-subbuild/juce-populate-prefix/src/7.0.9.zip" ABSOLUTE)
-get_filename_component(directory "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src" ABSOLUTE)
+get_filename_component(filename "/home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/7.0.9.zip" ABSOLUTE)
+get_filename_component(directory "/home/runner/workspace/build/_deps/juce-src" ABSOLUTE)
 
 message(VERBOSE "extracting...
      src='${filename}'
