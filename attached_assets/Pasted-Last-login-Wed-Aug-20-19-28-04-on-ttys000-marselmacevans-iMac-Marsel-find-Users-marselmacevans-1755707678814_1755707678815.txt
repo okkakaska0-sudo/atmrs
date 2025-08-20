@@ -1,0 +1,88 @@
+Last login: Wed Aug 20 19:28:04 on ttys000
+marselmacevans@iMac-Marsel ~ % find /Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/Release -name "*" -type f | grep -v Info.plist
+/Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/Release/.DS_Store
+/Users/marselmacevans/Downloads/atmrs/build/AutoTunePlugin_artefacts/Release/libMarsi AutoTune Pro_SharedCode.a
+marselmacevans@iMac-Marsel ~ % cd /Users/marselmacevans/Downloads/atmrs/build
+make AutoTunePlugin_VST3
+make AutoTunePlugin_AU
+make AutoTunePlugin_Standalone
+[  1%] Building CXX object CMakeFiles/juce_vst3_helper.dir/_deps/juce-src/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.mm.o
+[  3%] Linking CXX executable juce_vst3_helper
+[  3%] Built target juce_vst3_helper
+[ 79%] Built target AutoTunePlugin
+[ 80%] Generating AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_VST3/PkgInfo
+[ 82%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+[ 83%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+[ 85%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+[ 87%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+[ 88%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm.o
+[ 90%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm.o
+[ 91%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm.o
+[ 93%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm.o
+[ 95%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm.o
+[ 96%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm.o
+[ 98%] Building CXX object CMakeFiles/AutoTunePlugin_VST3.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm.o
+[100%] Linking CXX CFBundle shared module "AutoTunePlugin_artefacts/Release/VST3/Marsi AutoTune Pro.vst3/Contents/MacOS/Marsi AutoTune Pro"
+Undefined symbols for architecture x86_64:
+  "RubberBand::R3Stretcher::setPitchScale(double)", referenced from:
+      AutoTuneAudioProcessor::processBlock(juce::AudioBuffer<float>&, juce::MidiBuffer&) in lto.o
+ld: symbol(s) not found for architecture x86_64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make[3]: *** [AutoTunePlugin_artefacts/Release/VST3/Marsi AutoTune Pro.vst3/Contents/MacOS/Marsi AutoTune Pro] Error 1
+make[2]: *** [CMakeFiles/AutoTunePlugin_VST3.dir/all] Error 2
+make[1]: *** [CMakeFiles/AutoTunePlugin_VST3.dir/rule] Error 2
+make: *** [AutoTunePlugin_VST3] Error 2
+[ 78%] Built target AutoTunePlugin
+[ 80%] Generating AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_AU/PkgInfo
+[ 81%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+[ 83%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+[ 85%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+[ 86%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+[ 88%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm.o
+[ 90%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm.o
+[ 91%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm.o
+[ 93%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm.o
+[ 95%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm.o
+[ 96%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm.o
+[ 98%] Building CXX object CMakeFiles/AutoTunePlugin_AU.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm.o
+[100%] Linking CXX CFBundle shared module "AutoTunePlugin_artefacts/Release/AU/Marsi AutoTune Pro.component/Contents/MacOS/Marsi AutoTune Pro"
+Undefined symbols for architecture x86_64:
+  "RubberBand::R3Stretcher::setPitchScale(double)", referenced from:
+      AutoTuneAudioProcessor::processBlock(juce::AudioBuffer<float>&, juce::MidiBuffer&) in lto.o
+ld: symbol(s) not found for architecture x86_64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make[3]: *** [AutoTunePlugin_artefacts/Release/AU/Marsi AutoTune Pro.component/Contents/MacOS/Marsi AutoTune Pro] Error 1
+make[2]: *** [CMakeFiles/AutoTunePlugin_AU.dir/all] Error 2
+make[1]: *** [CMakeFiles/AutoTunePlugin_AU.dir/rule] Error 2
+make: *** [AutoTunePlugin_AU] Error 2
+[ 78%] Built target AutoTunePlugin
+[ 80%] Generating AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_Standalone/PkgInfo
+[ 81%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX_utils.cpp.o
+[ 83%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_ARA.cpp.o
+[ 85%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Standalone.cpp.o
+[ 86%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_Unity.cpp.o
+[ 88%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AAX.mm.o
+[ 90%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_1.mm.o
+[ 91%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AU_2.mm.o
+[ 93%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_AUv3.mm.o
+[ 95%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_LV2.mm.o
+[ 96%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST2.mm.o
+[ 98%] Building CXX object CMakeFiles/AutoTunePlugin_Standalone.dir/_deps/juce-src/modules/juce_audio_plugin_client/juce_audio_plugin_client_VST3.mm.o
+[100%] Linking CXX executable "AutoTunePlugin_artefacts/Release/Standalone/Marsi AutoTune Pro.app/Contents/MacOS/Marsi AutoTune Pro"
+Undefined symbols for architecture x86_64:
+  "RubberBand::R3Stretcher::setPitchScale(double)", referenced from:
+      AutoTuneAudioProcessor::processBlock(juce::AudioBuffer<float>&, juce::MidiBuffer&) in lto.o
+ld: symbol(s) not found for architecture x86_64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make[3]: *** [AutoTunePlugin_artefacts/Release/Standalone/Marsi AutoTune Pro.app/Contents/MacOS/Marsi AutoTune Pro] Error 1
+make[2]: *** [CMakeFiles/AutoTunePlugin_Standalone.dir/all] Error 2
+make[1]: *** [CMakeFiles/AutoTunePlugin_Standalone.dir/rule] Error 2
+make: *** [AutoTunePlugin_Standalone] Error 2
+marselmacevans@iMac-Marsel build % cd /Users/marselmacevans/Downloads/atmrs/build
+make help | grep AutoTune
+... AutoTunePlugin_All
+... AutoTunePlugin
+... AutoTunePlugin_AU
+... AutoTunePlugin_Standalone
+... AutoTunePlugin_VST3
+marselmacevans@iMac-Marsel build % 

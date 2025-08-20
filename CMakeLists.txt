@@ -153,6 +153,7 @@ target_include_directories(AutoTunePlugin PRIVATE
     ${RUBBERBAND_INCLUDE_DIR}/src
     ${RUBBERBAND_INCLUDE_DIR}/src/common
     ${RUBBERBAND_INCLUDE_DIR}/src/faster  
+    ${RUBBERBAND_INCLUDE_DIR}/src/finer
     ${RUBBERBAND_INCLUDE_DIR}/src/ext
     ${ONNXRUNTIME_INCLUDE_DIR}  # ONNX headers are in root directory
 )
@@ -192,10 +193,11 @@ foreach(format IN ITEMS VST3 AU Standalone)
     endif()
 endforeach()
 
-# Add specific Rubber Band source files (based on official Makefile.macos)
+# Add specific Rubber Band source files (based on official Makefile.macos + finer quality)
 set(RUBBERBAND_SOURCES
     "${RUBBERBAND_SRC_DIR}/rubberband-c.cpp"
     "${RUBBERBAND_SRC_DIR}/RubberBandStretcher.cpp"
+    # Faster quality (R2) files
     "${RUBBERBAND_SRC_DIR}/faster/AudioCurveCalculator.cpp"
     "${RUBBERBAND_SRC_DIR}/faster/CompoundAudioCurve.cpp"
     "${RUBBERBAND_SRC_DIR}/faster/HighFrequencyAudioCurve.cpp"
@@ -204,6 +206,9 @@ set(RUBBERBAND_SOURCES
     "${RUBBERBAND_SRC_DIR}/faster/R2Stretcher.cpp"
     "${RUBBERBAND_SRC_DIR}/faster/StretcherChannelData.cpp"
     "${RUBBERBAND_SRC_DIR}/faster/StretcherProcess.cpp"
+    # Finer quality (R3) files - REQUIRED for setPitchScale()
+    "${RUBBERBAND_SRC_DIR}/finer/R3Stretcher.cpp"
+    # Common files
     "${RUBBERBAND_SRC_DIR}/common/Allocators.cpp"
     "${RUBBERBAND_SRC_DIR}/common/BQResampler.cpp"
     "${RUBBERBAND_SRC_DIR}/common/FFT.cpp"
