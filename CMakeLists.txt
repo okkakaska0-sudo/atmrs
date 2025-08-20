@@ -4,9 +4,9 @@ project(AutoTunePlugin VERSION 1.0.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0" CACHE STRING "Minimum macOS deployment version")
 
-# Safe build for Replit environment - testing functionality
-message(STATUS "Building AutoTune Plugin for Replit environment (testing only)")
+message(STATUS "Building AutoTune Plugin with available macOS functionality")
 
 # Add JUCE
 include(FetchContent)
@@ -16,46 +16,103 @@ FetchContent_Declare(
     DOWNLOAD_EXTRACT_TIMESTAMP true
 )
 
-# Configure JUCE for headless build
 set(JUCE_BUILD_EXTRAS OFF CACHE BOOL "" FORCE)
 set(JUCE_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) 
 set(JUCE_ENABLE_MODULE_SOURCE_GROUPS OFF CACHE BOOL "" FORCE)
 set(JUCE_BUILD_HELPER_TOOLS OFF CACHE BOOL "" FORCE)
-set(JUCE_COPY_PLUGIN_AFTER_BUILD OFF CACHE BOOL "" FORCE)
+set(JUCE_COPY_PLUGIN_AFTER_BUILD ON CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(JUCE)
 
-# Find Eigen3 (installed via packager)
+# Find installed dependencies - only what's actually available
+find_package(PkgConfig REQUIRED)
+
+# Find Eigen3 - comprehensive search
 find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
     PATHS 
-        /nix/store/*/include/eigen3
-        /nix/store/*/include
-        /home/runner/.nix-profile/include/eigen3
-        /nix/var/nix/profiles/default/include/eigen3
-    PATH_SUFFIXES eigen3
+        /usr/local/include/eigen3 
+        /usr/local/opt/eigen/include/eigen3
+        /usr/local/Cellar/eigen/*/include/eigen3
+        /opt/homebrew/include/eigen3
+        /opt/homebrew/opt/eigen/include/eigen3
+        /opt/homebrew/Cellar/eigen/*/include/eigen3
+        /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Headers
 )
 
-# Report findings
+# Find ONNX Runtime - enhanced search for Intel Mac
+find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
+    PATHS 
+        /usr/local/opt/onnxruntime/include
+        /usr/local/include/onnxruntime
+        /usr/local/include
+        /usr/local/Cellar/onnxruntime/*/include
+        /opt/homebrew/opt/onnxruntime/include
+        /opt/homebrew/include/onnxruntime
+        /opt/homebrew/include
+        /opt/homebrew/Cellar/onnxruntime/*/include
+)
+find_library(ONNXRUNTIME_LIB onnxruntime
+    NAMES onnxruntime libonnxruntime onnxruntime.dylib libonnxruntime.dylib
+    PATHS 
+        /usr/local/opt/onnxruntime/lib
+        /usr/local/lib
+        /usr/local/Cellar/onnxruntime/*/lib
+        /opt/homebrew/opt/onnxruntime/lib
+        /opt/homebrew/lib
+        /opt/homebrew/Cellar/onnxruntime/*/lib
+)
+
+# Find Rubber Band - using discovered paths
+find_path(RUBBERBAND_INCLUDE_DIR rubberband/RubberBandStretcher.h
+    PATHS 
+        /usr/local/Cellar/rubberband/4.0.0/include
+        /usr/local/include
+        /usr/local/opt/rubberband/include
+        /usr/local/Cellar/rubberband/*/include
+        /opt/homebrew/include
+        /opt/homebrew/opt/rubberband/include
+        /opt/homebrew/Cellar/rubberband/*/include
+)
+find_library(RUBBERBAND_LIB rubberband
+    NAMES rubberband librubberband
+    PATHS 
+        /usr/local/Cellar/rubberband/4.0.0/lib
+        /usr/local/lib
+        /usr/local/opt/rubberband/lib
+        /usr/local/Cellar/rubberband/*/lib
+        /opt/homebrew/lib
+        /opt/homebrew/opt/rubberband/lib
+        /opt/homebrew/Cellar/rubberband/*/lib
+)
+
+# Report what was found
 if(EIGEN3_INCLUDE_DIR)
     message(STATUS "Found Eigen3: ${EIGEN3_INCLUDE_DIR}")
     set(HAS_EIGEN3 TRUE)
 else()
-    message(WARNING "Eigen3 not found - using fallback math")
+    message(WARNING "Eigen3 not found - mathematical operations will be limited")
     set(HAS_EIGEN3 FALSE)
 endif()
 
-# Disable all external dependencies for safe Replit testing
-set(HAS_ONNX FALSE)
-set(HAS_RUBBERBAND FALSE)
-set(HAS_CREPE FALSE)
-set(HAS_DDSP FALSE)
+if(ONNXRUNTIME_INCLUDE_DIR AND ONNXRUNTIME_LIB)
+    message(STATUS "Found ONNX Runtime: ${ONNXRUNTIME_INCLUDE_DIR}")
+    message(STATUS "ONNX Runtime library: ${ONNXRUNTIME_LIB}")
+    set(HAS_ONNX TRUE)
+else()
+    message(WARNING "ONNX Runtime not found - AI features will be disabled")
+    set(HAS_ONNX FALSE)
+endif()
 
-message(STATUS "Replit build configuration:")
-message(STATUS "  Eigen3: ${HAS_EIGEN3}")
-message(STATUS "  ONNX Runtime: ${HAS_ONNX} (disabled for Replit)")
-message(STATUS "  Rubber Band: ${HAS_RUBBERBAND} (disabled for Replit)")
+if(RUBBERBAND_INCLUDE_DIR AND RUBBERBAND_LIB)
+    message(STATUS "Found Rubber Band: ${RUBBERBAND_INCLUDE_DIR}")
+    message(STATUS "Rubber Band library: ${RUBBERBAND_LIB}")
+    set(HAS_RUBBERBAND TRUE)
+else()
+    message(WARNING "Rubber Band not found - pitch shifting will use basic algorithms")
+    set(HAS_RUBBERBAND FALSE)
+endif()
 
-# Define source files
+# Define ALL source files
 set(SOURCES
     Source/PluginProcessor.cpp
     Source/PluginEditor.cpp
@@ -68,25 +125,25 @@ set(SOURCES
     Source/AIModelLoader.cpp
 )
 
-# Add plugin target for testing (Standalone only)
+# Create the plugin with ALL formats
 juce_add_plugin(AutoTunePlugin
     COMPANY_NAME "ReplicaStudio"
     IS_SYNTH FALSE
     NEEDS_MIDI_INPUT FALSE
     NEEDS_MIDI_OUTPUT FALSE
     IS_MIDI_EFFECT FALSE
-    EDITOR_WANTS_KEYBOARD_FOCUS FALSE
-    COPY_PLUGIN_AFTER_BUILD FALSE
+    EDITOR_WANTS_KEYBOARD_FOCUS TRUE
+    COPY_PLUGIN_AFTER_BUILD TRUE
     PLUGIN_MANUFACTURER_CODE "Repl"
     PLUGIN_CODE "ATun"
-    FORMATS Standalone
-    PRODUCT_NAME "AutoTune Plugin (Replit Test)"
+    FORMATS VST3 AU Standalone
+    PRODUCT_NAME "AutoTune Plugin"
 )
 
 # Add source files
 target_sources(AutoTunePlugin PRIVATE ${SOURCES})
 
-# Safe compiler definitions for Replit
+# Compiler definitions based on available libraries
 target_compile_definitions(AutoTunePlugin
     PUBLIC
         JUCE_WEB_BROWSER=0
@@ -96,21 +153,28 @@ target_compile_definitions(AutoTunePlugin
         JUCE_REPORT_APP_USAGE=0
         JUCE_STRICT_REFCOUNTEDPTR=1
         USE_EIGEN=$<BOOL:${HAS_EIGEN3}>
-        USE_ONNX=0
-        USE_CREPE=0
-        USE_DDSP=0
-        USE_RUBBERBAND=0
-        REPLIT_BUILD=1
+        USE_RUBBERBAND=$<BOOL:${HAS_RUBBERBAND}>
+        USE_ONNX=$<BOOL:${HAS_ONNX}>
+        USE_CREPE=$<BOOL:${HAS_ONNX}>
+        USE_DDSP=$<BOOL:${HAS_ONNX}>
     PRIVATE
         JUCE_APPLICATION_NAME_STRING="$<TARGET_PROPERTY:AutoTunePlugin,JUCE_PLUGIN_NAME>"
         JUCE_APPLICATION_VERSION_STRING="$<TARGET_PROPERTY:AutoTunePlugin,JUCE_PLUGIN_VERSION>"
 )
 
-# Include directories
+# Include directories for available libraries
 target_include_directories(AutoTunePlugin PRIVATE Source)
 
 if(HAS_EIGEN3)
     target_include_directories(AutoTunePlugin PRIVATE ${EIGEN3_INCLUDE_DIR})
+endif()
+
+if(HAS_ONNX)
+    target_include_directories(AutoTunePlugin PRIVATE ${ONNXRUNTIME_INCLUDE_DIR})
+endif()
+
+if(HAS_RUBBERBAND)
+    target_include_directories(AutoTunePlugin PRIVATE ${RUBBERBAND_INCLUDE_DIR})
 endif()
 
 # Link libraries
@@ -124,7 +188,15 @@ target_link_libraries(AutoTunePlugin
     PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_lto_flags
+        # juce::juce_recommended_warning_flags  # Disabled for compatibility
 )
 
-message(STATUS "AutoTune Plugin configured for safe Replit testing")
-message(STATUS "Note: This is a test build only - full functionality requires macOS")
+if(HAS_ONNX)
+    target_link_libraries(AutoTunePlugin PRIVATE ${ONNXRUNTIME_LIB})
+endif()
+
+if(HAS_RUBBERBAND)
+    target_link_libraries(AutoTunePlugin PRIVATE ${RUBBERBAND_LIB})
+endif()
+
+message(STATUS "AutoTune Plugin configured with available macOS functionality")
