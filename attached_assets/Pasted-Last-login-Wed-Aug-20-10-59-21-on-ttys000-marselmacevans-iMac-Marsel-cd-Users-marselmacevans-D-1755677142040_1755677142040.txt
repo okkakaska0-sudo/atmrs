@@ -1,0 +1,72 @@
+Last login: Wed Aug 20 10:59:21 on ttys000
+marselmacevans@iMac-Marsel ~ % cd /Users/marselmacevans/Downloads/atmrs
+./build_simple.sh
+🎵 Building ProAutoTune Plugin...
+📦 Configuring build system...
+-- The C compiler identification is AppleClang 16.0.0.16000026
+-- The CXX compiler identification is AppleClang 16.0.0.16000026
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building for macOS
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Rubber Band Library found: /usr/local/lib/librubberband.dylib
+-- Rubber Band Library integrated into project
+-- Fetching ONNX Runtime for macOS...
+CMake Warning (dev) at /usr/local/share/cmake/Modules/FetchContent.cmake:1953 (message):
+  Calling FetchContent_Populate(eigen3) is deprecated, call
+  FetchContent_MakeAvailable(eigen3) instead.  Policy CMP0169 can be set to
+  OLD to allow FetchContent_Populate(eigen3) to be called directly for now,
+  but the ability to call it with declared details will be removed completely
+  in a future version.
+Call Stack (most recent call first):
+  CMakeLists.txt:99 (FetchContent_Populate)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Using Kiss FFT for FFT operations
+CMake Deprecation Warning at build/_deps/kissfft-src/CMakeLists.txt:35 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Building KissFFT with datatype: float
+-- Building static library
+-- PKGINCLUDEDIR is /kissfft
+[ 11%] Creating directories for 'libsamplerate-populate'
+[ 22%] Performing download step (git clone) for 'libsamplerate-populate'
+Клонирование в «libsamplerate-src»...
+fatal: неправильная ссылка: 0.2.3
+CMake Error at libsamplerate-subbuild/libsamplerate-populate-prefix/tmp/libsamplerate-populate-gitclone.cmake:61 (message):
+  Failed to checkout tag: '0.2.3'
+
+
+make[2]: *** [libsamplerate-populate-prefix/src/libsamplerate-populate-stamp/libsamplerate-populate-download] Error 1
+make[1]: *** [CMakeFiles/libsamplerate-populate.dir/all] Error 2
+make: *** [all] Error 2
+
+CMake Error at /usr/local/share/cmake/Modules/FetchContent.cmake:1918 (message):
+  Build step for libsamplerate failed: 2
+Call Stack (most recent call first):
+  /usr/local/share/cmake/Modules/FetchContent.cmake:1609 (__FetchContent_populateSubbuild)
+  /usr/local/share/cmake/Modules/FetchContent.cmake:2145:EVAL:2 (__FetchContent_doPopulation)
+  /usr/local/share/cmake/Modules/FetchContent.cmake:2145 (cmake_language)
+  /usr/local/share/cmake/Modules/FetchContent.cmake:2384 (__FetchContent_Populate)
+  CMakeLists.txt:138 (FetchContent_MakeAvailable)
+
+
+-- Configuring incomplete, errors occurred!
+❌ CMake configuration failed!
+marselmacevans@iMac-Marsel atmrs % 

@@ -121,26 +121,11 @@ set(KISSFFT_TOOLS OFF CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(kissfft)
 
-# Add libsamplerate for high-quality sample rate conversion
-FetchContent_Declare(
-    libsamplerate
-    GIT_REPOSITORY https://github.com/libsndfile/libsamplerate.git
-    GIT_TAG 0.2.3
-    GIT_SHALLOW TRUE
-)
-
-# Configure libsamplerate build
-set(LIBSAMPLERATE_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(LIBSAMPLERATE_TESTS OFF CACHE BOOL "" FORCE)
-set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
-set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
-
-FetchContent_MakeAvailable(libsamplerate)
+# libsamplerate removed - using JUCE built-in audio processing instead
 
 message(STATUS "All libraries integrated into project")
 set(USE_EIGEN ON)
 set(USE_KISSFFT ON)
-set(USE_LIBSAMPLERATE ON)
 
 # Plugin sources
 set(PLUGIN_SOURCES
@@ -228,9 +213,7 @@ target_link_libraries(AutoTunePlugin PRIVATE Eigen3::Eigen)
 target_compile_definitions(AutoTunePlugin PRIVATE USE_KISSFFT=1)
 target_link_libraries(AutoTunePlugin PRIVATE kissfft)
 
-# libsamplerate
-target_compile_definitions(AutoTunePlugin PRIVATE USE_LIBSAMPLERATE=1)
-target_link_libraries(AutoTunePlugin PRIVATE samplerate)
+# libsamplerate removed - using JUCE built-in processing
 
 # ONNX Runtime (macOS only)
 if(USE_ONNX)
