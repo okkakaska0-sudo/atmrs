@@ -43,35 +43,43 @@ find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
         /opt/homebrew/opt/eigen/include/eigen3
 )
 
-# Find ONNX Runtime - Intel paths  
-find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
+# Find ONNX Runtime - Intel paths with verbose output
+find_path(ONNXRUNTIME_INCLUDE_DIR 
+    NAMES onnxruntime_cxx_api.h onnxruntime_c_api.h
     PATHS 
         ${HOMEBREW_PREFIX}/opt/onnxruntime/include
         ${HOMEBREW_PREFIX}/include/onnxruntime
         ${HOMEBREW_PREFIX}/include
         ${HOMEBREW_PREFIX}/Cellar/onnxruntime/*/include
+    NO_DEFAULT_PATH
 )
-find_library(ONNXRUNTIME_LIB onnxruntime
-    NAMES onnxruntime libonnxruntime onnxruntime.dylib libonnxruntime.dylib
+
+find_library(ONNXRUNTIME_LIB 
+    NAMES libonnxruntime.dylib onnxruntime libonnxruntime
     PATHS 
         ${HOMEBREW_PREFIX}/opt/onnxruntime/lib
         ${HOMEBREW_PREFIX}/lib
         ${HOMEBREW_PREFIX}/Cellar/onnxruntime/*/lib
+    NO_DEFAULT_PATH
 )
 
-# Find Rubber Band - Intel paths
-find_path(RUBBERBAND_INCLUDE_DIR rubberband/RubberBandStretcher.h
+# Find Rubber Band - Intel paths with verbose output  
+find_path(RUBBERBAND_INCLUDE_DIR 
+    NAMES rubberband/RubberBandStretcher.h
     PATHS 
         ${HOMEBREW_PREFIX}/include
         ${HOMEBREW_PREFIX}/opt/rubberband/include
         ${HOMEBREW_PREFIX}/Cellar/rubberband/*/include
+    NO_DEFAULT_PATH
 )
-find_library(RUBBERBAND_LIB rubberband
-    NAMES rubberband librubberband rubberband.dylib librubberband.dylib
+
+find_library(RUBBERBAND_LIB 
+    NAMES librubberband.dylib rubberband librubberband
     PATHS 
         ${HOMEBREW_PREFIX}/lib
         ${HOMEBREW_PREFIX}/opt/rubberband/lib
         ${HOMEBREW_PREFIX}/Cellar/rubberband/*/lib
+    NO_DEFAULT_PATH
 )
 
 # Report found libraries
