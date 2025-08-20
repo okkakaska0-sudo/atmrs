@@ -4,7 +4,7 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
-packages = ["cmake", "gcc", "pkg-config", "xorg.libX11", "xorg.libXinerama", "xorg.libXrandr", "xorg.libXcursor", "freetype", "alsa-lib", "mesa", "gnumake", "curl", "freeglut", "libjack2", "git", "wget", "unzip", "xorg.libXext"]
+packages = ["cmake", "gcc", "pkg-config", "xorg.libX11", "xorg.libXinerama", "xorg.libXrandr", "xorg.libXcursor", "freetype", "alsa-lib", "mesa", "gnumake", "curl", "freeglut", "libjack2", "git", "wget", "unzip", "xorg.libXext", "eigen", "onnxruntime", "gtk3"]
 
 [workflows]
 runButton = "Project"
@@ -29,6 +29,10 @@ args = "Build Full macOS Plugin"
 [[workflows.workflow.tasks]]
 task = "workflow.run"
 args = "Build Full Replit Plugin"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Replit Plugin Build"
 
 [[workflows.workflow]]
 name = "build_and_test"
@@ -67,6 +71,17 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "./build_replit_full.sh"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow]]
+name = "Replit Plugin Build"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./build_replit.sh"
 
 [workflows.workflow.metadata]
 outputType = "console"

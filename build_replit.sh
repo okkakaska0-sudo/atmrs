@@ -1,44 +1,40 @@
 #!/bin/bash
 
-# Build script for AutoTune Plugin on Replit
-# Adapted for Linux environment with macOS compatibility mode
+echo "🎵 Building AutoTune Plugin for Replit Linux environment..."
+echo "📦 Using Replit-optimized configuration..."
 
-echo "🎵 Building ProAutoTune Plugin on Replit..."
+# Clean previous builds
+rm -rf build_replit build CMakeCache.txt
+
+# Use the Replit configuration
+cp CMakeLists_replit.txt CMakeLists.txt
 
 # Create build directory
-mkdir -p build
-cd build
+mkdir -p build_replit
+cd build_replit
 
-# Set environment variables for macOS compatibility
-export MACOS_BUILD=1
-export APPLE=1
-
-# Configure with CMake for Linux build with macOS compatibility
-echo "📦 Configuring build system..."
-cmake .. -DCMAKE_BUILD_TYPE=Release \
-         -DCMAKE_CXX_STANDARD=17 \
-         -DCMAKE_POSITION_INDEPENDENT_CODE=ON \
-         -DCMAKE_INSTALL_PREFIX=../install \
-         -DJUCE_BUILD_EXTRAS=OFF \
-         -DJUCE_BUILD_EXAMPLES=OFF
-
-# Check if configuration was successful
-if [ $? -ne 0 ]; then
-    echo "❌ CMake configuration failed!"
-    exit 1
-fi
+# Configure with CMake for Replit
+cmake .. \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DJUCE_BUILD_EXTRAS=OFF \
+    -DJUCE_BUILD_EXAMPLES=OFF \
+    -DJUCE_COPY_PLUGIN_AFTER_BUILD=OFF \
+    -DJUCE_BUILD_HELPER_TOOLS=OFF \
+    -DCMAKE_VERBOSE_MAKEFILE=ON
 
 # Build the plugin
 echo "🔨 Building plugin..."
-cmake --build . --config Release --parallel $(nproc)
+cmake --build . --config Release --parallel $(nproc) || {
+    echo "❌ Build failed!"
+    echo "📋 Showing error details..."
+    exit 1
+}
 
-# Check if build was successful
-if [ $? -ne 0 ]; then
+if [ $? -eq 0 ]; then
+    echo "✅ AutoTune Plugin built successfully for Replit!"
+    echo "📂 Build artifacts:"
+    find . -name "*.so" -o -name "*.vst3" -o -name "AutoTunePlugin*" -type f | head -10
+else
     echo "❌ Build failed!"
     exit 1
 fi
-
-echo "✅ Build completed successfully!"
-echo ""
-echo "📍 Plugin built in build/ directory"
-echo "🎉 Ready for testing!"
