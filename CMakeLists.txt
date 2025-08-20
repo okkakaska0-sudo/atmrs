@@ -110,7 +110,7 @@ message(STATUS "Using Kiss FFT for FFT operations")
 FetchContent_Declare(
     kissfft
     GIT_REPOSITORY https://github.com/mborgerding/kissfft.git
-    GIT_TAG v131.1.0
+    GIT_TAG 131.1.0
     GIT_SHALLOW TRUE
 )
 
