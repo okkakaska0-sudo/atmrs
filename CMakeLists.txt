@@ -68,7 +68,7 @@ FetchContent_Declare(
 FetchContent_GetProperties(onnxruntime)
 if(NOT onnxruntime_POPULATED AND APPLE)
     message(STATUS "Fetching ONNX Runtime for macOS...")
-    FetchContent_Populate(onnxruntime)
+    FetchContent_MakeAvailable(onnxruntime)
     set(ONNXRUNTIME_ROOT_PATH ${onnxruntime_SOURCE_DIR})
     set(USE_ONNX ON)
 else()
@@ -89,6 +89,8 @@ set(EIGEN_BUILD_TESTING OFF CACHE BOOL "" FORCE)
 set(EIGEN_BUILD_DOC OFF CACHE BOOL "" FORCE)
 set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
 set(EIGEN_BUILD_PKGCONFIG OFF CACHE BOOL "" FORCE)
+set(EIGEN_BUILD_BLAS OFF CACHE BOOL "" FORCE)
+set(EIGEN_BUILD_LAPACK OFF CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(eigen3)
 
