@@ -37,7 +37,7 @@ CMAKE_BUILD_TYPE:STRING=Release
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
 //CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322/bin/c++
+CMAKE_CXX_COMPILER:STRING=/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322/bin/c++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -63,7 +63,7 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
 //C compiler
-CMAKE_C_COMPILER:FILEPATH=/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322/bin/cc
+CMAKE_C_COMPILER:STRING=/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322/bin/cc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -265,15 +265,17 @@ FETCHCONTENT_UPDATES_DISCONNECTED_JUCE:BOOL=OFF
 //Value Computed by CMake
 JUCE_BINARY_DIR:STATIC=/home/runner/workspace/build/_deps/juce-build
 
-JUCE_BUILD_EXAMPLES:BOOL=OFF
+//No help, variable specified on the command line.
+JUCE_BUILD_EXAMPLES:UNINITIALIZED=OFF
 
-JUCE_BUILD_EXTRAS:BOOL=OFF
+//No help, variable specified on the command line.
+JUCE_BUILD_EXTRAS:UNINITIALIZED=OFF
 
-JUCE_BUILD_HELPER_TOOLS:BOOL=OFF
+//No help, variable specified on the command line.
+JUCE_BUILD_HELPER_TOOLS:UNINITIALIZED=OFF
 
-//Whether or not plugins should be installed to the system after
-// building
-JUCE_COPY_PLUGIN_AFTER_BUILD:BOOL=ON
+//No help, variable specified on the command line.
+JUCE_COPY_PLUGIN_AFTER_BUILD:UNINITIALIZED=OFF
 
 //Show all module sources in IDE projects
 JUCE_ENABLE_MODULE_SOURCE_GROUPS:BOOL=OFF
@@ -349,6 +351,8 @@ CMAKE_C_COMPILER-ADVANCED:INTERNAL=1
 CMAKE_C_COMPILER_AR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_COMPILER_RANLIB
 CMAKE_C_COMPILER_RANLIB-ADVANCED:INTERNAL=1
+//Result of TRY_COMPILE
+CMAKE_C_COMPILER_WORKS:INTERNAL=FALSE
 //ADVANCED property for variable: CMAKE_C_FLAGS
 CMAKE_C_FLAGS-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_C_FLAGS_DEBUG
@@ -407,7 +411,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=5
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

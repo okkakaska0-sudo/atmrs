@@ -5,6 +5,7 @@
 #include <future>
 #include <memory>
 #include <juce_core/juce_core.h>
+#include <juce_audio_utils/juce_audio_utils.h>
 
 // PIMPL implementation to hide complex AI model details
 struct AIModelLoader::Impl
@@ -36,7 +37,7 @@ struct AIModelLoader::Impl
                 float correlation = 0.0f;
                 int count = 0;
                 
-                for (int i = 0; i < static_cast<int>(audio.size()) - period; ++i)
+                for (size_t i = 0; i < audio.size() - static_cast<size_t>(period); ++i)
                 {
                     correlation += audio[i] * audio[i + period];
                     count++;

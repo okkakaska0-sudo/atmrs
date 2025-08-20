@@ -34,9 +34,9 @@ void PitchCorrectionEngine::prepare(double newSampleRate, int newBlockSize)
     blockSize = newBlockSize;
     
     // Resize buffers
-    autocorrelationBuffer.resize(blockSize * 2);
+    autocorrelationBuffer.resize(static_cast<size_t>(blockSize) * 2);
     windowedBuffer.resize(fftSize);
-    tempBuffer.resize(blockSize);
+    tempBuffer.resize(static_cast<size_t>(blockSize));
     
     // Calculate grain parameters based on sample rate
     grainSize = static_cast<int>(sampleRate * 0.025); // 25ms grains
@@ -194,7 +194,7 @@ float PitchCorrectionEngine::detectPitchYIN(const float* buffer, int numSamples)
     if (numSamples < 128) return 0.0f;
     
     int bufferSize = std::min(numSamples, 2048);
-    std::vector<float> yinBuffer(bufferSize / 2, 0.0f);
+    std::vector<float> yinBuffer(static_cast<size_t>(bufferSize) / 2, 0.0f);
     
     // Step 1: Difference function
     for (int tau = 1; tau < bufferSize / 2; ++tau)
@@ -396,7 +396,7 @@ void PitchCorrectionEngine::detectFormants(const std::vector<float>& spectrum)
     std::sort(peaks.begin(), peaks.end(), std::greater<std::pair<float, int>>());
     
     // Take the top formants
-    for (int i = 0; i < std::min(maxFormants, static_cast<int>(peaks.size())); ++i)
+    for (size_t i = 0; i < std::min(static_cast<size_t>(maxFormants), peaks.size()); ++i)
     {
         formantAmplitudes[i] = peaks[i].first;
         formantFrequencies[i] = static_cast<float>(peaks[i].second * sampleRate / fftSize);
@@ -511,7 +511,7 @@ void PitchCorrectionEngine::smoothPitch(float newPitch)
     if (newPitch > 0.0f)
     {
         // Add to history
-        for (int i = 0; i < pitchHistoryLength - 1; ++i)
+        for (size_t i = 0; i < static_cast<size_t>(pitchHistoryLength - 1); ++i)
         {
             pitchHistory[i] = pitchHistory[i + 1];
         }

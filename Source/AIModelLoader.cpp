@@ -37,7 +37,7 @@ struct AIModelLoader::Impl
                 float correlation = 0.0f;
                 int count = 0;
                 
-                for (int i = 0; i < static_cast<int>(audio.size()) - period; ++i)
+                for (size_t i = 0; i < audio.size() - static_cast<size_t>(period); ++i)
                 {
                     correlation += audio[i] * audio[i + period];
                     count++;
@@ -57,7 +57,7 @@ struct AIModelLoader::Impl
             if (bestPeriod > 0 && maxCorrelation > 0.3f)
             {
                 result.frequency = sampleRate / bestPeriod;
-                result.confidence = juce::jmin(maxCorrelation * 2.0f, 1.0f);
+                result.confidence = juce::jmin<float>(maxCorrelation * 2.0f, 1.0f);
                 result.voicing = result.confidence;
                 
                 // Mock harmonic analysis
@@ -117,7 +117,7 @@ struct AIModelLoader::Impl
                 // Apply loudness
                 sampleValue *= params.loudness;
                 
-                output[sample] = juce::jlimit(-1.0f, 1.0f, sampleValue);
+                output[sample] = juce::jlimit<float>(-1.0f, 1.0f, sampleValue);
             }
             
             return output;
@@ -426,7 +426,7 @@ void AIModelLoader::setUseMultiThreading(bool useThreads)
 
 void AIModelLoader::setMaxThreads(int threads)
 {
-    maxThreads = juce::jmax(1, threads);
+    maxThreads = juce::jmax<int>(1, threads);
     threadPool.setNumThreads(maxThreads);
 }
 
@@ -471,7 +471,7 @@ std::vector<float> AIModelLoader::preprocessAudioForCrepe(const float* input, in
         {
             float sourceIndex = i * ratio;
             int index1 = static_cast<int>(sourceIndex);
-            int index2 = juce::jmin(index1 + 1, numSamples - 1);
+            int index2 = juce::jmin<int>(index1 + 1, numSamples - 1);
             float fraction = sourceIndex - index1;
             
             output[i] = input[index1] * (1.0f - fraction) + input[index2] * fraction;

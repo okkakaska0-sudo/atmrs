@@ -1,0 +1,96 @@
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:107:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:129:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  129 |   if (ptr == 0) return handmade_aligned_malloc(size);
+      |              ^
+      |              nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:133:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:133:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:913:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  913 |   pointer allocate(size_type num, const void* /*hint*/ = 0)
+      |                                                          ^
+      |                                                          nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:972:26: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  972 |       int ways        = (abcd[1] & 0xFFC00000) >> 22; // B[31:22]
+      |                          ^~~~~~~ ~
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:913:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  913 |   pointer allocate(size_type num, const void* /*hint*/ = 0)
+      |                                                          ^
+      |                                                          nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:972:26: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  972 |       int ways        = (abcd[1] & 0xFFC00000) >> 22; // B[31:22]
+      |                          ^~~~~~~ ~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:171:
+/usr/local/include/eigen3/Eigen/src/Core/MathFunctions.h:1444:18: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+ 1444 |   unsigned int v(x);
+      |                ~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:171:
+/usr/local/include/eigen3/Eigen/src/Core/MathFunctions.h:1444:18: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+ 1444 |   unsigned int v(x);
+      |                ~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:176:
+/usr/local/include/eigen3/Eigen/src/Core/arch/Default/Half.h:606:24: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  606 |   o.u = (h.x & 0x7fff) << 13;             // exponent/mantissa bits
+      |       ~ ~~~~~~~~~~~~~~~^~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/Default/Half.h:618:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  618 |   o.u |= (h.x & 0x8000) << 16;    // sign bit
+      |       ~~ ~~~~~~~~~~~~~~~^~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:176:
+/usr/local/include/eigen3/Eigen/src/Core/arch/Default/Half.h:606:24: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  606 |   o.u = (h.x & 0x7fff) << 13;             // exponent/mantissa bits
+      |       ~ ~~~~~~~~~~~~~~~^~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/Default/Half.h:618:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  618 |   o.u |= (h.x & 0x8000) << 16;    // sign bit
+      |       ~~ ~~~~~~~~~~~~~~~^~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:205:
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:263:126: warning: implicit conversion changes signedness: 'unsigned int' to 'const int' [-Wsign-conversion]
+  263 | template<> EIGEN_STRONG_INLINE Packet4f pset1frombits<Packet4f>(unsigned int from) { return _mm_castsi128_ps(pset1<Packet4i>(from)); }
+      |                                                                                                              ~~~~~           ^~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:264:122: warning: implicit conversion changes signedness: 'uint64_t' (aka 'unsigned long long') to 'long long' [-Wsign-conversion]
+  264 | template<> EIGEN_STRONG_INLINE Packet2d pset1frombits<Packet2d>(uint64_t from) { return _mm_castsi128_pd(_mm_set1_epi64x(from)); }
+      |                                                                                                          ~~~~~~~~~~~~~~~ ^~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:90: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~                                  ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:79: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~                       ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:68: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~            ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:57: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~ ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:329:76: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  329 |   const Packet2d mask = _mm_castsi128_pd(_mm_setr_epi32(0x0,0x80000000,0x0,0x80000000));
+      |                                          ~~~~~~~~~~~~~~                    ^~~~~~~~~~

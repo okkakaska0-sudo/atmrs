@@ -125,6 +125,7 @@ public:
         
         AIError() : type(None) {}
         AIError(Type t, const juce::String& msg) : type(t), message(msg) {}
+        bool operator==(const AIError& other) const { return type == other.type; }
     };
     
     AIError getLastError() const { return lastError; }

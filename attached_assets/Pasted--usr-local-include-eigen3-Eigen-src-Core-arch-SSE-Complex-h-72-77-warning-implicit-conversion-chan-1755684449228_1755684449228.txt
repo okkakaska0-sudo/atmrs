@@ -1,0 +1,87 @@
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:72:77: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   72 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~                       ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:72:66: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   72 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~            ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:72:55: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   72 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~ ^~~~~~~~~~
+ /usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:77:88: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   77 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x00000000,0x80000000,0x00000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~                                  ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:77:66: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   77 |   conmask = _mm_castsi128_pd(_mm_set_epi32(0x80000000,0x0,0x0,0x0));
+      |                                         ~~~~~~~~~~~~~ ^~~~~~~~~~
+st __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x00000000,0x80000000,0x00000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~            ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:239:55: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  239 |   const __m128d mask = _mm_castsi128_pd(_mm_set_epi32(0x80000000,0x0,0x0,0x0));
+      |                                         ~~~~~~~~~~~~~ ^~~~~~~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:269:
+/usr/local/include/eigen3/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:269:
+/usr/local/include/eigen3/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:32:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:33:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:32:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:33:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+/Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:10: fatal error: 'onnxruntime_cxx_api.h' file not found
+   11 | #include <onnxruntime_cxx_api.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+/Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:10: fatal error: 'onnxruntime_cxx_api.h' file not found
+   11 | #include <onnxruntime_cxx_api.h>
+      |          ^~~~~~~~~~~~~~~~~~~~~~~
+32 warnings and 1 error generated.
+32 warnings and 1 error generated.
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:37:44: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   37 |     autocorrelationBuffer.resize(blockSize * 2);
+      |                           ~~~~~~ ~~~~~~~~~~^~~

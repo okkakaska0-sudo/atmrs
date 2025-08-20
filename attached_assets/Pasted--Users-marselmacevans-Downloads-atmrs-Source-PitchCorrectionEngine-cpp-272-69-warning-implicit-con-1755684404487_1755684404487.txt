@@ -1,0 +1,70 @@
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:272:69: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  272 |         frequencyData[i] = juce::dsp::Complex<float>(windowedBuffer[i], 0.0f);
+      |                                                      ~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:280:27: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  280 |         magnitudeSpectrum[i] = std::abs(frequencyData[i]);
+      |         ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:291:31: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  291 |         if (magnitudeSpectrum[i] > maxMag)
+      |             ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:293:40: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  293 |             maxMag = magnitudeSpectrum[i];
+      |                      ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:303:50: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  303 |             float y1 = magnitudeSpectrum[peakBin - 1];
+      |                        ~~~~~~~~~~~~~~~~~ ~~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:304:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  304 |             float y2 = magnitudeSpectrum[peakBin];
+      |                        ~~~~~~~~~~~~~~~~~ ^~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:305:50: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  305 |             float y3 = magnitudeSpectrum[peakBin + 1];
+      |                        ~~~~~~~~~~~~~~~~~ ~~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:289:42: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  289 |     for (int i = minBin; i < maxBin && i < magnitudeSpectrum.size(); ++i)
+      |                                        ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:301:36: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  301 |         if (peakBin > 1 && peakBin < magnitudeSpectrum.size() - 1)
+      |                            ~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:337:45: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  337 |         for (size_t i = 0; i < hps.size() / harmonic; ++i)
+      |                                           ~ ^~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:339:45: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+  339 |             hps[i] *= magnitudeSpectrum[i * harmonic];
+      |                                           ~ ^~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:351:17: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  351 |         if (hps[i] > maxValue)
+      |             ~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:353:28: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  353 |             maxValue = hps[i];
+      |                        ~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:349:42: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  349 |     for (int i = minBin; i < maxBin && i < hps.size(); ++i)
+      |                                        ~ ^ ~~~~~~~~~~
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o] Error 1
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:388:57: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  388 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                                                ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:388:72: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  388 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                                                              ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:388:26: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  388 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                 ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:388:41: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  388 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                               ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:387:57: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  387 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                                                ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:387:72: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  387 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                                                              ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:387:26: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  387 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                 ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:387:41: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  387 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                               ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:390:43: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  390 |                 peaks.push_back({spectrum[i], i});
+      |                                  ~~~~~~~~ ^

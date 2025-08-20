@@ -1,0 +1,30 @@
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:401:27: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  401 |         formantAmplitudes[i] = peaks[i].first;
+      |         ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:401:38: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  401 |         formantAmplitudes[i] = peaks[i].first;
+      |                                ~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:402:28: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  402 |         formantFrequencies[i] = static_cast<float>(peaks[i].second * sampleRate / fftSize);
+      |         ~~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:402:58: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  402 |         formantFrequencies[i] = static_cast<float>(peaks[i].second * sampleRate / fftSize);
+      |                                                    ~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:516:26: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  516 |             pitchHistory[i] = pitchHistory[i + 1];
+      |             ~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:516:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  516 |             pitchHistory[i] = pitchHistory[i + 1];
+      |                               ~~~~~~~~~~~~ ~~^~~
+88 warnings generated.
+make[1]: *** [CMakeFiles/AutoTunePlugin.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[  7%] Linking CXX executable juce_vst3_helper
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/juce_vst3_helper.dir/link.txt --verbose=1
+/usr/bin/c++ -O3 -DNDEBUG -Wl,-search_paths_first -Wl,-headerpad_max_install_names "CMakeFiles/juce_vst3_helper.dir/_deps/juce-src/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.mm.o" -o juce_vst3_helper  -framework Cocoa
+[  7%] Built target juce_vst3_helper
+make: *** [all] Error 2
+
+❌ Build failed!
+📋 Showing error details...
+marselmacevans@iMac-Marsel atmrs % 
