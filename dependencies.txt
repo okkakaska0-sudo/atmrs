@@ -1,53 +1,54 @@
 AutoTune Plugin - Integrated Libraries
 =====================================
 
-All libraries are automatically downloaded and built with the project:
+Most libraries are automatically downloaded and built with the project.
+Some optional libraries can be installed via Homebrew for better performance.
 
 Core Framework:
-✅ JUCE Framework 7.0.9 - Audio plugin framework with GUI
+✅ JUCE Framework 7.0.9 - Audio plugin framework
    - Real-time audio processing
-   - Cross-platform plugin formats (VST3, AU)
+   - macOS plugin formats (VST3, AU)
    - Professional GUI components
+   - Automatically downloaded
 
 Audio Processing:
-✅ Rubber Band Library v3.3.0 - Professional pitch shifting
+🔄 Rubber Band Library v3.3.0 - Professional pitch shifting (OPTIONAL)
    - High-quality time/pitch manipulation
    - Formant preservation
-   - Real-time processing
+   - Install: brew install rubberband
+   - Fallback: Basic algorithms if not installed
 
-✅ FFTW3 3.3.10 - Fast Fourier Transform
-   - Optimized frequency domain processing
-   - Multi-threaded support
-   - Float precision
-
-✅ Kiss FFT v131.1.0 - Lightweight FFT alternative
+✅ Kiss FFT v131.1.0 - Fast Fourier Transform
+   - Lightweight and efficient
    - Minimal dependencies
-   - Fast and efficient
-   - Fallback for FFTW3
+   - Automatically downloaded
 
 ✅ libsamplerate 0.2.2 - High-quality sample rate conversion
    - Professional audio resampling
    - Multiple algorithms
-   - Low distortion
+   - Automatically downloaded
 
 Mathematics & AI:
 ✅ Eigen3 3.4.0 - Linear algebra library
    - Matrix operations
-   - Optimized mathematical functions
    - Header-only library
+   - Automatically downloaded
 
 ✅ ONNX Runtime 1.16.3 - AI model inference (macOS)
    - CREPE pitch detection models
    - DDSP synthesis models
-   - Hardware acceleration
+   - Automatically downloaded
 
 Project Structure:
 - Source/ - C++ source code
 - Models/ - AI model files (CREPE/DDSP)
 - CMakeLists.txt - Build configuration
 - build_simple.sh - Build script
+- install_dependencies.sh - Install optional dependencies
 
-Build Command:
-./build_simple.sh
+Build Commands:
+1. Install optional dependencies: ./install_dependencies.sh
+2. Build plugin: ./build_simple.sh
 
-All dependencies are automatically handled - no manual installation required!
+Most dependencies are automatically handled!
+Only Rubber Band Library needs manual installation for best quality.
