@@ -1,0 +1,61 @@
+Last login: Wed Aug 20 15:01:15 on ttys002
+marselmacevans@iMac-Marsel ~ % >....                                            
+echo "⚠<fe0f>  ВАЖНО: Не закрывайте этот терминал!"
+echo "    Нажмите Ctrl+C для остановки синхронизации"
+echo ""
+
+# Создаем целевую папку если её нет
+mkdir -p "$TARGET_DIR"
+
+# Первичная синхронизация
+echo "🔄 Выполняю начальную синхронизацию..."
+rsync -av --exclude='.git' --exclude='node_modules' --exclude='build*' --exclude='.ccls-cache' "$REPLIT_PROJECT/" "$TARGET_DIR/"
+echo "✅ Начальная синхронизация завершена!"
+echo ""
+echo "🔄 Запускаю автоматическое отслеживание изменений..."
+
+# Мониторинг изменений
+fswatch -r "$REPLIT_PROJECT" | while read file; do
+    echo "$(date '+%H:%M:%S') 🔄 Detected change in: $(basename "$file")"
+    rsync -av --exclude='.git' --exclude='node_modules' --exclude='build*' --exclude='.ccls-cache' "$REPLIT_PROJECT/" "$TARGET_DIR/" > /dev/null 2>&1
+    echo "$(date '+%H:%M:%S') ✅ Files synchronized to atmrs folder"
+done
+EOF
+marselmacevans@iMac-Marsel ~ % chmod +x ~/autosync_replit_to_atmrs.sh
+marselmacevans@iMac-Marsel ~ % ~/autosync_replit_to_atmrs.sh
+🔍 Ищу проект AutoTune в Replit Desktop App...
+   Проверяю: /Users/marselmacevans/Library/Application Support/Replit
+
+❌ Проект AutoTune не найден в Desktop App
+
+💡 Что нужно сделать:
+   1. Откройте /Applications/Replit.app
+   2. Войдите в аккаунт
+   3. Найдите проект 'AutoTune Plugin'
+   4. Откройте проект (чтобы он загрузился локально)
+   5. Запустите этот скрипт снова
+
+marselmacevans@iMac-Marsel ~ % ls -la /Users/marselmacevans/Downloads/atmrs/Source/
+total 384
+drwxr-xr-x@ 21 marselmacevans  staff    672 20 авг 14:30 .
+drwxr-xr-x@ 40 marselmacevans  staff   1280 20 авг 14:32 ..
+-rw-r--r--@  1 marselmacevans  staff  18186 20 авг 14:30 AIModelLoader.cpp
+-rw-r--r--@  1 marselmacevans  staff   5476 20 авг 14:24 AIModelLoader.h
+-rw-r--r--@  1 marselmacevans  staff  19709 20 авг 14:24 LookAndFeel.cpp
+-rw-r--r--@  1 marselmacevans  staff   3785 20 авг 14:24 LookAndFeel.h
+-rw-r--r--@  1 marselmacevans  staff   8201 20 авг 14:24 ModeSelector.cpp
+-rw-r--r--@  1 marselmacevans  staff   4062 20 авг 14:24 ModeSelector.h
+-rw-r--r--@  1 marselmacevans  staff   4779 20 авг 14:24 Parameters.cpp
+-rw-r--r--@  1 marselmacevans  staff   2168 20 авг 14:24 Parameters.h
+-rw-r--r--@  1 marselmacevans  staff  18483 20 авг 14:24 PitchCorrectionEngine.cpp
+-rw-r--r--@  1 marselmacevans  staff   4030 20 авг 14:24 PitchCorrectionEngine.h
+-rw-r--r--@  1 marselmacevans  staff  13875 20 авг 14:24 PluginEditor.cpp
+-rw-r--r--@  1 marselmacevans  staff   2669 20 авг 14:24 PluginEditor.h
+-rw-r--r--@  1 marselmacevans  staff   1927 20 авг 14:24 PluginEditor_minimal.cpp
+-rw-r--r--@  1 marselmacevans  staff  15011 20 авг 14:24 PluginProcessor.cpp
+-rw-r--r--@  1 marselmacevans  staff   4303 20 авг 14:24 PluginProcessor.h
+-rw-r--r--@  1 marselmacevans  staff  15354 20 авг 14:24 PresetManager.cpp
+-rw-r--r--@  1 marselmacevans  staff   3339 20 авг 14:24 PresetManager.h
+-rw-r--r--@  1 marselmacevans  staff  12910 20 авг 14:24 Utils.cpp
+-rw-r--r--@  1 marselmacevans  staff   3617 20 авг 14:24 Utils.h
+marselmacevans@iMac-Marsel ~ % 
