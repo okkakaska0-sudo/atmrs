@@ -1,0 +1,69 @@
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:32:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:33:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:166:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:129:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  129 |   if (ptr == 0) return handmade_aligned_malloc(size);
+      |              ^
+      |              nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:913:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  913 |   pointer allocate(size_type num, const void* /*hint*/ = 0)
+      |                                                          ^
+      |                                                          nullptr
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:171:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/MathFunctions.h:1444:18: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+ 1444 |   unsigned int v(x);
+      |                ~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:166:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr

@@ -1,0 +1,117 @@
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:287:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  287 | ORT_RUNTIME_CLASS(OptionalTypeInfo);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:288:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  288 | ORT_RUNTIME_CLASS(SessionOptions);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:289:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  289 | ORT_RUNTIME_CLASS(CustomOpDomain);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:290:33: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  290 | ORT_RUNTIME_CLASS(ModelMetadata);
+      |                                 ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:291:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  291 | ORT_RUNTIME_CLASS(ThreadPoolParams);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:292:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  292 | ORT_RUNTIME_CLASS(ThreadingOptions);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:293:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  293 | ORT_RUNTIME_CLASS(ArenaCfg);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:294:45: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  294 | ORT_RUNTIME_CLASS(PrepackedWeightsContainer);
+      |                                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:295:45: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  295 | ORT_RUNTIME_CLASS(TensorRTProviderOptionsV2);
+      |                                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:296:41: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  296 | ORT_RUNTIME_CLASS(CUDAProviderOptionsV2);
+      |                                         ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:297:39: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  297 | ORT_RUNTIME_CLASS(CANNProviderOptions);
+      |                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:298:39: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  298 | ORT_RUNTIME_CLASS(DnnlProviderOptions);
+      |                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:299:22: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  299 | ORT_RUNTIME_CLASS(Op);
+      |                      ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:300:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  300 | ORT_RUNTIME_CLASS(OpAttr);
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:301:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  301 | ORT_RUNTIME_CLASS(Logger);
+      |                          ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:27:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:493:16: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+  493 |       uint16_t result;
+      |                ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:488:12: note: previous declaration is here
+  488 |   uint16_t result;
+      |            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:442:101: warning: extra ';' after member function definition [-Wextra-semi]
+  442 |   constexpr bool operator==(const Float8E4M3FN_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:443:101: warning: extra ';' after member function definition [-Wextra-semi]
+  443 |   constexpr bool operator!=(const Float8E4M3FN_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:459:103: warning: extra ';' after member function definition [-Wextra-semi]
+  459 |   constexpr bool operator==(const Float8E4M3FNUZ_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:460:103: warning: extra ';' after member function definition [-Wextra-semi]
+  460 |   constexpr bool operator!=(const Float8E4M3FNUZ_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:476:99: warning: extra ';' after member function definition [-Wextra-semi]
+  476 |   constexpr bool operator==(const Float8E5M2_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:477:99: warning: extra ';' after member function definition [-Wextra-semi]
+  477 |   constexpr bool operator!=(const Float8E5M2_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:493:103: warning: extra ';' after member function definition [-Wextra-semi]
+  493 |   constexpr bool operator==(const Float8E5M2FNUZ_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:494:103: warning: extra ';' after member function definition [-Wextra-semi]
+  494 |   constexpr bool operator!=(const Float8E5M2FNUZ_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:505:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  505 | ORT_DEFINE_RELEASE(Allocator);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:506:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  506 | ORT_DEFINE_RELEASE(MemoryInfo);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:507:35: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  507 | ORT_DEFINE_RELEASE(CustomOpDomain);
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:508:37: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  508 | ORT_DEFINE_RELEASE(ThreadingOptions);
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:509:24: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  509 | ORT_DEFINE_RELEASE(Env);
+      |                        ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:510:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  510 | ORT_DEFINE_RELEASE(RunOptions);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:511:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  511 | ORT_DEFINE_RELEASE(Session);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:512:35: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  512 | ORT_DEFINE_RELEASE(SessionOptions);
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:513:43: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  513 | ORT_DEFINE_RELEASE(TensorTypeAndShapeInfo);
+      |                                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:514:37: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  514 | ORT_DEFINE_RELEASE(SequenceTypeInfo);
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:515:32: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  515 | ORT_DEFINE_RELEASE(MapTypeInfo);
+      |                                ^

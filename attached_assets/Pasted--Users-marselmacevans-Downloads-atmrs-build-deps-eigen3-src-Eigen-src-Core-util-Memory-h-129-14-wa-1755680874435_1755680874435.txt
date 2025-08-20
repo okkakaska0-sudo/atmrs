@@ -1,0 +1,87 @@
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:129:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  129 |   if (ptr == 0) return handmade_aligned_malloc(size);
+      |              ^
+      |              nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:913:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  913 |   pointer allocate(size_type num, const void* /*hint*/ = 0)
+      |                                                          ^
+      |                                                          nullptr
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:171:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/MathFunctions.h:1444:18: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+ 1444 |   unsigned int v(x);
+      |                ~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:65:37: error: duplicate member 'fft'
+   65 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:55:37: note: previous declaration is here
+   55 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:66:58: error: duplicate member 'window'
+   66 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:56:58: note: previous declaration is here
+   56 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:67:48: error: duplicate member 'frequencyData'
+   67 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:57:48: note: previous declaration is here
+   57 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:215:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:281:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+  281 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:408:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+  408 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1105:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+ 1105 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1118:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+ 1118 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:215:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:281:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+  281 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:408:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+  408 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1105:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+ 1105 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1118:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+ 1118 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:269:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^

@@ -1,0 +1,101 @@
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:269:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:32:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:33:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:32:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:33:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:65:37: error: duplicate member 'fft'
+   65 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:55:37: note: previous declaration is here
+   55 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:66:58: error: duplicate member 'window'
+   66 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:56:58: note: previous declaration is here
+   56 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:67:48: error: duplicate member 'frequencyData'
+   67 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:57:48: note: previous declaration is here
+   57 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:26:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:276:23: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  276 | ORT_RUNTIME_CLASS(Env);
+      |                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:277:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  277 | ORT_RUNTIME_CLASS(Status);  // nullptr for Status* indicates success
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:278:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  278 | ORT_RUNTIME_CLASS(MemoryInfo);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:279:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  279 | ORT_RUNTIME_CLASS(IoBinding);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:280:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  280 | ORT_RUNTIME_CLASS(Session);  // Don't call ReleaseSession from Dllmain (because session owns a thread pool)
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:281:25: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  281 | ORT_RUNTIME_CLASS(Value);
+      |                         ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:282:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  282 | ORT_RUNTIME_CLASS(RunOptions);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:283:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  283 | ORT_RUNTIME_CLASS(TypeInfo);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:284:42: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  284 | ORT_RUNTIME_CLASS(TensorTypeAndShapeInfo);
+      |                                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:285:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  285 | ORT_RUNTIME_CLASS(MapTypeInfo);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:286:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  286 | ORT_RUNTIME_CLASS(SequenceTypeInfo);
+      |                                    ^

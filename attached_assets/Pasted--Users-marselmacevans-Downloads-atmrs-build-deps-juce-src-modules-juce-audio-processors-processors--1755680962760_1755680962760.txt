@@ -1,0 +1,189 @@
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/processors/juce_AudioProcessorEditor.h:258:32: note: candidate constructor not viable: no known conversion from 'AutoTuneAudioProcessor' to 'const AudioProcessorEditor' for 1st argument
+  258 |     JUCE_DECLARE_NON_COPYABLE (AudioProcessorEditor)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_core/system/juce_PlatformDefs.h:229:5: note: expanded from macro 'JUCE_DECLARE_NON_COPYABLE'
+  229 |     className (const className&) = delete;\
+      |     ^          ~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:183:69: warning: implicit conversion turns floating-point number into integer: 'float' to 'int' [-Wfloat-conversion]
+  183 |     auto mainControlsArea = bounds.removeFromTop(bounds.getHeight() * 0.6f);
+      |                                    ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:234:63: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  234 |             float y = displayArea.getBottom() - (pitchHistory[i] * 0.5f + 0.5f) * displayArea.getHeight();
+      |                                                  ~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:231:27: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  231 |         for (int i = 0; i < pitchHistory.size(); ++i)
+      |                         ~ ^ ~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:356:22: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  356 |         pitchHistory[i] = pitchHistory[i + 1];
+      |         ~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:356:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  356 |         pitchHistory[i] = pitchHistory[i + 1];
+      |                           ~~~~~~~~~~~~ ~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:354:23: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  354 |     for (int i = 0; i < pitchHistory.size() - 1; ++i)
+      |                     ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1853:35: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+ 1853 |   auto release_fn = [&len](char** providers) {
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1850:10: note: previous declaration is here
+ 1850 |   char** providers;
+      |          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:15:5: error: no matching constructor for initialization of 'juce::AudioProcessorValueTreeState'
+   15 |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
+      |     ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:252:5: note: candidate constructor not viable: no known conversion from 'AutoTuneAudioProcessor' to 'AudioProcessor &' for 1st argument
+  252 |     AudioProcessorValueTreeState (AudioProcessor& processorToConnectTo,
+      |     ^                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:267:5: note: candidate constructor not viable: requires 2 arguments, but 4 were provided
+  267 |     AudioProcessorValueTreeState (AudioProcessor& processorToConnectTo, UndoManager* undoManagerToUse);
+      |     ^                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:657:51: note: candidate constructor not viable: requires 1 argument, but 4 were provided
+  657 |     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioProcessorValueTreeState)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_core/system/juce_PlatformDefs.h:243:31: note: expanded from macro 'JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR'
+  243 |     JUCE_DECLARE_NON_COPYABLE(className) \
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_core/system/juce_PlatformDefs.h:229:5: note: expanded from macro 'JUCE_DECLARE_NON_COPYABLE'
+  229 |     className (const className&) = delete;\
+      |     ^          ~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:14:5: warning: field 'pluginParameters' will be initialized after field 'parameters' [-Wreorder-ctor]
+   14 |     pluginParameters(),
+      |     ^~~~~~~~~~~~~~~~~~
+      |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout())
+   15 |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     pluginParameters()
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:15:72: warning: field 'pluginParameters' is uninitialized when used here [-Wuninitialized]
+   15 |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
+      |                                                                        ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:22:59: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   22 |     parameters.addParameterListener(Parameters::SPEED_ID, this);
+      |                                                           ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:23:60: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   23 |     parameters.addParameterListener(Parameters::AMOUNT_ID, this);
+      |                                                            ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:24:58: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   24 |     parameters.addParameterListener(Parameters::MODE_ID, this);
+      |                                                          ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:25:57: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   25 |     parameters.addParameterListener(Parameters::KEY_ID, this);
+      |                                                         ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:26:59: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   26 |     parameters.addParameterListener(Parameters::SCALE_ID, this);
+      |                                                           ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:40:62: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   40 |     parameters.removeParameterListener(Parameters::SPEED_ID, this);
+      |                                                              ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:41:63: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   41 |     parameters.removeParameterListener(Parameters::AMOUNT_ID, this);
+      |                                                               ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:42:61: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   42 |     parameters.removeParameterListener(Parameters::MODE_ID, this);
+      |                                                             ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:43:60: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   43 |     parameters.removeParameterListener(Parameters::KEY_ID, this);
+      |                                                            ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:44:62: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   44 |     parameters.removeParameterListener(Parameters::SCALE_ID, this);
+      |                                                              ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:133:34: error: cannot initialize object parameter of type 'const juce::AudioProcessor' with an expression of type 'AutoTuneAudioProcessor'
+  133 |     auto totalNumInputChannels = getTotalNumInputChannels();
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:134:35: error: cannot initialize object parameter of type 'const juce::AudioProcessor' with an expression of type 'AutoTuneAudioProcessor'
+  134 |     auto totalNumOutputChannels = getTotalNumOutputChannels();
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:188:36: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  188 |         std::vector<float> pitches(numSamples);
+      |                            ~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:194:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  194 |             float currentPitch = pitches[sample];
+      |                                  ~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:239:36: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  239 |         std::vector<float> pitches(numSamples);
+      |                            ~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:245:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  245 |             float currentPitch = pitches[sample];
+      |                                  ~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:287:88: warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+  287 |             auto pitchPrediction = aiModelLoader.predictPitch(channelData, numSamples, currentSampleRate);
+      |                                                  ~~~~~~~~~~~~                          ^~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:303:47: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  303 |                 std::vector<float> tempBuffer(numSamples);
+      |                                    ~~~~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:312:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  312 |                         channelData[i] = tempBuffer[i] * (1.0f - blendFactor) + channelData[i] * blendFactor;
+      |                                          ~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:320:40: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  320 |             std::vector<float> pitches(numSamples);
+      |                                ~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:326:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  326 |                 float currentPitch = pitches[sample];
+      |                                      ~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:406:12: error: static_cast from 'AutoTuneAudioProcessor *' to 'juce::AudioProcessor *', which are not related by inheritance, is not allowed
+  406 |     return static_cast<juce::AudioProcessor*>(new AutoTuneAudioProcessor());
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+70 warnings and 3 errors generated.
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:27:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:301:24: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  301 |   o.u = (val & 0x7fff) << 13;            // exponent/mantissa bits
+      |       ~ ~~~~~~~~~~~~~~~^~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:198:49: note: in instantiation of member function 'onnxruntime_float16::Float16Impl<Ort::Float16_t>::ToFloatImpl' requested here
+  198 |   float ToFloat() const noexcept { return Basemake[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+::ToFloatImpl(); }
+      |                                                 ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:27:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:301:24: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  301 |   o.u = (val & 0x7fff) << 13;            // exponent/mantissa bits
+      |       ~ ~~~~~~~~~~~~~~~^~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:198:49: note: in instantiation of member function 'onnxruntime_float16::Float16Impl<Ort::Float16_t>::ToFloatImpl' requested here
+  198 |   float ToFloat() const noexcept { return Base::ToFloatImpl(); }
+      |                                                 ^
+78 warnings and 4 errors generated.
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o] Error 1
+83 warnings and 17 errors generated.
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o] Error 1
+make[1]: *** [CMakeFiles/AutoTunePlugin.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 25%] Linking CXX executable juce_vst3_helper
+[ 25%] Built target juce_vst3_helper
+make: *** [all] Error 2
+❌ Build failed!
+marselmacevans@iMac-Marsel atmrs % 

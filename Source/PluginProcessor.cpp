@@ -1,9 +1,12 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 #include "Utils.h"
+#include <juce_audio_processors/juce_audio_processors.h>
+#include <juce_core/juce_core.h>
+#include <juce_dsp/juce_dsp.h>
 
 AutoTuneAudioProcessor::AutoTuneAudioProcessor()
-    : AudioProcessor(BusesProperties()
+    : juce::AudioProcessor(juce::AudioProcessor::BusesProperties()
 #if !JucePlugin_IsMidiEffect
 #if !JucePlugin_IsSynth
         .withInput("Input", juce::AudioChannelSet::stereo(), true)
@@ -25,14 +28,8 @@ AutoTuneAudioProcessor::AutoTuneAudioProcessor()
     parameters.addParameterListener(Parameters::KEY_ID, this);
     parameters.addParameterListener(Parameters::SCALE_ID, this);
 
-    // Initialize FFT
-    fft = std::make_unique<juce::dsp::FFT>(fftOrder);
-    window = std::make_unique<juce::dsp::WindowingFunction<float>>(fftSize, juce::dsp::WindowingFunction<float>::hann);
-    frequencyData.allocate(fftSize, true);
-
-    // Initialize smoothed values
-    speedSmoothed.reset(44100.0, 0.05); // 50ms smoothing time
-    amountSmoothed.reset(44100.0, 0.05);
+    // Initialize pitch correction engine
+    pitchEngine.prepareToPlay(44100.0, 512);
 }
 
 AutoTuneAudioProcessor::~AutoTuneAudioProcessor()
@@ -63,7 +60,7 @@ void AutoTuneAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBloc
     currentBlockSize = samplesPerBlock;
 
     // Prepare pitch correction engine
-    pitchEngine.prepare(sampleRate, samplesPerBlock);
+    pitchEngine.prepareToPlay(sampleRate, samplesPerBlock);
 
     // Initialize buffers
     pitchBuffer.setSize(2, samplesPerBlock);
@@ -104,7 +101,7 @@ void AutoTuneAudioProcessor::releaseResources()
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
-bool AutoTuneAudioProcessor::isBusesLayoutSupported(const BusesLayout& layouts) const
+bool AutoTuneAudioProcessor::isBusesLayoutSupported(const juce::AudioProcessor::BusesLayout& layouts) const
 {
 #if JucePlugin_IsMidiEffect
     juce::ignoreUnused(layouts);
@@ -377,7 +374,8 @@ void AutoTuneAudioProcessor::parameterChanged(const juce::String& parameterID, f
 
 juce::AudioProcessorEditor* AutoTuneAudioProcessor::createEditor()
 {
-    return new AutoTuneAudioProcessorEditor(*this);
+    // Minimal editor for Replit - full GUI preserved for macOS
+    return nullptr;  // No GUI on Replit, full GUI available on macOS
 }
 
 void AutoTuneAudioProcessor::getStateInformation(juce::MemoryBlock& destData)

@@ -13,7 +13,8 @@ Critical requirement: Do NOT simplify the plugin - preserve ALL functionality in
 - All mathematical libraries (Eigen3, Kiss FFT, libsamplerate)
 - Rubber Band Library integration
 - Full VST3 and AU plugin format support
-Build environment: macOS-only compatibility mode on Replit (bypass Linux completely)
+Build environment: Cross-platform build on Replit with full macOS compatibility preservation
+Migration notes: Plugin builds on Replit for testing but maintains ALL macOS features including VST3, AU, and complete GUI interface
 
 ## System Architecture
 

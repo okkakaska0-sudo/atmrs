@@ -21,6 +21,7 @@ public:
     ~PitchCorrectionEngine();
 
     void prepare(double sampleRate, int blockSize);
+    void prepareToPlay(double sampleRate, int blockSize);
     void reset();
 
     // Basic pitch detection methods
@@ -51,7 +52,7 @@ private:
     float pitchConfidence = 0.0f;
     float rmsLevel = 0.0f;
     
-    // JUCE components
+    // JUCE components for FFT and spectral analysis
     std::unique_ptr<juce::dsp::FFT> fft;
     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
@@ -60,11 +61,6 @@ private:
     std::vector<float> autocorrelationBuffer;
     std::vector<float> windowedBuffer;
     std::vector<float> tempBuffer;
-    
-    // FFT for spectral analysis
-    std::unique_ptr<juce::dsp::FFT> fft;
-    std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
-    juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
     std::vector<float> magnitudeSpectrum;
     static constexpr int fftOrder = 12; // 2^12 = 4096
     static constexpr int fftSize = 1 << fftOrder;

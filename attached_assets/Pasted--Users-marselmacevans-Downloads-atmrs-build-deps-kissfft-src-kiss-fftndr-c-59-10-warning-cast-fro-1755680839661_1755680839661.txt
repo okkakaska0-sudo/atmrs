@@ -1,0 +1,80 @@
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftndr.c:59:10: warning: cast from 'char *' to 'kiss_fftndr_cfg' (aka 'struct kiss_fftndr_state *') increases required alignment from 1 to 8 [-Wcast-align]
+   59 |     st = (kiss_fftndr_cfg) ptr;
+      |          ^~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftndr.c:59:10: warning: cast from 'char *' to 'kiss_fftndr_cfg' (aka 'struct kiss_fftndr_state *') increases required alignment from 1 to 8 [-Wcast-align]
+   59 |     st = (kiss_fftndr_cfg) ptr;
+      |          ^~~~~~~~~~~~~~~~~~~~~
+[ 14%] Building C object _deps/libsamplerate-build/src/CMakeFiles/samplerate.dir/src_zoh.c.o
+1 warning generated.
+[ 15%] Building C object _deps/kissfft-build/CMakeFiles/kissfft.dir/kiss_fftr.c.o
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftr.c:49:18: warning: cast from 'char *' to 'kiss_fft_cpx *' increases required alignment from 1 to 4 [-Wcast-align]
+   49 |     st->tmpbuf = (kiss_fft_cpx *) (((char *) st->substate) + subsize);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftr.c:49:18: warning: cast from 'char *' to 'kiss_fft_cpx *' increases required alignment from 1 to 4 [-Wcast-align]
+   49 |     st->tmpbuf = (kiss_fft_cpx *) (((char *) st->substate) + subsize);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[ 17%] Linking C static library libkissfft-float.a
+[ 17%] Built target kissfft
+[ 18%] Linking C static library libsamplerate.a
+[ 18%] Built target samplerate
+[ 23%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o
+[ 23%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o
+[ 23%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:166:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:129:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  129 |   if (ptr == 0) return handmade_aligned_malloc(size);
+      |              ^
+      |              nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:913:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  913 |   pointer allocate(size_type num, const void* /*hint*/ = 0)
+      |                                                          ^
+      |                                                          nullptr
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:171:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/MathFunctions.h:1444:18: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+ 1444 |   unsigned int v(x);
+      |                ~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:215:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:281:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+  281 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:408:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+  408 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1105:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+ 1105 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1118:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+ 1118 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:269:

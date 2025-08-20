@@ -4,7 +4,7 @@ expertMode = true
 
 [nix]
 channel = "stable-25_05"
-packages = ["cmake", "gcc", "pkg-config", "xorg.libX11", "xorg.libXinerama", "xorg.libXrandr", "xorg.libXcursor", "freetype", "alsa-lib", "mesa", "gnumake", "curl", "freeglut", "libjack2", "git", "wget", "unzip"]
+packages = ["cmake", "gcc", "pkg-config", "xorg.libX11", "xorg.libXinerama", "xorg.libXrandr", "xorg.libXcursor", "freetype", "alsa-lib", "mesa", "gnumake", "curl", "freeglut", "libjack2", "git", "wget", "unzip", "xorg.libXext"]
 
 [workflows]
 runButton = "Project"

@@ -1,0 +1,157 @@
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:382:41: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  382 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                               ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:385:43: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  385 |                 peaks.push_back({spectrum[i], i});
+      |                                  ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:396:27: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  396 |         formantAmplitudes[i] = peaks[i].first;
+      |         ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:396:38: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  396 |         formantAmplitudes[i] = peaks[i].first;
+      |                                ~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:397:28: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  397 |         formantFrequencies[i] = static_cast<float>(peaks[i].second * sampleRate / fftSize);
+      |         ~~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:397:58: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  397 |         formantFrequencies[i] = static_cast<float>(peaks[i].second * sampleRate / fftSize);
+      |                                                    ~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:511:26: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  511 |             pitchHistory[i] = pitchHistory[i + 1];
+      |             ~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:511:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  511 |             pitchHistory[i] = pitchHistory[i + 1];
+      |                               ~~~~~~~~~~~~ ~~^~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:27:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:493:16: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+  493 |       uint16_t result;
+      |                ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:488:12: note: previous declaration is here
+  488 |   uint16_t result;
+      |            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:442:101: warning: extra ';' after member function definition [-Wextra-semi]
+  442 |   constexpr bool operator==(const Float8E4M3FN_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:443:101: warning: extra ';' after member function definition [-Wextra-semi]
+  443 |   constexpr bool operator!=(const Float8E4M3FN_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:459:103: warning: extra ';' after member function definition [-Wextra-semi]
+  459 |   constexpr bool operator==(const Float8E4M3FNUZ_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:460:103: warning: extra ';' after member function definition [-Wextra-semi]
+  460 |   constexpr bool operator!=(const Float8E4M3FNUZ_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:476:99: warning: extra ';' after member function definition [-Wextra-semi]
+  476 |   constexpr bool operator==(const Float8E5M2_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:477:99: warning: extra ';' after member function definition [-Wextra-semi]
+  477 |   constexpr bool operator!=(const Float8E5M2_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:493:103: warning: extra ';' after member function definition [-Wextra-semi]
+  493 |   constexpr bool operator==(const Float8E5M2FNUZ_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:494:103: warning: extra ';' after member function definition [-Wextra-semi]
+  494 |   constexpr bool operator!=(const Float8E5M2FNUZ_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:505:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  505 | ORT_DEFINE_RELEASE(Allocator);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:506:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  506 | ORT_DEFINE_RELEASE(MemoryInfo);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:507:35: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  507 | ORT_DEFINE_RELEASE(CustomOpDomain);
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:508:37: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  508 | ORT_DEFINE_RELEASE(ThreadingOptions);
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:509:24: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  509 | ORT_DEFINE_RELEASE(Env);
+      |                        ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:510:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  510 | ORT_DEFINE_RELEASE(RunOptions);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:511:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  511 | ORT_DEFINE_RELEASE(Session);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:512:35: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  512 | ORT_DEFINE_RELEASE(SessionOptions);
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:513:43: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  513 | ORT_DEFINE_RELEASE(TensorTypeAndShapeInfo);
+      |                                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:514:37: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  514 | ORT_DEFINE_RELEASE(SequenceTypeInfo);
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:515:32: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  515 | ORT_DEFINE_RELEASE(MapTypeInfo);
+      |                                ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:516:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  516 | ORT_DEFINE_RELEASE(TypeInfo);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:517:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  517 | ORT_DEFINE_RELEASE(Value);
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:518:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  518 | ORT_DEFINE_RELEASE(ModelMetadata);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:519:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  519 | ORT_DEFINE_RELEASE(IoBinding);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:520:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  520 | ORT_DEFINE_RELEASE(ArenaCfg);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:521:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  521 | ORT_DEFINE_RELEASE(Status);
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:522:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  522 | ORT_DEFINE_RELEASE(OpAttr);
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:523:23: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  523 | ORT_DEFINE_RELEASE(Op);
+      |                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:524:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  524 | ORT_DEFINE_RELEASE(KernelInfo);
+      |                               ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:2266:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1088:54: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+ 1088 |   auto strings_deletor = [&deletor, num_keys](char** out) { for(int64_t i = 0; i < num_keys; ++i) deletor(out[i]); };
+      |                                                      ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1078:10: note: previous declaration is here
+ 1078 |   char** out = nullptr;
+      |          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1853:35: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+ 1853 |   auto release_fn = [&len](char** providers) {
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1850:10: note: previous declaration is here
+ 1850 |   char** providers;
+      |          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:5:7: error: no matching constructor for initialization of 'juce::AudioProcessorEditor'
+    5 |     : AudioProcessorEditor(In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:2266:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1088:54: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+ 1088 |   auto strings_deletor = [&deletor, num_keys](char** out) { for(int64_t i = 0; i < num_keys; ++ip) deletor(out[i]));,  };
+
+            | |       ^                    ~                                                     ^
+
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1078:10: note: previous declaration is here
+ 1078 |   char** out = n/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/processors/juce_AudioProcessorEditor.hu:l47l:p5t:r ;
+note:       | candidate constructor not viable: no known conversion from 'AutoTuneAudioProcessor' to 'AudioProcessor &' for 1st argument         ^
+
+   47 |     AudioProcessorEditor (AudioProcessor&) noexcept;
+      |     ^                     ~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/processors/juce_AudioProcessorEditor.h:50:5: note: candidate constructor not viable: no known conversion from 'AutoTuneAudioProcessor' to 'AudioProcessor *' for 1st argument
+   50 |     AudioProcessorEditor (AudioProcessor*) noexcept;
+      |     ^                     ~~~~~~~~~~~~~~~

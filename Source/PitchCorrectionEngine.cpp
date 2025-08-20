@@ -45,6 +45,11 @@ void PitchCorrectionEngine::prepare(double newSampleRate, int newBlockSize)
     reset();
 }
 
+void PitchCorrectionEngine::prepareToPlay(double newSampleRate, int newBlockSize)
+{
+    prepare(newSampleRate, newBlockSize);
+}
+
 void PitchCorrectionEngine::reset()
 {
     currentPitch = 0.0f;

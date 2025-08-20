@@ -1,0 +1,122 @@
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:284:42[: twarning: au]extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi])
+
+      |   284                   ~~~~~~~ ^ ~~~~~~~~~~~~~~~~ | 
+ORT_RUNTIME_CLA/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cppS:S236(:T32e:n sorwarning: Typcomparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]eA
+ndShape  I236n | f o ) ;  
+        |                                            ^ 
+  if (tau > 0 && tau < yinBuffer.s/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:285:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  285 | ORT_RUNTIME_CLASS(MapTypeInfo);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:286:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  286 | ORT_RUNTIME_CLASS(SequenceTypeInfo);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:287:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  287 | ORiT_RzUeN(T)I M-E _1C)LAS
+S      (| Op                           ~~~ ^ ~~~~~~~~~~~~~~~~~~~~t
+ionalTypeInfo);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:288:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  288 | ORT_RUNTIME_CLASS(SessionOptions);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:289:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  289 | ORT_RUNTIME_CLASS(CustomOpDomain);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:290:33: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  290 | ORT_RUNTIME_CLASS(ModelMetadata);
+      |                                 ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:291:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  291 | ORT_RUNTIME_CLASS(ThreadPoolParams);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:292:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  292 | ORT_RUNTIME_CLASS(ThreadingOptions);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:267:69: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  267 |         frequencyData[i] /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h=: 293j:u28c:e ::dwarning: sp:extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]:C
+ompl  e293x | <OfRlTo_aRtU>N(TwIiMnEd_oCwLeAdSBSu(fAfreern[aiC]f,g )0;.0
+f      )| ;                           ^
+
+      |                                                      ~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:294:45: /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cppwarning: :275:extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]27:
+ warning:   294implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion] | O
+RT_RUNT  I275M | E _ C L A S S ( PmraegpnaictkueddeWSepiegchttrsuCmo[nit]a i=n esrt)d;::
+a      b| s(                                            ^f
+requencyData[i]);
+      |         ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:295:45: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  295 | ORT_RUNTIME_CLASS(TensorRTProviderOptionsV2);
+      |                   /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:286:31: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  286 |         if (magnitudeSpectrum[i] > maxMag)
+      |             ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:288:40: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  288 |             maxMag = magnitudeSpectrum[i];
+      |                      ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:298:50: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  298 |             float y1 = magnitudeSpectrum[peakBin - 1];
+      |                        ~~~~~~~~~~~~~~~~~ ~~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:299:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  299 |             float y2 = magnitudeSpectrum[peakBin];
+                          ^      |                        ~~~~~~~~~~~~~~~~~ ^~~~~~~
+
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:300:50: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  300 |             float/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h :y2963: 41=:  magwarning: nitextra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]ud
+eSpect  r296u | mO[RpTe_aRkUBNiTnI M+E _1C]L;AS
+S      (| CU                       ~~~~~~~~~~~~~~~~~ ~~~~~~~~^~~D
+AProviderOptio/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:284:42: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  284 |     for (intn i s=V 2m)i;nBi
+n      ;|  i                                        ^ 
+< maxBin && i < magnitudeSpectrum.size(); ++i)
+      |                                        ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:296:36: /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:297:39: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  297 | ORT_RUNTIME_CLASS(CANNProviderOptions);
+      |                                       ^
+warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  296 |         if (peakBin > 1 && peakBin < magnitudeSpectrum.size() - 1)
+      |                            ~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:298:39: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  298 | ORT_RUNTIME_CLASS(DnnlProviderOptions);
+      |                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:299:22: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  299 | ORT_RUNTIME_CLA/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:332:45: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  332 |         for (size_t i = 0; i < hps.size() / harmonic; ++i)
+      |                                           ~ ^~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:334:45: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+  334 |             hps[i] *= magnitudeSpectrum[i * harmonic];
+      |                                           ~ ^~~~~~~~
+SS(Op);
+      |                      ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:300:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  300 | ORT_RUNTIME_CLASS/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp(:O346p:A17t:t r);warning: 
+      implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]| 
+                         ^
+  346 |         if (hps[i] > maxValue)
+      |             ~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:348:28: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:  301348: | 26 :     warning:    extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]  
+  max  V301a | lOuReT _=R UhNpTsI[MiE]_;CL
+A      S| S(                       ~~~ ^L
+ogger);
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:344:42: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  344 |     for (int i = minBin; i < maxBin && i < hps.size(); ++i)
+      |                                        ~ ^ ~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:383:57: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  383 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                                                ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:383:72: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  383 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                                                              ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:383:26: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  383 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                 ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:383:41: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  383 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                               ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:382:57: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  382 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                                                ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:382:72: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  382 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                                                              ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:382:26: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  382 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                 ~~~~~~~~ ^

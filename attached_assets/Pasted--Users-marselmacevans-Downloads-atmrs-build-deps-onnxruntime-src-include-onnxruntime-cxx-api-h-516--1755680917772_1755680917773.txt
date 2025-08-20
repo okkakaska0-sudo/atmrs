@@ -1,0 +1,151 @@
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:516:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  516 | ORT_DEFINE_RELEASE(TypeInfo);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:517:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  517 | ORT_DEFINE_RELEASE(Value);
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:518:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  518 | ORT_DEFINE_RELEASE(ModelMetadata);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:519:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  519 | ORT_DEFINE_RELEASE(IoBinding);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:520:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  520 | ORT_DEFINE_RELEASE(ArenaCfg);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:521:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  521 | ORT_DEFINE_RELEASE(Status);
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:522:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  522 | ORT_DEFINE_RELEASE(OpAttr);
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:523:23: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  523 | ORT_DEFINE_RELEASE(Op);
+      |                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:524:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  524 | ORT_DEFINE_RELEASE(KernelInfo);
+      |                               ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:65:37: error: duplicate member 'fft'
+   65 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:55:37: note: previous declaration is here
+   55 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:66:58: error: duplicate member 'window'
+   66 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:56:58: note: previous declaration is here
+   56 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:67:48: error: duplicate member 'frequencyData'
+   67 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:57:48: note: previous declaration is here
+   57 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:37:44: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   37 |     autocorrelationBuffer.resize(blockSize * 2);
+      |                           ~~~~~~ ~~~~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:39:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   39 |     tempBuffer.resize(blockSize);
+      |                ~~~~~~ ^~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:139:35: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  139 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |             ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:139:80: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  139 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |                                                               ~~~~~~~~~~~~~~ ~~^~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:139:58: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  139 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |                                           ~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:141:31: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  141 |         autocorrelationBuffer[lag] /= (analysisSize - lag); // Normalize
+      |         ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:152:35: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  152 |         if (autocorrelationBuffer[lag] > maxValue)
+      |             ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:154:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  154 |             maxValue = autocorrelationBuffer[lag];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:164:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  164 |             float y1 = autocorrelationBuffer[maxLag - 1];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:165:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  165 |             float y2 = autocorrelationBuffer[maxLag];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:166:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  166 |             float y3 = autocorrelationBuffer[maxLag + 1];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:150:53: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  150 |     for (int lag = minLag; lag < maxLagLimit && lag < autocorrelationBuffer.size(); ++lag)
+      |                                                 ~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:162:34: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  162 |         if (maxLag > 1 && maxLag < autocorrelationBuffer.size() - 1)
+      |                           ~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:192:45: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  192 |     std::vector<float> yinBuffer(bufferSize / 2, 0.0f);
+      |                        ~~~~~~~~~ ~~~~~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:200:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  200 |             yinBuffer[tau] += delta * delta;
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:209:33: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  209 |         runningSum += yinBuffer[tau];
+      |                       ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:212:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  212 |             yinBuffer[tau] *= tau / runningSum;
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:216:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  216 |             yinBuffer[tau] = 1.0f;
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:227:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  227 |         if (yinBuffer[tau] < threshold)
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:230:64: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  230 |             while (tau + 1 < yinBuffer.size() && yinBuffer[tau + 1] < yinBuffer[tau])
+      |                                                  ~~~~~~~~~ ~~~~^~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp::11230:
+:In file included from 81/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:: 26:
+warning: /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:276implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]:23
+: warning:   230extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  276 | ORT_RUNTIME_CLASS(Env);
+      |                       ^
+ |             while (tau + 1 < yi/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.hn:B277u:f26f:e r.swarning: izeextra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]()
+ && yi  n277B | uOfRfTe_rR[UtNaTuI M+E _1C]L A<S Sy(iSntBautfufse)r;[ t a/u/] )nul
+l      p| tr                                                                      ~~~~~~~~~ ^~~ 
+for Status* indicates success
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:278:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  278 | ORT_RUNTIME/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:238:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  238 |                 float s0 = yinBuffer[tau - 1];
+      |                            ~~~~~~~~~ ~~~~^~~
+_CLASS(MemoryInfo);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:279:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  279 | ORT_RUNTIME_CLASS(I/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:239:38: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  239 |                 float s1 = yinBuffer[tau];
+      |                            ~~~~~~~~~ ^~~
+oBinding);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:280:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  280 | ORT_RUNTIM/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cppE:_240C:L42A:S S(Swarning: essimplicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]io
+n);  /  /240  | D o n ' t   c a l l   R e l e a sfelSoeasts iso2n  =f ryoimn BDulflfmeari[nt a(ub e+c a1u]s;e 
+s      e| ss                           ~~~~~~~~~ ~~~~^~~i
+on owns a thread pool)
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:281:25: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  281 | ORT_RUNTIME_CLASS(Value);
+      |                         ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:225:48: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  225 |     for (int tau = minTau; tau < maxTau && tau < yinBuffer.size(); ++tau)
+      |                                            ~~~ ^ ~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:230:28: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  230 |             while (tau/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h :+282 :130 :<  yiwarning: nBuextra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]ff
+er.si  z282e | (O)R T&_&R UyNiTnIBMuEf_fCeLrA[StSa(uR u+n O1p]t i<o nysi)n;Bu
+f      f| er                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:283:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  283 | ORT_RUNTIME_CLASS(TypeInfo);
+      |                            ^
