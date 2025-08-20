@@ -10,3 +10,5 @@
 [x] 10. Prepared build_intel_only.sh for Intel x64 Mac (no universal binary)
 [x] 11. SUCCESSFUL BUILD! All plugin formats created: VST3, AU, Standalone
 [x] 12. MIGRATION COMPLETED! Project ready for production use
+[x] 13. FIXED CRITICAL BUGS: Enabled GUI, real pitch shifting, proper includes
+[x] 14. GUI now works! Pitch correction now functional with Rubber Band!

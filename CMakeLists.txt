@@ -6,7 +6,19 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0" CACHE STRING "Minimum macOS deployment version")
 
-message(STATUS "Building AutoTune Plugin with available macOS functionality")
+# FORCE Intel x64 ONLY - aggressive architecture enforcement
+set(CMAKE_OSX_ARCHITECTURES "x86_64" CACHE STRING "macOS architecture" FORCE)
+set(CMAKE_APPLE_SILICON_PROCESSOR OFF CACHE BOOL "" FORCE)
+set(JUCE_BUILD_UNIVERSAL_BINARY OFF CACHE BOOL "" FORCE)
+
+# Force compiler and linker flags for Intel x64
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -arch x86_64" CACHE STRING "" FORCE)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -arch x86_64" CACHE STRING "" FORCE)
+set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -arch x86_64" CACHE STRING "" FORCE)
+set(CMAKE_MODULE_LINKER_FLAGS "${CMAKE_MODULE_LINKER_FLAGS} -arch x86_64" CACHE STRING "" FORCE)
+set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -arch x86_64" CACHE STRING "" FORCE)
+
+message(STATUS "Building AutoTune Plugin for Intel x64")
 
 # Add JUCE
 include(FetchContent)
@@ -22,128 +34,119 @@ set(JUCE_ENABLE_MODULE_SOURCE_GROUPS OFF CACHE BOOL "" FORCE)
 set(JUCE_BUILD_HELPER_TOOLS OFF CACHE BOOL "" FORCE)
 set(JUCE_COPY_PLUGIN_AFTER_BUILD ON CACHE BOOL "" FORCE)
 
+# AGGRESSIVE JUCE universal binary prevention
+set(JUCE_BUILD_UNIVERSAL_BINARY OFF CACHE BOOL "" FORCE)
+set(JUCE_TARGET_ARCHITECTURE "x86_64" CACHE STRING "" FORCE)
+
 FetchContent_MakeAvailable(JUCE)
 
-# Find installed dependencies - only what's actually available
+# Find installed dependencies for Intel Homebrew
 find_package(PkgConfig REQUIRED)
 
-# Find Eigen3 - comprehensive search
+# Intel Homebrew paths (/usr/local)
+set(HOMEBREW_PREFIX "/usr/local")
+
+# Find Eigen3 - Intel paths
 find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
     PATHS 
-        /usr/local/include/eigen3 
-        /usr/local/opt/eigen/include/eigen3
-        /usr/local/Cellar/eigen/*/include/eigen3
+        ${HOMEBREW_PREFIX}/include/eigen3
+        ${HOMEBREW_PREFIX}/opt/eigen/include/eigen3
+        ${HOMEBREW_PREFIX}/Cellar/eigen/*/include/eigen3
         /opt/homebrew/include/eigen3
         /opt/homebrew/opt/eigen/include/eigen3
-        /opt/homebrew/Cellar/eigen/*/include/eigen3
-        /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Headers
 )
 
-# Find ONNX Runtime - enhanced search for Intel Mac
-find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
+# Find ONNX Runtime - Intel paths with verbose output
+find_path(ONNXRUNTIME_INCLUDE_DIR 
+    NAMES onnxruntime_cxx_api.h onnxruntime_c_api.h
     PATHS 
-        /usr/local/opt/onnxruntime/include
-        /usr/local/include/onnxruntime
-        /usr/local/include
-        /usr/local/Cellar/onnxruntime/*/include
-        /opt/homebrew/opt/onnxruntime/include
-        /opt/homebrew/include/onnxruntime
-        /opt/homebrew/include
-        /opt/homebrew/Cellar/onnxruntime/*/include
-)
-find_library(ONNXRUNTIME_LIB onnxruntime
-    NAMES onnxruntime libonnxruntime onnxruntime.dylib libonnxruntime.dylib
-    PATHS 
-        /usr/local/opt/onnxruntime/lib
-        /usr/local/lib
-        /usr/local/Cellar/onnxruntime/*/lib
-        /opt/homebrew/opt/onnxruntime/lib
-        /opt/homebrew/lib
-        /opt/homebrew/Cellar/onnxruntime/*/lib
+        ${HOMEBREW_PREFIX}/opt/onnxruntime/include
+        ${HOMEBREW_PREFIX}/include/onnxruntime
+        ${HOMEBREW_PREFIX}/include
+        ${HOMEBREW_PREFIX}/Cellar/onnxruntime/*/include
+    NO_DEFAULT_PATH
 )
 
-# Find Rubber Band - using discovered paths
-find_path(RUBBERBAND_INCLUDE_DIR rubberband/RubberBandStretcher.h
+find_library(ONNXRUNTIME_LIB 
+    NAMES libonnxruntime.dylib onnxruntime libonnxruntime
     PATHS 
-        /usr/local/Cellar/rubberband/4.0.0/include
-        /usr/local/include
-        /usr/local/opt/rubberband/include
-        /usr/local/Cellar/rubberband/*/include
-        /opt/homebrew/include
-        /opt/homebrew/opt/rubberband/include
-        /opt/homebrew/Cellar/rubberband/*/include
-)
-find_library(RUBBERBAND_LIB rubberband
-    NAMES rubberband librubberband
-    PATHS 
-        /usr/local/Cellar/rubberband/4.0.0/lib
-        /usr/local/lib
-        /usr/local/opt/rubberband/lib
-        /usr/local/Cellar/rubberband/*/lib
-        /opt/homebrew/lib
-        /opt/homebrew/opt/rubberband/lib
-        /opt/homebrew/Cellar/rubberband/*/lib
+        ${HOMEBREW_PREFIX}/opt/onnxruntime/lib
+        ${HOMEBREW_PREFIX}/lib
+        ${HOMEBREW_PREFIX}/Cellar/onnxruntime/*/lib
+    NO_DEFAULT_PATH
 )
 
-# Report what was found
+# Find Rubber Band - Intel paths with verbose output  
+find_path(RUBBERBAND_INCLUDE_DIR 
+    NAMES rubberband/RubberBandStretcher.h
+    PATHS 
+        ${HOMEBREW_PREFIX}/include
+        ${HOMEBREW_PREFIX}/opt/rubberband/include
+        ${HOMEBREW_PREFIX}/Cellar/rubberband/*/include
+    NO_DEFAULT_PATH
+)
+
+find_library(RUBBERBAND_LIB 
+    NAMES librubberband.dylib rubberband librubberband
+    PATHS 
+        ${HOMEBREW_PREFIX}/lib
+        ${HOMEBREW_PREFIX}/opt/rubberband/lib
+        ${HOMEBREW_PREFIX}/Cellar/rubberband/*/lib
+    NO_DEFAULT_PATH
+)
+
+# Report found libraries
 if(EIGEN3_INCLUDE_DIR)
     message(STATUS "Found Eigen3: ${EIGEN3_INCLUDE_DIR}")
-    set(HAS_EIGEN3 TRUE)
+    set(USE_EIGEN ON)
 else()
-    message(WARNING "Eigen3 not found - mathematical operations will be limited")
-    set(HAS_EIGEN3 FALSE)
+    message(WARNING "Eigen3 not found - some features will be disabled")
+    set(USE_EIGEN OFF)
 endif()
 
 if(ONNXRUNTIME_INCLUDE_DIR AND ONNXRUNTIME_LIB)
-    message(STATUS "Found ONNX Runtime: ${ONNXRUNTIME_INCLUDE_DIR}")
-    message(STATUS "ONNX Runtime library: ${ONNXRUNTIME_LIB}")
-    set(HAS_ONNX TRUE)
+    message(STATUS "Found ONNX Runtime: ${ONNXRUNTIME_INCLUDE_DIR}, ${ONNXRUNTIME_LIB}")
+    set(USE_ONNX ON)
 else()
     message(WARNING "ONNX Runtime not found - AI features will be disabled")
-    set(HAS_ONNX FALSE)
+    set(USE_ONNX OFF)
 endif()
 
 if(RUBBERBAND_INCLUDE_DIR AND RUBBERBAND_LIB)
-    message(STATUS "Found Rubber Band: ${RUBBERBAND_INCLUDE_DIR}")
-    message(STATUS "Rubber Band library: ${RUBBERBAND_LIB}")
-    set(HAS_RUBBERBAND TRUE)
+    message(STATUS "Found Rubber Band: ${RUBBERBAND_INCLUDE_DIR}, ${RUBBERBAND_LIB}")
+    set(USE_RUBBERBAND ON)
 else()
     message(WARNING "Rubber Band not found - pitch shifting will use basic algorithms")
-    set(HAS_RUBBERBAND FALSE)
+    set(USE_RUBBERBAND OFF)
 endif()
 
-# Define ALL source files
-set(SOURCES
-    Source/PluginProcessor.cpp
-    Source/PluginEditor.cpp
-    Source/PitchCorrectionEngine.cpp
-    Source/Parameters.cpp
-    Source/PresetManager.cpp
-    Source/ModeSelector.cpp
-    Source/Utils.cpp
-    Source/LookAndFeel.cpp
-    Source/AIModelLoader.cpp
+# Source files
+file(GLOB_RECURSE SOURCE_FILES
+    "Source/*.cpp"
+    "Source/*.h"
 )
 
-# Create the plugin with ALL formats
+# Create plugin
 juce_add_plugin(AutoTunePlugin
-    COMPANY_NAME "ReplicaStudio"
+    COMPANY_NAME "YourCompany"
     IS_SYNTH FALSE
     NEEDS_MIDI_INPUT FALSE
     NEEDS_MIDI_OUTPUT FALSE
     IS_MIDI_EFFECT FALSE
-    EDITOR_WANTS_KEYBOARD_FOCUS TRUE
+    EDITOR_WANTS_KEYBOARD_FOCUS FALSE
     COPY_PLUGIN_AFTER_BUILD TRUE
-    PLUGIN_MANUFACTURER_CODE "Repl"
-    PLUGIN_CODE "ATun"
+    PLUGIN_MANUFACTURER_CODE Yco
+    PLUGIN_CODE Atpl
     FORMATS VST3 AU Standalone
     PRODUCT_NAME "AutoTune Plugin"
 )
 
-# Add source files
-target_sources(AutoTunePlugin PRIVATE ${SOURCES})
+# Set target properties
+juce_generate_juce_header(AutoTunePlugin)
 
-# Compiler definitions based on available libraries
+target_sources(AutoTunePlugin PRIVATE ${SOURCE_FILES})
+
+# Compile definitions
 target_compile_definitions(AutoTunePlugin
     PUBLIC
         JUCE_WEB_BROWSER=0
@@ -151,29 +154,26 @@ target_compile_definitions(AutoTunePlugin
         JUCE_VST3_CAN_REPLACE_VST2=0
         JUCE_DISPLAY_SPLASH_SCREEN=0
         JUCE_REPORT_APP_USAGE=0
-        JUCE_STRICT_REFCOUNTEDPTR=1
-        USE_EIGEN=$<BOOL:${HAS_EIGEN3}>
-        USE_RUBBERBAND=$<BOOL:${HAS_RUBBERBAND}>
-        USE_ONNX=$<BOOL:${HAS_ONNX}>
-        USE_CREPE=$<BOOL:${HAS_ONNX}>
-        USE_DDSP=$<BOOL:${HAS_ONNX}>
-    PRIVATE
-        JUCE_APPLICATION_NAME_STRING="$<TARGET_PROPERTY:AutoTunePlugin,JUCE_PLUGIN_NAME>"
-        JUCE_APPLICATION_VERSION_STRING="$<TARGET_PROPERTY:AutoTunePlugin,JUCE_PLUGIN_VERSION>"
+        JUCE_ALSA=0
+        JUCE_DIRECTSOUND=0
+        JUCE_DISABLE_CAUTIOUS_PARAMETER_ID_CHECKING=1
+        $<$<BOOL:${USE_EIGEN}>:USE_EIGEN=1>
+        $<$<BOOL:${USE_ONNX}>:USE_ONNX=1>
+        $<$<BOOL:${USE_RUBBERBAND}>:USE_RUBBERBAND=1>
 )
 
-# Include directories for available libraries
+# Include directories
 target_include_directories(AutoTunePlugin PRIVATE Source)
 
-if(HAS_EIGEN3)
+if(USE_EIGEN)
     target_include_directories(AutoTunePlugin PRIVATE ${EIGEN3_INCLUDE_DIR})
 endif()
 
-if(HAS_ONNX)
+if(USE_ONNX)
     target_include_directories(AutoTunePlugin PRIVATE ${ONNXRUNTIME_INCLUDE_DIR})
 endif()
 
-if(HAS_RUBBERBAND)
+if(USE_RUBBERBAND)
     target_include_directories(AutoTunePlugin PRIVATE ${RUBBERBAND_INCLUDE_DIR})
 endif()
 
@@ -184,19 +184,34 @@ target_link_libraries(AutoTunePlugin
         juce::juce_audio_processors
         juce::juce_dsp
         juce::juce_gui_basics
-        juce::juce_core
+        juce::juce_gui_extra
     PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_lto_flags
-        # juce::juce_recommended_warning_flags  # Disabled for compatibility
 )
 
-if(HAS_ONNX)
+# Link external libraries if available
+if(USE_ONNX AND ONNXRUNTIME_LIB)
     target_link_libraries(AutoTunePlugin PRIVATE ${ONNXRUNTIME_LIB})
 endif()
 
-if(HAS_RUBBERBAND)
+if(USE_RUBBERBAND AND RUBBERBAND_LIB)
     target_link_libraries(AutoTunePlugin PRIVATE ${RUBBERBAND_LIB})
 endif()
 
-message(STATUS "AutoTune Plugin configured with available macOS functionality")
+# Compiler-specific settings
+if(APPLE)
+    target_compile_options(AutoTunePlugin PRIVATE -Wno-deprecated-declarations)
+    
+    # Intel specific optimizations
+    if(CMAKE_OSX_ARCHITECTURES STREQUAL "x86_64")
+        target_compile_options(AutoTunePlugin PRIVATE -march=native)
+    endif()
+endif()
+
+# Installation
+install(TARGETS AutoTunePlugin
+    LIBRARY DESTINATION lib
+    ARCHIVE DESTINATION lib
+    RUNTIME DESTINATION bin
+)

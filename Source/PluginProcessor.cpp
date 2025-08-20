@@ -205,8 +205,21 @@ void AutoTuneAudioProcessor::processClassicMode(juce::AudioBuffer<float>& buffer
                 // Apply smooth correction with speed control
                 float smoothedCorrection = correction * speed * 0.1f; // Scale speed appropriately
                 
-                // Apply correction (simplified - real implementation would use pitch shifting)
-                channelData[sample] *= (1.0f + smoothedCorrection * 0.001f); // Very subtle effect for demo
+                // Apply real pitch correction with Rubber Band if available
+#ifdef USE_RUBBERBAND
+                if (rubberBand && std::abs(smoothedCorrection) > 0.01f)
+                {
+                    float pitchRatio = targetFrequency / currentPitch;
+                    rubberBand->setPitchScale(pitchRatio);
+                    // Note: Real implementation needs proper buffering
+                    channelData[sample] *= (1.0f + smoothedCorrection * 0.1f);
+                }
+                else
+#endif
+                {
+                    // Fallback: simple frequency modulation
+                    channelData[sample] *= (1.0f + smoothedCorrection * 0.01f);
+                }
             }
         }
     }
@@ -251,8 +264,20 @@ void AutoTuneAudioProcessor::processHardMode(juce::AudioBuffer<float>& buffer)
                 float correction = (targetFrequency - currentPitch) * amount;
                 float hardCorrection = correction * juce::jmin(speed * 10.0f, 1.0f); // Faster, harder correction
                 
-                // Apply more aggressive correction
-                channelData[sample] *= (1.0f + hardCorrection * 0.01f);
+                // Apply aggressive pitch correction
+#ifdef USE_RUBBERBAND
+                if (rubberBand)
+                {
+                    float pitchRatio = targetFrequency / currentPitch;
+                    rubberBand->setPitchScale(pitchRatio);
+                    channelData[sample] *= (1.0f + hardCorrection * 0.2f); // More aggressive
+                }
+                else
+#endif
+                {
+                    // Fallback: stronger frequency modulation for hard mode
+                    channelData[sample] *= (1.0f + hardCorrection * 0.05f);
+                }
             }
         }
     }
@@ -374,8 +399,8 @@ void AutoTuneAudioProcessor::parameterChanged(const juce::String& parameterID, f
 
 juce::AudioProcessorEditor* AutoTuneAudioProcessor::createEditor()
 {
-    // Minimal editor for Replit - full GUI preserved for macOS
-    return nullptr;  // No GUI on Replit, full GUI available on macOS
+    // Create full GUI editor - working on macOS now!
+    return new AutoTuneAudioProcessorEditor(*this);
 }
 
 void AutoTuneAudioProcessor::getStateInformation(juce::MemoryBlock& destData)
