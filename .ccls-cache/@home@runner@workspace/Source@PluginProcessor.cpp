@@ -403,5 +403,5 @@ void AutoTuneAudioProcessor::setStateInformation(const void* data, int sizeInByt
 // This creates new instances of the plugin
 juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
-    return new AutoTuneAudioProcessor();
+    return static_cast<juce::AudioProcessor*>(new AutoTuneAudioProcessor());
 }

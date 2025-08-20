@@ -15,7 +15,7 @@
 #endif
 
 class AutoTuneAudioProcessor : public juce::AudioProcessor,
-                               public juce::AudioProcessorValueTreeState::Listener
+                                public juce::AudioProcessorValueTreeState::Listener
 {
 public:
     AutoTuneAudioProcessor();

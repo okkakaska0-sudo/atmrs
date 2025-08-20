@@ -1,0 +1,65 @@
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:22:59: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   22 |     parameters.addParameterListener(Parameters::SPEED_ID, this);
+      |                                                           ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:23:60: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   23 |     parameters.addParameterListener(Parameters::AMOUNT_ID, this);
+      |                                                            ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:24:58: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   24 |     parameters.addParameterListener(Parameters::MODE_ID, this);
+      |                                                          ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:25:57: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   25 |     parameters.addParameterListener(Parameters::KEY_ID, this);
+      |                                                         ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:26:59: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   26 |     parameters.addParameterListener(Parameters::SCALE_ID, this);
+      |                                                           ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:40:62: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   40 |     parameters.removeParameterListener(Parameters::SPEED_ID, this);
+      |                                                              ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:41:63: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   41 |     parameters.removeParameterListener(Parameters::AMOUNT_ID, this);
+      |                                                               ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:42:61: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   42 |     parameters.removeParameterListener(Parameters::MODE_ID, this);
+      |                                                             ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:43:60: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   43 |     parameters.removeParameterListener(Parameters::KEY_ID, this);
+      |                                                            ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:44:62: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   44 |     parameters.removeParameterListener(Parameters::SCALE_ID, this);
+      |                                                              ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:133:34: error: cannot initialize object parameter of type 'const juce::AudioProcessor' with an expression of type 'AutoTuneAudioProcessor'
+  133 |     auto totalNumInputChannels = getTotalNumInputChannels();
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:134:35: error: cannot initialize object parameter of type 'const juce::AudioProcessor' with an expression of type 'AutoTuneAudioProcessor'
+  134 |     auto totalNumOutputChannels = getTotalNumOutputChannels();
