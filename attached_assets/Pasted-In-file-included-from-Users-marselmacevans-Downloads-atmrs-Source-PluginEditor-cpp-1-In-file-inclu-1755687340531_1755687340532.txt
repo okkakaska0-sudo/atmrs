@@ -1,0 +1,115 @@
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:205:
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:263:126: warning: implicit conversion changes signedness: 'unsigned int' to 'const int' [-Wsign-conversion]
+  263 | template<> EIGEN_STRONG_INLINE Packet4f pset1frombits<Packet4f>(unsigned int from) { return _mm_castsi128_ps(pset1<Packet4i>(from)); }
+      |                                                                                                              ~~~~~           ^~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:264:122: warning: implicit conversion changes signedness: 'uint64_t' (aka 'unsigned long long') to 'long long' [-Wsign-conversion]
+  264 | template<> EIGEN_STRONG_INLINE Packet2d pset1frombits<Packet2d>(uint64_t from) { return _mm_castsi128_pd(_mm_set1_epi64x(from)); }
+      |                                                                                                          ~~~~~~~~~~~~~~~ ^~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:90: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~                                  ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:79: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~                       ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:68: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~            ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:57: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~ ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:329:76: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  329 |   const Packet2d mask = _mm_castsi128_pd(_mm_setr_epi32(0x0,0x80000000,0x0,0x80000000));
+      |                                          ~~~~~~~~~~~~~~                    ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:329:61: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  329 |   const Packet2d mask = _mm_castsi128_pd(_mm_setr_epi32(0x0,0x80000000,0x0,0x80000000));
+      |                                          ~~~~~~~~~~~~~~     ^~~~~~~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:176:
+/usr/local/include/eigen3/Eigen/src/Core/arch/Default/Half.h:606:24: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  606 |   o.u = (h.x & 0x7fff) << 13;             // exponent/mantissa bits
+      |       ~ ~~~~~~~~~~~~~~~^~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/Default/Half.h:618:25: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  618 |   o.u |= (h.x & 0x8000) << 16;    // sign bit
+      |       ~~ ~~~~~~~~~~~~~~~^~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:608:79: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  608 |   const Packet2d mask = _mm_castsi128_pd(_mm_setr_epi32(0xFFFFFFFF,0x7FFFFFFF,0xFFFFFFFF,0x7FFFFFFF));
+      |                                          ~~~~~~~~~~~~~~                       ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:608:57: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  608 |   const Packet2d mask = _mm_castsi128_pd(_mm_setr_epi32(0xFFFFFFFF,0x7FFFFFFF,0xFFFFFFFF,0x7FFFFFFF));
+      |                                          ~~~~~~~~~~~~~~ ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:632:80: warning: implicit conversion changes signedness: 'unsigned long long' to 'long long' [-Wsign-conversion]
+  632 |   const Packet2d mask = _mm_castsi128_pd(_mm_set_epi64x(0x8000000000000000ull, 0x8000000000000000ull));
+      |                                          ~~~~~~~~~~~~~~                        ^~~~~~~~~~~~~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:632:57: warning: implicit conversion changes signedness: 'unsigned long long' to 'long long' [-Wsign-conversion]
+  632 |   const Packet2d mask = _mm_castsi128_pd(_mm_set_epi64x(0x8000000000000000ull, 0x8000000000000000ull));
+      |                                          ~~~~~~~~~~~~~~ ^~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:205:
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:263:126: warning: implicit conversion changes signedness: 'unsigned int' to 'const int' [-Wsign-conversion]
+  263 | template<> EIGEN_STRONG_INLINE Packet4f pset1frombits<Packet4f>(unsigned int from) { return _mm_castsi128_ps(pset1<Packet4i>(from)); }
+      |                                                                                                              ~~~~~           ^~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:264:122: warning: implicit conversion changes signedness: 'uint64_t' (aka 'unsigned long long') to 'long long' [-Wsign-conversion]
+  264 | template<> EIGEN_STRONG_INLINE Packet2d pset1frombits<Packet2d>(uint64_t from) { return _mm_castsi128_pd(_mm_set1_epi64x(from)); }
+      |                                                                                                          ~~~~~~~~~~~~~~~ ^~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:90: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~                                  ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:79: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~                       ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:68: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~            ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:324:57: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  324 |   const Packet4f mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                          ~~~~~~~~~~~~~~ ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:329:76: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  329 |   const Packet2d mask = _mm_castsi128_pd(_mm_setr_epi32(0x0,0x80000000,0x0,0x80000000));
+      |                                          ~~~~~~~~~~~~~~                    ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:329:61: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  329 |   const Packet2d mask = _mm_castsi128_pd(_mm_setr_epi32(0x0,0x80000000,0x0,0x80000000));
+      |                                          ~~~~~~~~~~~~~~     ^~~~~~~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:208:
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:72:88: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   72 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~                                  ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:72:77: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   72 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~                       ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:72:66: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   72 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~            ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:72:55: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   72 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x80000000,0x80000000,0x80000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~ ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:77:88: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   77 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x00000000,0x80000000,0x00000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~                                  ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/Complex.h:77:66: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+   77 |   const __m128 mask = _mm_castsi128_ps(_mm_setr_epi32(0x00000000,0x80000000,0x00000000,0x80000000));
+      |                                        ~~~~~~~~~~~~~~            ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:608:79: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  608 |   const Packet2d mask = _mm_castsi128_pd(_mm_setr_epi32(0xFFFFFFFF,0x7FFFFFFF,0xFFFFFFFF,0x7FFFFFFF));
+      |                                          ~~~~~~~~~~~~~~                       ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:608:57: warning: implicit conversion changes signedness: 'unsigned int' to 'int' [-Wsign-conversion]
+  608 |   const Packet2d mask = _mm_castsi128_pd(_mm_setr_epi32(0xFFFFFFFF,0x7FFFFFFF,0xFFFFFFFF,0x7FFFFFFF));
+      |                                          ~~~~~~~~~~~~~~ ^~~~~~~~~~
+/usr/local/include/eigen3/Eigen/src/Core/arch/SSE/PacketMath.h:632:80: warning: implicit conversion changes signedness: 'unsigned long long' to 'long long' [-Wsign-conversion]
+  632 |   const Packet2d mask = _mm_castsi128_pd(_mm_set_epi64x(0x8000000000000000ull, 0x8000000000000000ull));
+      |                                          ~~~~~~~~~~~~~~                        ^~~~~~~~~~~~~~~~~~~~~

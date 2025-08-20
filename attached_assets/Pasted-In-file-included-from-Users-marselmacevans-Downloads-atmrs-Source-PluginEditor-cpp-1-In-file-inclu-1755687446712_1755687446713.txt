@@ -1,0 +1,213 @@
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:215:
+/usr/local/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:281:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+  281 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+/usr/local/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:408:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+  408 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/usr/local/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:1105:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+ 1105 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/usr/local/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:1118:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+ 1118 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:166:
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:107:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:107:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:129:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  129 |   if (ptr == 0) return handmade_aligned_malloc(size);
+      |              ^
+      |              nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:133:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:133:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/usr/local/include/eigen3/Eigen/src/Core/util/Memory.h:913:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  913 |   pointer allocate(size_type num, const void* /*hint*/ = 0)
+      |                                                          ^
+      |                                                          nullptr
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:171:
+/usr/local/include/eigen3/Eigen/src/Core/MathFunctions.h:1444:18: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+ 1444 |   unsigned int v(x);
+      |                ~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:269:
+/usr/local/include/eigen3/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:32:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:33:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:215:
+/usr/local/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:281:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+  281 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+/usr/local/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:408:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+  408 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/usr/local/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:1105:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+ 1105 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/usr/local/include/eigen3/Eigen/src/Core/arch/NEON/TypeCasting.h:1118:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+ 1118 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:1:
+In file included from /usr/local/include/eigen3/Eigen/Core:269:
+/usr/local/include/eigen3/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:32:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:33:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:183:69: warning: implicit conversion turns floating-point number into integer: 'float' to 'int' [-Wfloat-conversion]
+  183 |     auto mainControlsArea = bounds.removeFromTop(bounds.getHeight() * 0.6f);
+      |                                    ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:234:63: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  234 |             float y = displayArea.getBottom() - (pitchHistory[i] * 0.5f + 0.5f) * displayArea.getHeight();
+      |                                                  ~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:231:27: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  231 |         for (int i = 0; i < pitchHistory.size(); ++i)
+      |                         ~ ^ ~~~~~~~~~~~~~~~~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:32:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:356:22: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  356 |         pitchHistory[i] = pitchHistory[i + 1];
+      |         ~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:356:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  356 |         pitchHistory[i] = pitchHistory[i + 1];
+      |                           ~~~~~~~~~~~~ ~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:354:23: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  354 |     for (int i = 0; i < pitchHistory.size() - 1; ++i)
+      |                     ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:33:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:17:5: warning: field 'pluginParameters' will be initialized after field 'parameters' [-Wreorder-ctor]
+   17 |     pluginParameters(),
+      |     ^~~~~~~~~~~~~~~~~~
+      |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout())
+   18 |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     pluginParameters()
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:18:72: warning: field 'pluginParameters' is uninitialized when used here [-Wuninitialized]
+   18 |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
+      |                                                                        ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:185:36: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  185 |         std::vector<float> pitches(numSamples);
+      |                            ~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:191:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  191 |             float currentPitch = pitches[sample];
+      |                                  ~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:236:36: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  236 |         std::vector<float> pitches(numSamples);
+      |                            ~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:242:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  242 |             float currentPitch = pitches[sample];
+      |                                  ~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:284:88: warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+  284 |             auto pitchPrediction = aiModelLoader.predictPitch(channelData, numSamples, currentSampleRate);
+      |                                                  ~~~~~~~~~~~~                          ^~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:300:47: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  300 |                 std::vector<float> tempBuffer(numSamples);
+      |                                    ~~~~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:309:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  309 |                         channelData[i] = tempBuffer[i] * (1.0f - blendFactor) + channelData[i] * blendFactor;
+      |                                          ~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:317:40: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  317 |             std::vector<float> pitches(numSamples);
+      |                                ~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:323:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  323 |                 float currentPitch = pitches[sample];
+      |                                      ~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:144:35: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  144 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |             ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:144:80: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  144 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |                                                               ~~~~~~~~~~~~~~ ~~^~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:144:58: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  144 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |                                           ~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:146:31: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  146 |         autocorrelationBuffer[lag] /= (analysisSize - lag); // Normalize
+      |         ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:157:35: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  157 |         if (autocorrelationBuffer[lag] > maxValue)
+      |             ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:159:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  159 |             maxValue = autocorrelationBuffer[lag];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:169:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  169 |             float y1 = autocorrelationBuffer[maxLag - 1];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~^~~
