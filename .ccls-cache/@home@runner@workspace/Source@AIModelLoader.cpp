@@ -4,8 +4,16 @@
 #include <cmath>
 #include <future>
 #include <memory>
+
+#ifdef JUCE_HEADER
+#include JUCE_HEADER
+#else
 #include <juce_core/juce_core.h>
 #include <juce_audio_utils/juce_audio_utils.h>
+#include <juce_audio_basics/juce_audio_basics.h>
+#endif
+
+using namespace juce;
 
 // PIMPL implementation to hide complex AI model details
 struct AIModelLoader::Impl
@@ -57,7 +65,7 @@ struct AIModelLoader::Impl
             if (bestPeriod > 0 && maxCorrelation > 0.3f)
             {
                 result.frequency = sampleRate / bestPeriod;
-                result.confidence = juce::jmin<float>(maxCorrelation * 2.0f, 1.0f);
+                result.confidence = jmin<float>(maxCorrelation * 2.0f, 1.0f);
                 result.voicing = result.confidence;
                 
                 // Mock harmonic analysis
@@ -117,7 +125,7 @@ struct AIModelLoader::Impl
                 // Apply loudness
                 sampleValue *= params.loudness;
                 
-                output[sample] = juce::jlimit<float>(-1.0f, 1.0f, sampleValue);
+                output[sample] = jlimit<float>(-1.0f, 1.0f, sampleValue);
             }
             
             return output;

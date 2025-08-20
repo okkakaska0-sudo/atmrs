@@ -14,6 +14,7 @@
 #endif
 
 using namespace juce;
+using namespace std;
 
 // PIMPL implementation to hide complex AI model details
 struct AIModelLoader::Impl
@@ -139,10 +140,10 @@ struct AIModelLoader::Impl
 };
 
 AIModelLoader::AIModelLoader()
-    : pImpl(std::make_unique<Impl>()),
+    : pImpl(make_unique<Impl>()),
       currentQuality(ProcessingQuality::Standard),
       useMultiThreading(true),
-      maxThreads(std::thread::hardware_concurrency()),
+      maxThreads(thread::hardware_concurrency()),
       threadPool(maxThreads),
       lastProcessingTime(0.0f),
       averageProcessingTime(0.0f),
@@ -171,9 +172,9 @@ AIModelLoader::~AIModelLoader()
     unloadModels();
 }
 
-bool AIModelLoader::loadCrepeModel(const juce::File& modelFile)
+bool AIModelLoader::loadCrepeModel(const File& modelFile)
 {
-    juce::ScopedLock lock(modelLock);
+    ScopedLock lock(modelLock);
     
     if (!validateModelFile(modelFile, "crepe"))
     {
@@ -197,14 +198,14 @@ bool AIModelLoader::loadCrepeModel(const juce::File& modelFile)
     }
     catch (const std::exception& e)
     {
-        lastError = AIError(AIError::ModelLoadFailed, "Failed to load CREPE model: " + juce::String(e.what()));
+        lastError = AIError(AIError::ModelLoadFailed, "Failed to load CREPE model: " + String(e.what()));
         return false;
     }
 }
 
-bool AIModelLoader::loadDDSPModel(const juce::File& modelFile)
+bool AIModelLoader::loadDDSPModel(const File& modelFile)
 {
-    juce::ScopedLock lock(modelLock);
+    ScopedLock lock(modelLock);
     
     if (!validateModelFile(modelFile, "ddsp"))
     {
@@ -227,7 +228,7 @@ bool AIModelLoader::loadDDSPModel(const juce::File& modelFile)
     }
     catch (const std::exception& e)
     {
-        lastError = AIError(AIError::ModelLoadFailed, "Failed to load DDSP model: " + juce::String(e.what()));
+        lastError = AIError(AIError::ModelLoadFailed, "Failed to load DDSP model: " + String(e.what()));
         return false;
     }
 }
@@ -245,16 +246,16 @@ AIModelLoader::PitchPrediction AIModelLoader::predictPitch(const float* audioBuf
         return PitchPrediction();
     }
     
-    auto startTime = juce::Time::getCurrentTime();
+    auto startTime = Time::getCurrentTime();
     
     // Preprocess audio for CREPE
-    std::vector<float> preprocessed = preprocessAudioForCrepe(audioBuffer, numSamples, sampleRate);
+    vector<float> preprocessed = preprocessAudioForCrepe(audioBuffer, numSamples, sampleRate);
     
     // Predict using mock CREPE model
     PitchPrediction result = pImpl->crepeModel.predict(preprocessed);
     
     // Update performance metrics
-    auto endTime = juce::Time::getCurrentTime();
+    auto endTime = Time::getCurrentTime();
     lastProcessingTime = static_cast<float>((endTime - startTime).inMilliseconds());
     updatePerformanceMetrics();
     
@@ -434,13 +435,14 @@ void AIModelLoader::setUseMultiThreading(bool useThreads)
 
 void AIModelLoader::setMaxThreads(int threads)
 {
-    maxThreads = juce::jmax<int>(1, threads);
-    threadPool.setNumThreads(maxThreads);
+    maxThreads = jmax<int>(1, threads);
+    // Note: JUCE ThreadPool manages its own threads automatically
+    // We'll use maxThreads to limit our own threading logic
 }
 
 void AIModelLoader::setupDefaultModelDirectory()
 {
-    auto userDocsDir = juce::File::getSpecialLocation(juce::File::userDocumentsDirectory);
+    auto userDocsDir = File::getSpecialLocation(File::userDocumentsDirectory);
     modelDirectory = userDocsDir.getChildFile("ProAutoTune").getChildFile("Models");
     
     if (!modelDirectory.exists())
@@ -449,7 +451,7 @@ void AIModelLoader::setupDefaultModelDirectory()
     }
 }
 
-bool AIModelLoader::validateModelFile(const juce::File& file, const juce::String& expectedType)
+bool AIModelLoader::validateModelFile(const File& file, const String& expectedType)
 {
     if (!file.existsAsFile())
         return false;
@@ -479,7 +481,7 @@ std::vector<float> AIModelLoader::preprocessAudioForCrepe(const float* input, in
         {
             float sourceIndex = i * ratio;
             int index1 = static_cast<int>(sourceIndex);
-            int index2 = juce::jmin<int>(index1 + 1, numSamples - 1);
+            int index2 = jmin<int>(index1 + 1, numSamples - 1);
             float fraction = sourceIndex - index1;
             
             output[i] = input[index1] * (1.0f - fraction) + input[index2] * fraction;
