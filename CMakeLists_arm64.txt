@@ -33,6 +33,22 @@ find_package(PkgConfig REQUIRED)
 # ARM64 Homebrew paths (/opt/homebrew)
 set(HOMEBREW_PREFIX "/opt/homebrew")
 
+# Detect actual Homebrew Cellar paths
+execute_process(
+    COMMAND find ${HOMEBREW_PREFIX}/Cellar -name "onnxruntime" -type d -maxdepth 1
+    OUTPUT_VARIABLE ONNX_CELLAR_PATH
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+execute_process(
+    COMMAND find ${HOMEBREW_PREFIX}/Cellar -name "rubberband" -type d -maxdepth 1  
+    OUTPUT_VARIABLE RUBBER_CELLAR_PATH
+    OUTPUT_STRIP_TRAILING_WHITESPACE
+)
+
+message(STATUS "ONNX Cellar path: ${ONNX_CELLAR_PATH}")
+message(STATUS "Rubber Band Cellar path: ${RUBBER_CELLAR_PATH}")
+
 # Find Eigen3 - ARM64 paths
 find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
     PATHS 
@@ -43,36 +59,65 @@ find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
         /usr/local/opt/eigen/include/eigen3
 )
 
-# Find ONNX Runtime - ARM64 paths
-find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
-    PATHS 
-        ${HOMEBREW_PREFIX}/opt/onnxruntime/include
-        ${HOMEBREW_PREFIX}/include/onnxruntime
-        ${HOMEBREW_PREFIX}/include
-        ${HOMEBREW_PREFIX}/Cellar/onnxruntime/*/include
-)
-find_library(ONNXRUNTIME_LIB onnxruntime
-    NAMES onnxruntime libonnxruntime onnxruntime.dylib libonnxruntime.dylib
-    PATHS 
-        ${HOMEBREW_PREFIX}/opt/onnxruntime/lib
-        ${HOMEBREW_PREFIX}/lib
-        ${HOMEBREW_PREFIX}/Cellar/onnxruntime/*/lib
-)
+# Find ONNX Runtime with exact Cellar paths
+if(ONNX_CELLAR_PATH)
+    find_path(ONNXRUNTIME_INCLUDE_DIR 
+        NAMES onnxruntime_cxx_api.h onnxruntime_c_api.h
+        PATHS ${ONNX_CELLAR_PATH}/*/include
+        NO_DEFAULT_PATH
+    )
+    find_library(ONNXRUNTIME_LIB 
+        NAMES libonnxruntime.dylib onnxruntime
+        PATHS ${ONNX_CELLAR_PATH}/*/lib
+        NO_DEFAULT_PATH
+    )
+else()
+    # Fallback search
+    find_path(ONNXRUNTIME_INCLUDE_DIR 
+        NAMES onnxruntime_cxx_api.h onnxruntime_c_api.h
+        PATHS 
+            ${HOMEBREW_PREFIX}/opt/onnxruntime/include
+            ${HOMEBREW_PREFIX}/include
+        NO_DEFAULT_PATH
+    )
+    find_library(ONNXRUNTIME_LIB 
+        NAMES libonnxruntime.dylib onnxruntime
+        PATHS 
+            ${HOMEBREW_PREFIX}/opt/onnxruntime/lib
+            ${HOMEBREW_PREFIX}/lib
+        NO_DEFAULT_PATH
+    )
+endif()
 
-# Find Rubber Band - ARM64 paths
-find_path(RUBBERBAND_INCLUDE_DIR rubberband/RubberBandStretcher.h
-    PATHS 
-        ${HOMEBREW_PREFIX}/include
-        ${HOMEBREW_PREFIX}/opt/rubberband/include
-        ${HOMEBREW_PREFIX}/Cellar/rubberband/*/include
-)
-find_library(RUBBERBAND_LIB rubberband
-    NAMES rubberband librubberband rubberband.dylib librubberband.dylib
-    PATHS 
-        ${HOMEBREW_PREFIX}/lib
-        ${HOMEBREW_PREFIX}/opt/rubberband/lib
-        ${HOMEBREW_PREFIX}/Cellar/rubberband/*/lib
-)
+# Find Rubber Band with exact Cellar paths
+if(RUBBER_CELLAR_PATH)
+    find_path(RUBBERBAND_INCLUDE_DIR 
+        NAMES rubberband/RubberBandStretcher.h
+        PATHS ${RUBBER_CELLAR_PATH}/*/include
+        NO_DEFAULT_PATH
+    )
+    find_library(RUBBERBAND_LIB 
+        NAMES librubberband.dylib rubberband
+        PATHS ${RUBBER_CELLAR_PATH}/*/lib
+        NO_DEFAULT_PATH
+    )
+else()
+    # Fallback search
+    find_path(RUBBERBAND_INCLUDE_DIR 
+        NAMES rubberband/RubberBandStretcher.h
+        PATHS 
+            ${HOMEBREW_PREFIX}/include
+            ${HOMEBREW_PREFIX}/opt/rubberband/include
+        NO_DEFAULT_PATH
+    )
+    find_library(RUBBERBAND_LIB 
+        NAMES librubberband.dylib rubberband
+        PATHS 
+            ${HOMEBREW_PREFIX}/lib
+            ${HOMEBREW_PREFIX}/opt/rubberband/lib
+        NO_DEFAULT_PATH
+    )
+endif()
 
 # Report found libraries
 if(EIGEN3_INCLUDE_DIR)
