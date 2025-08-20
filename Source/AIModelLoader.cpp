@@ -5,6 +5,7 @@
 #include <future>
 #include <memory>
 #include <juce_core/juce_core.h>
+#include <juce_audio_utils/juce_audio_utils.h>
 
 // PIMPL implementation to hide complex AI model details
 struct AIModelLoader::Impl

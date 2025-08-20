@@ -3,6 +3,8 @@
 #include <algorithm>
 #include <cmath>
 #include <future>
+#include <memory>
+#include <juce_core/juce_core.h>
 
 // PIMPL implementation to hide complex AI model details
 struct AIModelLoader::Impl
