@@ -116,5 +116,9 @@ private:
     void applyHannWindow(float* buffer, int numSamples);
     void applyBlackmanWindow(float* buffer, int numSamples);
     
+    // REAL PITCH SHIFTING METHODS
+    void applyGranularPitchShift(float* buffer, int numSamples, float pitchRatio, float speed);
+    void applyHardPitchQuantization(float* buffer, int numSamples, float pitchRatio, float speed);
+    
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(PitchCorrectionEngine)
 };

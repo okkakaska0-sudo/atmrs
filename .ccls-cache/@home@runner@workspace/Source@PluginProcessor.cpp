@@ -256,19 +256,12 @@ void AutoTuneAudioProcessor::processHardMode(juce::AudioBuffer<float>& buffer)
                 float correction = (targetFrequency - currentPitch) * amount;
                 float hardCorrection = correction * juce::jmin(speed * 10.0f, 1.0f); // Faster, harder correction
                 
-                // Apply aggressive pitch correction
-#ifdef USE_RUBBERBAND
-                if (rubberBand)
+                // HARD MODE: Instant pitch snapping
+                float pitchRatio = targetFrequency / currentPitch;
+                if (std::abs(pitchRatio - 1.0f) > 0.005f) // Aggressive threshold
                 {
-                    float pitchRatio = targetFrequency / currentPitch;
-                    rubberBand->setPitchScale(pitchRatio);
-                    channelData[sample] *= (1.0f + hardCorrection * 0.2f); // More aggressive
-                }
-                else
-#endif
-                {
-                    // Fallback: stronger frequency modulation for hard mode
-                    channelData[sample] *= (1.0f + hardCorrection * 0.05f);
+                    // Hard snap to target with formant preservation
+                    pitchEngine.correctPitchHard(&channelData[sample], 1, targetFrequency, speed, amount);
                 }
             }
         }

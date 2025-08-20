@@ -83,7 +83,8 @@ void AutoTuneAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBloc
     rubberBand = std::make_unique<RubberBand::RubberBandStretcher>(
         sampleRate, 2,
         RubberBand::RubberBandStretcher::OptionProcessRealTime |
-        RubberBand::RubberBandStretcher::OptionPitchHighQuality
+        RubberBand::RubberBandStretcher::OptionPitchHighQuality |
+        RubberBand::RubberBandStretcher::OptionEngineFiner  // R3 engine for setPitchScale()
     );
 #endif
 }

@@ -482,7 +482,8 @@ void PitchCorrectionEngine::correctPitchAI(float* buffer, int numSamples,
             sampleRate, 1,
             RubberBand::RubberBandStretcher::OptionProcessRealTime |
             RubberBand::RubberBandStretcher::OptionFormantPreserved |
-            RubberBand::RubberBandStretcher::OptionPitchHighQuality
+            RubberBand::RubberBandStretcher::OptionPitchHighQuality |
+            RubberBand::RubberBandStretcher::OptionEngineFiner  // R3 engine for setPitchScale()
         );
     }
     
