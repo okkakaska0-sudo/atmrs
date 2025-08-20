@@ -17,6 +17,14 @@ if [ -d "build" ]; then
     rm -rf build
 fi
 
+# Copy Intel config to main CMakeLists.txt
+if [[ ! -f "CMakeLists_intel.txt" ]]; then
+    echo "❌ CMakeLists_intel.txt not found!"
+    exit 1
+fi
+
+cp CMakeLists_intel.txt CMakeLists.txt
+
 # Create build directory
 mkdir -p build
 cd build
@@ -30,7 +38,6 @@ cmake -G "Unix Makefiles" \
     -DUSE_EIGEN=ON \
     -DUSE_ONNX=ON \
     -DUSE_RUBBERBAND=ON \
-    -f ../CMakeLists_intel.txt \
     ..
 
 echo "🔨 Building plugin..."
@@ -51,6 +58,10 @@ else
 fi
 
 echo ""
-echo "🎵 Ready to use in DAW!"
-echo "Copy .vst3 files to: ~/Library/Audio/Plug-Ins/VST3/"
-echo "Copy .component files to: ~/Library/Audio/Plug-Ins/Components/"
+echo "🎵 Marsi AutoTune Pro ready for professional use!"
+echo "📂 Installation:"
+echo "   VST3: cp *.vst3 ~/Library/Audio/Plug-Ins/VST3/"
+echo "   AU:   cp *.component ~/Library/Audio/Plug-Ins/Components/"
+echo ""
+echo "🏢 Marsi Sound Studio - Professional Audio Plugin"
+echo "🎵 Compatible with Logic Pro, Pro Tools, Ableton Live, and more!"

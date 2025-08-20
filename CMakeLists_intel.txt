@@ -97,17 +97,17 @@ file(GLOB_RECURSE SOURCE_FILES
 
 # Create plugin
 juce_add_plugin(AutoTunePlugin
-    COMPANY_NAME "YourCompany"
+    COMPANY_NAME "Marsi Sound Studio"
     IS_SYNTH FALSE
     NEEDS_MIDI_INPUT FALSE
     NEEDS_MIDI_OUTPUT FALSE
     IS_MIDI_EFFECT FALSE
     EDITOR_WANTS_KEYBOARD_FOCUS FALSE
     COPY_PLUGIN_AFTER_BUILD TRUE
-    PLUGIN_MANUFACTURER_CODE Yco
-    PLUGIN_CODE Atpl
+    PLUGIN_MANUFACTURER_CODE Mrsi
+    PLUGIN_CODE MsAt
     FORMATS VST3 AU Standalone
-    PRODUCT_NAME "AutoTune Plugin"
+    PRODUCT_NAME "Marsi AutoTune Pro"
 )
 
 # Set target properties
