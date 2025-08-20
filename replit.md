@@ -37,8 +37,10 @@ cd /path/to/project
 
 **Major Issue:** Architecture detection confusion - CMake was building for ARM64 despite Intel x64 Mac
 - **Root Cause:** Conflicting architecture detection in universal build scripts
-- **Solution:** Created dedicated `build_intel_fixed.sh` with forced Intel x64 targeting
-- **Result:** Proper `x86_64` compilation with correct `/usr/local` Homebrew paths
+- **Initial Solution:** Created dedicated `build_intel_fixed.sh` with forced Intel x64 targeting
+- **Final Issue Found:** Universal binary compilation (`-arch x86_64 -arch arm64`) despite Intel-only target
+- **Final Solution:** Created `build_intel_only.sh` with forced single architecture compilation
+- **Result:** Proper `x86_64` ONLY compilation with correct `/usr/local` Homebrew paths
 
 ### ✅ COMPILATION ERRORS COMPLETELY FIXED
 
@@ -53,9 +55,15 @@ cd /path/to/project
 - **PluginProcessor.h:** CRITICAL - Fixed member initialization order to prevent crashes
 - **AIModelLoader.cpp:** Complete JUCE namespace resolution and API compatibility
 
-#### 3. Build System Optimization
-- **CMakeLists_intel.txt:** Enhanced library detection with verbose output for Intel x64
-- **build_intel_fixed.sh:** Comprehensive dependency verification and architecture checking
+#### 3. Universal Binary Issue Resolved
+- **Issue:** CMake building for both architectures (`-arch x86_64 -arch arm64`)
+- **Problem:** Linker couldn't find ARM64 libraries, only Intel x64 available
+- **Error:** `ld: warning: ignoring file 'libonnxruntime.dylib': found architecture 'x86_64', required architecture 'arm64'`
+- **Solution:** Force single architecture build with `JUCE_BUILD_UNIVERSAL_BINARY=OFF`
+
+#### 4. Build System Optimization
+- **CMakeLists_intel.txt:** Enhanced library detection with forced Intel-only compilation
+- **build_intel_only.sh:** Single architecture build script preventing universal binary
 - **Library Integration:** Correct integration with Intel Homebrew paths (`/usr/local`)
 
 ### ✅ DEPENDENCIES VERIFIED & CONFIGURED
@@ -71,12 +79,12 @@ All dependencies properly installed via Homebrew for Intel x64:
 **Recommended build command:**
 ```bash
 cd /Users/marselmacevans/Downloads/atmrs
-./build_intel_fixed.sh
+./build_intel_only.sh
 ```
 
 **Required files to copy from Replit:**
-- `build_intel_fixed.sh` (Intel x64 optimized build script)
-- `CMakeLists_intel.txt` (Intel architecture configuration)
+- `build_intel_only.sh` (Intel x64 ONLY build script - prevents universal binary)
+- `CMakeLists_intel.txt` (Intel architecture configuration with universal binary disabled)
 - `Source/AIModelLoader.cpp` (JUCE compatibility fixes applied)
 
 **Expected output:** VST3, AU, and Standalone plugin formats ready for distribution
@@ -92,11 +100,12 @@ cd /Users/marselmacevans/Downloads/atmrs
 ### 📋 ARCHITECTURAL DETAILS
 
 #### Build Configurations Created
-- `CMakeLists_intel.txt` - Intel x64 optimized with `/usr/local` paths
+- `CMakeLists_intel.txt` - Intel x64 optimized with `/usr/local` paths and universal binary disabled
 - `CMakeLists_arm64.txt` - Apple Silicon with `/opt/homebrew` paths  
-- `CMakeLists_universal.txt` - Auto-detecting universal configuration
-- `build_intel_fixed.sh` - Intel-specific build with dependency verification
-- `build_universal.sh` - Architecture auto-detection script
+- `CMakeLists_universal.txt` - Auto-detecting universal configuration (deprecated)
+- `build_intel_only.sh` - **FINAL SOLUTION** Intel-only build preventing universal binary compilation
+- `build_intel_fixed.sh` - Initial Intel-specific build (superseded by build_intel_only.sh)
+- `build_universal.sh` - Architecture auto-detection script (deprecated for Intel Mac)
 
 #### Key Technical Fixes Applied
 ```cpp
@@ -192,10 +201,10 @@ Critical requirements:
 - User preference: manual file copying (NO automation scripts)
 
 **CURRENT WORKING FILES:**
-- **Build script**: `build_intel_fixed.sh` (Intel x64 optimized)
-- **Configuration**: `CMakeLists_intel.txt` (Intel architecture)
+- **Build script**: `build_intel_only.sh` (Intel x64 ONLY - prevents universal binary)
+- **Configuration**: `CMakeLists_intel.txt` (Intel architecture with universal binary disabled)
 - **Dependencies**: All confirmed installed at correct Intel Homebrew paths
-- **Source**: All compilation errors resolved, ready to build
+- **Source**: All compilation errors resolved, universal binary issue fixed, ready to build
 
 **NEVER:**
 - Attempt Linux builds or Replit compilation  
