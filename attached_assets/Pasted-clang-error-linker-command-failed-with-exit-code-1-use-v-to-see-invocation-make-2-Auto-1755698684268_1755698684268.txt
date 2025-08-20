@@ -1,0 +1,43 @@
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [AutoTunePlugin_artefacts/Release/AU/AutoTune Plugin.component/Contents/MacOS/AutoTune Plugin] Error 1
+make[1]: *** [CMakeFiles/AutoTunePlugin_AU.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+Undefined symbols for architecture arm64:
+  "_OrtGetApiBase", referenced from:
+      ___cxx_global_var_init.150 in lto.o
+      ___cxx_global_var_init.168 in lto.o
+  "RubberBand::RubberBandStretcher::setPitchScale(double)", referenced from:
+      AutoTuneAudioProcessor::processBlock(juce::AudioBuffer<float>&, juce::MidiBuffer&) in lto.o
+  "RubberBand::RubberBandStretcher::RubberBandStretcher(unsigned long, unsigned long, int, double, double)", referenced from:
+      AutoTuneAudioProcessor::prepareToPlay(double, int) in lto.o
+  "RubberBand::RubberBandStretcher::~RubberBandStretcher()", referenced from:
+      AutoTuneAudioProcessor::prepareToPlay(double, int) in lto.o
+      AutoTuneAudioProcessor::releaseResources() in lto.o
+      AutoTuneAudioProcessor::~AutoTuneAudioProcessor() in lto.o
+      std::__1::unique_ptr<RubberBand::RubberBandStretcher, std::__1::default_delete<RubberBand::RubberBandStretcher>>::~unique_ptr[abi:ne180100]() in lto.o
+ld: symbol(s) not found for architecture arm64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [AutoTunePlugin_artefacts/Release/Standalone/AutoTune Plugin.app/Contents/MacOS/AutoTune Plugin] Error 1
+make[1]: *** [CMakeFiles/AutoTunePlugin_Standalone.dir/all] Error 2
+Undefined symbols for architecture arm64:
+  "_OrtGetApiBase", referenced from:
+      ___cxx_global_var_init.150 in lto.o
+      ___cxx_global_var_init.168 in lto.o
+  "RubberBand::RubberBandStretcher::setPitchScale(double)", referenced from:
+      AutoTuneAudioProcessor::processBlock(juce::AudioBuffer<float>&, juce::MidiBuffer&) in lto.o
+  "RubberBand::RubberBandStretcher::RubberBandStretcher(unsigned long, unsigned long, int, double, double)", referenced from:
+      AutoTuneAudioProcessor::prepareToPlay(double, int) in lto.o
+  "RubberBand::RubberBandStretcher::~RubberBandStretcher()", referenced from:
+      AutoTuneAudioProcessor::prepareToPlay(double, int) in lto.o
+      AutoTuneAudioProcessor::releaseResources() in lto.o
+      AutoTuneAudioProcessor::~AutoTuneAudioProcessor() in lto.o
+      std::__1::unique_ptr<RubberBand::RubberBandStretcher, std::__1::default_delete<RubberBand::RubberBandStretcher>>::~unique_ptr[abi:ne180100]() in lto.o
+ld: symbol(s) not found for architecture arm64
+clang++: error: linker command failed with exit code 1 (use -v to see invocation)
+make[2]: *** [AutoTunePlugin_artefacts/Release/VST3/AutoTune Plugin.vst3/Contents/MacOS/AutoTune Plugin] Error 1
+make[1]: *** [CMakeFiles/AutoTunePlugin_VST3.dir/all] Error 2
+make: *** [all] Error 2
+
+❌ Build failed!
+📋 Showing error details...
+marselmacevans@iMac-Marsel atmrs % 
