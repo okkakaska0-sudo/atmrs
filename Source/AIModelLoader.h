@@ -8,7 +8,8 @@
 #include <functional>
 
 #ifdef USE_ONNX
-#include <onnxruntime_cxx_api.h>
+// ONNX Runtime headers - comment out for now to allow compilation
+// #include <onnxruntime_cxx_api.h>
 #endif
 
 #ifdef USE_EIGEN
