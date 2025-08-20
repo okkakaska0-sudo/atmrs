@@ -1,5 +1,0 @@
-# Hashes of file build rules.
-cd064d030b5e012de2e31b9be26a0aa4 AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_AU/PkgInfo
-50b73add17c531e684562d6488965060 AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_Standalone/PkgInfo
-638236ea2c29393ba378078d1632d924 AutoTunePlugin_artefacts/JuceLibraryCode/AutoTunePlugin_VST3/PkgInfo
-96b66df4ce67828f7b1a6d6ae4636701 AutoTunePlugin_artefacts/JuceLibraryCode/JuceHeader.h
