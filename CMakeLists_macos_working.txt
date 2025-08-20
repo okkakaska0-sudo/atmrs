@@ -39,9 +39,10 @@ find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
         /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Headers
 )
 
-# Find ONNX Runtime - comprehensive search
+# Find ONNX Runtime - using discovered paths
 find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
     PATHS 
+        /usr/local/Cellar/onnxruntime/1.22.2_1/include
         /usr/local/include
         /usr/local/opt/onnxruntime/include
         /usr/local/Cellar/onnxruntime/*/include
@@ -52,6 +53,7 @@ find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
 find_library(ONNXRUNTIME_LIB onnxruntime
     NAMES onnxruntime libonnxruntime
     PATHS 
+        /usr/local/Cellar/onnxruntime/1.22.2_1/lib
         /usr/local/lib
         /usr/local/opt/onnxruntime/lib
         /usr/local/Cellar/onnxruntime/*/lib
@@ -60,9 +62,10 @@ find_library(ONNXRUNTIME_LIB onnxruntime
         /opt/homebrew/Cellar/onnxruntime/*/lib
 )
 
-# Find Rubber Band - comprehensive search
+# Find Rubber Band - using discovered paths
 find_path(RUBBERBAND_INCLUDE_DIR rubberband/RubberBandStretcher.h
     PATHS 
+        /usr/local/Cellar/rubberband/4.0.0/include
         /usr/local/include
         /usr/local/opt/rubberband/include
         /usr/local/Cellar/rubberband/*/include
@@ -73,6 +76,7 @@ find_path(RUBBERBAND_INCLUDE_DIR rubberband/RubberBandStretcher.h
 find_library(RUBBERBAND_LIB rubberband
     NAMES rubberband librubberband
     PATHS 
+        /usr/local/Cellar/rubberband/4.0.0/lib
         /usr/local/lib
         /usr/local/opt/rubberband/lib
         /usr/local/Cellar/rubberband/*/lib
