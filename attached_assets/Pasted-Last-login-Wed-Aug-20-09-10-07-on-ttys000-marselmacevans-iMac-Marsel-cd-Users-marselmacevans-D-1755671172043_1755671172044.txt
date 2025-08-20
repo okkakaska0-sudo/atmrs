@@ -1,0 +1,72 @@
+Last login: Wed Aug 20 09:10:07 on ttys000
+marselmacevans@iMac-Marsel ~ % cd /Users/marselmacevans/Downloads/MusicSynth
+./build_simple.sh
+🎵 Building ProAutoTune Plugin...
+📦 Configuring build system...
+-- The C compiler identification is AppleClang 16.0.0.16000026
+-- The CXX compiler identification is AppleClang 16.0.0.16000026
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Rubber Band Library not found, using basic implementation
+CMake Warning (dev) at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:693 (add_custom_command):
+  The following keywords are not supported when using
+  add_custom_command(TARGET): DEPENDS.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1316 (_juce_configure_bundle)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)
+  CMakeLists.txt:45 (juce_add_plugin)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (120.5s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/marselmacevans/Downloads/MusicSynth/build
+🔨 Building plugin...
+[  2%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o
+[  5%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o
+[  7%] Building CXX object CMakeFiles/juce_vst3_helper.dir/_deps/juce-src/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.mm.o
+[ 10%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o
+In file included from In file included from In file included from /Users/marselmacevans/Downloads/MusicSynth/Source/PitchCorrectionEngine.cpp/Users/marselmacevans/Downloads/MusicSynth/Source/PluginEditor.cpp:/Users/marselmacevans/Downloads/MusicSynth/Source/PluginProcessor.cpp:1:1:
+1:
+:
+/Users/marselmacevans/Downloads/MusicSynth/Source/PitchCorrectionEngine.h/Users/marselmacevans/Downloads/MusicSynth/Source/PluginEditor.h:/Users/marselmacevans/Downloads/MusicSynth/Source/PluginProcessor.h:3:3:3:10:10:10: :  fatal error: fatal error: fatal error: 'JuceHeader.h' file not found'JuceHeader.h' file not found'JuceHeader.h' file not found
+
+
+    3 | #inc    lu3de |  #<iJnuccleuHdeea d<eJru.che>He
+a      d| er         ^~~~~~~~~~~~~~.
+h>
+      |          ^~~~~~~~~~~~~~
+    3 | #include <JuceHeader.h>
+      |          ^~~~~~~~~~~~~~
+1 error generated.
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+1 error generated.
+1 error generated.
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o] Error 1
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o] Error 1
+make[1]: *** [CMakeFiles/AutoTunePlugin.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 12%] Linking CXX executable juce_vst3_helper
+[ 12%] Built target juce_vst3_helper
+make: *** [all] Error 2
+❌ Build failed!
+marselmacevans@iMac-Marsel MusicSynth % 

@@ -5,15 +5,33 @@ project(AutoTunePlugin VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Add JUCE as a subdirectory (assumes JUCE is in the project root or as a submodule)
-# If JUCE is not present, it will be downloaded
+# Detect platform
+if(APPLE)
+    message(STATUS "Building for macOS")
+    set(MACOS_BUILD TRUE)
+else()
+    message(STATUS "Building for other platform")
+    set(MACOS_BUILD FALSE)
+endif()
+
+# Add JUCE - download as archive
 include(FetchContent)
 FetchContent_Declare(
     JUCE
-    GIT_REPOSITORY https://github.com/juce-framework/JUCE.git
-    GIT_TAG 7.0.9
-    GIT_SHALLOW TRUE
+    URL https://github.com/juce-framework/JUCE/archive/refs/tags/7.0.9.zip
+    DOWNLOAD_EXTRACT_TIMESTAMP true
 )
+
+# Configure JUCE build - disable all extras
+set(JUCE_BUILD_EXTRAS OFF CACHE BOOL "" FORCE)
+set(JUCE_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(JUCE_ENABLE_MODULE_SOURCE_GROUPS OFF CACHE BOOL "" FORCE)
+set(JUCE_BUILD_HELPER_TOOLS OFF CACHE BOOL "" FORCE)
+
+# Force disable juceaide and other tools
+set(JUCE_TOOL_INSTALL_DIR "" CACHE STRING "" FORCE)
+set(JUCE_COPY_PLUGIN_AFTER_BUILD OFF CACHE BOOL "" FORCE)
+
 FetchContent_MakeAvailable(JUCE)
 
 # Find Rubber Band Library
@@ -41,7 +59,13 @@ set(PLUGIN_SOURCES
     Source/AIModelLoader.cpp
 )
 
-# Create the plugin target
+# Create the plugin target with platform-specific formats
+if(APPLE)
+    set(PLUGIN_FORMATS AU VST3)
+else()
+    set(PLUGIN_FORMATS VST3)
+endif()
+
 juce_add_plugin(AutoTunePlugin
     COMPANY_NAME "ProAudio"
     IS_SYNTH FALSE
@@ -52,27 +76,44 @@ juce_add_plugin(AutoTunePlugin
     COPY_PLUGIN_AFTER_BUILD TRUE
     PLUGIN_MANUFACTURER_CODE Paud
     PLUGIN_CODE Auto
-    FORMATS VST3
+    FORMATS ${PLUGIN_FORMATS}
     PRODUCT_NAME "ProAutoTune"
+    BUNDLE_ID "com.proaudio.proautotune"
 )
 
 # Add sources to the plugin
 target_sources(AutoTunePlugin PRIVATE ${PLUGIN_SOURCES})
 
-# Compiler-specific options
-target_compile_definitions(AutoTunePlugin
-    PUBLIC
-        JUCE_WEB_BROWSER=0
-        JUCE_USE_CURL=0
-        JUCE_VST3_CAN_REPLACE_VST2=0
-        JUCE_DISPLAY_SPLASH_SCREEN=0
-        JUCE_REPORT_APP_USAGE=0
-        JUCE_USE_XRANDR=0
-        JUCE_USE_XINERAMA=0
-        JUCE_USE_XCURSOR=0
-        JUCE_PLUGINHOST_VST3=0
-        JUCE_PLUGINHOST_AU=0
-)
+# Platform-specific compiler options
+if(APPLE)
+    # macOS build with full GUI support
+    target_compile_definitions(AutoTunePlugin
+        PUBLIC
+            JUCE_WEB_BROWSER=0
+            JUCE_USE_CURL=0
+            JUCE_VST3_CAN_REPLACE_VST2=0
+            JUCE_DISPLAY_SPLASH_SCREEN=0
+            JUCE_REPORT_APP_USAGE=0
+    )
+else()
+    # Linux/other platforms - headless build
+    target_compile_definitions(AutoTunePlugin
+        PUBLIC
+            JUCE_WEB_BROWSER=0
+            JUCE_USE_CURL=0
+            JUCE_VST3_CAN_REPLACE_VST2=0
+            JUCE_DISPLAY_SPLASH_SCREEN=0
+            JUCE_REPORT_APP_USAGE=0
+            JUCE_USE_XRANDR=0
+            JUCE_USE_XINERAMA=0
+            JUCE_USE_XCURSOR=0
+            JUCE_PLUGINHOST_VST3=0
+            JUCE_PLUGINHOST_AU=0
+            JUCE_HEADLESS=1
+        PRIVATE
+            JUCE_MODULE_AVAILABLE_juce_opengl=0
+    )
+endif()
 
 if(USE_RUBBERBAND)
     target_compile_definitions(AutoTunePlugin PRIVATE USE_RUBBERBAND=1)

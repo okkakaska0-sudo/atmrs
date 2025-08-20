@@ -82,9 +82,6 @@ CMakeFiles/juce-populate-complete: juce-populate-prefix/src/juce-populate-stamp/
 	/nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E touch /home/runner/workspace/build/_deps/juce-subbuild/CMakeFiles/juce-populate-complete
 	/nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E touch /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-done
 
-juce-populate-prefix/src/juce-populate-stamp/juce-populate-update:
-.PHONY : juce-populate-prefix/src/juce-populate-stamp/juce-populate-update
-
 juce-populate-prefix/src/juce-populate-stamp/juce-populate-build: juce-populate-prefix/src/juce-populate-stamp/juce-populate-configure
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/runner/workspace/build/_deps/juce-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "No build step for 'juce-populate'"
 	cd /home/runner/workspace/build/_deps/juce-build && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E echo_append
@@ -96,10 +93,13 @@ juce-populate-prefix/src/juce-populate-stamp/juce-populate-configure: juce-popul
 	cd /home/runner/workspace/build/_deps/juce-build && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E echo_append
 	cd /home/runner/workspace/build/_deps/juce-build && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E touch /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-configure
 
-juce-populate-prefix/src/juce-populate-stamp/juce-populate-download: juce-populate-prefix/src/juce-populate-stamp/juce-populate-gitinfo.txt
+juce-populate-prefix/src/juce-populate-stamp/juce-populate-download: juce-populate-prefix/src/juce-populate-stamp/download-juce-populate.cmake
+juce-populate-prefix/src/juce-populate-stamp/juce-populate-download: juce-populate-prefix/src/juce-populate-stamp/juce-populate-urlinfo.txt
 juce-populate-prefix/src/juce-populate-stamp/juce-populate-download: juce-populate-prefix/src/juce-populate-stamp/juce-populate-mkdir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/runner/workspace/build/_deps/juce-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (git clone) for 'juce-populate'"
-	cd /home/runner/workspace/build/_deps && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/tmp/juce-populate-gitclone.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/runner/workspace/build/_deps/juce-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Performing download step (download, verify and extract) for 'juce-populate'"
+	cd /home/runner/workspace/build/_deps && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/download-juce-populate.cmake
+	cd /home/runner/workspace/build/_deps && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/verify-juce-populate.cmake
+	cd /home/runner/workspace/build/_deps && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/extract-juce-populate.cmake
 	cd /home/runner/workspace/build/_deps && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E touch /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-download
 
 juce-populate-prefix/src/juce-populate-stamp/juce-populate-install: juce-populate-prefix/src/juce-populate-stamp/juce-populate-build
@@ -118,19 +118,16 @@ juce-populate-prefix/src/juce-populate-stamp/juce-populate-patch: juce-populate-
 	/nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E echo_append
 	/nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E touch /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-patch
 
-juce-populate-prefix/src/juce-populate-stamp/juce-populate-update:
-.PHONY : juce-populate-prefix/src/juce-populate-stamp/juce-populate-update
-
 juce-populate-prefix/src/juce-populate-stamp/juce-populate-test: juce-populate-prefix/src/juce-populate-stamp/juce-populate-install
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/runner/workspace/build/_deps/juce-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "No test step for 'juce-populate'"
 	cd /home/runner/workspace/build/_deps/juce-build && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E echo_append
 	cd /home/runner/workspace/build/_deps/juce-build && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E touch /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-test
 
-juce-populate-prefix/src/juce-populate-stamp/juce-populate-update: juce-populate-prefix/tmp/juce-populate-gitupdate.cmake
 juce-populate-prefix/src/juce-populate-stamp/juce-populate-update: juce-populate-prefix/src/juce-populate-stamp/juce-populate-update-info.txt
 juce-populate-prefix/src/juce-populate-stamp/juce-populate-update: juce-populate-prefix/src/juce-populate-stamp/juce-populate-download
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/runner/workspace/build/_deps/juce-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Performing update step for 'juce-populate'"
-	cd /home/runner/workspace/build/_deps/juce-src && /nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -Dcan_fetch=YES -DCMAKE_MESSAGE_LOG_LEVEL=VERBOSE -P /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/tmp/juce-populate-gitupdate.cmake
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/runner/workspace/build/_deps/juce-subbuild/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "No update step for 'juce-populate'"
+	/nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E echo_append
+	/nix/store/29ax4k0a83zhz43lb73cv610d95wdsx1-cmake-3.31.6/bin/cmake -E touch /home/runner/workspace/build/_deps/juce-subbuild/juce-populate-prefix/src/juce-populate-stamp/juce-populate-update
 
 CMakeFiles/juce-populate.dir/codegen:
 .PHONY : CMakeFiles/juce-populate.dir/codegen

@@ -1,6 +1,8 @@
 #pragma once
 
-#include <JuceHeader.h>
+#include <juce_audio_processors/juce_audio_processors.h>
+#include <juce_dsp/juce_dsp.h>
+#include <juce_core/juce_core.h>
 #include "PitchCorrectionEngine.h"
 #include "Parameters.h"
 #include "PresetManager.h"

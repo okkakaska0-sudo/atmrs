@@ -16,18 +16,10 @@ unset(ENV{CMAKE_TOOLCHAIN_FILE})
 project(juce-populate NONE)
 
 
-# Pass through things we've already detected in the main project to avoid
-# paying the cost of redetecting them again in ExternalProject_Add()
-set(GIT_EXECUTABLE [==[/nix/store/1yj5z39xwiram4s0dm1i2ldpw4cbmwa6-replit-runtime-path/bin/git]==])
-set(GIT_VERSION_STRING [==[2.49.0]==])
-set_property(GLOBAL PROPERTY _CMAKE_FindGit_GIT_EXECUTABLE_VERSION
-  [==[/nix/store/1yj5z39xwiram4s0dm1i2ldpw4cbmwa6-replit-runtime-path/bin/git;2.49.0]==]
-)
-
 
 include(ExternalProject)
 ExternalProject_Add(juce-populate
-                     "UPDATE_DISCONNECTED" "False" "GIT_REPOSITORY" "https://github.com/juce-framework/JUCE.git" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "GIT_TAG" "7.0.9" "GIT_SHALLOW" "TRUE"
+                     "UPDATE_DISCONNECTED" "False" "DOWNLOAD_EXTRACT_TIMESTAMP" "true" "EXTERNALPROJECT_INTERNAL_ARGUMENT_SEPARATOR" "URL" "https://github.com/juce-framework/JUCE/archive/refs/tags/7.0.9.zip"
                     SOURCE_DIR          "/home/runner/workspace/build/_deps/juce-src"
                     BINARY_DIR          "/home/runner/workspace/build/_deps/juce-build"
                     CONFIGURE_COMMAND   ""
