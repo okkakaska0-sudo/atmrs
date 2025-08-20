@@ -5,7 +5,11 @@ ModeSelector::ModeSelector()
       currentQuality(QualityLevel::High),
       isInitialized(false)
 {
-    initializeModeConfigs();
+    // Initialize mode configs array explicitly
+    modeConfigs[0] = ModeConfig{"Classic", "Classic pitch correction", Parameters::Mode::Classic};
+    modeConfigs[1] = ModeConfig{"Hard", "Hard pitch correction", Parameters::Mode::Hard};
+    modeConfigs[2] = ModeConfig{"AI", "AI-powered pitch correction", Parameters::Mode::AI};
+    
     isInitialized = true;
 }
 

@@ -1,0 +1,81 @@
+ 202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:33:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:32:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /usr/local/include/eigen3/Eigen/Dense:3:
+In file included from /usr/local/include/eigen3/Eigen/Cholesky:33:
+/usr/local/include/eigen3/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:144:35: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  144 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |             ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:144:80: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  144 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |                                                               ~~~~~~~~~~~~~~ ~~^~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:144:58: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  144 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |                                           ~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:146:31: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  146 |         autocorrelationBuffer[lag] /= (analysisSize - lag); // Normalize
+      |         ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:157:35: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  157 |         if (autocorrelationBuffer[lag] > maxValue)
+      |             ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:159:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  159 |             maxValue = autocorrelationBuffer[lag];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:169:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  169 |             float y1 = autocorrelationBuffer[maxLag - 1];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:170:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  170 |             float y2 = autocorrelationBuffer[maxLag];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:171:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  171 |             float y3 = autocorrelationBuffer[maxLag + 1];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:155:53: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  155 |     for (int lag = minLag; lag < maxLagLimit && lag < autocorrelationBuffer.size(); ++lag)
+      |                                                 ~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:167:34: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  167 |         if (maxLag > 1 && maxLag < autocorrelationBuffer.size() - 1)
+      |                           ~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:205:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  205 |             yinBuffer[tau] += delta * delta;
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:214:33: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  214 |         runningSum += yinBuffer[tau];
+      |                       ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:217:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  217 |             yinBuffer[tau] *= tau / runningSum;
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:221:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  221 |             yinBuffer[tau] = 1.0f;
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:232:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  232 |         if (yinBuffer[tau] < threshold)
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:235:64: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  235 |             while (tau + 1 < yinBuffer.size() && yinBuffer[tau + 1] < yinBuffer[tau])
+      |                                                  ~~~~~~~~~ ~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:235:81: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  235 |             while (tau + 1 < yinBuffer.size() && yinBuffer[tau + 1] < yinBuffer[tau])
+      |                                                                       ~~~~~~~~~ ^~~
