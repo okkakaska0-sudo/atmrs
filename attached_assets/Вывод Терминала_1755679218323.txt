@@ -1,0 +1,1226 @@
+Last login: Wed Aug 20 11:28:08 on ttys000
+marselmacevans@iMac-Marsel ~ % cd /Users/marselmacevans/Downloads/atmrs
+./build_simple.sh
+🎵 Building ProAutoTune Plugin...
+📦 Configuring build system...
+-- The C compiler identification is AppleClang 16.0.0.16000026
+-- The CXX compiler identification is AppleClang 16.0.0.16000026
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building for macOS
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Rubber Band Library found: /usr/local/lib/librubberband.dylib
+-- Rubber Band Library integrated into project
+-- Fetching ONNX Runtime for macOS...
+CMake Warning (dev) at /usr/local/share/cmake/Modules/FetchContent.cmake:1953 (message):
+  Calling FetchContent_Populate(eigen3) is deprecated, call
+  FetchContent_MakeAvailable(eigen3) instead.  Policy CMP0169 can be set to
+  OLD to allow FetchContent_Populate(eigen3) to be called directly for now,
+  but the ability to call it with declared details will be removed completely
+  in a future version.
+Call Stack (most recent call first):
+  CMakeLists.txt:99 (FetchContent_Populate)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Using Kiss FFT for FFT operations
+CMake Deprecation Warning at build/_deps/kissfft-src/CMakeLists.txt:35 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Building KissFFT with datatype: float
+-- Building static library
+-- PKGINCLUDEDIR is /kissfft
+CMake Deprecation Warning at build/_deps/libsamplerate-src/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+CMake Deprecation Warning at build/_deps/libsamplerate-src/CMakeLists.txt:16 (cmake_policy):
+  The OLD behavior for policy CMP0091 will be removed from a future version
+  of CMake.
+
+  The cmake-policies(7) manual explains that the OLD behaviors of all
+  policies are deprecated and that a policy should be set to OLD only under
+  specific short-term circumstances.  Projects should be ported to the NEW
+  behavior and not rely on setting a policy to OLD.
+
+
+CMake Deprecation Warning at build/_deps/libsamplerate-src/CMakeLists.txt:46 (message):
+  LIBSAMPLERATE_TESTS option deprecated, use BUILD_TESTING option instead.
+
+
+-- Looking for stdbool.h
+-- Looking for stdbool.h - found
+-- Looking for unistd.h
+-- Looking for unistd.h - found
+-- Could NOT find PkgConfig (missing: PKG_CONFIG_EXECUTABLE) 
+-- Checking processor clipping capabilities...
+-- Performing Test CPU_CLIPS_POSITIVE
+-- Performing Test CPU_CLIPS_POSITIVE - Failed
+-- Performing Test CPU_CLIPS_NEGATIVE
+-- Performing Test CPU_CLIPS_NEGATIVE - Failed
+-- Checking processor clipping capabilities... none
+-- Performing Test HAVE_VISIBILITY
+-- Performing Test HAVE_VISIBILITY - Success
+-- All libraries integrated into project
+CMake Warning (dev) at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:693 (add_custom_command):
+  The following keywords are not supported when using
+  add_custom_command(TARGET): DEPENDS.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1316 (_juce_configure_bundle)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)
+  CMakeLists.txt:166 (juce_add_plugin)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:693 (add_custom_command):
+  The following keywords are not supported when using
+  add_custom_command(TARGET): DEPENDS.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1316 (_juce_configure_bundle)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)
+  CMakeLists.txt:166 (juce_add_plugin)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- Configuring done (98.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/marselmacevans/Downloads/atmrs/build
+🔨 Building plugin...
+[  3%] Building C object _deps/kissfft-build/CMakeFiles/kissfft.dir/kfc.c.o
+[  3%] Building CXX object CMakeFiles/juce_vst3_helper.dir/_deps/juce-src/modules/juce_audio_plugin_client/VST3/juce_VST3ManifestHelper.mm.o
+[  6%] Building C object _deps/libsamplerate-build/src/CMakeFiles/samplerate.dir/samplerate.c.o
+[  6%] Building C object _deps/kissfft-build/CMakeFiles/kissfft.dir/kiss_fft.c.o
+[  7%] Building C object _deps/kissfft-build/CMakeFiles/kissfft.dir/kiss_fftnd.c.o
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftnd.c:50:10: warning: cast from 'char *' to 'kiss_fftnd_cfg' (aka 'struct kiss_fftnd_state *') increases required alignment from 1 to 8 [-Wcast-align]
+   50 |     st = (kiss_fftnd_cfg) ptr;
+      |          ^~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftnd.c:55:18: warning: cast from 'char *' to 'kiss_fft_cfg *' (aka 'struct kiss_fft_state **') increases required alignment from 1 to 8 [-Wcast-align]
+   55 |     st->states = (kiss_fft_cfg *)ptr;
+      |                  ^~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftnd.c:58:16: warning: cast from 'char *' to 'int *' increases required alignment from 1 to 4 [-Wcast-align]
+   58 |     st->dims = (int*)ptr;
+      |                ^~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftnd.c:61:18: warning: cast from 'char *' to 'kiss_fft_cpx *' increases required alignment from 1 to 4 [-Wcast-align]
+   61 |     st->tmpbuf = (kiss_fft_cpx*)ptr;
+      |                  ^~~~~~~~~~~~~~~~~~
+4 warnings generated.
+[  9%] Building C object _deps/libsamplerate-build/src/CMakeFiles/samplerate.dir/src_linear.c.o
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftnd.c:50:10: warning: cast from 'char *' to 'kiss_fftnd_cfg' (aka 'struct kiss_fftnd_state *') increases required alignment from 1 to 8 [-Wcast-align]
+   50 |     st = (kiss_fftnd_cfg) ptr;
+      |          ^~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftnd.c:55:18: warning: cast from 'char *' to 'kiss_fft_cfg *' (aka 'struct kiss_fft_state **') increases required alignment from 1 to 8 [-Wcast-align]
+   55 |     st->states = (kiss_fft_cfg *)ptr;
+      |                  ^~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftnd.c:58:16: warning: cast from 'char *' to 'int *' increases required alignment from 1 to 4 [-Wcast-align]
+   58 |     st->dims = (int*)ptr;
+      |                ^~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftnd.c:61:18: warning: cast from 'char *' to 'kiss_fft_cpx *' increases required alignment from 1 to 4 [-Wcast-align]
+   61 |     st->tmpbuf = (kiss_fft_cpx*)ptr;
+      |                  ^~~~~~~~~~~~~~~~~~
+4 warnings generated.
+[ 10%] Building C object _deps/kissfft-build/CMakeFiles/kissfft.dir/kiss_fftndr.c.o
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftndr.c:59:10: warning: cast from 'char *' to 'kiss_fftndr_cfg' (aka 'struct kiss_fftndr_state *') increases required alignment from 1 to 8 [-Wcast-align]
+   59 |     st = (kiss_fftndr_cfg) ptr;
+      |          ^~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftndr.c:59:10: warning: cast from 'char *' to 'kiss_fftndr_cfg' (aka 'struct kiss_fftndr_state *') increases required alignment from 1 to 8 [-Wcast-align]
+   59 |     st = (kiss_fftndr_cfg) ptr;
+      |          ^~~~~~~~~~~~~~~~~~~~~
+[ 12%] Building C object _deps/libsamplerate-build/src/CMakeFiles/samplerate.dir/src_sinc.c.o
+1 warning generated.
+[ 14%] Building C object _deps/kissfft-build/CMakeFiles/kissfft.dir/kiss_fftr.c.o
+[ 15%] Building C object _deps/libsamplerate-build/src/CMakeFiles/samplerate.dir/src_zoh.c.o
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftr.c:49:18: warning: cast from 'char *' to 'kiss_fft_cpx *' increases required alignment from 1 to 4 [-Wcast-align]
+   49 |     st->tmpbuf = (kiss_fft_cpx *) (((char *) st->substate) + subsize);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+/Users/marselmacevans/Downloads/atmrs/build/_deps/kissfft-src/kiss_fftr.c:49:18: warning: cast from 'char *' to 'kiss_fft_cpx *' increases required alignment from 1 to 4 [-Wcast-align]
+   49 |     st->tmpbuf = (kiss_fft_cpx *) (((char *) st->substate) + subsize);
+      |                  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 warning generated.
+[ 17%] Linking C static library libkissfft-float.a
+[ 17%] Built target kissfft
+[ 18%] Linking C static library libsamplerate.a
+[ 18%] Built target samplerate
+[ 20%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o
+[ 21%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o
+[ 23%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:166:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:129:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  129 |   if (ptr == 0) return handmade_aligned_malloc(size);
+      |              ^
+      |              nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:913:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  913 |   pointer allocate(size_type num, const void* /*hint*/ = 0)
+      |                                                          ^
+      |                                                          nullptr
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:171:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/MathFunctions.h:1444:18: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+ 1444 |   unsigned int v(x);
+      |                ~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:215:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:281:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+  281 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:408:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+  408 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1105:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+ 1105 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1118:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+ 1118 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:269:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:32:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:33:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:166:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:129:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  129 |   if (ptr == 0) return handmade_aligned_malloc(size);
+      |              ^
+      |              nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:913:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  913 |   pointer allocate(size_type num, const void* /*hint*/ = 0)
+      |                                                          ^
+      |                                                          nullptr
+:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:166:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:107:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  107 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:129:14: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  129 |   if (ptr == 0) return handmade_aligned_malloc(size);
+      |              ^
+      |              nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:19: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                   ^
+      |                   nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:133:29: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  133 |   if (original == 0) return 0;
+      |                             ^
+      |                             nullptr
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/util/Memory.h:913:58: warning: zero as null pointer constant [-Wzero-as-null-pointer-constant]
+  913 |   pointer allocate(size_type num, const void* /*hint*/ = 0)
+      |                                                          ^
+      |                                                          nullptr
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:171:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/MathFunctions.h:1444:18: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+ 1444 |   unsigned int v(x);
+      |                ~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:171:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/MathFunctions.h:1444:18: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+ 1444 |   unsigned int v(x);
+      |                ~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:1:
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:65:37: error: duplicate member 'fft'
+   65 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:55:37: note: previous declaration is here
+   55 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:66:58: error: duplicate member 'window'
+   66 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:56:58: note: previous declaration is here
+   56 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:67:48: error: duplicate member 'frequencyData'
+   67 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:57:48: note: previous declaration is here
+   57 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:215:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:281:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+  281 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:408:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+  408 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1105:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+ 1105 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1118:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+ 1118 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:215:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:281:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+  281 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:408:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+  408 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1105:32: warning: implicit conversion changes signedness: 'const unsigned int' to 'const int' [-Wsign-conversion]
+ 1105 |   return static_cast<Packet4c>(a);
+      |          ~~~~~~~~~~~           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/arch/NEON/TypeCasting.h:1118:33: warning: implicit conversion changes signedness: 'const int' to 'const unsigned int' [-Wsign-conversion]
+ 1118 |   return static_cast<Packet4uc>(a);
+      |          ~~~~~~~~~~~            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:269:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Core:269:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Core/IO.h:66:30: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   66 |     while (i>=0 && matSuffix[i]!='\n')
+      |                    ~~~~~~~~~ ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:32:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:33:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:32:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LLT.h:202:64: warning: extra ';' after member function definition [-Wextra-semi]
+  202 |     const LLT& adjoint() const EIGEN_NOEXCEPT { return *this; };
+      |                                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:14:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Dense:3:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/Cholesky:33:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/eigen3-src/Eigen/src/Cholesky/LDLT.h:247:50: warning: extra ';' after member function definition [-Wextra-semi]
+  247 |     const LDLT& adjoint() const { return *this; };
+      |                                                  ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:37:44: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   37 |     autocorrelationBuffer.resize(blockSize * 2);
+      |                           ~~~~~~ ~~~~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:39:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+   39 |     tempBuffer.resize(blockSize);
+      |                ~~~~~~ ^~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:139:35: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  139 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |             ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:139:80: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  139 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |                                                               ~~~~~~~~~~~~~~ ~~^~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:139:58: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  139 |             autocorrelationBuffer[lag] += windowedBuffer[i] * windowedBuffer[i + lag];
+      |                                           ~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:141:31: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  141 |         autocorrelationBuffer[lag] /= (analysisSize - lag); // Normalize
+      |         ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:152:35: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  152 |         if (autocorrelationBuffer[lag] > maxValue)
+      |             ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:154:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  154 |             maxValue = autocorrelationBuffer[lag];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:164:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  164 |             float y1 = autocorrelationBuffer[maxLag - 1];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:165:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  165 |             float y2 = autocorrelationBuffer[maxLag];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:166:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  166 |             float y3 = autocorrelationBuffer[maxLag + 1];
+      |                        ~~~~~~~~~~~~~~~~~~~~~ ~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:150:53: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  150 |     for (int lag = minLag; lag < maxLagLimit && lag < autocorrelationBuffer.size(); ++lag)
+      |                                                 ~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:162:34: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  162 |         if (maxLag > 1 && maxLag < autocorrelationBuffer.size() - 1)
+      |                           ~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:192:45: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  192 |     std::vector<float> yinBuffer(bufferSize / 2, 0.0f);
+      |                        ~~~~~~~~~ ~~~~~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:200:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  200 |             yinBuffer[tau] += delta * delta;
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:209:33: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  209 |         runningSum += yinBuffer[tau];
+      |                       ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:212:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  212 |             yinBuffer[tau] *= tau / runningSum;
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:216:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  216 |             yinBuffer[tau] = 1.0f;
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:227:23: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  227 |         if (yinBuffer[tau] < threshold)
+      |             ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:230:64: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  230 |             while (tau + 1 < yinBuffer.size() && yinBuffer[tau + 1] < yinBuffer[tau])
+      |                                                  ~~~~~~~~~ ~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:230:81: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  230 |             while (tau + 1 < yinBuffer.size() && yinBuffer[tau + 1] < yinBuffer[tau])
+      |                                                                       ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:238:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  238 |                 float s0 = yinBuffer[tau - 1];
+      |                            ~~~~~~~~~ ~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:239:38: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  239 |                 float s1 = yinBuffer[tau];
+      |                            ~~~~~~~~~ ^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:240:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  240 |                 float s2 = yinBuffer[tau + 1];
+      |                            ~~~~~~~~~ ~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:225:48: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  225 |     for (int tau = minTau; tau < maxTau && tau < yinBuffer.size(); ++tau)
+      |                                            ~~~ ^ ~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:230:28: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  230 |             while (tau + 1 < yinBuffer.size() && yinBuffer[tau + 1] < yinBuffer[tau])
+      |                    ~~~~~~~ ^ ~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:236:32: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  236 |             if (tau > 0 && tau < yinBuffer.size() - 1)
+      |                            ~~~ ^ ~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:267:69: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  267 |         frequencyData[i] = juce::dsp::Complex<float>(windowedBuffer[i], 0.0f);
+      |                                                      ~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:275:27: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  275 |         magnitudeSpectrum[i] = std::abs(frequencyData[i]);
+      |         ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:286:31: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  286 |         if (magnitudeSpectrum[i] > maxMag)
+      |             ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:288:40: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  288 |             maxMag = magnitudeSpectrum[i];
+      |                      ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:298:50: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  298 |             float y1 = magnitudeSpectrum[peakBin - 1];
+      |                        ~~~~~~~~~~~~~~~~~ ~~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:299:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  299 |             float y2 = magnitudeSpectrum[peakBin];
+      |                        ~~~~~~~~~~~~~~~~~ ^~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:300:50: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  300 |             float y3 = magnitudeSpectrum[peakBin + 1];
+      |                        ~~~~~~~~~~~~~~~~~ ~~~~~~~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:284:42: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  284 |     for (int i = minBin; i < maxBin && i < magnitudeSpectrum.size(); ++i)
+      |                                        ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:296:36: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  296 |         if (peakBin > 1 && peakBin < magnitudeSpectrum.size() - 1)
+      |                            ~~~~~~~ ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:332:45: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  332 |         for (size_t i = 0; i < hps.size() / harmonic; ++i)
+      |                                           ~ ^~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:334:45: warning: implicit conversion changes signedness: 'int' to 'size_t' (aka 'unsigned long') [-Wsign-conversion]
+  334 |             hps[i] *= magnitudeSpectrum[i * harmonic];
+      |                                           ~ ^~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:346:17: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  346 |         if (hps[i] > maxValue)
+      |             ~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:348:28: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  348 |             maxValue = hps[i];
+      |                        ~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:344:42: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  344 |     for (int i = minBin; i < maxBin && i < hps.size(); ++i)
+      |                                        ~ ^ ~~~~~~~~~~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:65:37: error: duplicate member 'fft'
+   65 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:55:37: note: previous declaration is here
+   55 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:383:57: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  383 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                                                ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:383:72: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  383 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                                                              ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:383:26: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  383 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                 ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:383:41: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  383 |                 spectrum[i] > spectrum[i-2] && spectrum[i] > spectrum[i+2])
+      |                               ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:382:57: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  382 |             if (spectrum[i] > spectrum[i-1] && spectru/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:66:58: error: duplicate member 'window'
+   66 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:56:58: note: previous declaration is here
+   56 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:67:48: error: duplicate member 'frequencyData'
+   67 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:57:48: note: previous declaration is here
+   57 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+m[i] > spectrum[i+1] &&
+      |                                                ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:382:72: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  382 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                                                              ~~~~~~~~ ~^~
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:382:26: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  382 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                 ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:382:41: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  382 |             if (spectrum[i] > spectrum[i-1] && spectrum[i] > spectrum[i+1] &&
+      |                               ~~~~~~~~ ~^~
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:26:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:276:23: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  276 | ORT_RUNTIME_CLASS(Env);
+      |                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:277:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  277 | ORT_RUNTIME_CLASS(Status);  // nullptr for Status* indicates success
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:385:43: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  385 |                 peaks.push_back({spectrum[i], i});
+      |                                  ~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:278:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  278 | ORT_RUNTIME_CLASS(MemoryInfo);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:279:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  279 | ORT_RUNTIME_CLASS(IoBinding);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:396:27: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  396 |      /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h : 280 :f27o:r manwarning: tAmextra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]plitudes[i] = peaks[i].first;
+      |         ~~~~~~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:396:38: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  396 |         formantAmplitudes[i] = peaks[i].first;
+      |                                ~~~~~ ^
+
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:397:  28280: |  ORTwarning: _RUimplicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]NT
+IME_CLA  S397S | (        formantFrequenciSeess[sii]o n=) ;s t a/t/i cD_ocna'stt <cfallola tR>e(lpeeaaskesS[eis]s.isoenc ofnrdo m*  DslalmmpalienR a(tbee c/a ufsfet Ssiezses)i;on
+       o| wn        ~~~~~~~~~~~~~~~~~~ ^s
+ a thread po/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cppo:l397):58:
+       | warning:                           ^
+implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  397 |         formantFrequencies[i] = static_cast<float>(peaks[i]/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h.:s281e:c25o:n d *warning:  saextra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]mp
+leRat  e281  | /O RfTf_tRSUiNzTeI)M;E_
+C      L| AS                                                   ~~~~~ ^S
+(Value);
+      |                         ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:282:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  282 | ORT_RUNTIME_CLASS(RunOptions);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:283:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  283 | ORT_RUNTIME_CLASS(TypeInfo);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:284:42: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  284 | ORT_RUNTIME_CLASS(TensorTypeAndShapeInfo);
+      |                                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:285:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  285 | ORT_RUNTIME_CLASS(MapTypeInfo);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:511:26: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  511 |             pitchHistory[i] = pitchHistory[i + 1];
+      |             ~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.cpp:511:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  511 |             pitchHistory[i] = pitchHistory[i + 1];
+      |                               ~~~~~~~~~~~~ ~~^~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:286:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  286 | ORT_RUNTIME_CLASS(SequenceTypeInfo);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:287:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  287 | ORT_RUNTIME_CLASS(OptionalTypeInfo);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:288:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  288 | ORT_RUNTIME_CLASS(SessionOptions);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:289:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  289 | ORT_RUNTIME_CLASS(CustomOpDomain);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:290:33: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  290 | ORT_RUNTIME_CLASS(ModelMetadata);
+      |                                 ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:291:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  291 | ORT_RUNTIME_CLASS(ThreadPoolParams);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:292:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  292 | ORT_RUNTIME_CLASS(ThreadingOptions);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:293:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  293 | ORT_RUNTIME_CLASS(ArenaCfg);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:294:45: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  294 | ORT_RUNTIME_CLASS(PrepackedWeightsContainer);
+      |                                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:295:45: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  295 | ORT_RUNTIME_CLASS(TensorRTProviderOptionsV2);
+      |                                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:296:41: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  296 | ORT_RUNTIME_CLASS(CUDAProviderOptionsV2);
+      |                                         ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:297:39: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  297 | ORT_RUNTIME_CLASS(CANNProviderOptions);
+      |                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:298:39: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  298 | ORT_RUNTIME_CLASS(DnnlProviderOptions);
+      |                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:299:22: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  299 | ORT_RUNTIME_CLASS(Op);
+      |                      ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:300:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  300 | ORT_RUNTIME_CLASS(OpAttr);
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:301:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  301 | ORT_RUNTIME_CLASS(Logger);
+      |                          ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:27:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:493:16: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+  493 |       uint16_t result;
+      |                ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:488:12: note: previous declaration is here
+  488 |   uint16_t result;
+      |            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:442:101: warning: extra ';' after member function definition [-Wextra-semi]
+  442 |   constexpr bool operator==(const Float8E4M3FN_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:443:101: warning: extra ';' after member function definition [-Wextra-semi]
+  443 |   constexpr bool operator!=(const Float8E4M3FN_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:459:103: warning: extra ';' after member function definition [-Wextra-semi]
+  459 |   constexpr bool operator==(const Float8E4M3FNUZ_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:460:103: warning: extra ';' after member function definition [-Wextra-semi]
+  460 |   constexpr bool operator!=(const Float8E4M3FNUZ_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:476:99: warning: extra ';' after member function definition [-Wextra-semi]
+  476 |   constexpr bool operator==(const Float8E5M2_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:477:99: warning: extra ';' after member function definition [-Wextra-semi]
+  477 |   constexpr bool operator!=(const Float8E5M2_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:493:103: warning: extra ';' after member function definition [-Wextra-semi]
+  493 |   constexpr bool operator==(const Float8E5M2FNUZ_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:494:103: warning: extra ';' after member function definition [-Wextra-semi]
+  494 |   constexpr bool operator!=(const Float8E5M2FNUZ_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:505:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  505 | ORT_DEFINE_RELEASE(Allocator);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:506:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  506 | ORT_DEFINE_RELEASE(MemoryInfo);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:507:35: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  507 | ORT_DEFINE_RELEASE(CustomOpDomain);
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:508:37: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  508 | ORT_DEFINE_RELEASE(ThreadingOptions);
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:509:24: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  509 | ORT_DEFINE_RELEASE(Env);
+      |                        ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:510:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  510 | ORT_DEFINE_RELEASE(RunOptions);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:511:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  511 | ORT_DEFINE_RELEASE(Session);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:512:35: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  512 | ORT_DEFINE_RELEASE(SessionOptions);
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:513:43: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  513 | ORT_DEFINE_RELEASE(TensorTypeAndShapeInfo);
+      |                                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:514:37: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  514 | ORT_DEFINE_RELEASE(SequenceTypeInfo);
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:515:32: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  515 | ORT_DEFINE_RELEASE(MapTypeInfo);
+      |                                ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:516:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  516 | ORT_DEFINE_RELEASE(TypeInfo);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:517:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  517 | ORT_DEFINE_RELEASE(Value);
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:518:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  518 | ORT_DEFINE_RELEASE(ModelMetadata);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:519:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  519 | ORT_DEFINE_RELEASE(IoBinding);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:520:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  520 | ORT_DEFINE_RELEASE(ArenaCfg);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:521:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  521 | ORT_DEFINE_RELEASE(Status);
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:522:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  522 | ORT_DEFINE_RELEASE(OpAttr);
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:523:23: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  523 | ORT_DEFINE_RELEASE(Op);
+      |                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:524:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  524 | ORT_DEFINE_RELEASE(KernelInfo);
+      |                               ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:7:
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:65:37: error: duplicate member 'fft'
+   65 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:55:37: note: previous declaration is here
+   55 |     std::unique_ptr<juce::dsp::FFT> fft;
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:66:58: error: duplicate member 'window'
+   66 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:56:58: note: previous declaration is here
+   56 |     std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
+      |                                                          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:67:48: error: duplicate member 'frequencyData'
+   67 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+/Users/marselmacevans/Downloads/atmrs/Source/PitchCorrectionEngine.h:57:48: note: previous declaration is here
+   57 |     juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+      |                                                ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:26:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:276:23: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  276 | ORT_RUNTIME_CLASS(Env);
+      |                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:277:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  277 | ORT_RUNTIME_CLASS(Status);  // nullptr for Status* indicates success
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:278:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  278 | ORT_RUNTIME_CLASS(MemoryInfo);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:279:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  279 | ORT_RUNTIME_CLASS(IoBinding);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:280:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  280 | ORT_RUNTIME_CLASS(Session);  // Don't call ReleaseSession from Dllmain (because session owns a thread pool)
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:281:25: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  281 | ORT_RUNTIME_CLASS(Value);
+      |                         ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:282:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  282 | ORT_RUNTIME_CLASS(RunOptions);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:283:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  283 | ORT_RUNTIME_CLASS(TypeInfo);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:284:42: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  284 | ORT_RUNTIME_CLASS(TensorTypeAndShapeInfo);
+      |                                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:285:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  285 | ORT_RUNTIME_CLASS(MapTypeInfo);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:286:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  286 | ORT_RUNTIME_CLASS(SequenceTypeInfo);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:287:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  287 | ORT_RUNTIME_CLASS(OptionalTypeInfo);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:288:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  288 | ORT_RUNTIME_CLASS(SessionOptions);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:289:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  289 | ORT_RUNTIME_CLASS(CustomOpDomain);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:290:33: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  290 | ORT_RUNTIME_CLASS(ModelMetadata);
+      |                                 ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:291:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  291 | ORT_RUNTIME_CLASS(ThreadPoolParams);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:292:36: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  292 | ORT_RUNTIME_CLASS(ThreadingOptions);
+      |                                    ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:293:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  293 | ORT_RUNTIME_CLASS(ArenaCfg);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:294:45: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  294 | ORT_RUNTIME_CLASS(PrepackedWeightsContainer);
+      |                                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:295:45: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  295 | ORT_RUNTIME_CLASS(TensorRTProviderOptionsV2);
+      |                                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:296:41: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  296 | ORT_RUNTIME_CLASS(CUDAProviderOptionsV2);
+      |                                         ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:297:39: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  297 | ORT_RUNTIME_CLASS(CANNProviderOptions);
+      |                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:298:39: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  298 | ORT_RUNTIME_CLASS(DnnlProviderOptions);
+      |                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:299:22: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  299 | ORT_RUNTIME_CLASS(Op);
+      |                      ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:300:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  300 | ORT_RUNTIME_CLASS(OpAttr);
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_c_api.h:301:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  301 | ORT_RUNTIME_CLASS(Logger);
+      |                          ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:27:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:493:16: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+  493 |       uint16_t result;
+      |                ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:488:12: note: previous declaration is here
+  488 |   uint16_t result;
+      |            ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:442:101: warning: extra ';' after member function definition [-Wextra-semi]
+  442 |   constexpr bool operator==(const Float8E4M3FN_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:443:101: warning: extra ';' after member function definition [-Wextra-semi]
+  443 |   constexpr bool operator!=(const Float8E4M3FN_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:459:103: warning: extra ';' after member function definition [-Wextra-semi]
+  459 |   constexpr bool operator==(const Float8E4M3FNUZ_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:460:103: warning: extra ';' after member function definition [-Wextra-semi]
+  460 |   constexpr bool operator!=(const Float8E4M3FNUZ_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:476:99: warning: extra ';' after member function definition [-Wextra-semi]
+  476 |   constexpr bool operator==(const Float8E5M2_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:477:99: warning: extra ';' after member function definition [-Wextra-semi]
+  477 |   constexpr bool operator!=(const Float8E5M2_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:493:103: warning: extra ';' after member function definition [-Wextra-semi]
+  493 |   constexpr bool operator==(const Float8E5M2FNUZ_t& rhs) const noexcept { return value == rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:494:103: warning: extra ';' after member function definition [-Wextra-semi]
+  494 |   constexpr bool operator!=(const Float8E5M2FNUZ_t& rhs) const noexcept { return value != rhs.value; };
+      |                                                                                                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:505:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  505 | ORT_DEFINE_RELEASE(Allocator);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:506:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  506 | ORT_DEFINE_RELEASE(MemoryInfo);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:507:35: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  507 | ORT_DEFINE_RELEASE(CustomOpDomain);
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:508:37: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  508 | ORT_DEFINE_RELEASE(ThreadingOptions);
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:509:24: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  509 | ORT_DEFINE_RELEASE(Env);
+      |                        ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:510:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  510 | ORT_DEFINE_RELEASE(RunOptions);
+      |                               ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:511:28: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  511 | ORT_DEFINE_RELEASE(Session);
+      |                            ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:512:35: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  512 | ORT_DEFINE_RELEASE(SessionOptions);
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:513:43: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  513 | ORT_DEFINE_RELEASE(TensorTypeAndShapeInfo);
+      |                                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:514:37: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  514 | ORT_DEFINE_RELEASE(SequenceTypeInfo);
+      |                                     ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:515:32: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  515 | ORT_DEFINE_RELEASE(MapTypeInfo);
+      |                                ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:516:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  516 | ORT_DEFINE_RELEASE(TypeInfo);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:517:26: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  517 | ORT_DEFINE_RELEASE(Value);
+      |                          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:518:34: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  518 | ORT_DEFINE_RELEASE(ModelMetadata);
+      |                                  ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:519:30: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  519 | ORT_DEFINE_RELEASE(IoBinding);
+      |                              ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:520:29: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  520 | ORT_DEFINE_RELEASE(ArenaCfg);
+      |                             ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:521:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  521 | ORT_DEFINE_RELEASE(Status);
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:522:27: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  522 | ORT_DEFINE_RELEASE(OpAttr);
+      |                           ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:523:23: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  523 | ORT_DEFINE_RELEASE(Op);
+      |                       ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:524:31: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-extra-semi]
+  524 | ORT_DEFINE_RELEASE(KernelInfo);
+      |                               ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:2266:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1088:54: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+ 1088 |   auto strings_deletor = [&deletor, num_keys](char** out) { for(int64_t i = 0; i < num_keys; ++i) deletor(out[i]); };
+      |                                                      ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1078:10: note: previous declaration is here
+ 1078 |   char** out = nullptr;
+      |          ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1853:35: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+ 1853 |   auto release_fn = [&len](char** providers) {
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1850:10: note: previous declaration is here
+ 1850 |   char** providers;
+      |          ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:2266:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1088:54: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+ 1088 |   auto strings_deletor = [&deletor, num_keys](char** out) { for(int64_t i = 0; i < num_keys; ++i) deletor(out[i]); };
+      |                                                      ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1078:10: note: previous declaration is here
+ 1078 |   char** out = nullptr;
+      |          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:15:5: error: no matching constructor for initialization of 'juce::AudioProcessorValueTreeState'
+   15 |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
+      |     ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:252:5: note: candidate constructor not viable: no known conversion from 'AutoTuneAudioProcessor' to 'AudioProcessor &' for 1st argument
+  252 |     AudioProcessorValueTreeState (AudioProcessor& processorToConnectTo,
+      |     ^                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:267:5: note: candidate constructor not viable: requires 2 arguments, but 4 were provided
+  267 |     AudioProcessorValueTreeState (AudioProcessor& processorToConnectTo, UndoManager* undoManagerToUse);
+      |     ^                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:657:51: note: candidate constructor not viable: requires 1 argument, but 4 were provided
+  657 |     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (AudioProcessorValueTreeState)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_core/system/juce_PlatformDefs.h:243:31: note: expanded from macro 'JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR'
+  243 |     JUCE_DECLARE_NON_COPYABLE(className) \
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_core/system/juce_PlatformDefs.h:229:5: note: expanded from macro 'JUCE_DECLARE_NON_COPYABLE'
+  229 |     className (const className&) = delete;\
+      |     ^          ~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:14:5: warning: field 'pluginParameters' will be initialized after field 'parameters' [-Wreorder-ctor]
+   14 |     pluginParameters(),
+      |     ^~~~~~~~~~~~~~~~~~
+      |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout())
+   15 |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+      |     pluginParameters()
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:15:72: warning: field 'pluginParameters' is uninitialized when used here [-Wuninitialized]
+   15 |     parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
+      |                                                                        ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:22:59: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   22 |     parameters.addParameterListener(Parameters::SPEED_ID, this);
+      |                                                           ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:23:60: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   23 |     parameters.addParameterListener(Parameters::AMOUNT_ID, this);
+      |                                                            ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:24:58: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   24 |     parameters.addParameterListener(Parameters::MODE_ID, this);
+      |                                                          ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:25:57: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   25 |     parameters.addParameterListener(Parameters::KEY_ID, this);
+      |                                                         ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:26:59: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   26 |     parameters.addParameterListener(Parameters::SCALE_ID, this);
+      |                                                           ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:357:65: note: passing argument to parameter 'listener' here
+  357 |     void addParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                 ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:40:62: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   40 |     parameters.removeParameterListener(Parameters::SPEED_ID, this);
+      |                                                              ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:41:63: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   41 |     parameters.removeParameterListener(Parameters::AMOUNT_ID, this);
+      |                                                               ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:42:61: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   42 |     parameters.removeParameterListener(Parameters::MODE_ID, this);
+      |                                                             ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:43:60: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   43 |     parameters.removeParameterListener(Parameters::KEY_ID, this);
+      |                                                            ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:44:62: error: cannot initialize a parameter of type 'Listener *' with an rvalue of type 'AutoTuneAudioProcessor *'
+   44 |     parameters.removeParameterListener(Parameters::SCALE_ID, this);
+      |                                                              ^~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/utilities/juce_AudioProcessorValueTreeState.h:360:68: note: passing argument to parameter 'listener' here
+  360 |     void removeParameterListener (StringRef parameterID, Listener* listener);
+      |                                                                    ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:133:34: error: cannot initialize object parameter of type 'const juce::AudioProcessor' with an expression of type 'AutoTuneAudioProcessor'
+  133 |     auto totalNumInputChannels = getTotalNumInputChannels();
+      |                                  ^~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:134:35: error: cannot initialize object parameter of type 'const juce::AudioProcessor' with an expression of type 'AutoTuneAudioProcessor'
+  134 |     auto totalNumOutputChannels = getTotalNumOutputChannels();
+      |                                   ^~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:188:36: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  188 |         std::vector<float> pitches(numSamples);
+      |                            ~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:194:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  194 |             float currentPitch = pitches[sample];
+      |                                  ~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:239:36: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  239 |         std::vector<float> pitches(numSamples);
+      |                            ~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:245:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  245 |             float currentPitch = pitches[sample];
+      |                                  ~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:287:88: warning: implicit conversion loses floating-point precision: 'double' to 'float' [-Wimplicit-float-conversion]
+  287 |             auto pitchPrediction = aiModelLoader.predictPitch(channelData, numSamples, currentSampleRate);
+      |                                                  ~~~~~~~~~~~~                          ^~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:303:47: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  303 |                 std::vector<float> tempBuffer(numSamples);
+      |                                    ~~~~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:312:53: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  312 |                         channelData[i] = tempBuffer[i] * (1.0f - blendFactor) + channelData[i] * blendFactor;
+      |                                          ~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:320:40: warning: implicit conversion changes signedness: 'const int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  320 |             std::vector<float> pitches(numSamples);
+      |                                ~~~~~~~ ^~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:326:46: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  326 |                 float currentPitch = pitches[sample];
+      |                                      ~~~~~~~ ^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:406:12: error: cannot initialize return object of type 'juce::AudioProcessor *' with an rvalue of type 'AutoTuneAudioProcessor *'
+  406 |     return new AutoTuneAudioProcessor();
+      |            ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1853:35: warning: declaration shadows a local variable [-Wshadow-uncaptured-local]
+ 1853 |   auto release_fn = [&len](char** providers) {
+      |                                   ^
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_inline.h:1850:10: note: previous declaration is here
+ 1850 |   char** providers;
+      |          ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:5:7: error: no matching constructor for initialization of 'juce::AudioProcessorEditor'
+    5 |     : AudioProcessorEditor(&p), 
+      |       ^                    ~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/processors/juce_AudioProcessorEditor.h:47:5: note: candidate constructor not viable: no known conversion from 'AutoTuneAudioProcessor *' to 'AudioProcessor &' for 1st argument
+   47 |     AudioProcessorEditor (AudioProcessor&) noexcept;
+      |     ^                     ~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/processors/juce_AudioProcessorEditor.h:50:5: note: candidate constructor not viable: no known conversion from 'AutoTuneAudioProcessor *' to 'AudioProcessor *' for 1st argument
+   50 |     AudioProcessorEditor (AudioProcessor*) noexcept;
+      |     ^                     ~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_audio_processors/processors/juce_AudioProcessorEditor.h:258:32: note: candidate constructor not viable: no known conversion from 'AutoTuneAudioProcessor *' to 'const AudioProcessorEditor' for 1st argument
+  258 |     JUCE_DECLARE_NON_COPYABLE (AudioProcessorEditor)
+      |     ~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/juce-src/modules/juce_core/system/juce_PlatformDefs.h:229:5: note: expanded from macro 'JUCE_DECLARE_NON_COPYABLE'
+  229 |     className (const className&) = delete;\
+      |     ^          ~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:183:69: warning: implicit conversion turns floating-point number into integer: 'float' to 'int' [-Wfloat-conversion]
+  183 |     auto mainControlsArea = bounds.removeFromTop(bounds.getHeight() * 0.6f);
+      |                                    ~~~~~~~~~~~~~ ~~~~~~~~~~~~~~~~~~~^~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:234:63: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  234 |             float y = displayArea.getBottom() - (pitchHistory[i] * 0.5f + 0.5f) * displayArea.getHeight();
+      |                                                  ~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:231:27: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  231 |         for (int i = 0; i < pitchHistory.size(); ++i)
+      |                         ~ ^ ~~~~~~~~~~~~~~~~~~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:356:22: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  356 |         pitchHistory[i] = pitchHistory[i + 1];
+      |         ~~~~~~~~~~~~ ^
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:356:42: warning: implicit conversion changes signedness: 'int' to 'size_type' (aka 'unsigned long') [-Wsign-conversion]
+  356 |         pitchHistory[i] = pitchHistory[i + 1];
+      |                           ~~~~~~~~~~~~ ~~^~~
+/Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:354:23: warning: comparison of integers of different signs: 'int' and 'size_type' (aka 'unsigned long') [-Wsign-compare]
+  354 |     for (int i = 0; i < pitchHistory.size() - 1; ++i)
+      |                     ~ ^ ~~~~~~~~~~~~~~~~~~~~~~~
+70 warnings and 3 errors generated.
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o] Error 1
+make[2]: *** Waiting for unfinished jobs....
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:27:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:301:24: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  301 |   o.u = (val & 0x7fff) << 13;            // exponent/mantissa bits
+      |       ~ ~~~~~~~~~~~~~~~^~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:198:49: note: in instantiation of member function 'onnxruntime_float16::Float16Impl<Ort::Float16_t>::ToFloatImpl' requested here
+  198 |   float ToFloat() const noexcept { return Base::ToFloatImpl(); }
+      |                                                 ^
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:27:
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_float16.h:301:24: warning: implicit conversion changes signedness: 'int' to 'unsigned int' [-Wsign-conversion]
+  301 |   o.u = (val & 0x7fff) << 13;            // exponent/mantissa bits
+      |       ~ ~~~~~~~~~~~~~~~^~~~~
+/Users/marselmacevans/Downloads/atmrs/build/_deps/onnxruntime-src/include/onnxruntime_cxx_api.h:198:49: note: in instantiation of member function 'onnxruntime_float16::Float16Impl<Ort::Float16_t>::ToFloatImpl' requested here
+  198 |   float ToFloat() const noexcept { return Base::ToFloatImpl(); }
+      |                                                 ^
+83 warnings and 17 errors generated.
+78 warnings and 4 errors generated.
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PluginProcessor.cpp.o] Error 1
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o] Error 1
+make[1]: *** [CMakeFiles/AutoTunePlugin.dir/all] Error 2
+make[1]: *** Waiting for unfinished jobs....
+[ 25%] Linking CXX executable juce_vst3_helper
+[ 25%] Built target juce_vst3_helper
+make: *** [all] Error 2
+❌ Build failed!
+marselmacevans@iMac-Marsel atmrs % 
