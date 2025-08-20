@@ -7,6 +7,13 @@ This is a professional audio plugin project that implements real-time pitch corr
 ## User Preferences
 
 Preferred communication style: Simple, everyday language.
+Critical requirement: Do NOT simplify the plugin - preserve ALL functionality including:
+- Complete audio processing capabilities
+- All AI models (ONNX, CREPE, DDSP)
+- All mathematical libraries (Eigen3, Kiss FFT, libsamplerate)
+- Rubber Band Library integration
+- Full VST3 and AU plugin format support
+Build environment: macOS-only compatibility mode on Replit (bypass Linux completely)
 
 ## System Architecture
 

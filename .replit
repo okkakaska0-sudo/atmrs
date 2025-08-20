@@ -1,10 +1,10 @@
-modules = ["cpp-clang14", "c-clang14", "bash"]
+modules = ["cpp-clang14", "c-clang14", "bash", "python-3.11"]
 [agent]
 expertMode = true
 
 [nix]
 channel = "stable-25_05"
-packages = ["cmake", "gcc", "pkg-config", "xorg.libX11", "xorg.libXinerama", "xorg.libXrandr", "xorg.libXcursor", "freetype", "alsa-lib", "mesa", "gnumake", "curl", "freeglut", "libjack2"]
+packages = ["cmake", "gcc", "pkg-config", "xorg.libX11", "xorg.libXinerama", "xorg.libXrandr", "xorg.libXcursor", "freetype", "alsa-lib", "mesa", "gnumake", "curl", "freeglut", "libjack2", "git", "wget", "unzip"]
 
 [workflows]
 runButton = "Project"
@@ -22,6 +22,14 @@ args = "build_and_test"
 task = "workflow.run"
 args = "Build AutoTune Plugin"
 
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Build Full macOS Plugin"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Build Full Replit Plugin"
+
 [[workflows.workflow]]
 name = "build_and_test"
 author = "agent"
@@ -37,6 +45,28 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "./build_simple.sh"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow]]
+name = "Build Full macOS Plugin"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./build_full_macos.sh"
+
+[workflows.workflow.metadata]
+outputType = "console"
+
+[[workflows.workflow]]
+name = "Build Full Replit Plugin"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "./build_replit_full.sh"
 
 [workflows.workflow.metadata]
 outputType = "console"

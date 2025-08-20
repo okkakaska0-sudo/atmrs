@@ -5,14 +5,15 @@ project(AutoTunePlugin VERSION 1.0.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-# Detect platform
-if(APPLE)
-    message(STATUS "Building for macOS")
-    set(MACOS_BUILD TRUE)
-else()
-    message(STATUS "Building for other platform")
-    set(MACOS_BUILD FALSE)
+# Detect platform - Force macOS mode ONLY
+if(NOT APPLE)
+    message(STATUS "Forcing macOS-only build mode")
+    set(CMAKE_SYSTEM_NAME Darwin)
+    set(CMAKE_SYSTEM_PROCESSOR x86_64)
 endif()
+message(STATUS "Building for macOS ONLY")
+set(MACOS_BUILD TRUE)
+set(APPLE TRUE)
 
 # Add JUCE - download as archive
 include(FetchContent)
@@ -22,19 +23,20 @@ FetchContent_Declare(
     DOWNLOAD_EXTRACT_TIMESTAMP true
 )
 
-# Configure JUCE build - disable all extras and tools
+# Configure JUCE build - disable all extras and tools, force macOS mode
 set(JUCE_BUILD_EXTRAS OFF CACHE BOOL "" FORCE)
-set(JUCE_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(JUCE_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) 
 set(JUCE_ENABLE_MODULE_SOURCE_GROUPS OFF CACHE BOOL "" FORCE)
 set(JUCE_BUILD_HELPER_TOOLS OFF CACHE BOOL "" FORCE)
 set(JUCE_COPY_PLUGIN_AFTER_BUILD OFF CACHE BOOL "" FORCE)
 
-# Disable juceaide completely
-if(NOT COMMAND juce_add_plugin)
-    macro(juce_add_plugin)
-        # Override to prevent juceaide calls
-    endmacro()
-endif()
+# Force macOS-specific JUCE settings
+set(JUCE_TARGET_PLATFORM "macOS" CACHE STRING "" FORCE)
+set(JUCE_USE_XRANDR OFF CACHE BOOL "" FORCE)
+set(JUCE_USE_XINERAMA OFF CACHE BOOL "" FORCE)
+set(JUCE_USE_XCURSOR OFF CACHE BOOL "" FORCE)
+set(JUCE_WEB_BROWSER OFF CACHE BOOL "" FORCE)
+set(JUCE_USE_CURL OFF CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(JUCE)
 
@@ -58,7 +60,7 @@ endif()
 message(STATUS "Rubber Band Library integrated into project")
 set(USE_RUBBERBAND ON)
 
-# Add ONNX Runtime for AI models
+# Add ONNX Runtime for AI models - macOS ONLY
 FetchContent_Declare(
     onnxruntime
     URL https://github.com/microsoft/onnxruntime/releases/download/v1.16.3/onnxruntime-osx-universal2-1.16.3.tgz
@@ -233,7 +235,7 @@ target_link_libraries(AutoTunePlugin PRIVATE kissfft)
 target_compile_definitions(AutoTunePlugin PRIVATE USE_LIBSAMPLERATE=1)
 target_link_libraries(AutoTunePlugin PRIVATE samplerate)
 
-# ONNX Runtime (macOS only)
+# ONNX Runtime (macOS ONLY)
 if(USE_ONNX)
     target_compile_definitions(AutoTunePlugin PRIVATE USE_ONNX=1)
     target_include_directories(AutoTunePlugin PRIVATE ${ONNXRUNTIME_ROOT_PATH}/include)
