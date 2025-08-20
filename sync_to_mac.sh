@@ -1,25 +1,43 @@
 #!/bin/bash
 
-# Скрипт для автоматической синхронизации файлов с Mac
-# Запускается в Replit для отправки изменений на Mac
+# Быстрая синхронизация AutoTune Plugin с Mac
+echo "🔄 Создаю обновленные файлы для Mac..."
 
-echo "🔄 Синхронизация AutoTune Plugin с Mac..."
+# Создаем папку для синхронизации
+mkdir -p sync_update/Source
 
-# Создаем архив только исходных файлов
-tar -czf autotune_sync.tar.gz \
-    Source/ \
-    CMakeLists_macos_working.txt \
-    build_simple.sh \
-    replit.md \
-    README_ASSISTANT.md
+# Копируем только нужные файлы
+cp Source/*.cpp Source/*.h sync_update/Source/
+cp CMakeLists_macos_working.txt sync_update/
+cp build_simple.sh sync_update/
+cp *.md sync_update/
 
-echo "📦 Архив создан: autotune_sync.tar.gz"
+# Создаем скрипт для Mac
+cat > sync_update/update_on_mac.sh << 'EOF'
+#!/bin/bash
+echo "🔄 Обновляю AutoTune Plugin..."
+
+# Копируем файлы в проект
+rsync -av Source/ /Users/marselmacevans/Downloads/atmrs/Source/
+cp CMakeLists_macos_working.txt /Users/marselmacevans/Downloads/atmrs/
+cp build_simple.sh /Users/marselmacevans/Downloads/atmrs/
+cp *.md /Users/marselmacevans/Downloads/atmrs/
+
+echo "✅ Файлы обновлены! Запускаю сборку..."
+cd /Users/marselmacevans/Downloads/atmrs
+chmod +x build_simple.sh
+./build_simple.sh
+EOF
+
+chmod +x sync_update/update_on_mac.sh
+
+# Упаковываем
+tar -czf autotune_quick_sync.tar.gz sync_update/
+rm -rf sync_update
+
+echo "✅ Готово! Скачайте autotune_quick_sync.tar.gz"
 echo ""
-echo "📁 Для синхронизации с Mac:"
-echo "1. Скачайте файл autotune_sync.tar.gz из Files панели"
-echo "2. На Mac выполните:"
-echo "   cd /Users/marselmacevans/Downloads"
-echo "   tar -xzf autotune_sync.tar.gz -C atmrs --strip-components=0"
-echo "   cd atmrs && ./build_simple.sh"
-echo ""
-echo "✅ Готово к скачиванию!"
+echo "На Mac распакуйте и запустите:"
+echo "  tar -xzf autotune_quick_sync.tar.gz"
+echo "  cd sync_update"
+echo "  ./update_on_mac.sh"
