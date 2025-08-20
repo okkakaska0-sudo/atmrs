@@ -1,0 +1,60 @@
+Last login: Wed Aug 20 10:49:27 on ttys000
+marselmacevans@iMac-Marsel ~ % cd /Users/marselmacevans/Downloads/atmrs
+./build_simple.sh
+🎵 Building ProAutoTune Plugin...
+📦 Configuring build system...
+-- The C compiler identification is AppleClang 16.0.0.16000026
+-- The CXX compiler identification is AppleClang 16.0.0.16000026
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building for macOS
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- Rubber Band Library found: /usr/local/lib/librubberband.dylib
+-- Rubber Band Library integrated into project
+-- Fetching ONNX Runtime for macOS...
+CMake Warning (dev) at /usr/local/share/cmake/Modules/FetchContent.cmake:1953 (message):
+  Calling FetchContent_Populate(eigen3) is deprecated, call
+  FetchContent_MakeAvailable(eigen3) instead.  Policy CMP0169 can be set to
+  OLD to allow FetchContent_Populate(eigen3) to be called directly for now,
+  but the ability to call it with declared details will be removed completely
+  in a future version.
+Call Stack (most recent call first):
+  CMakeLists.txt:99 (FetchContent_Populate)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Using Kiss FFT for FFT operations
+CMake Deprecation Warning at build/_deps/kissfft-src/CMakeLists.txt:35 (cmake_minimum_required):
+  Compatibility with CMake < 3.10 will be removed from a future version of
+  CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+
+-- Building KissFFT with datatype: float
+-- Building static library
+-- PKGINCLUDEDIR is /kissfft
+CMake Error at build/_deps/libsamplerate-src/CMakeLists.txt:1 (cmake_minimum_required):
+  Compatibility with CMake < 3.5 has been removed from CMake.
+
+  Update the VERSION argument <min> value.  Or, use the <min>...<max> syntax
+  to tell CMake that the project requires at least <min> but has been updated
+  to work with policies introduced by <max> or earlier.
+
+  Or, add -DCMAKE_POLICY_VERSION_MINIMUM=3.5 to try configuring anyway.
+
+
+-- Configuring incomplete, errors occurred!
+❌ CMake configuration failed!
+marselmacevans@iMac-Marsel atmrs % 

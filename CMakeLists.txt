@@ -125,7 +125,7 @@ FetchContent_MakeAvailable(kissfft)
 FetchContent_Declare(
     libsamplerate
     GIT_REPOSITORY https://github.com/libsndfile/libsamplerate.git
-    GIT_TAG 0.2.2
+    GIT_TAG 0.2.3
     GIT_SHALLOW TRUE
 )
 
@@ -133,6 +133,7 @@ FetchContent_Declare(
 set(LIBSAMPLERATE_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(LIBSAMPLERATE_TESTS OFF CACHE BOOL "" FORCE)
 set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
+set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
 
 FetchContent_MakeAvailable(libsamplerate)
 
