@@ -50,9 +50,10 @@ set(EXTERNAL_LIBS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/libs")
 # Eigen3 - header-only library
 set(EIGEN3_INCLUDE_DIR "${EXTERNAL_LIBS_DIR}/eigen-3.4.0")
 
-# ONNX Runtime - pre-compiled for macOS x64 (headers might be embedded)
+# ONNX Runtime - pre-compiled for macOS x64 with headers in root
 set(ONNXRUNTIME_BASE_DIR "${EXTERNAL_LIBS_DIR}/onnxruntime-osx-x86_64-1.16.3")
 set(ONNXRUNTIME_LIB "${ONNXRUNTIME_BASE_DIR}/lib/libonnxruntime.1.16.3.dylib")
+set(ONNXRUNTIME_INCLUDE_DIR "${ONNXRUNTIME_BASE_DIR}")
 
 # Rubber Band - use source headers and compile needed source files
 set(RUBBERBAND_BASE_DIR "${EXTERNAL_LIBS_DIR}/rubberband-3.3.0")
@@ -130,6 +131,15 @@ target_compile_definitions(AutoTunePlugin
         $<$<BOOL:${USE_EIGEN}>:USE_EIGEN=1>
         $<$<BOOL:${USE_ONNX}>:USE_ONNX=1>
         $<$<BOOL:${USE_RUBBERBAND}>:USE_RUBBERBAND=1>
+    PRIVATE
+        # Complete macOS compilation support for Rubber Band (from official Makefile)
+        $<$<PLATFORM_ID:Darwin>:USE_PTHREADS=1>
+        $<$<PLATFORM_ID:Darwin>:HAVE_VDSP=1>
+        $<$<PLATFORM_ID:Darwin>:NO_THREAD_CHECKS=1>
+        $<$<PLATFORM_ID:Darwin>:MALLOC_IS_ALIGNED=1>
+        $<$<PLATFORM_ID:Darwin>:USE_BQRESAMPLER=1>
+        $<$<PLATFORM_ID:Darwin>:NO_TIMING=1>
+        $<$<PLATFORM_ID:Darwin>:NDEBUG=1>
 )
 
 # Include directories
@@ -139,7 +149,9 @@ target_include_directories(AutoTunePlugin PRIVATE Source)
 target_include_directories(AutoTunePlugin PRIVATE 
     ${EIGEN3_INCLUDE_DIR}
     ${RUBBERBAND_INCLUDE_DIR}
-    ${ONNXRUNTIME_BASE_DIR}  # ONNX headers might be with the library
+    ${RUBBERBAND_INCLUDE_DIR}/rubberband
+    ${RUBBERBAND_INCLUDE_DIR}/src
+    ${ONNXRUNTIME_INCLUDE_DIR}  # ONNX headers are in root directory
 )
 
 message(STATUS "✅ Including all bundled library headers")
@@ -160,16 +172,37 @@ target_link_libraries(AutoTunePlugin
 # Link bundled libraries  
 target_link_libraries(AutoTunePlugin PRIVATE ${ONNXRUNTIME_LIB})
 
-# Add Rubber Band source files to compile
-file(GLOB_RECURSE RUBBERBAND_SOURCES 
-    "${RUBBERBAND_SRC_DIR}/*.cpp"
-    "${RUBBERBAND_SRC_DIR}/*.c"
-)
+# Add macOS system frameworks for Rubber Band
+if(APPLE)
+    target_link_libraries(AutoTunePlugin PRIVATE
+        "-framework Accelerate"  # For vDSP functions used by Rubber Band
+    )
+endif()
 
-# Filter out unnecessary files
-list(FILTER RUBBERBAND_SOURCES EXCLUDE REGEX ".*test.*")
-list(FILTER RUBBERBAND_SOURCES EXCLUDE REGEX ".*main.*")
-list(FILTER RUBBERBAND_SOURCES EXCLUDE REGEX ".*program.*")
+# Add specific Rubber Band source files (based on official Makefile.macos)
+set(RUBBERBAND_SOURCES
+    "${RUBBERBAND_SRC_DIR}/rubberband-c.cpp"
+    "${RUBBERBAND_SRC_DIR}/RubberBandStretcher.cpp"
+    "${RUBBERBAND_SRC_DIR}/faster/AudioCurveCalculator.cpp"
+    "${RUBBERBAND_SRC_DIR}/faster/CompoundAudioCurve.cpp"
+    "${RUBBERBAND_SRC_DIR}/faster/HighFrequencyAudioCurve.cpp"
+    "${RUBBERBAND_SRC_DIR}/faster/SilentAudioCurve.cpp"
+    "${RUBBERBAND_SRC_DIR}/faster/PercussiveAudioCurve.cpp"
+    "${RUBBERBAND_SRC_DIR}/faster/R2Stretcher.cpp"
+    "${RUBBERBAND_SRC_DIR}/faster/StretcherChannelData.cpp"
+    "${RUBBERBAND_SRC_DIR}/faster/StretcherProcess.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/Allocators.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/BQResampler.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/FFT.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/Log.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/Profiler.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/Resampler.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/StretchCalculator.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/Thread.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/VectorOpsComplex.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/mathmisc.cpp"
+    "${RUBBERBAND_SRC_DIR}/common/sysutils.cpp"
+)
 
 if(RUBBERBAND_SOURCES)
     target_sources(AutoTunePlugin PRIVATE ${RUBBERBAND_SOURCES})
