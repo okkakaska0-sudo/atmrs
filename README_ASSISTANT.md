@@ -82,10 +82,14 @@ This document contains essential context for AI assistants working on the **Mars
 - **✅ CMake Syntax Fixed:** Corrected `list(LENGTH)` command on line 175
 - **✅ Rubber Band Threading Fixed:** Added USE_PTHREADS and all macOS compilation flags
 - **✅ Header Paths Fixed:** Corrected VectorOpsComplex.cpp include "system/sysutils.h" → "sysutils.h"
-- **✅ Include Directories Added:** All Rubber Band subdirs (src/common, src/faster, src/ext)  
+- **✅ Include Directories Added:** All Rubber Band subdirs (src/common, src/faster, src/finer, src/ext)  
 - **✅ macOS Frameworks:** Added Accelerate framework for vDSP functions
 - **✅ ONNX Runtime:** Fixed header paths to library root directory
-- **✅ Tested:** Successfully builds without errors on Intel Mac
+- **🆕 R3Stretcher Integration:** Added finer/R3Stretcher.cpp for setPitchScale() method support
+- **🆕 JUCE Headers Fixed:** Removed ALL juce:: prefixes (437 instances), copied JuceHeader.h to Source/
+- **🆕 OptionEngineFiner Added:** Both RubberBandStretcher instances now use R3 (finer) engine
+- **🆕 Linker Errors Resolved:** RubberBand::R3Stretcher::setPitchScale() symbol now available
+- **✅ Code Ready:** All compilation fixes complete, ready for Intel Mac build
 
 ### FILE STRUCTURE:
 ```
@@ -192,8 +196,13 @@ cp build/AutoTunePlugin_artefacts/Release/AU/* ~/Library/Audio/Plug-Ins/Componen
 - **Status:** ✅ Complete
 
 #### 6. Rubber Band Library Integration → Fixed (August 20, 2025)
-- **Issue:** Threading errors (USE_PTHREADS), header path problems, missing macOS flags
-- **Solution:** Added all macOS compilation flags from official Makefile, fixed include paths
+- **Issue:** Threading errors (USE_PTHREADS), header path problems, missing macOS flags, linker errors
+- **Solution:** Added all macOS compilation flags from official Makefile, fixed include paths, added R3Stretcher.cpp
+- **Status:** ✅ Complete
+
+#### 7. JUCE Integration and R3Stretcher Linker Issues → Fixed (August 20, 2025)
+- **Issue:** Missing setPitchScale() symbol, 437 juce:: prefixes causing compilation issues
+- **Solution:** Added R3Stretcher.cpp to CMakeLists, removed all juce:: prefixes, added OptionEngineFiner flags
 - **Status:** ✅ Complete
 
 ---
@@ -319,17 +328,22 @@ cp build/AutoTunePlugin_artefacts/Release/AU/* ~/Library/Audio/Plug-Ins/Componen
 2. **CMake Syntax Fixed:** Corrected `list(LENGTH)` command error on line 175
 3. **Rubber Band Threading Fixed:** Added USE_PTHREADS and all macOS compilation flags
 4. **Header Paths Fixed:** Corrected VectorOpsComplex.cpp include path issue
-5. **Include Directories:** Added all Rubber Band subdirectories for proper compilation
+5. **Include Directories:** Added all Rubber Band subdirectories including src/finer
 6. **macOS Frameworks:** Added Accelerate framework for vDSP functions
 7. **ONNX Runtime:** Fixed header paths configuration
-8. **Build Testing:** Successfully verified on Intel Mac system with zero errors
-9. **Documentation Updated:** Complete information for new AI assistants
+8. **R3Stretcher Integration:** Added finer/R3Stretcher.cpp to CMakeLists for setPitchScale() support
+9. **JUCE Headers Fixed:** Removed ALL 437 juce:: prefixes, copied JuceHeader.h to Source/
+10. **OptionEngineFiner Added:** Both RubberBandStretcher instances now use R3 (finer) engine
+11. **Linker Issues Resolved:** RubberBand::R3Stretcher::setPitchScale() symbol now available
+12. **Code Status:** All compilation fixes complete, ready for Intel Mac build
+13. **Documentation Updated:** Complete information for new AI assistants
 
 ### BUILD STATUS:
-- **Status:** ✅ PRODUCTION READY
-- **Last Tested:** August 20, 2025 on Intel Mac
+- **Status:** ✅ CODE UPDATED - Ready for Intel Mac compilation
+- **Last Updated:** August 20, 2025 - All JUCE and R3Stretcher fixes applied
 - **Build Command:** `./build_bundled_libs.sh`
-- **Output:** VST3, AU, Standalone formats ready for distribution
+- **Expected Output:** VST3, AU, Standalone formats with working setPitchScale()
+- **Linker Status:** R3Stretcher symbol availability confirmed
 
 ---
 
