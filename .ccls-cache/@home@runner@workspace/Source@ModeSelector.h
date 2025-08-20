@@ -1,7 +1,6 @@
 #pragma once
 
-#include <juce_core/juce_core.h>
-#include <juce_events/juce_events.h>
+#include "JuceHeader.h"
 #include "Parameters.h"
 
 class ModeSelector
@@ -17,8 +16,8 @@ public:
     // Mode configuration
     struct ModeConfig
     {
-        juce::String name;
-        juce::String description;
+        String name;
+        String description;
         float defaultSpeed;
         float defaultAmount;
         bool useFormantPreservation;
@@ -31,7 +30,7 @@ public:
                       useFormantPreservation(false), useAdvancedPitchDetection(false),
                       useRubberBand(false), latencyMs(10.0f) {}
         
-        ModeConfig(const juce::String& modeName, const juce::String& desc, 
+        ModeConfig(const String& modeName, const String& desc, 
                   float speed, float amount, bool formants = false, 
                   bool advanced = false, bool rubberband = false, float latency = 10.0f)
             : name(modeName), description(desc), defaultSpeed(speed), defaultAmount(amount),

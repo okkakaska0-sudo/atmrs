@@ -1,21 +1,18 @@
 #include "PluginProcessor.h"
 #include "PluginEditor.h"
 #include "Utils.h"
-#include <juce_audio_processors/juce_audio_processors.h>
-#include <juce_core/juce_core.h>
-#include <juce_dsp/juce_dsp.h>
 
 AutoTuneAudioProcessor::AutoTuneAudioProcessor()
-    : juce::AudioProcessor(juce::AudioProcessor::BusesProperties()
+    : AudioProcessor(AudioProcessor::BusesProperties()
 #if !JucePlugin_IsMidiEffect
 #if !JucePlugin_IsSynth
-        .withInput("Input", juce::AudioChannelSet::stereo(), true)
+        .withInput("Input", AudioChannelSet::stereo(), true)
 #endif
-        .withOutput("Output", juce::AudioChannelSet::stereo(), true)
+        .withOutput("Output", AudioChannelSet::stereo(), true)
 #endif
     ),
     pluginParameters(),
-    parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
+    parameters(*this, nullptr, Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
     presetManager(parameters),
     pitchEngine(),
     modeSelector(),
@@ -43,15 +40,15 @@ AutoTuneAudioProcessor::~AutoTuneAudioProcessor()
 
 // Methods moved to header as inline functions
 
-const juce::String AutoTuneAudioProcessor::getProgramName(int index)
+const String AutoTuneAudioProcessor::getProgramName(int index)
 {
-    juce::ignoreUnused(index);
+    ignoreUnused(index);
     return {};
 }
 
-void AutoTuneAudioProcessor::changeProgramName(int index, const juce::String& newName)
+void AutoTuneAudioProcessor::changeProgramName(int index, const String& newName)
 {
-    juce::ignoreUnused(index, newName);
+    ignoreUnused(index, newName);
 }
 
 void AutoTuneAudioProcessor::prepareToPlay(double sampleRate, int samplesPerBlock)
@@ -102,15 +99,15 @@ void AutoTuneAudioProcessor::releaseResources()
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
-bool AutoTuneAudioProcessor::isBusesLayoutSupported(const juce::AudioProcessor::BusesLayout& layouts) const
+bool AutoTuneAudioProcessor::isBusesLayoutSupported(const AudioProcessor::BusesLayout& layouts) const
 {
 #if JucePlugin_IsMidiEffect
-    juce::ignoreUnused(layouts);
+    ignoreUnused(layouts);
     return true;
 #else
     // This is the place where you check if the layout is supported.
-    if (layouts.getMainOutputChannelSet() != juce::AudioChannelSet::mono()
-        && layouts.getMainOutputChannelSet() != juce::AudioChannelSet::stereo())
+    if (layouts.getMainOutputChannelSet() != AudioChannelSet::mono()
+        && layouts.getMainOutputChannelSet() != AudioChannelSet::stereo())
         return false;
 
 #if !JucePlugin_IsSynth
@@ -123,11 +120,11 @@ bool AutoTuneAudioProcessor::isBusesLayoutSupported(const juce::AudioProcessor::
 }
 #endif
 
-void AutoTuneAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juce::MidiBuffer& midiMessages)
+void AutoTuneAudioProcessor::processBlock(AudioBuffer<float>& buffer, MidiBuffer& midiMessages)
 {
-    juce::ignoreUnused(midiMessages);
+    ignoreUnused(midiMessages);
 
-    juce::ScopedNoDenormals noDenormals;
+    ScopedNoDenormals noDenormals;
     auto totalNumInputChannels = getTotalNumInputChannels();
     auto totalNumOutputChannels = getTotalNumOutputChannels();
 
@@ -162,7 +159,7 @@ void AutoTuneAudioProcessor::processBlock(juce::AudioBuffer<float>& buffer, juce
     }
 }
 
-void AutoTuneAudioProcessor::processClassicMode(juce::AudioBuffer<float>& buffer)
+void AutoTuneAudioProcessor::processClassicMode(AudioBuffer<float>& buffer)
 {
     const int numSamples = buffer.getNumSamples();
     const int numChannels = buffer.getNumChannels();
@@ -218,7 +215,7 @@ void AutoTuneAudioProcessor::processClassicMode(juce::AudioBuffer<float>& buffer
     }
 }
 
-void AutoTuneAudioProcessor::processHardMode(juce::AudioBuffer<float>& buffer)
+void AutoTuneAudioProcessor::processHardMode(AudioBuffer<float>& buffer)
 {
     const int numSamples = buffer.getNumSamples();
     const int numChannels = buffer.getNumChannels();
@@ -255,7 +252,7 @@ void AutoTuneAudioProcessor::processHardMode(juce::AudioBuffer<float>& buffer)
                 
                 // Hard correction - immediate snap to target
                 float correction = (targetFrequency - currentPitch) * amount;
-                float hardCorrection = correction * juce::jmin(speed * 10.0f, 1.0f); // Faster, harder correction
+                float hardCorrection = correction * jmin(speed * 10.0f, 1.0f); // Faster, harder correction
                 
                 // HARD MODE: Instant pitch snapping
                 float pitchRatio = targetFrequency / currentPitch;
@@ -269,7 +266,7 @@ void AutoTuneAudioProcessor::processHardMode(juce::AudioBuffer<float>& buffer)
     }
 }
 
-void AutoTuneAudioProcessor::processAIMode(juce::AudioBuffer<float>& buffer)
+void AutoTuneAudioProcessor::processAIMode(AudioBuffer<float>& buffer)
 {
     const int numSamples = buffer.getNumSamples();
     const int numChannels = buffer.getNumChannels();
@@ -365,7 +362,7 @@ void AutoTuneAudioProcessor::processAIMode(juce::AudioBuffer<float>& buffer)
 #endif
 }
 
-void AutoTuneAudioProcessor::parameterChanged(const juce::String& parameterID, float newValue)
+void AutoTuneAudioProcessor::parameterChanged(const String& parameterID, float newValue)
 {
     if (parameterID == Parameters::SPEED_ID)
     {
@@ -383,34 +380,34 @@ void AutoTuneAudioProcessor::parameterChanged(const juce::String& parameterID, f
     }
 }
 
-juce::AudioProcessorEditor* AutoTuneAudioProcessor::createEditor()
+AudioProcessorEditor* AutoTuneAudioProcessor::createEditor()
 {
     // Create full GUI editor - working on macOS now!
     return new AutoTuneAudioProcessorEditor(*this);
 }
 
-void AutoTuneAudioProcessor::getStateInformation(juce::MemoryBlock& destData)
+void AutoTuneAudioProcessor::getStateInformation(MemoryBlock& destData)
 {
     auto state = parameters.copyState();
-    std::unique_ptr<juce::XmlElement> xml(state.createXml());
+    std::unique_ptr<XmlElement> xml(state.createXml());
     copyXmlToBinary(*xml, destData);
 }
 
 void AutoTuneAudioProcessor::setStateInformation(const void* data, int sizeInBytes)
 {
-    std::unique_ptr<juce::XmlElement> xmlState(getXmlFromBinary(data, sizeInBytes));
+    std::unique_ptr<XmlElement> xmlState(getXmlFromBinary(data, sizeInBytes));
     
     if (xmlState.get() != nullptr)
     {
         if (xmlState->hasTagName(parameters.state.getType()))
         {
-            parameters.replaceState(juce::ValueTree::fromXml(*xmlState));
+            parameters.replaceState(ValueTree::fromXml(*xmlState));
         }
     }
 }
 
 // This creates new instances of the plugin
-juce::AudioProcessor* JUCE_CALLTYPE createPluginFilter()
+AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
-    return static_cast<juce::AudioProcessor*>(new AutoTuneAudioProcessor());
+    return static_cast<AudioProcessor*>(new AutoTuneAudioProcessor());
 }

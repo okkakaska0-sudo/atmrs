@@ -1,7 +1,5 @@
 #include "PitchCorrectionEngine.h" 
 #include "Utils.h"
-#include <juce_dsp/juce_dsp.h>
-#include <juce_core/juce_core.h>
 #include <algorithm>
 #include <cmath>
 #include <vector>
@@ -14,8 +12,8 @@
 PitchCorrectionEngine::PitchCorrectionEngine()
 {
     // Initialize FFT
-    fft = std::make_unique<juce::dsp::FFT>(fftOrder);
-    window = std::make_unique<juce::dsp::WindowingFunction<float>>(fftSize, juce::dsp::WindowingFunction<float>::hann);
+    fft = std::make_unique<dsp::FFT>(fftOrder);
+    window = std::make_unique<dsp::WindowingFunction<float>>(fftSize, dsp::WindowingFunction<float>::hann);
     
     // Allocate frequency domain buffer
     frequencyData.allocate(fftSize, true);
@@ -295,7 +293,7 @@ float PitchCorrectionEngine::detectPitchSpectral(const float* buffer, int numSam
     // Convert to complex and perform FFT
     for (int i = 0; i < fftSize; ++i)
     {
-        frequencyData[i] = juce::dsp::Complex<float>(windowedBuffer[i], 0.0f);
+        frequencyData[i] = dsp::Complex<float>(windowedBuffer[i], 0.0f);
     }
     
     fft->perform(frequencyData, frequencyData, false);
@@ -453,7 +451,7 @@ void PitchCorrectionEngine::correctPitchHard(float* buffer, int numSamples,
     float correction = (pitchRatio - 1.0f) * amount * 0.01f;
     
     // HARD MODE: Instant pitch quantization with anti-aliasing
-    float hardSpeed = juce::jmin(speed * 0.2f, 1.0f);
+    float hardSpeed = jmin(speed * 0.2f, 1.0f);
     
     if (std::abs(pitchRatio - 1.0f) > 0.001f)
     {
@@ -592,7 +590,7 @@ void PitchCorrectionEngine::smoothPitch(float newPitch)
 
 float PitchCorrectionEngine::interpolateValue(float current, float target, float factor)
 {
-    factor = juce::jlimit(0.0f, 1.0f, factor);
+    factor = jlimit(0.0f, 1.0f, factor);
     return current + (target - current) * factor;
 }
 
@@ -600,7 +598,7 @@ void PitchCorrectionEngine::applyHannWindow(float* buffer, int numSamples)
 {
     for (int i = 0; i < numSamples; ++i)
     {
-        float windowValue = 0.5f * (1.0f - std::cos(2.0f * juce::MathConstants<float>::pi * i / (numSamples - 1)));
+        float windowValue = 0.5f * (1.0f - std::cos(2.0f * MathConstants<float>::pi * i / (numSamples - 1)));
         buffer[i] *= windowValue;
     }
 }
@@ -613,7 +611,7 @@ void PitchCorrectionEngine::applyBlackmanWindow(float* buffer, int numSamples)
     
     for (int i = 0; i < numSamples; ++i)
     {
-        float phase = 2.0f * juce::MathConstants<float>::pi * i / (numSamples - 1);
+        float phase = 2.0f * MathConstants<float>::pi * i / (numSamples - 1);
         float windowValue = a0 - a1 * std::cos(phase) + a2 * std::cos(2.0f * phase);
         buffer[i] *= windowValue;
     }
@@ -657,7 +655,7 @@ void PitchCorrectionEngine::applyGranularPitchShift(float* buffer, int numSample
             }
             
             // Apply Hann window to grain
-            float window = 0.5f * (1.0f - std::cos(2.0f * juce::MathConstants<float>::pi * i / (actualGrainSize - 1)));
+            float window = 0.5f * (1.0f - std::cos(2.0f * MathConstants<float>::pi * i / (actualGrainSize - 1)));
             grain[i] *= window;
         }
         
@@ -693,8 +691,8 @@ void PitchCorrectionEngine::applyHardPitchQuantization(float* buffer, int numSam
             if (sourceIndex >= 0 && sourceIndex < i)
             {
                 float x = sourcePhase - sourceIndex;
-                float sincValue = (x == 0.0f) ? 1.0f : std::sin(juce::MathConstants<float>::pi * x) / (juce::MathConstants<float>::pi * x);
-                float window = 0.54f - 0.46f * std::cos(2.0f * juce::MathConstants<float>::pi * (k + kernelSize) / (2 * kernelSize));
+                float sincValue = (x == 0.0f) ? 1.0f : std::sin(MathConstants<float>::pi * x) / (MathConstants<float>::pi * x);
+                float window = 0.54f - 0.46f * std::cos(2.0f * MathConstants<float>::pi * (k + kernelSize) / (2 * kernelSize));
                 result += buffer[sourceIndex] * sincValue * window;
             }
         }

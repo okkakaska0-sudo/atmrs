@@ -1,10 +1,10 @@
 #include "PresetManager.h"
 #include "Parameters.h"
 
-const juce::String PresetManager::presetFileExtension = ".xml";
-const juce::String PresetManager::presetFileName = "ProAutoTunePresets.xml";
+const String PresetManager::presetFileExtension = ".xml";
+const String PresetManager::presetFileName = "ProAutoTunePresets.xml";
 
-PresetManager::PresetManager(juce::AudioProcessorValueTreeState& params)
+PresetManager::PresetManager(AudioProcessorValueTreeState& params)
     : parameters(params), currentPresetIndex(-1)
 {
     loadFactoryPresets();
@@ -16,7 +16,7 @@ PresetManager::~PresetManager()
     savePresetsToFile();
 }
 
-void PresetManager::savePreset(const juce::String& name, const juce::String& description)
+void PresetManager::savePreset(const String& name, const String& description)
 {
     if (name.isEmpty())
         return;
@@ -68,7 +68,7 @@ bool PresetManager::loadPreset(int index)
     return true;
 }
 
-bool PresetManager::loadPreset(const juce::String& name)
+bool PresetManager::loadPreset(const String& name)
 {
     for (int i = 0; i < static_cast<int>(presets.size()); ++i)
     {
@@ -85,7 +85,7 @@ void PresetManager::deletePreset(int index)
     if (!isValidPresetIndex(index))
         return;
     
-    juce::String deletedName = presets[index].name;
+    String deletedName = presets[index].name;
     presets.erase(presets.begin() + index);
     
     if (currentPresetIndex == index)
@@ -103,7 +103,7 @@ void PresetManager::deletePreset(int index)
         onPresetDeleted(deletedName);
 }
 
-void PresetManager::deletePreset(const juce::String& name)
+void PresetManager::deletePreset(const String& name)
 {
     for (int i = 0; i < static_cast<int>(presets.size()); ++i)
     {
@@ -163,9 +163,9 @@ const PresetManager::Preset& PresetManager::getPreset(int index) const
     return emptyPreset;
 }
 
-juce::StringArray PresetManager::getPresetNames() const
+StringArray PresetManager::getPresetNames() const
 {
-    juce::StringArray names;
+    StringArray names;
     for (const auto& preset : presets)
     {
         names.add(preset.name);
@@ -177,7 +177,7 @@ void PresetManager::savePresetsToFile()
 {
     auto presetFile = getPresetFile();
     
-    juce::XmlElement root("ProAutoTunePresets");
+    XmlElement root("ProAutoTunePresets");
     root.setAttribute("version", "1.0");
     root.setAttribute("count", static_cast<int>(presets.size()));
     
@@ -200,7 +200,7 @@ void PresetManager::loadPresetsFromFile()
     if (!presetFile.existsAsFile())
         return;
     
-    auto xml = juce::XmlDocument::parse(presetFile);
+    auto xml = XmlDocument::parse(presetFile);
     if (xml == nullptr)
         return;
     
@@ -250,9 +250,9 @@ void PresetManager::loadPresetsFromFile()
     }
 }
 
-juce::File PresetManager::getPresetDirectory() const
+File PresetManager::getPresetDirectory() const
 {
-    auto userDocsDir = juce::File::getSpecialLocation(juce::File::userDocumentsDirectory);
+    auto userDocsDir = File::getSpecialLocation(File::userDocumentsDirectory);
     auto presetDir = userDocsDir.getChildFile("ProAutoTune").getChildFile("Presets");
     
     if (!presetDir.exists())
@@ -261,19 +261,19 @@ juce::File PresetManager::getPresetDirectory() const
     return presetDir;
 }
 
-juce::File PresetManager::getPresetFile() const
+File PresetManager::getPresetFile() const
 {
     return getPresetDirectory().getChildFile(presetFileName);
 }
 
-bool PresetManager::exportPreset(int index, const juce::File& file)
+bool PresetManager::exportPreset(int index, const File& file)
 {
     if (!isValidPresetIndex(index))
         return false;
     
     const auto& preset = presets[index];
     
-    juce::XmlElement root("ProAutoTunePreset");
+    XmlElement root("ProAutoTunePreset");
     root.setAttribute("version", "1.0");
     
     auto presetElement = root.createNewChildElement("Preset");
@@ -282,12 +282,12 @@ bool PresetManager::exportPreset(int index, const juce::File& file)
     return root.writeTo(file);
 }
 
-bool PresetManager::importPreset(const juce::File& file)
+bool PresetManager::importPreset(const File& file)
 {
     if (!file.existsAsFile())
         return false;
     
-    auto xml = juce::XmlDocument::parse(file);
+    auto xml = XmlDocument::parse(file);
     if (xml == nullptr || !xml->hasTagName("ProAutoTunePreset"))
         return false;
     
@@ -299,11 +299,11 @@ bool PresetManager::importPreset(const juce::File& file)
     if (readPresetFromXml(*presetElement, preset))
     {
         // Check for name conflicts
-        juce::String originalName = preset.name;
+        String originalName = preset.name;
         int counter = 1;
         while (presetExists(preset.name))
         {
-            preset.name = originalName + " (" + juce::String(counter++) + ")";
+            preset.name = originalName + " (" + String(counter++) + ")";
         }
         
         presets.push_back(preset);
@@ -314,9 +314,9 @@ bool PresetManager::importPreset(const juce::File& file)
     return false;
 }
 
-bool PresetManager::exportAllPresets(const juce::File& file)
+bool PresetManager::exportAllPresets(const File& file)
 {
-    juce::XmlElement root("ProAutoTunePresets");
+    XmlElement root("ProAutoTunePresets");
     root.setAttribute("version", "1.0");
     root.setAttribute("count", static_cast<int>(presets.size()));
     
@@ -329,12 +329,12 @@ bool PresetManager::exportAllPresets(const juce::File& file)
     return root.writeTo(file);
 }
 
-bool PresetManager::importPresetsFromFile(const juce::File& file)
+bool PresetManager::importPresetsFromFile(const File& file)
 {
     if (!file.existsAsFile())
         return false;
     
-    auto xml = juce::XmlDocument::parse(file);
+    auto xml = XmlDocument::parse(file);
     if (xml == nullptr || !xml->hasTagName("ProAutoTunePresets"))
         return false;
     
@@ -348,11 +348,11 @@ bool PresetManager::importPresetsFromFile(const juce::File& file)
             if (readPresetFromXml(*presetElement, preset))
             {
                 // Handle name conflicts
-                juce::String originalName = preset.name;
+                String originalName = preset.name;
                 int counter = 1;
                 while (presetExists(preset.name))
                 {
-                    preset.name = originalName + " (" + juce::String(counter++) + ")";
+                    preset.name = originalName + " (" + String(counter++) + ")";
                 }
                 
                 presets.push_back(preset);
@@ -375,7 +375,7 @@ bool PresetManager::isValidPresetIndex(int index) const
     return index >= 0 && index < static_cast<int>(presets.size());
 }
 
-bool PresetManager::presetExists(const juce::String& name) const
+bool PresetManager::presetExists(const String& name) const
 {
     for (const auto& preset : presets)
     {
@@ -385,12 +385,12 @@ bool PresetManager::presetExists(const juce::String& name) const
     return false;
 }
 
-PresetManager::Preset PresetManager::createPresetFromCurrentState(const juce::String& name, const juce::String& description)
+PresetManager::Preset PresetManager::createPresetFromCurrentState(const String& name, const String& description)
 {
     Preset preset;
     preset.name = name;
     preset.description = description;
-    preset.dateCreated = juce::Time::getCurrentTime();
+    preset.dateCreated = Time::getCurrentTime();
     
     preset.speed = *parameters.getRawParameterValue(Parameters::SPEED_ID);
     preset.amount = *parameters.getRawParameterValue(Parameters::AMOUNT_ID);
@@ -418,9 +418,9 @@ void PresetManager::applyPresetToParameters(const Preset& preset)
         static_cast<float>(preset.scale) / 2.0f);
 }
 
-juce::ValueTree PresetManager::presetToValueTree(const Preset& preset)
+ValueTree PresetManager::presetToValueTree(const Preset& preset)
 {
-    juce::ValueTree tree("Preset");
+    ValueTree tree("Preset");
     tree.setProperty("name", preset.name, nullptr);
     tree.setProperty("description", preset.description, nullptr);
     tree.setProperty("speed", preset.speed, nullptr);
@@ -433,7 +433,7 @@ juce::ValueTree PresetManager::presetToValueTree(const Preset& preset)
     return tree;
 }
 
-PresetManager::Preset PresetManager::valueTreeToPreset(const juce::ValueTree& tree)
+PresetManager::Preset PresetManager::valueTreeToPreset(const ValueTree& tree)
 {
     Preset preset;
     preset.name = tree.getProperty("name", "Untitled");
@@ -444,27 +444,27 @@ PresetManager::Preset PresetManager::valueTreeToPreset(const juce::ValueTree& tr
     preset.key = tree.getProperty("key", 0);
     preset.scale = tree.getProperty("scale", 0);
     
-    juce::String dateString = tree.getProperty("dateCreated", "");
+    String dateString = tree.getProperty("dateCreated", "");
     if (dateString.isNotEmpty())
     {
-        preset.dateCreated = juce::Time::fromISO8601(dateString);
+        preset.dateCreated = Time::fromISO8601(dateString);
     }
     else
     {
-        preset.dateCreated = juce::Time::getCurrentTime();
+        preset.dateCreated = Time::getCurrentTime();
     }
     
     return preset;
 }
 
-void PresetManager::addFactoryPreset(const juce::String& name, float speed, float amount, 
-                                    int mode, int key, int scale, const juce::String& description)
+void PresetManager::addFactoryPreset(const String& name, float speed, float amount, 
+                                    int mode, int key, int scale, const String& description)
 {
     Preset preset(name, speed, amount, mode, key, scale, description);
     presets.push_back(preset);
 }
 
-bool PresetManager::writePresetToXml(const Preset& preset, juce::XmlElement& xml)
+bool PresetManager::writePresetToXml(const Preset& preset, XmlElement& xml)
 {
     xml.setAttribute("name", preset.name);
     xml.setAttribute("description", preset.description);
@@ -478,7 +478,7 @@ bool PresetManager::writePresetToXml(const Preset& preset, juce::XmlElement& xml
     return true;
 }
 
-bool PresetManager::readPresetFromXml(const juce::XmlElement& xml, Preset& preset)
+bool PresetManager::readPresetFromXml(const XmlElement& xml, Preset& preset)
 {
     if (!xml.hasAttribute("name"))
         return false;
@@ -491,14 +491,14 @@ bool PresetManager::readPresetFromXml(const juce::XmlElement& xml, Preset& prese
     preset.key = xml.getIntAttribute("key", 0);
     preset.scale = xml.getIntAttribute("scale", 0);
     
-    juce::String dateString = xml.getStringAttribute("dateCreated");
+    String dateString = xml.getStringAttribute("dateCreated");
     if (dateString.isNotEmpty())
     {
-        preset.dateCreated = juce::Time::fromISO8601(dateString);
+        preset.dateCreated = Time::fromISO8601(dateString);
     }
     else
     {
-        preset.dateCreated = juce::Time::getCurrentTime();
+        preset.dateCreated = Time::getCurrentTime();
     }
     
     return true;

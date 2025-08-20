@@ -1,88 +1,87 @@
 #pragma once
 
-#include <juce_gui_basics/juce_gui_basics.h>
-#include <juce_graphics/juce_graphics.h>
+#include "JuceHeader.h"
 
-class ProAutoTuneLookAndFeel : public juce::LookAndFeel_V4
+class ProAutoTuneLookAndFeel : public LookAndFeel_V4
 {
 public:
     ProAutoTuneLookAndFeel();
     ~ProAutoTuneLookAndFeel() override;
 
     // Slider customization
-    void drawRotarySlider(juce::Graphics& g, int x, int y, int width, int height,
+    void drawRotarySlider(Graphics& g, int x, int y, int width, int height,
                          float sliderPosProportional, float rotaryStartAngle,
-                         float rotaryEndAngle, juce::Slider& slider) override;
+                         float rotaryEndAngle, Slider& slider) override;
     
-    void drawLinearSlider(juce::Graphics& g, int x, int y, int width, int height,
+    void drawLinearSlider(Graphics& g, int x, int y, int width, int height,
                          float sliderPos, float minSliderPos, float maxSliderPos,
-                         const juce::Slider::SliderStyle style, juce::Slider& slider) override;
+                         const Slider::SliderStyle style, Slider& slider) override;
     
-    juce::Label* createSliderTextBox(juce::Slider& slider) override;
+    Label* createSliderTextBox(Slider& slider) override;
     
     // ComboBox customization
-    void drawComboBox(juce::Graphics& g, int width, int height, bool isButtonDown,
+    void drawComboBox(Graphics& g, int width, int height, bool isButtonDown,
                      int buttonX, int buttonY, int buttonW, int buttonH,
-                     juce::ComboBox& comboBox) override;
+                     ComboBox& comboBox) override;
     
-    void positionComboBoxText(juce::ComboBox& comboBox, juce::Label& labelToPosition) override;
+    void positionComboBoxText(ComboBox& comboBox, Label& labelToPosition) override;
     
     // Button customization
-    void drawButtonBackground(juce::Graphics& g, juce::Button& button,
-                             const juce::Colour& backgroundColour,
+    void drawButtonBackground(Graphics& g, Button& button,
+                             const Colour& backgroundColour,
                              bool shouldDrawButtonAsHighlighted,
                              bool shouldDrawButtonAsDown) override;
     
-    void drawButtonText(juce::Graphics& g, juce::TextButton& button,
+    void drawButtonText(Graphics& g, TextButton& button,
                        bool shouldDrawButtonAsHighlighted,
                        bool shouldDrawButtonAsDown) override;
     
     // Label customization
-    void drawLabel(juce::Graphics& g, juce::Label& label) override;
+    void drawLabel(Graphics& g, Label& label) override;
     
     // Popup menu customization
-    void drawPopupMenuBackground(juce::Graphics& g, int width, int height) override;
-    void drawPopupMenuItem(juce::Graphics& g, const juce::Rectangle<int>& area,
+    void drawPopupMenuBackground(Graphics& g, int width, int height) override;
+    void drawPopupMenuItem(Graphics& g, const Rectangle<int>& area,
                           bool isSeparator, bool isActive, bool isHighlighted,
-                          bool isTicked, bool hasSubMenu, const juce::String& text,
-                          const juce::String& shortcutKeyText,
-                          const juce::Drawable* icon, const juce::Colour* textColour) override;
+                          bool isTicked, bool hasSubMenu, const String& text,
+                          const String& shortcutKeyText,
+                          const Drawable* icon, const Colour* textColour) override;
 
     // Color scheme
     struct Colors
     {
-        static const juce::Colour background;
-        static const juce::Colour surface;
-        static const juce::Colour surfaceVariant;
-        static const juce::Colour primary;
-        static const juce::Colour primaryVariant;
-        static const juce::Colour secondary;
-        static const juce::Colour accent;
-        static const juce::Colour textPrimary;
-        static const juce::Colour textSecondary;
-        static const juce::Colour textDisabled;
-        static const juce::Colour border;
-        static const juce::Colour borderFocus;
-        static const juce::Colour highlight;
-        static const juce::Colour shadow;
+        static const Colour background;
+        static const Colour surface;
+        static const Colour surfaceVariant;
+        static const Colour primary;
+        static const Colour primaryVariant;
+        static const Colour secondary;
+        static const Colour accent;
+        static const Colour textPrimary;
+        static const Colour textSecondary;
+        static const Colour textDisabled;
+        static const Colour border;
+        static const Colour borderFocus;
+        static const Colour highlight;
+        static const Colour shadow;
     };
 
 private:
     // Helper methods
-    void drawGlowEffect(juce::Graphics& g, const juce::Rectangle<float>& bounds,
-                       juce::Colour glowColor, float intensity = 1.0f);
+    void drawGlowEffect(Graphics& g, const Rectangle<float>& bounds,
+                       Colour glowColor, float intensity = 1.0f);
     
-    void drawGradientBackground(juce::Graphics& g, const juce::Rectangle<int>& bounds,
-                               juce::Colour topColor, juce::Colour bottomColor);
+    void drawGradientBackground(Graphics& g, const Rectangle<int>& bounds,
+                               Colour topColor, Colour bottomColor);
     
-    void drawRoundedPath(juce::Graphics& g, const juce::Path& path,
-                        juce::Colour fillColor, juce::Colour strokeColor,
+    void drawRoundedPath(Graphics& g, const Path& path,
+                        Colour fillColor, Colour strokeColor,
                         float strokeWidth = 1.0f);
     
     // Custom fonts
-    juce::Font getTitleFont() const;
-    juce::Font getControlFont() const;
-    juce::Font getSmallFont() const;
+    Font getTitleFont() const;
+    Font getControlFont() const;
+    Font getSmallFont() const;
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(ProAutoTuneLookAndFeel)
 };

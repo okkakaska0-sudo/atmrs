@@ -1,23 +1,21 @@
 #pragma once
 
-#include <juce_gui_basics/juce_gui_basics.h>
-#include <juce_audio_processors/juce_audio_processors.h>
-#include <juce_graphics/juce_graphics.h>
+#include "JuceHeader.h"
 #include "PluginProcessor.h"
 #include "LookAndFeel.h"
 
-class AutoTuneAudioProcessorEditor : public juce::AudioProcessorEditor,
-                                     public juce::Timer,
-                                     public juce::Button::Listener
+class AutoTuneAudioProcessorEditor : public AudioProcessorEditor,
+                                     public Timer,
+                                     public Button::Listener
 {
 public:
     AutoTuneAudioProcessorEditor(AutoTuneAudioProcessor&);
     ~AutoTuneAudioProcessorEditor() override;
 
-    void paint(juce::Graphics&) override;
+    void paint(Graphics&) override;
     void resized() override;
     void timerCallback() override;
-    void buttonClicked(juce::Button* button) override;
+    void buttonClicked(Button* button) override;
 
 private:
     AutoTuneAudioProcessor& audioProcessor;
@@ -26,35 +24,35 @@ private:
     ProAutoTuneLookAndFeel lookAndFeel;
     
     // Main controls
-    juce::Slider speedSlider;
-    juce::Label speedLabel;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> speedAttachment;
+    Slider speedSlider;
+    Label speedLabel;
+    std::unique_ptr<AudioProcessorValueTreeState::SliderAttachment> speedAttachment;
     
-    juce::Slider amountSlider;
-    juce::Label amountLabel;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::SliderAttachment> amountAttachment;
+    Slider amountSlider;
+    Label amountLabel;
+    std::unique_ptr<AudioProcessorValueTreeState::SliderAttachment> amountAttachment;
     
-    juce::ComboBox modeSelector;
-    juce::Label modeLabel;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::ComboBoxAttachment> modeAttachment;
+    ComboBox modeSelector;
+    Label modeLabel;
+    std::unique_ptr<AudioProcessorValueTreeState::ComboBoxAttachment> modeAttachment;
     
-    juce::ComboBox keySelector;
-    juce::Label keyLabel;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::ComboBoxAttachment> keyAttachment;
+    ComboBox keySelector;
+    Label keyLabel;
+    std::unique_ptr<AudioProcessorValueTreeState::ComboBoxAttachment> keyAttachment;
     
-    juce::ComboBox scaleSelector;
-    juce::Label scaleLabel;
-    std::unique_ptr<juce::AudioProcessorValueTreeState::ComboBoxAttachment> scaleAttachment;
+    ComboBox scaleSelector;
+    Label scaleLabel;
+    std::unique_ptr<AudioProcessorValueTreeState::ComboBoxAttachment> scaleAttachment;
     
     // Preset controls
-    juce::TextButton savePresetButton;
-    juce::TextButton loadPresetButton;
-    juce::ComboBox presetSelector;
+    TextButton savePresetButton;
+    TextButton loadPresetButton;
+    ComboBox presetSelector;
     
     // Visual elements
-    juce::Rectangle<int> headerArea;
-    juce::Rectangle<int> controlsArea;
-    juce::Rectangle<int> presetArea;
+    Rectangle<int> headerArea;
+    Rectangle<int> controlsArea;
+    Rectangle<int> presetArea;
     
     // Real-time display
     float currentInputLevel = 0.0f;
@@ -66,11 +64,11 @@ private:
     void setupControls();
     void setupLayout();
     void updatePresetList();
-    void drawHeader(juce::Graphics& g, const juce::Rectangle<int>& area);
-    void drawControls(juce::Graphics& g, const juce::Rectangle<int>& area);
-    void drawPresetSection(juce::Graphics& g, const juce::Rectangle<int>& area);
-    void drawPitchDisplay(juce::Graphics& g, const juce::Rectangle<int>& area);
-    void drawLevelMeters(juce::Graphics& g, const juce::Rectangle<int>& area);
+    void drawHeader(Graphics& g, const Rectangle<int>& area);
+    void drawControls(Graphics& g, const Rectangle<int>& area);
+    void drawPresetSection(Graphics& g, const Rectangle<int>& area);
+    void drawPitchDisplay(Graphics& g, const Rectangle<int>& area);
+    void drawLevelMeters(Graphics& g, const Rectangle<int>& area);
     
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(AutoTuneAudioProcessorEditor)
 };

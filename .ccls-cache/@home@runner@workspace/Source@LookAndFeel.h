@@ -1,29 +1,28 @@
 #pragma once
 
-#include <juce_gui_basics/juce_gui_basics.h>
-#include <juce_graphics/juce_graphics.h>
+#include "JuceHeader.h"
 
-class ProAutoTuneLookAndFeel : public juce::LookAndFeel_V4
+class ProAutoTuneLookAndFeel : public LookAndFeel_V4
 {
 public:
     ProAutoTuneLookAndFeel();
     ~ProAutoTuneLookAndFeel() override;
 
     // Slider customization
-    void drawRotarySlider(juce::Graphics& g, int x, int y, int width, int height,
+    void drawRotarySlider(Graphics& g, int x, int y, int width, int height,
                          float sliderPosProportional, float rotaryStartAngle,
-                         float rotaryEndAngle, juce::Slider& slider) override;
+                         float rotaryEndAngle, Slider& slider) override;
     
-    void drawLinearSlider(juce::Graphics& g, int x, int y, int width, int height,
+    void drawLinearSlider(Graphics& g, int x, int y, int width, int height,
                          float sliderPos, float minSliderPos, float maxSliderPos,
-                         const juce::Slider::SliderStyle style, juce::Slider& slider) override;
+                         const Slider::SliderStyle style, Slider& slider) override;
     
-    juce::Label* createSliderTextBox(juce::Slider& slider) override;
+    Label* createSliderTextBox(Slider& slider) override;
     
     // ComboBox customization
-    void drawComboBox(juce::Graphics& g, int width, int height, bool isButtonDown,
+    void drawComboBox(Graphics& g, int width, int height, bool isButtonDown,
                      int buttonX, int buttonY, int buttonW, int buttonH,
-                     juce::ComboBox& comboBox) override;
+                     ComboBox& comboBox) override;
     
     void positionComboBoxText(juce::ComboBox& comboBox, juce::Label& labelToPosition) override;
     

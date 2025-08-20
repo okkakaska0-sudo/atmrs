@@ -1,17 +1,16 @@
 #pragma once
 
-#include <juce_audio_processors/juce_audio_processors.h>
-#include <juce_core/juce_core.h>
+#include "JuceHeader.h"
 
 class Parameters
 {
 public:
     // Parameter IDs
-    static const juce::String SPEED_ID;
-    static const juce::String AMOUNT_ID;
-    static const juce::String MODE_ID;
-    static const juce::String KEY_ID;
-    static const juce::String SCALE_ID;
+    static const String SPEED_ID;
+    static const String AMOUNT_ID;
+    static const String MODE_ID;
+    static const String KEY_ID;
+    static const String SCALE_ID;
 
     // Enums for categorical parameters
     enum class Mode
@@ -39,7 +38,7 @@ public:
     ~Parameters();
 
     // Create parameter layout for AudioProcessorValueTreeState
-    juce::AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
+    AudioProcessorValueTreeState::ParameterLayout createParameterLayout();
 
     // Parameter ranges and defaults
     static constexpr float SPEED_MIN = 0.0f;
@@ -57,9 +56,9 @@ public:
     static constexpr int SCALE_DEFAULT = static_cast<int>(Scale::Major);
 
     // Utility functions
-    static juce::String getModeString(Mode mode);
-    static juce::String getKeyString(Key key);
-    static juce::String getScaleString(Scale scale);
+    static String getModeString(Mode mode);
+    static String getKeyString(Key key);
+    static String getScaleString(Scale scale);
     
     static Mode getMode(int value);
     static Key getKey(int value);

@@ -1,7 +1,6 @@
 #pragma once
 
-#include <juce_core/juce_core.h>
-#include <juce_dsp/juce_dsp.h>
+#include "JuceHeader.h"
 #include "Parameters.h"
 #include <vector>
 #include <cmath>

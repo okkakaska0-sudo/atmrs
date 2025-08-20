@@ -19,7 +19,7 @@ void ModeSelector::setCurrentMode(Parameters::Mode mode)
     {
         Parameters::Mode oldMode = currentMode;
         currentMode = mode;
-        lastSwitchTime = juce::Time::getCurrentTime();
+        lastSwitchTime = Time::getCurrentTime();
         
         if (onModeChanged)
             onModeChanged(oldMode, currentMode);
@@ -41,9 +41,9 @@ const ModeSelector::ModeConfig& ModeSelector::getModeConfig(Parameters::Mode mod
     return modeConfigs[0]; // Default to Classic mode
 }
 
-juce::StringArray ModeSelector::getModeNames() const
+StringArray ModeSelector::getModeNames() const
 {
-    juce::StringArray names;
+    StringArray names;
     for (const auto& config : modeConfigs)
     {
         names.add(config.name);
@@ -107,7 +107,7 @@ void ModeSelector::switchToMode(Parameters::Mode newMode)
 bool ModeSelector::canSwitchToMode(Parameters::Mode mode) const
 {
     // Check if enough time has passed since last switch to prevent rapid switching
-    if (isInitialized && (juce::Time::getCurrentTime() - lastSwitchTime).inMilliseconds() < 100)
+    if (isInitialized && (Time::getCurrentTime() - lastSwitchTime).inMilliseconds() < 100)
     {
         return false;
     }
@@ -238,7 +238,7 @@ ModeSelector::ProcessingParams ModeSelector::calculateProcessingParams(const Mod
             params.windowSize *= 2;
             params.enableFormantCorrection = true;
             params.enableHarmonicAnalysis = true;
-            params.smoothingFactor = juce::jmin(0.95f, params.smoothingFactor * 1.2f);
+            params.smoothingFactor = jmin(0.95f, params.smoothingFactor * 1.2f);
             break;
     }
     

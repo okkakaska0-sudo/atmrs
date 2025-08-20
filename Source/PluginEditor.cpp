@@ -1,8 +1,5 @@
 #include "PluginEditor.h"
 #include "Utils.h"
-#include <juce_gui_basics/juce_gui_basics.h>
-#include <juce_audio_processors/juce_audio_processors.h>
-#include <juce_core/juce_core.h>
 
 AutoTuneAudioProcessorEditor::AutoTuneAudioProcessorEditor(AutoTuneAudioProcessor& p)
     : AudioProcessorEditor(p), 
@@ -34,34 +31,34 @@ AutoTuneAudioProcessorEditor::~AutoTuneAudioProcessorEditor()
 void AutoTuneAudioProcessorEditor::setupControls()
 {
     // Speed Slider
-    speedSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    speedSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 80, 20);
+    speedSlider.setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
+    speedSlider.setTextBoxStyle(Slider::TextBoxBelow, false, 80, 20);
     speedSlider.setRange(0.0, 100.0, 0.1);
     speedSlider.setValue(50.0);
     speedSlider.setSkewFactor(0.5); // Make lower values more accessible
     addAndMakeVisible(speedSlider);
     
-    speedLabel.setText("Speed", juce::dontSendNotification);
-    speedLabel.setJustificationType(juce::Justification::centred);
-    speedLabel.setColour(juce::Label::textColourId, juce::Colours::white);
+    speedLabel.setText("Speed", dontSendNotification);
+    speedLabel.setJustificationType(Justification::centred);
+    speedLabel.setColour(Label::textColourId, Colours::white);
     addAndMakeVisible(speedLabel);
     
-    speedAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(
+    speedAttachment = std::make_unique<AudioProcessorValueTreeState::SliderAttachment>(
         audioProcessor.getValueTreeState(), Parameters::SPEED_ID, speedSlider);
     
     // Amount Slider
-    amountSlider.setSliderStyle(juce::Slider::RotaryHorizontalVerticalDrag);
-    amountSlider.setTextBoxStyle(juce::Slider::TextBoxBelow, false, 80, 20);
+    amountSlider.setSliderStyle(Slider::RotaryHorizontalVerticalDrag);
+    amountSlider.setTextBoxStyle(Slider::TextBoxBelow, false, 80, 20);
     amountSlider.setRange(0.0, 100.0, 0.1);
     amountSlider.setValue(50.0);
     addAndMakeVisible(amountSlider);
     
-    amountLabel.setText("Amount", juce::dontSendNotification);
-    amountLabel.setJustificationType(juce::Justification::centred);
-    amountLabel.setColour(juce::Label::textColourId, juce::Colours::white);
+    amountLabel.setText("Amount", dontSendNotification);
+    amountLabel.setJustificationType(Justification::centred);
+    amountLabel.setColour(Label::textColourId, Colours::white);
     addAndMakeVisible(amountLabel);
     
-    amountAttachment = std::make_unique<juce::AudioProcessorValueTreeState::SliderAttachment>(
+    amountAttachment = std::make_unique<AudioProcessorValueTreeState::SliderAttachment>(
         audioProcessor.getValueTreeState(), Parameters::AMOUNT_ID, amountSlider);
     
     // Mode Selector
@@ -71,12 +68,12 @@ void AutoTuneAudioProcessorEditor::setupControls()
     modeSelector.setSelectedId(1);
     addAndMakeVisible(modeSelector);
     
-    modeLabel.setText("Mode", juce::dontSendNotification);
-    modeLabel.setJustificationType(juce::Justification::centred);
-    modeLabel.setColour(juce::Label::textColourId, juce::Colours::white);
+    modeLabel.setText("Mode", dontSendNotification);
+    modeLabel.setJustificationType(Justification::centred);
+    modeLabel.setColour(Label::textColourId, Colours::white);
     addAndMakeVisible(modeLabel);
     
-    modeAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(
+    modeAttachment = std::make_unique<AudioProcessorValueTreeState::ComboBoxAttachment>(
         audioProcessor.getValueTreeState(), Parameters::MODE_ID, modeSelector);
     
     // Key Selector
@@ -88,12 +85,12 @@ void AutoTuneAudioProcessorEditor::setupControls()
     keySelector.setSelectedId(1); // C
     addAndMakeVisible(keySelector);
     
-    keyLabel.setText("Key", juce::dontSendNotification);
-    keyLabel.setJustificationType(juce::Justification::centred);
-    keyLabel.setColour(juce::Label::textColourId, juce::Colours::white);
+    keyLabel.setText("Key", dontSendNotification);
+    keyLabel.setJustificationType(Justification::centred);
+    keyLabel.setColour(Label::textColourId, Colours::white);
     addAndMakeVisible(keyLabel);
     
-    keyAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(
+    keyAttachment = std::make_unique<AudioProcessorValueTreeState::ComboBoxAttachment>(
         audioProcessor.getValueTreeState(), Parameters::KEY_ID, keySelector);
     
     // Scale Selector
@@ -103,12 +100,12 @@ void AutoTuneAudioProcessorEditor::setupControls()
     scaleSelector.setSelectedId(1); // Major
     addAndMakeVisible(scaleSelector);
     
-    scaleLabel.setText("Scale", juce::dontSendNotification);
-    scaleLabel.setJustificationType(juce::Justification::centred);
-    scaleLabel.setColour(juce::Label::textColourId, juce::Colours::white);
+    scaleLabel.setText("Scale", dontSendNotification);
+    scaleLabel.setJustificationType(Justification::centred);
+    scaleLabel.setColour(Label::textColourId, Colours::white);
     addAndMakeVisible(scaleLabel);
     
-    scaleAttachment = std::make_unique<juce::AudioProcessorValueTreeState::ComboBoxAttachment>(
+    scaleAttachment = std::make_unique<AudioProcessorValueTreeState::ComboBoxAttachment>(
         audioProcessor.getValueTreeState(), Parameters::SCALE_ID, scaleSelector);
     
     // Preset Controls
@@ -140,12 +137,12 @@ void AutoTuneAudioProcessorEditor::setupLayout()
     controlsArea = bounds;
 }
 
-void AutoTuneAudioProcessorEditor::paint(juce::Graphics& g)
+void AutoTuneAudioProcessorEditor::paint(Graphics& g)
 {
     // Background gradient
-    juce::ColourGradient gradient(
-        juce::Colour(0xff1e1e2e), 0.0f, 0.0f,
-        juce::Colour(0xff181825), 0.0f, static_cast<float>(getHeight()),
+    ColourGradient gradient(
+        Colour(0xff1e1e2e), 0.0f, 0.0f,
+        Colour(0xff181825), 0.0f, static_cast<float>(getHeight()),
         false
     );
     g.setGradientFill(gradient);
@@ -157,44 +154,44 @@ void AutoTuneAudioProcessorEditor::paint(juce::Graphics& g)
     drawPresetSection(g, presetArea);
 }
 
-void AutoTuneAudioProcessorEditor::drawHeader(juce::Graphics& g, const juce::Rectangle<int>& area)
+void AutoTuneAudioProcessorEditor::drawHeader(Graphics& g, const Rectangle<int>& area)
 {
     // Modern header with gradient
-    juce::ColourGradient headerGradient(
-        juce::Colour(0xff21262D), 0.0f, 0.0f,
-        juce::Colour(0xff161B22), 0.0f, static_cast<float>(area.getHeight()),
+    ColourGradient headerGradient(
+        Colour(0xff21262D), 0.0f, 0.0f,
+        Colour(0xff161B22), 0.0f, static_cast<float>(area.getHeight()),
         false
     );
     g.setGradientFill(headerGradient);
     g.fillRoundedRectangle(area.toFloat(), 12.0f);
     
     // Modern glow border
-    g.setColour(juce::Colour(0xff00D4FF).withAlpha(0.3f));
+    g.setColour(Colour(0xff00D4FF).withAlpha(0.3f));
     g.drawRoundedRectangle(area.toFloat().reduced(1.0f), 12.0f, 2.0f);
     
     // Title with modern typography
-    g.setColour(juce::Colour(0xff00D4FF));
-    g.setFont(juce::Font("Arial", 32.0f, juce::Font::bold));
-    g.drawText("AUTOTUNE PRO", area.reduced(30), juce::Justification::centredLeft);
+    g.setColour(Colour(0xff00D4FF));
+    g.setFont(Font("Arial", 32.0f, Font::bold));
+    g.drawText("AUTOTUNE PRO", area.reduced(30), Justification::centredLeft);
     
     // Subtitle
-    g.setFont(juce::Font("Arial", 13.0f, juce::Font::plain));
-    g.setColour(juce::Colour(0xff7C3AED));
-    g.drawText("AI-POWERED PITCH CORRECTION", area.reduced(30).translated(0, 25), juce::Justification::centredLeft);
+    g.setFont(Font("Arial", 13.0f, Font::plain));
+    g.setColour(Colour(0xff7C3AED));
+    g.drawText("AI-POWERED PITCH CORRECTION", area.reduced(30).translated(0, 25), Justification::centredLeft);
     
     // Status indicator
-    g.setColour(juce::Colour(0xff00FF88));
+    g.setColour(Colour(0xff00FF88));
     g.fillEllipse(area.getRight() - 50, area.getCentreY() - 5, 10, 10);
-    g.setFont(juce::Font("Arial", 11.0f, juce::Font::plain));
-    g.setColour(juce::Colours::white);
-    g.drawText("ACTIVE", area.getRight() - 80, area.getCentreY() + 8, 60, 15, juce::Justification::centred);
+    g.setFont(Font("Arial", 11.0f, Font::plain));
+    g.setColour(Colours::white);
+    g.drawText("ACTIVE", area.getRight() - 80, area.getCentreY() + 8, 60, 15, Justification::centred);
     
     // Draw level meters in header
     auto meterArea = area.reduced(30).removeFromRight(120).reduced(10);
     drawLevelMeters(g, meterArea);
 }
 
-void AutoTuneAudioProcessorEditor::drawControls(juce::Graphics& g, const juce::Rectangle<int>& area)
+void AutoTuneAudioProcessorEditor::drawControls(Graphics& g, const Rectangle<int>& area)
 {
     auto bounds = area.reduced(20);
     
@@ -203,48 +200,48 @@ void AutoTuneAudioProcessorEditor::drawControls(juce::Graphics& g, const juce::R
     auto pitchDisplayArea = bounds;
     
     // Draw main controls background
-    g.setColour(juce::Colour(0xff2a2a3a));
+    g.setColour(Colour(0xff2a2a3a));
     g.fillRoundedRectangle(mainControlsArea.toFloat(), 8.0f);
     
     // Draw pitch display
     drawPitchDisplay(g, pitchDisplayArea);
 }
 
-void AutoTuneAudioProcessorEditor::drawPresetSection(juce::Graphics& g, const juce::Rectangle<int>& area)
+void AutoTuneAudioProcessorEditor::drawPresetSection(Graphics& g, const Rectangle<int>& area)
 {
     // Preset section background
-    g.setColour(juce::Colour(0xff2d2d44));
+    g.setColour(Colour(0xff2d2d44));
     g.fillRoundedRectangle(area.toFloat(), 8.0f);
     
     // Preset label
-    g.setColour(juce::Colours::white);
-    g.setFont(juce::Font("Arial", 14.0f, juce::Font::plain));
-    g.drawText("Presets", area.reduced(20, 10), juce::Justification::centredLeft);
+    g.setColour(Colours::white);
+    g.setFont(Font("Arial", 14.0f, Font::plain));
+    g.drawText("Presets", area.reduced(20, 10), Justification::centredLeft);
 }
 
-void AutoTuneAudioProcessorEditor::drawPitchDisplay(juce::Graphics& g, const juce::Rectangle<int>& area)
+void AutoTuneAudioProcessorEditor::drawPitchDisplay(Graphics& g, const Rectangle<int>& area)
 {
     if (area.getWidth() < 10 || area.getHeight() < 10)
         return;
         
     // Background
-    g.setColour(juce::Colour(0xff1a1a2e));
+    g.setColour(Colour(0xff1a1a2e));
     g.fillRoundedRectangle(area.toFloat(), 8.0f);
     
     // Border
-    g.setColour(juce::Colour(0xff3d3d5c));
+    g.setColour(Colour(0xff3d3d5c));
     g.drawRoundedRectangle(area.toFloat(), 8.0f, 2.0f);
     
     // Title
-    g.setColour(juce::Colours::white);
-    g.setFont(juce::Font("Arial", 14.0f, juce::Font::plain));
-    g.drawText("Pitch Display", area.reduced(10).removeFromTop(20), juce::Justification::centredLeft);
+    g.setColour(Colours::white);
+    g.setFont(Font("Arial", 14.0f, Font::plain));
+    g.drawText("Pitch Display", area.reduced(10).removeFromTop(20), Justification::centredLeft);
     
     // Draw pitch history
     auto displayArea = area.reduced(20, 30);
     if (displayArea.getWidth() > 0 && displayArea.getHeight() > 0)
     {
-        juce::Path pitchPath;
+        Path pitchPath;
         bool firstPoint = true;
         
         for (int i = 0; i < pitchHistory.size(); ++i)
@@ -264,17 +261,17 @@ void AutoTuneAudioProcessorEditor::drawPitchDisplay(juce::Graphics& g, const juc
         }
         
         // Draw pitch curve
-        g.setColour(juce::Colour(0xff4CAF50));
-        g.strokePath(pitchPath, juce::PathStrokeType(2.0f));
+        g.setColour(Colour(0xff4CAF50));
+        g.strokePath(pitchPath, PathStrokeType(2.0f));
         
         // Draw center line (target pitch)
-        g.setColour(juce::Colour(0xff666666));
+        g.setColour(Colour(0xff666666));
         float centerY = displayArea.getCentreY();
         g.drawLine(displayArea.getX(), centerY, displayArea.getRight(), centerY, 1.0f);
     }
 }
 
-void AutoTuneAudioProcessorEditor::drawLevelMeters(juce::Graphics& g, const juce::Rectangle<int>& area)
+void AutoTuneAudioProcessorEditor::drawLevelMeters(Graphics& g, const Rectangle<int>& area)
 {
     auto meterWidth = 20;
     auto mutableArea = area;
@@ -282,30 +279,30 @@ void AutoTuneAudioProcessorEditor::drawLevelMeters(juce::Graphics& g, const juce
     auto outputMeterArea = mutableArea.removeFromRight(meterWidth);
     
     // Input meter
-    g.setColour(juce::Colour(0xff333344));
+    g.setColour(Colour(0xff333344));
     g.fillRect(inputMeterArea);
     
     auto inputHeight = static_cast<int>(currentInputLevel * inputMeterArea.getHeight());
     auto inputLevelArea = inputMeterArea.removeFromBottom(inputHeight);
     
-    g.setColour(currentInputLevel > 0.8f ? juce::Colours::red : juce::Colours::green);
+    g.setColour(currentInputLevel > 0.8f ? Colours::red : Colours::green);
     g.fillRect(inputLevelArea);
     
     // Output meter
-    g.setColour(juce::Colour(0xff333344));
+    g.setColour(Colour(0xff333344));
     g.fillRect(outputMeterArea);
     
     auto outputHeight = static_cast<int>(currentOutputLevel * outputMeterArea.getHeight());
     auto outputLevelArea = outputMeterArea.removeFromBottom(outputHeight);
     
-    g.setColour(currentOutputLevel > 0.8f ? juce::Colours::red : juce::Colours::blue);
+    g.setColour(currentOutputLevel > 0.8f ? Colours::red : Colours::blue);
     g.fillRect(outputLevelArea);
     
     // Labels
-    g.setColour(juce::Colours::white);
+    g.setColour(Colours::white);
     g.setFont(10.0f);
-    g.drawText("IN", inputMeterArea.withY(area.getBottom() + 5).withHeight(15), juce::Justification::centred);
-    g.drawText("OUT", outputMeterArea.withY(area.getBottom() + 5).withHeight(15), juce::Justification::centred);
+    g.drawText("IN", inputMeterArea.withY(area.getBottom() + 5).withHeight(15), Justification::centred);
+    g.drawText("OUT", outputMeterArea.withY(area.getBottom() + 5).withHeight(15), Justification::centred);
 }
 
 void AutoTuneAudioProcessorEditor::resized()
@@ -366,20 +363,20 @@ void AutoTuneAudioProcessorEditor::resized()
 void AutoTuneAudioProcessorEditor::timerCallback()
 {
     // Update level meters (simplified - in real implementation would get from processor)
-    currentInputLevel = 0.3f + 0.2f * std::sin(juce::Time::getMillisecondCounter() * 0.01f);
-    currentOutputLevel = 0.25f + 0.15f * std::cos(juce::Time::getMillisecondCounter() * 0.008f);
+    currentInputLevel = 0.3f + 0.2f * std::sin(Time::getMillisecondCounter() * 0.01f);
+    currentOutputLevel = 0.25f + 0.15f * std::cos(Time::getMillisecondCounter() * 0.008f);
     
     // Update pitch history (placeholder data)
     for (int i = 0; i < pitchHistory.size() - 1; ++i)
     {
         pitchHistory[i] = pitchHistory[i + 1];
     }
-    pitchHistory.back() = 0.1f * std::sin(juce::Time::getMillisecondCounter() * 0.005f);
+    pitchHistory.back() = 0.1f * std::sin(Time::getMillisecondCounter() * 0.005f);
     
     repaint();
 }
 
-void AutoTuneAudioProcessorEditor::buttonClicked(juce::Button* button)
+void AutoTuneAudioProcessorEditor::buttonClicked(Button* button)
 {
     if (button == &savePresetButton)
     {

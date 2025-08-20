@@ -241,7 +241,7 @@ std::vector<int> Utils::findSpectralPeaks(const std::vector<float>& magnitude, f
     return peaks;
 }
 
-juce::String Utils::noteNumberToNoteName(int noteNumber)
+String Utils::noteNumberToNoteName(int noteNumber)
 {
     const char* noteNames[] = {"C", "C#", "D", "D#", "E", "F", "F#", "G", "G#", "A", "A#", "B"};
     
@@ -254,10 +254,10 @@ juce::String Utils::noteNumberToNoteName(int noteNumber)
         octave--;
     }
     
-    return juce::String(noteNames[note]) + juce::String(octave);
+    return String(noteNames[note]) + String(octave);
 }
 
-int Utils::noteNameToNoteNumber(const juce::String& noteName)
+int Utils::noteNameToNoteNumber(const String& noteName)
 {
     // Simple implementation - could be expanded for more robust parsing
     if (noteName.length() < 2)

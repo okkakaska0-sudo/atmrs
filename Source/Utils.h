@@ -1,7 +1,6 @@
 #pragma once
 
-#include <juce_core/juce_core.h>
-#include <juce_dsp/juce_dsp.h>
+#include "JuceHeader.h"
 #include "Parameters.h"
 #include <vector>
 #include <cmath>
@@ -50,8 +49,8 @@ public:
     static std::vector<int> findSpectralPeaks(const std::vector<float>& magnitude, float threshold = 0.1f);
     
     // Musical theory utilities
-    static juce::String noteNumberToNoteName(int noteNumber);
-    static int noteNameToNoteNumber(const juce::String& noteName);
+    static String noteNumberToNoteName(int noteNumber);
+    static int noteNameToNoteNumber(const String& noteName);
     static float centsToRatio(float cents);
     static float ratioToCents(float ratio);
     

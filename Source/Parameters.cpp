@@ -1,11 +1,11 @@
 #include "Parameters.h"
 
 // Parameter ID strings
-const juce::String Parameters::SPEED_ID = "speed";
-const juce::String Parameters::AMOUNT_ID = "amount";
-const juce::String Parameters::MODE_ID = "mode";
-const juce::String Parameters::KEY_ID = "key";
-const juce::String Parameters::SCALE_ID = "scale";
+const String Parameters::SPEED_ID = "speed";
+const String Parameters::AMOUNT_ID = "amount";
+const String Parameters::MODE_ID = "mode";
+const String Parameters::KEY_ID = "key";
+const String Parameters::SCALE_ID = "scale";
 
 Parameters::Parameters()
 {
@@ -15,39 +15,39 @@ Parameters::~Parameters()
 {
 }
 
-juce::AudioProcessorValueTreeState::ParameterLayout Parameters::createParameterLayout()
+AudioProcessorValueTreeState::ParameterLayout Parameters::createParameterLayout()
 {
-    std::vector<std::unique_ptr<juce::RangedAudioParameter>> params;
+    std::vector<std::unique_ptr<RangedAudioParameter>> params;
 
     // Speed parameter - Controls how fast the correction is applied
-    params.push_back(std::make_unique<juce::AudioParameterFloat>(
+    params.push_back(std::make_unique<AudioParameterFloat>(
         SPEED_ID,
         "Speed",
-        juce::NormalisableRange<float>(SPEED_MIN, SPEED_MAX, SPEED_STEP),
+        NormalisableRange<float>(SPEED_MIN, SPEED_MAX, SPEED_STEP),
         SPEED_DEFAULT,
-        juce::String(),
-        juce::AudioProcessorParameter::genericParameter,
-        [](float value, int) { return juce::String(value, 1) + "%"; }
+        String(),
+        AudioProcessorParameter::genericParameter,
+        [](float value, int) { return String(value, 1) + "%"; }
     ));
 
     // Amount parameter - Controls the strength of the correction
-    params.push_back(std::make_unique<juce::AudioParameterFloat>(
+    params.push_back(std::make_unique<AudioParameterFloat>(
         AMOUNT_ID,
         "Amount",
-        juce::NormalisableRange<float>(AMOUNT_MIN, AMOUNT_MAX, AMOUNT_STEP),
+        NormalisableRange<float>(AMOUNT_MIN, AMOUNT_MAX, AMOUNT_STEP),
         AMOUNT_DEFAULT,
-        juce::String(),
-        juce::AudioProcessorParameter::genericParameter,
-        [](float value, int) { return juce::String(value, 1) + "%"; }
+        String(),
+        AudioProcessorParameter::genericParameter,
+        [](float value, int) { return String(value, 1) + "%"; }
     ));
 
     // Mode parameter - Selects the correction algorithm
-    juce::StringArray modeChoices;
+    StringArray modeChoices;
     modeChoices.add("Classic");
     modeChoices.add("Hard");
     modeChoices.add("AI");
 
-    params.push_back(std::make_unique<juce::AudioParameterChoice>(
+    params.push_back(std::make_unique<AudioParameterChoice>(
         MODE_ID,
         "Mode",
         modeChoices,
@@ -55,7 +55,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout Parameters::createParameterL
     ));
 
     // Key parameter - Sets the musical key
-    juce::StringArray keyChoices;
+    StringArray keyChoices;
     keyChoices.add("C");
     keyChoices.add("C#");
     keyChoices.add("D");
@@ -69,7 +69,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout Parameters::createParameterL
     keyChoices.add("A#");
     keyChoices.add("B");
 
-    params.push_back(std::make_unique<juce::AudioParameterChoice>(
+    params.push_back(std::make_unique<AudioParameterChoice>(
         KEY_ID,
         "Key",
         keyChoices,
@@ -77,12 +77,12 @@ juce::AudioProcessorValueTreeState::ParameterLayout Parameters::createParameterL
     ));
 
     // Scale parameter - Sets the musical scale
-    juce::StringArray scaleChoices;
+    StringArray scaleChoices;
     scaleChoices.add("Major");
     scaleChoices.add("Minor");
     scaleChoices.add("Chromatic");
 
-    params.push_back(std::make_unique<juce::AudioParameterChoice>(
+    params.push_back(std::make_unique<AudioParameterChoice>(
         SCALE_ID,
         "Scale",
         scaleChoices,
@@ -92,7 +92,7 @@ juce::AudioProcessorValueTreeState::ParameterLayout Parameters::createParameterL
     return { params.begin(), params.end() };
 }
 
-juce::String Parameters::getModeString(Mode mode)
+String Parameters::getModeString(Mode mode)
 {
     switch (mode)
     {
@@ -103,7 +103,7 @@ juce::String Parameters::getModeString(Mode mode)
     }
 }
 
-juce::String Parameters::getKeyString(Key key)
+String Parameters::getKeyString(Key key)
 {
     const char* keyNames[] = {
         "C", "C#", "D", "D#", "E", "F", 
@@ -113,13 +113,13 @@ juce::String Parameters::getKeyString(Key key)
     int keyIndex = static_cast<int>(key);
     if (keyIndex >= 0 && keyIndex < 12)
     {
-        return juce::String(keyNames[keyIndex]);
+        return String(keyNames[keyIndex]);
     }
     
     return "C";
 }
 
-juce::String Parameters::getScaleString(Scale scale)
+String Parameters::getScaleString(Scale scale)
 {
     switch (scale)
     {

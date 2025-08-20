@@ -1,8 +1,6 @@
 #pragma once
 
-#include <juce_audio_processors/juce_audio_processors.h>
-#include <juce_core/juce_core.h>
-#include <juce_data_structures/juce_data_structures.h>
+#include "JuceHeader.h"
 #include <vector>
 
 class PresetManager
@@ -10,28 +8,28 @@ class PresetManager
 public:
     struct Preset
     {
-        juce::String name;
+        String name;
         float speed;
         float amount;
         int mode;
         int key;
         int scale;
-        juce::String description;
-        juce::Time dateCreated;
+        String description;
+        Time dateCreated;
         
         Preset() : speed(50.0f), amount(50.0f), mode(0), key(0), scale(0) {}
         
-        Preset(const juce::String& presetName, float speedVal, float amountVal, 
-               int modeVal, int keyVal, int scaleVal, const juce::String& desc = juce::String())
+        Preset(const String& presetName, float speedVal, float amountVal, 
+               int modeVal, int keyVal, int scaleVal, const String& desc = String())
             : name(presetName), speed(speedVal), amount(amountVal), mode(modeVal), 
-              key(keyVal), scale(scaleVal), description(desc), dateCreated(juce::Time::getCurrentTime()) {}
+              key(keyVal), scale(scaleVal), description(desc), dateCreated(Time::getCurrentTime()) {}
     };
 
-    PresetManager(juce::AudioProcessorValueTreeState& parameters);
+    PresetManager(AudioProcessorValueTreeState& parameters);
     ~PresetManager();
 
     // Preset management
-    void savePreset(const juce::String& name, const juce::String& description = juce::String());
+    void savePreset(const String& name, const String& description = String());
     bool loadPreset(int index);
     bool loadPreset(const juce::String& name);
     void deletePreset(int index);

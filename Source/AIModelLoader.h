@@ -1,8 +1,6 @@
 #pragma once
 
-#include <juce_core/juce_core.h>
-#include <juce_events/juce_events.h>
-#include <juce_audio_basics/juce_audio_basics.h>
+#include "JuceHeader.h"
 #include <memory>
 #include <vector>
 #include <string>
@@ -45,16 +43,16 @@ public:
     ~AIModelLoader();
 
     // Model loading and management
-    bool loadCrepeModel(const juce::File& modelFile);
-    bool loadDDSPModel(const juce::File& modelFile);
+    bool loadCrepeModel(const File& modelFile);
+    bool loadDDSPModel(const File& modelFile);
     bool areModelsLoaded() const;
     
     // Model information
     struct ModelInfo
     {
-        juce::String name;
-        juce::String version;
-        juce::String description;
+        String name;
+        String version;
+        String description;
         float sampleRate;
         int inputSize;
         int outputSize;
@@ -99,8 +97,8 @@ public:
     // Model management
     void unloadModels();
     bool reloadModels();
-    void setModelDirectory(const juce::File& directory);
-    juce::File getModelDirectory() const { return modelDirectory; }
+    void setModelDirectory(const File& directory);
+    File getModelDirectory() const { return modelDirectory; }
     
     // Performance settings
     enum class ProcessingQuality
@@ -133,10 +131,10 @@ public:
         };
         
         Type type;
-        juce::String message;
+        String message;
         
         AIError() : type(None) {}
-        AIError(Type t, const juce::String& msg) : type(t), message(msg) {}
+        AIError(Type t, const String& msg) : type(t), message(msg) {}
         bool operator==(const AIError& other) const { return type == other.type; }
     };
     
@@ -145,7 +143,7 @@ public:
     void clearError() { lastError = AIError(); }
     
     // Callbacks
-    std::function<void(const juce::String&)> onModelLoaded;
+    std::function<void(const String&)> onModelLoaded;
     std::function<void(const AIError&)> onError;
     std::function<void(float)> onProgress;
 
@@ -159,7 +157,7 @@ private:
     ModelInfo ddspInfo;
     
     // Configuration
-    juce::File modelDirectory;
+    File modelDirectory;
     ProcessingQuality currentQuality;
     bool useMultiThreading;
     int maxThreads;
@@ -168,10 +166,10 @@ private:
     AIError lastError;
     
     // Internal methods
-    bool initializeCrepeModel(const juce::File& modelFile);
-    bool initializeDDSPModel(const juce::File& modelFile);
+    bool initializeCrepeModel(const File& modelFile);
+    bool initializeDDSPModel(const File& modelFile);
     void setupDefaultModelDirectory();
-    bool validateModelFile(const juce::File& file, const juce::String& expectedType);
+    bool validateModelFile(const File& file, const String& expectedType);
     
     // Processing helpers
     std::vector<float> preprocessAudioForCrepe(const float* input, int numSamples, float targetSampleRate);
@@ -179,8 +177,8 @@ private:
     void postprocessDDSPOutput(float* output, int numSamples, float gainAdjustment);
     
     // Thread management
-    juce::ThreadPool threadPool;
-    juce::CriticalSection modelLock;
+    ThreadPool threadPool;
+    CriticalSection modelLock;
     
     // Performance monitoring
     void updatePerformanceMetrics();

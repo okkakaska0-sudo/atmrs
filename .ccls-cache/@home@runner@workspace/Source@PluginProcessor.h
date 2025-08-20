@@ -1,8 +1,6 @@
 #pragma once
 
-#include <juce_audio_processors/juce_audio_processors.h>
-#include <juce_dsp/juce_dsp.h>
-#include <juce_core/juce_core.h>
+#include "JuceHeader.h"
 #include <memory>
 #include "PitchCorrectionEngine.h"
 #include "Parameters.h"
@@ -14,8 +12,8 @@
 #include <rubberband/RubberBandStretcher.h>
 #endif
 
-class AutoTuneAudioProcessor : public juce::AudioProcessor,
-                                public juce::AudioProcessorValueTreeState::Listener
+class AutoTuneAudioProcessor : public AudioProcessor,
+                                public AudioProcessorValueTreeState::Listener
 {
 public:
     AutoTuneAudioProcessor();
@@ -26,15 +24,15 @@ public:
     void releaseResources() override;
 
 #ifndef JucePlugin_PreferredChannelConfigurations
-    bool isBusesLayoutSupported(const juce::AudioProcessor::BusesLayout& layouts) const override;
+    bool isBusesLayoutSupported(const AudioProcessor::BusesLayout& layouts) const override;
 #endif
 
-    void processBlock(juce::AudioBuffer<float>&, juce::MidiBuffer&) override;
+    void processBlock(AudioBuffer<float>&, MidiBuffer&) override;
 
-    juce::AudioProcessorEditor* createEditor() override;
+    AudioProcessorEditor* createEditor() override;
     bool hasEditor() const override { return true; }
 
-    const juce::String getName() const override { return JucePlugin_Name; }
+    const String getName() const override { return JucePlugin_Name; }
 
     bool acceptsMidi() const override { return false; }
     bool producesMidi() const override { return false; }
@@ -43,18 +41,18 @@ public:
 
     int getNumPrograms() override { return 1; }
     int getCurrentProgram() override { return 0; }
-    void setCurrentProgram(int index) override { juce::ignoreUnused(index); }
-    const juce::String getProgramName(int index) override;
-    void changeProgramName(int index, const juce::String& newName) override;
+    void setCurrentProgram(int index) override { ignoreUnused(index); }
+    const String getProgramName(int index) override;
+    void changeProgramName(int index, const String& newName) override;
 
-    void getStateInformation(juce::MemoryBlock& destData) override;
+    void getStateInformation(MemoryBlock& destData) override;
     void setStateInformation(const void* data, int sizeInBytes) override;
 
     // Parameter listener
-    void parameterChanged(const juce::String& parameterID, float newValue) override;
+    void parameterChanged(const String& parameterID, float newValue) override;
 
     // Public accessors
-    juce::AudioProcessorValueTreeState& getValueTreeState() { return parameters; }
+    AudioProcessorValueTreeState& getValueTreeState() { return parameters; }
     Parameters& getParameters() { return pluginParameters; }
     PresetManager& getPresetManager() { return presetManager; }
     PitchCorrectionEngine& getPitchEngine() { return pitchEngine; }
@@ -63,7 +61,7 @@ public:
 private:
     // Core components - ORDER MATTERS for initialization!
     Parameters pluginParameters;                       // Must be initialized BEFORE parameters
-    juce::AudioProcessorValueTreeState parameters;
+    AudioProcessorValueTreeState parameters;
     PresetManager presetManager;
     PitchCorrectionEngine pitchEngine;
     ModeSelector modeSelector;
@@ -74,41 +72,41 @@ private:
     int currentBlockSize = 512;
     
     // Pitch detection buffers
-    juce::AudioBuffer<float> pitchBuffer;
-    juce::AudioBuffer<float> correctedBuffer;
+    AudioBuffer<float> pitchBuffer;
+    AudioBuffer<float> correctedBuffer;
     
     // Circular buffer for overlap-add processing
-    juce::AudioBuffer<float> overlapBuffer;
+    AudioBuffer<float> overlapBuffer;
     int overlapPosition = 0;
     static constexpr int overlapSize = 2048;
 
     // FFT for frequency domain processing
-    std::unique_ptr<juce::dsp::FFT> fft;
-    std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
-    juce::AudioBuffer<float> fftBuffer;
-    juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+    std::unique_ptr<dsp::FFT> fft;
+    std::unique_ptr<dsp::WindowingFunction<float>> window;
+    AudioBuffer<float> fftBuffer;
+    HeapBlock<dsp::Complex<float>> frequencyData;
     static constexpr int fftOrder = 11; // 2^11 = 2048
     static constexpr int fftSize = 1 << fftOrder;
 
     // Smoothing filters for parameters
-    juce::SmoothedValue<float> speedSmoothed;
-    juce::SmoothedValue<float> amountSmoothed;
+    SmoothedValue<float> speedSmoothed;
+    SmoothedValue<float> amountSmoothed;
 
 #ifdef USE_RUBBERBAND
     std::unique_ptr<RubberBand::RubberBandStretcher> rubberBand;
 #endif
 
     // Processing methods
-    void processClassicMode(juce::AudioBuffer<float>& buffer);
-    void processHardMode(juce::AudioBuffer<float>& buffer);
-    void processAIMode(juce::AudioBuffer<float>& buffer);
+    void processClassicMode(AudioBuffer<float>& buffer);
+    void processHardMode(AudioBuffer<float>& buffer);
+    void processAIMode(AudioBuffer<float>& buffer);
     
-    void performPitchCorrection(juce::AudioBuffer<float>& buffer, 
+    void performPitchCorrection(AudioBuffer<float>& buffer, 
                                float speed, float amount, 
                                Parameters::Key key, Parameters::Scale scale);
     
-    void applyOverlapAdd(juce::AudioBuffer<float>& buffer, 
-                        const juce::AudioBuffer<float>& processedBuffer);
+    void applyOverlapAdd(AudioBuffer<float>& buffer, 
+                        const AudioBuffer<float>& processedBuffer);
 
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR(AutoTuneAudioProcessor)
 };

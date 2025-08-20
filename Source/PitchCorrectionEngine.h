@@ -1,7 +1,6 @@
 #pragma once
 
-#include <juce_dsp/juce_dsp.h>
-#include <juce_core/juce_core.h>
+#include "JuceHeader.h"
 #include <memory>
 #include <vector>
 #include <complex>
@@ -53,9 +52,9 @@ private:
     float rmsLevel = 0.0f;
     
     // JUCE components for FFT and spectral analysis
-    std::unique_ptr<juce::dsp::FFT> fft;
-    std::unique_ptr<juce::dsp::WindowingFunction<float>> window;
-    juce::HeapBlock<juce::dsp::Complex<float>> frequencyData;
+    std::unique_ptr<dsp::FFT> fft;
+    std::unique_ptr<dsp::WindowingFunction<float>> window;
+    HeapBlock<dsp::Complex<float>> frequencyData;
     
     // Autocorrelation-based pitch detection
     std::vector<float> autocorrelationBuffer;
