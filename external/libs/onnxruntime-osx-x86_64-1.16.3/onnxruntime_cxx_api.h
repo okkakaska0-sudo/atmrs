@@ -28,20 +28,22 @@ namespace Ort {
         }
     };
     
-    // Value (tensor)
-    template<typename T>
+    // Value (tensor) - simplified non-template version for compilation
     struct Value {
+        template<typename T>
         static Value CreateTensor(const MemoryInfo& memory_info, T* data, 
                                  size_t data_length, const int64_t* shape, 
                                  size_t shape_length) {
             return Value{};
         }
         
+        template<typename T>
         T* GetTensorMutableData() { 
             static T dummy{};
             return &dummy; 
         }
         
+        template<typename T>
         const T* GetTensorData() const { 
             static T dummy{};
             return &dummy; 
