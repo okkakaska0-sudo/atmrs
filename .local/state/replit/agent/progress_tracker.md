@@ -6,3 +6,5 @@
 [x] 6. All source files and dependencies verified
 [x] 7. Build system ready for Intel/Apple Silicon auto-detection
 [x] 8. Migration from Replit Agent to Replit completed successfully
+[x] 9. Fixed architecture issue - Intel Mac requires Intel-only build
+[x] 10. Prepared build_intel_only.sh for Intel x64 Mac (no universal binary)
