@@ -1,0 +1,178 @@
+Last login: Wed Aug 20 18:24:07 on ttys000
+marselmacevans@iMac-Marsel ~ % cd /Users/marselmacevans/Downloads/atmrs
+chmod +x build_bundled_libs.sh
+./build_bundled_libs.sh
+🚀 Building AutoTune Plugin with Bundled Libraries
+==================================================
+⚙️  Configuring CMake with bundled libraries...
+-- The C compiler identification is AppleClang 16.0.0.16000026
+-- The CXX compiler identification is AppleClang 16.0.0.16000026
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building AutoTune Plugin for Intel x64
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- ✅ Bundled Eigen3: /Users/marselmacevans/Downloads/atmrs/external/libs/eigen-3.4.0
+-- ✅ Bundled ONNX Runtime library: /Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/lib/libonnxruntime.1.16.3.dylib
+-- ✅ Bundled Rubber Band: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src
+-- 🚀 ALL BUNDLED LIBRARIES READY FOR COMPILATION
+CMake Warning (dev) at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:693 (add_custom_command):
+  The following keywords are not supported when using
+  add_custom_command(TARGET): DEPENDS.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1316 (_juce_configure_bundle)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)
+  CMakeLists.txt:99 (juce_add_plugin)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:693 (add_custom_command):
+  The following keywords are not supported when using
+  add_custom_command(TARGET): DEPENDS.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1316 (_juce_configure_bundle)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)
+  CMakeLists.txt:99 (juce_add_plugin)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:693 (add_custom_command):
+  The following keywords are not supported when using
+  add_custom_command(TARGET): DEPENDS.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1316 (_juce_configure_bundle)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)
+  CMakeLists.txt:99 (juce_add_plugin)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- ✅ Including all bundled library headers
+-- ✅ Added 28 Rubber Band source files
+-- Configuring done (77.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /Users/marselmacevans/Downloads/atmrs/build
+🔨 Building plugin...
+[  1%] Generating AutoTunePlugin_artefacts/JuceLibraryCode/JuceHeader.h
+[  3%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o
+[  5%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/ModeSelector.cpp.o
+[  9%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/Parameters.cpp.o
+[  9%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/LookAndFeel.cpp.o
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:14:
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:64:21: error: use of class template 'Value' requires template arguments
+   64 |         std::vector<Value> Run(const std::vector<const char*>& input_names,
+      |                     ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:33:12: note: template is declared here
+   32 |     template<typename T>
+      |     ~~~~~~~~~~~~~~~~~~~~
+   33 |     struct Value {
+      |            ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:65:49: error: use of class template 'Value' requires template arguments
+   65 |                               const std::vector<Value>& input_values,
+      |                                                 ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:33:12: note: template is declared here
+   32 |     template<typename T>
+      |     ~~~~~~~~~~~~~~~~~~~~
+   33 |     struct Value {
+      |            ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:67:32: error: use of class template 'Value' requires template arguments
+   67 |             return std::vector<Value>{};
+      |                                ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:33:12: note: template is declared here
+   32 |     template<typename T>
+      |     ~~~~~~~~~~~~~~~~~~~~
+   33 |     struct Value {
+      |            ^
+[ 11%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PitchCorrectionEngine.cpp.o
+[ 12%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o
+[ 14%] Building CXX object CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o
+3 errors generated.
+make[3]: *** [CMakeFiles/AutoTunePlugin.dir/Source/AIModelLoader.cpp.o] Error 1
+make[3]: *** Waiting for unfinished jobs....
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor.h:6:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:14:
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:64:21: error: use of class template 'Value' requires template arguments
+   64 |         std::vector<Value> Run(const std::vector<const char*>& input_names,
+      |                     ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:33:12: note: template is declared here
+   32 |     template<typename T>
+      |     ~~~~~~~~~~~~~~~~~~~~
+   33 |     struct Value {
+      |            ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:65:49: error: use of class template 'Value' requires template arguments
+   65 |                               const std::vector<Value>& input_values,
+      |                                                 ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:33:12: note: template is declared here
+   32 |     template<typename T>
+      |     ~~~~~~~~~~~~~~~~~~~~
+   33 |     struct Value {
+      |            ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:67:32: error: use of class template 'Value' requires template arguments
+   67 |             return std::vector<Value>{};
+      |                                ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:33:12: note: template is declared here
+   32 |     template<typename T>
+      |     ~~~~~~~~~~~~~~~~~~~~
+   33 |     struct Value {
+      |            ^
+3 errors generated.
+make[3]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor.cpp.o] Error 1
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginEditor_minimal.cpp:1:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/PluginProcessor.h:11:
+In file included from /Users/marselmacevans/Downloads/atmrs/Source/AIModelLoader.h:14:
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:64:21: error: use of class template 'Value' requires template arguments
+   64 |         std::vector<Value> Run(const std::vector<const char*>& input_names,
+      |                     ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:33:12: note: template is declared here
+   32 |     template<typename T>
+      |     ~~~~~~~~~~~~~~~~~~~~
+   33 |     struct Value {
+      |            ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:65:49: error: use of class template 'Value' requires template arguments
+   65 |                               const std::vector<Value>& input_values,
+      |                                                 ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:33:12: note: template is declared here
+   32 |     template<typename T>
+      |     ~~~~~~~~~~~~~~~~~~~~
+   33 |     struct Value {
+      |            ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:67:32: error: use of class template 'Value' requires template arguments
+   67 |             return std::vector<Value>{};
+      |                                ^
+/Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/onnxruntime_cxx_api.h:33:12: note: template is declared here
+   32 |     template<typename T>
+      |     ~~~~~~~~~~~~~~~~~~~~
+   33 |     struct Value {
+      |            ^
+3 errors generated.
+make[3]: *** [CMakeFiles/AutoTunePlugin.dir/Source/PluginEditor_minimal.cpp.o] Error 1
+make[2]: *** [CMakeFiles/AutoTunePlugin.dir/all] Error 2
+make[1]: *** [CMakeFiles/AutoTunePlugin.dir/rule] Error 2
+make: *** [AutoTunePlugin] Error 2
+marselmacevans@iMac-Marsel atmrs % 
