@@ -159,22 +159,38 @@ void AutoTuneAudioProcessorEditor::paint(juce::Graphics& g)
 
 void AutoTuneAudioProcessorEditor::drawHeader(juce::Graphics& g, const juce::Rectangle<int>& area)
 {
-    // Header background
-    g.setColour(juce::Colour(0xff2d2d44));
-    g.fillRoundedRectangle(area.toFloat(), 8.0f);
+    // Modern header with gradient
+    juce::ColourGradient headerGradient(
+        juce::Colour(0xff21262D), 0.0f, 0.0f,
+        juce::Colour(0xff161B22), 0.0f, static_cast<float>(area.getHeight()),
+        false
+    );
+    g.setGradientFill(headerGradient);
+    g.fillRoundedRectangle(area.toFloat(), 12.0f);
     
-    // Title
+    // Modern glow border
+    g.setColour(juce::Colour(0xff00D4FF).withAlpha(0.3f));
+    g.drawRoundedRectangle(area.toFloat().reduced(1.0f), 12.0f, 2.0f);
+    
+    // Title with modern typography
+    g.setColour(juce::Colour(0xff00D4FF));
+    g.setFont(juce::Font("Arial", 32.0f, juce::Font::bold));
+    g.drawText("AUTOTUNE PRO", area.reduced(30), juce::Justification::centredLeft);
+    
+    // Subtitle
+    g.setFont(juce::Font("Arial", 13.0f, juce::Font::plain));
+    g.setColour(juce::Colour(0xff7C3AED));
+    g.drawText("AI-POWERED PITCH CORRECTION", area.reduced(30).translated(0, 25), juce::Justification::centredLeft);
+    
+    // Status indicator
+    g.setColour(juce::Colour(0xff00FF88));
+    g.fillEllipse(area.getRight() - 50, area.getCentreY() - 5, 10, 10);
+    g.setFont(juce::Font("Arial", 11.0f, juce::Font::plain));
     g.setColour(juce::Colours::white);
-    g.setFont(juce::Font("Arial", 28.0f, juce::Font::bold));
-    g.drawText("ProAutoTune", area.reduced(20), juce::Justification::centredLeft);
-    
-    // Version info
-    g.setFont(juce::Font("Arial", 12.0f, juce::Font::plain));
-    g.setColour(juce::Colour(0xffb8b8c8));
-    g.drawText("v1.0", area.reduced(20), juce::Justification::centredRight);
+    g.drawText("ACTIVE", area.getRight() - 80, area.getCentreY() + 8, 60, 15, juce::Justification::centred);
     
     // Draw level meters in header
-    auto meterArea = area.reduced(20).removeFromRight(200).reduced(10);
+    auto meterArea = area.reduced(30).removeFromRight(120).reduced(10);
     drawLevelMeters(g, meterArea);
 }
 

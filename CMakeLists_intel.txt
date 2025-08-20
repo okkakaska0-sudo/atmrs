@@ -40,85 +40,54 @@ set(JUCE_TARGET_ARCHITECTURE "x86_64" CACHE STRING "" FORCE)
 
 FetchContent_MakeAvailable(JUCE)
 
-# Find installed dependencies for Intel Homebrew
-find_package(PkgConfig REQUIRED)
+# ============================================================================
+# USE BUNDLED LIBRARIES - NO EXTERNAL DEPENDENCIES
+# ============================================================================
 
-# Intel Homebrew paths (/usr/local)
-set(HOMEBREW_PREFIX "/usr/local")
+# Set paths to our bundled libraries
+set(EXTERNAL_LIBS_DIR "${CMAKE_CURRENT_SOURCE_DIR}/external/libs")
 
-# Find Eigen3 - Intel paths
-find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
-    PATHS 
-        ${HOMEBREW_PREFIX}/include/eigen3
-        ${HOMEBREW_PREFIX}/opt/eigen/include/eigen3
-        ${HOMEBREW_PREFIX}/Cellar/eigen/*/include/eigen3
-        /opt/homebrew/include/eigen3
-        /opt/homebrew/opt/eigen/include/eigen3
-)
+# Eigen3 - header-only library
+set(EIGEN3_INCLUDE_DIR "${EXTERNAL_LIBS_DIR}/eigen-3.4.0")
 
-# Find ONNX Runtime - Intel paths with verbose output
-find_path(ONNXRUNTIME_INCLUDE_DIR 
-    NAMES onnxruntime_cxx_api.h onnxruntime_c_api.h
-    PATHS 
-        ${HOMEBREW_PREFIX}/opt/onnxruntime/include
-        ${HOMEBREW_PREFIX}/include/onnxruntime
-        ${HOMEBREW_PREFIX}/include
-        ${HOMEBREW_PREFIX}/Cellar/onnxruntime/*/include
-    NO_DEFAULT_PATH
-)
+# ONNX Runtime - pre-compiled for macOS x64 (headers might be embedded)
+set(ONNXRUNTIME_BASE_DIR "${EXTERNAL_LIBS_DIR}/onnxruntime-osx-x86_64-1.16.3")
+set(ONNXRUNTIME_LIB "${ONNXRUNTIME_BASE_DIR}/lib/libonnxruntime.1.16.3.dylib")
 
-find_library(ONNXRUNTIME_LIB 
-    NAMES libonnxruntime.dylib onnxruntime libonnxruntime
-    PATHS 
-        ${HOMEBREW_PREFIX}/opt/onnxruntime/lib
-        ${HOMEBREW_PREFIX}/lib
-        ${HOMEBREW_PREFIX}/Cellar/onnxruntime/*/lib
-    NO_DEFAULT_PATH
-)
+# Rubber Band - use source headers and compile needed source files
+set(RUBBERBAND_BASE_DIR "${EXTERNAL_LIBS_DIR}/rubberband-3.3.0")
+set(RUBBERBAND_INCLUDE_DIR "${RUBBERBAND_BASE_DIR}")
+set(RUBBERBAND_SRC_DIR "${RUBBERBAND_BASE_DIR}/src")
 
-# Find Rubber Band - Intel paths with verbose output  
-find_path(RUBBERBAND_INCLUDE_DIR 
-    NAMES rubberband/RubberBandStretcher.h
-    PATHS 
-        ${HOMEBREW_PREFIX}/include
-        ${HOMEBREW_PREFIX}/opt/rubberband/include
-        ${HOMEBREW_PREFIX}/Cellar/rubberband/*/include
-    NO_DEFAULT_PATH
-)
+# ============================================================================
+# FORCE ALL LIBRARIES TO BE ENABLED - FOR BOTH REPLIT AND MAC BUILDS
+# ============================================================================
 
-find_library(RUBBERBAND_LIB 
-    NAMES librubberband.dylib rubberband librubberband
-    PATHS 
-        ${HOMEBREW_PREFIX}/lib
-        ${HOMEBREW_PREFIX}/opt/rubberband/lib
-        ${HOMEBREW_PREFIX}/Cellar/rubberband/*/lib
-    NO_DEFAULT_PATH
-)
+# Enable all bundled libraries
+set(USE_EIGEN ON CACHE BOOL "Enable Eigen3 library" FORCE)
+set(USE_ONNX ON CACHE BOOL "Enable ONNX Runtime library" FORCE) 
+set(USE_RUBBERBAND ON CACHE BOOL "Enable Rubber Band library" FORCE)
 
-# Report found libraries
-if(EIGEN3_INCLUDE_DIR)
-    message(STATUS "Found Eigen3: ${EIGEN3_INCLUDE_DIR}")
-    set(USE_EIGEN ON)
+# Verify libraries exist
+if(EXISTS "${EIGEN3_INCLUDE_DIR}/Eigen/Dense")
+    message(STATUS "✅ Bundled Eigen3: ${EIGEN3_INCLUDE_DIR}")
 else()
-    message(WARNING "Eigen3 not found - some features will be disabled")
-    set(USE_EIGEN OFF)
+    message(FATAL_ERROR "❌ Eigen3 not found at ${EIGEN3_INCLUDE_DIR}")
 endif()
 
-if(ONNXRUNTIME_INCLUDE_DIR AND ONNXRUNTIME_LIB)
-    message(STATUS "Found ONNX Runtime: ${ONNXRUNTIME_INCLUDE_DIR}, ${ONNXRUNTIME_LIB}")
-    set(USE_ONNX ON)
+if(EXISTS "${ONNXRUNTIME_LIB}")
+    message(STATUS "✅ Bundled ONNX Runtime library: ${ONNXRUNTIME_LIB}")
 else()
-    message(WARNING "ONNX Runtime not found - AI features will be disabled")
-    set(USE_ONNX OFF)
+    message(FATAL_ERROR "❌ ONNX Runtime library not found at ${ONNXRUNTIME_LIB}")
 endif()
 
-if(RUBBERBAND_INCLUDE_DIR AND RUBBERBAND_LIB)
-    message(STATUS "Found Rubber Band: ${RUBBERBAND_INCLUDE_DIR}, ${RUBBERBAND_LIB}")
-    set(USE_RUBBERBAND ON)
+if(EXISTS "${RUBBERBAND_SRC_DIR}")
+    message(STATUS "✅ Bundled Rubber Band: ${RUBBERBAND_SRC_DIR}")
 else()
-    message(WARNING "Rubber Band not found - pitch shifting will use basic algorithms")
-    set(USE_RUBBERBAND OFF)
+    message(FATAL_ERROR "❌ Rubber Band not found at ${RUBBERBAND_SRC_DIR}")
 endif()
+
+message(STATUS "🚀 ALL BUNDLED LIBRARIES READY FOR COMPILATION")
 
 # Source files
 file(GLOB_RECURSE SOURCE_FILES
@@ -165,17 +134,14 @@ target_compile_definitions(AutoTunePlugin
 # Include directories
 target_include_directories(AutoTunePlugin PRIVATE Source)
 
-if(USE_EIGEN)
-    target_include_directories(AutoTunePlugin PRIVATE ${EIGEN3_INCLUDE_DIR})
-endif()
+# Include directories for bundled libraries
+target_include_directories(AutoTunePlugin PRIVATE 
+    ${EIGEN3_INCLUDE_DIR}
+    ${RUBBERBAND_INCLUDE_DIR}
+    ${ONNXRUNTIME_BASE_DIR}  # ONNX headers might be with the library
+)
 
-if(USE_ONNX)
-    target_include_directories(AutoTunePlugin PRIVATE ${ONNXRUNTIME_INCLUDE_DIR})
-endif()
-
-if(USE_RUBBERBAND)
-    target_include_directories(AutoTunePlugin PRIVATE ${RUBBERBAND_INCLUDE_DIR})
-endif()
+message(STATUS "✅ Including all bundled library headers")
 
 # Link libraries
 target_link_libraries(AutoTunePlugin
@@ -190,13 +156,23 @@ target_link_libraries(AutoTunePlugin
         juce::juce_recommended_lto_flags
 )
 
-# Link external libraries if available
-if(USE_ONNX AND ONNXRUNTIME_LIB)
-    target_link_libraries(AutoTunePlugin PRIVATE ${ONNXRUNTIME_LIB})
-endif()
+# Link bundled libraries  
+target_link_libraries(AutoTunePlugin PRIVATE ${ONNXRUNTIME_LIB})
 
-if(USE_RUBBERBAND AND RUBBERBAND_LIB)
-    target_link_libraries(AutoTunePlugin PRIVATE ${RUBBERBAND_LIB})
+# Add Rubber Band source files to compile
+file(GLOB_RECURSE RUBBERBAND_SOURCES 
+    "${RUBBERBAND_SRC_DIR}/*.cpp"
+    "${RUBBERBAND_SRC_DIR}/*.c"
+)
+
+# Filter out unnecessary files
+list(FILTER RUBBERBAND_SOURCES EXCLUDE REGEX ".*test.*")
+list(FILTER RUBBERBAND_SOURCES EXCLUDE REGEX ".*main.*")
+list(FILTER RUBBERBAND_SOURCES EXCLUDE REGEX ".*program.*")
+
+if(RUBBERBAND_SOURCES)
+    target_sources(AutoTunePlugin PRIVATE ${RUBBERBAND_SOURCES})
+    message(STATUS "✅ Added ${list(LENGTH RUBBERBAND_SOURCES)} Rubber Band source files")
 endif()
 
 # Compiler-specific settings

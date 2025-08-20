@@ -402,11 +402,11 @@ float Utils::lookupSin(float x)
     
     // Convert to table index
     float indexFloat = x * LOOKUP_TABLE_SIZE * INV_TWO_PI;
-    int index = static_cast<int>(indexFloat);
-    float fraction = indexFloat - index;
+    size_t index = static_cast<size_t>(indexFloat);
+    float fraction = indexFloat - static_cast<float>(index);
     
     // Linear interpolation between adjacent values
-    int nextIndex = (index + 1) % LOOKUP_TABLE_SIZE;
+    size_t nextIndex = (index + 1) % LOOKUP_TABLE_SIZE;
     return sinLookupTable[index] + fraction * (sinLookupTable[nextIndex] - sinLookupTable[index]);
 }
 
@@ -421,11 +421,11 @@ float Utils::lookupCos(float x)
     
     // Convert to table index
     float indexFloat = x * LOOKUP_TABLE_SIZE * INV_TWO_PI;
-    int index = static_cast<int>(indexFloat);
-    float fraction = indexFloat - index;
+    size_t index = static_cast<size_t>(indexFloat);
+    float fraction = indexFloat - static_cast<float>(index);
     
     // Linear interpolation between adjacent values
-    int nextIndex = (index + 1) % LOOKUP_TABLE_SIZE;
+    size_t nextIndex = (index + 1) % LOOKUP_TABLE_SIZE;
     return cosLookupTable[index] + fraction * (cosLookupTable[nextIndex] - cosLookupTable[index]);
 }
 

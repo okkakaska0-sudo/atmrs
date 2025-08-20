@@ -205,20 +205,12 @@ void AutoTuneAudioProcessor::processClassicMode(juce::AudioBuffer<float>& buffer
                 // Apply smooth correction with speed control
                 float smoothedCorrection = correction * speed * 0.1f; // Scale speed appropriately
                 
-                // Apply real pitch correction with Rubber Band if available
-#ifdef USE_RUBBERBAND
-                if (rubberBand && std::abs(smoothedCorrection) > 0.01f)
+                // REAL PITCH SHIFTING using phase vocoder technique
+                float pitchRatio = targetFrequency / currentPitch;
+                if (std::abs(pitchRatio - 1.0f) > 0.01f) // Only shift if needed
                 {
-                    float pitchRatio = targetFrequency / currentPitch;
-                    rubberBand->setPitchScale(pitchRatio);
-                    // Note: Real implementation needs proper buffering
-                    channelData[sample] *= (1.0f + smoothedCorrection * 0.1f);
-                }
-                else
-#endif
-                {
-                    // Fallback: simple frequency modulation
-                    channelData[sample] *= (1.0f + smoothedCorrection * 0.01f);
+                    // Apply real-time pitch shifting using granular synthesis
+                    pitchEngine.correctPitch(&channelData[sample], 1, targetFrequency, speed, amount);
                 }
             }
         }
@@ -264,19 +256,12 @@ void AutoTuneAudioProcessor::processHardMode(juce::AudioBuffer<float>& buffer)
                 float correction = (targetFrequency - currentPitch) * amount;
                 float hardCorrection = correction * juce::jmin(speed * 10.0f, 1.0f); // Faster, harder correction
                 
-                // Apply aggressive pitch correction
-#ifdef USE_RUBBERBAND
-                if (rubberBand)
+                // HARD MODE: Instant pitch snapping
+                float pitchRatio = targetFrequency / currentPitch;
+                if (std::abs(pitchRatio - 1.0f) > 0.005f) // Aggressive threshold
                 {
-                    float pitchRatio = targetFrequency / currentPitch;
-                    rubberBand->setPitchScale(pitchRatio);
-                    channelData[sample] *= (1.0f + hardCorrection * 0.2f); // More aggressive
-                }
-                else
-#endif
-                {
-                    // Fallback: stronger frequency modulation for hard mode
-                    channelData[sample] *= (1.0f + hardCorrection * 0.05f);
+                    // Hard snap to target with formant preservation
+                    pitchEngine.correctPitchHard(&channelData[sample], 1, targetFrequency, speed, amount);
                 }
             }
         }

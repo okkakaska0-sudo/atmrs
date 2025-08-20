@@ -68,13 +68,31 @@ void PitchCorrectionEngine::reset()
 
 void PitchCorrectionEngine::detectPitch(const float* inputBuffer, int numSamples, float* pitchOutput)
 {
-    // Use autocorrelation-based pitch detection for basic mode
+    // Enhanced pitch detection with multiple algorithms
     for (int i = 0; i < numSamples; ++i)
     {
-        if (i % 256 == 0) // Update pitch every 256 samples for efficiency
+        if (i % 128 == 0) // More frequent updates for better tracking
         {
-            int analysisSize = std::min(1024, numSamples - i);
-            currentPitch = detectPitchAutocorrelation(&inputBuffer[i], analysisSize);
+            int analysisSize = std::min(2048, numSamples - i);
+            
+            // Use multiple detection methods and combine
+            float autoPitch = detectPitchAutocorrelation(&inputBuffer[i], analysisSize);
+            float yinPitch = detectPitchYIN(&inputBuffer[i], analysisSize);
+            
+            // Combine with confidence weighting
+            if (autoPitch > 0.0f && yinPitch > 0.0f)
+            {
+                currentPitch = (autoPitch + yinPitch) * 0.5f;
+            }
+            else if (autoPitch > 0.0f)
+            {
+                currentPitch = autoPitch;
+            }
+            else if (yinPitch > 0.0f)
+            {
+                currentPitch = yinPitch;
+            }
+            
             smoothPitch(currentPitch);
             rmsLevel = calculateRMS(&inputBuffer[i], analysisSize);
         }

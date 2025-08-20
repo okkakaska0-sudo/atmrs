@@ -1,13 +1,13 @@
 #include "LookAndFeel.h"
 
 // Color definitions
-const juce::Colour ProAutoTuneLookAndFeel::Colors::background          = juce::Colour(0xff1e1e2e);
-const juce::Colour ProAutoTuneLookAndFeel::Colors::surface             = juce::Colour(0xff2a2a3a);
-const juce::Colour ProAutoTuneLookAndFeel::Colors::surfaceVariant      = juce::Colour(0xff2d2d44);
-const juce::Colour ProAutoTuneLookAndFeel::Colors::primary             = juce::Colour(0xff4CAF50);
-const juce::Colour ProAutoTuneLookAndFeel::Colors::primaryVariant      = juce::Colour(0xff388E3C);
-const juce::Colour ProAutoTuneLookAndFeel::Colors::secondary           = juce::Colour(0xff03DAC6);
-const juce::Colour ProAutoTuneLookAndFeel::Colors::accent              = juce::Colour(0xffFF6B35);
+const juce::Colour ProAutoTuneLookAndFeel::Colors::background          = juce::Colour(0xff0D1117);
+const juce::Colour ProAutoTuneLookAndFeel::Colors::surface             = juce::Colour(0xff161B22);
+const juce::Colour ProAutoTuneLookAndFeel::Colors::surfaceVariant      = juce::Colour(0xff21262D);
+const juce::Colour ProAutoTuneLookAndFeel::Colors::primary             = juce::Colour(0xff00D4FF);
+const juce::Colour ProAutoTuneLookAndFeel::Colors::primaryVariant      = juce::Colour(0xff0099CC);
+const juce::Colour ProAutoTuneLookAndFeel::Colors::secondary           = juce::Colour(0xff7C3AED);
+const juce::Colour ProAutoTuneLookAndFeel::Colors::accent              = juce::Colour(0xffFF2D92);
 const juce::Colour ProAutoTuneLookAndFeel::Colors::textPrimary         = juce::Colour(0xffffffff);
 const juce::Colour ProAutoTuneLookAndFeel::Colors::textSecondary       = juce::Colour(0xffb8b8c8);
 const juce::Colour ProAutoTuneLookAndFeel::Colors::textDisabled        = juce::Colour(0xff666666);
