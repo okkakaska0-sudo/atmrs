@@ -1,0 +1,53 @@
+AutoTune Plugin - Integrated Libraries
+=====================================
+
+All libraries are automatically downloaded and built with the project:
+
+Core Framework:
+✅ JUCE Framework 7.0.9 - Audio plugin framework with GUI
+   - Real-time audio processing
+   - Cross-platform plugin formats (VST3, AU)
+   - Professional GUI components
+
+Audio Processing:
+✅ Rubber Band Library v3.3.0 - Professional pitch shifting
+   - High-quality time/pitch manipulation
+   - Formant preservation
+   - Real-time processing
+
+✅ FFTW3 3.3.10 - Fast Fourier Transform
+   - Optimized frequency domain processing
+   - Multi-threaded support
+   - Float precision
+
+✅ Kiss FFT v131.1.0 - Lightweight FFT alternative
+   - Minimal dependencies
+   - Fast and efficient
+   - Fallback for FFTW3
+
+✅ libsamplerate 0.2.2 - High-quality sample rate conversion
+   - Professional audio resampling
+   - Multiple algorithms
+   - Low distortion
+
+Mathematics & AI:
+✅ Eigen3 3.4.0 - Linear algebra library
+   - Matrix operations
+   - Optimized mathematical functions
+   - Header-only library
+
+✅ ONNX Runtime 1.16.3 - AI model inference (macOS)
+   - CREPE pitch detection models
+   - DDSP synthesis models
+   - Hardware acceleration
+
+Project Structure:
+- Source/ - C++ source code
+- Models/ - AI model files (CREPE/DDSP)
+- CMakeLists.txt - Build configuration
+- build_simple.sh - Build script
+
+Build Command:
+./build_simple.sh
+
+All dependencies are automatically handled - no manual installation required!

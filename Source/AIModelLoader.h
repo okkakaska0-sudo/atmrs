@@ -6,6 +6,19 @@
 #include <vector>
 #include <string>
 
+#ifdef USE_ONNX
+#include <onnxruntime_cxx_api.h>
+#endif
+
+#ifdef USE_EIGEN
+#include <Eigen/Dense>
+#include <Eigen/Core>
+#endif
+
+#ifdef USE_FFTW
+#include <fftw3.h>
+#endif
+
 // Forward declarations for AI model interfaces
 namespace AIModels {
     class CrepeModel;

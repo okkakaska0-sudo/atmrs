@@ -5,6 +5,14 @@
 #include <vector>
 #include <complex>
 
+#ifdef USE_FFTW
+#include <fftw3.h>
+#endif
+
+#ifdef USE_EIGEN
+#include <Eigen/Dense>
+#endif
+
 class PitchCorrectionEngine
 {
 public:
