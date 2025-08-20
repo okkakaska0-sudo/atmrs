@@ -11,8 +11,8 @@ AutoTuneAudioProcessor::AutoTuneAudioProcessor()
         .withOutput("Output", juce::AudioChannelSet::stereo(), true)
 #endif
     ),
-    parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
     pluginParameters(),
+    parameters(*this, nullptr, juce::Identifier("AutoTuneParameters"), pluginParameters.createParameterLayout()),
     presetManager(parameters),
     pitchEngine(),
     modeSelector(),

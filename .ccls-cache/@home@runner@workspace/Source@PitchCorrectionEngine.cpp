@@ -516,7 +516,7 @@ void PitchCorrectionEngine::smoothPitch(float newPitch)
         float smoothedPitch = 0.0f;
         float totalWeight = 0.0f;
         
-        for (int i = 0; i < pitchHistoryLength; ++i)
+        for (size_t i = 0; i < static_cast<size_t>(pitchHistoryLength); ++i)
         {
             if (pitchHistory[i] > 0.0f)
             {
@@ -543,8 +543,8 @@ void PitchCorrectionEngine::applyHannWindow(float* buffer, int numSamples)
 {
     for (int i = 0; i < numSamples; ++i)
     {
-        float window = 0.5f * (1.0f - std::cos(2.0f * juce::MathConstants<float>::pi * i / (numSamples - 1)));
-        buffer[i] *= window;
+        float windowValue = 0.5f * (1.0f - std::cos(2.0f * juce::MathConstants<float>::pi * i / (numSamples - 1)));
+        buffer[i] *= windowValue;
     }
 }
 
@@ -557,7 +557,7 @@ void PitchCorrectionEngine::applyBlackmanWindow(float* buffer, int numSamples)
     for (int i = 0; i < numSamples; ++i)
     {
         float phase = 2.0f * juce::MathConstants<float>::pi * i / (numSamples - 1);
-        float window = a0 - a1 * std::cos(phase) + a2 * std::cos(2.0f * phase);
-        buffer[i] *= window;
+        float windowValue = a0 - a1 * std::cos(phase) + a2 * std::cos(2.0f * phase);
+        buffer[i] *= windowValue;
     }
 }

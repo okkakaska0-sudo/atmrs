@@ -2,7 +2,7 @@
 #include "Utils.h"
 
 AutoTuneAudioProcessorEditor::AutoTuneAudioProcessorEditor(AutoTuneAudioProcessor& p)
-    : AudioProcessorEditor(&p), 
+    : AudioProcessorEditor(p), 
       audioProcessor(p),
       pitchHistory(pitchHistorySize, 0.0f)
 {
