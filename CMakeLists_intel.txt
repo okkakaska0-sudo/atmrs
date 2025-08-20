@@ -98,6 +98,7 @@ file(GLOB_RECURSE SOURCE_FILES
 # Create plugin
 juce_add_plugin(AutoTunePlugin
     COMPANY_NAME "Marsi Sound Studio"
+    BUNDLE_ID "com.marsisoundstudio.autotunepro"
     IS_SYNTH FALSE
     NEEDS_MIDI_INPUT FALSE
     NEEDS_MIDI_OUTPUT FALSE
@@ -172,7 +173,8 @@ list(FILTER RUBBERBAND_SOURCES EXCLUDE REGEX ".*program.*")
 
 if(RUBBERBAND_SOURCES)
     target_sources(AutoTunePlugin PRIVATE ${RUBBERBAND_SOURCES})
-    message(STATUS "✅ Added ${list(LENGTH RUBBERBAND_SOURCES)} Rubber Band source files")
+    list(LENGTH RUBBERBAND_SOURCES RUBBERBAND_COUNT)
+    message(STATUS "✅ Added ${RUBBERBAND_COUNT} Rubber Band source files")
 endif()
 
 # Compiler-specific settings

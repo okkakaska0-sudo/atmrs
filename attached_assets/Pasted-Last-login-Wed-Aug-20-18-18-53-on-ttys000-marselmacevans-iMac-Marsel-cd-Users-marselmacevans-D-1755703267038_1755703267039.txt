@@ -1,0 +1,98 @@
+Last login: Wed Aug 20 18:18:53 on ttys000
+marselmacevans@iMac-Marsel ~ % cd /Users/marselmacevans/Downloads/atmrs
+chmod +x build_bundled_libs.sh
+./build_bundled_libs.sh
+
+🚀 Building AutoTune Plugin with Bundled Libraries
+==================================================
+⚙️  Configuring CMake with bundled libraries...
+-- The C compiler identification is AppleClang 16.0.0.16000026
+-- The CXX compiler identification is AppleClang 16.0.0.16000026
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Building AutoTune Plugin for Intel x64
+-- Configuring juceaide
+-- Building juceaide
+-- Exporting juceaide
+-- ✅ Bundled Eigen3: /Users/marselmacevans/Downloads/atmrs/external/libs/eigen-3.4.0
+-- ✅ Bundled ONNX Runtime library: /Users/marselmacevans/Downloads/atmrs/external/libs/onnxruntime-osx-x86_64-1.16.3/lib/libonnxruntime.1.16.3.dylib
+-- ✅ Bundled Rubber Band: /Users/marselmacevans/Downloads/atmrs/external/libs/rubberband-3.3.0/src
+-- 🚀 ALL BUNDLED LIBRARIES READY FOR COMPILATION
+CMake Warning at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1532 (message):
+  Target AutoTunePlugin has JUCE_BUNDLE_ID 'com.Marsi Sound
+  Studio.AutoTunePlugin', which contains spaces.  Use the BUNDLE_ID option to
+  specify a valid ID.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1952 (_juce_set_fallback_properties)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2018 (_juce_initialise_target)
+  CMakeLists.txt:99 (juce_add_plugin)
+
+
+CMake Warning (dev) at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:693 (add_custom_command):
+  The following keywords are not supported when using
+  add_custom_command(TARGET): DEPENDS.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1316 (_juce_configure_bundle)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)
+  CMakeLists.txt:99 (juce_add_plugin)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:693 (add_custom_command):
+  The following keywords are not supported when using
+  add_custom_command(TARGET): DEPENDS.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1316 (_juce_configure_bundle)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)
+  CMakeLists.txt:99 (juce_add_plugin)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+CMake Warning (dev) at build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:693 (add_custom_command):
+  The following keywords are not supported when using
+  add_custom_command(TARGET): DEPENDS.
+
+  Policy CMP0175 is not set: add_custom_command() rejects invalid arguments.
+  Run "cmake --help-policy CMP0175" for policy details.  Use the cmake_policy
+  command to set the policy and suppress this warning.
+Call Stack (most recent call first):
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1316 (_juce_configure_bundle)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:1460 (_juce_link_plugin_wrapper)
+  build/_deps/juce-src/extras/Build/CMake/JUCEUtils.cmake:2019 (_juce_configure_plugin_targets)
+  CMakeLists.txt:99 (juce_add_plugin)
+This warning is for project developers.  Use -Wno-dev to suppress it.
+
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+-- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+-- Found Threads: TRUE
+-- ✅ Including all bundled library headers
+CMake Error at CMakeLists.txt:175 (message):
+  Syntax error in cmake code at
+
+    /Users/marselmacevans/Downloads/atmrs/CMakeLists.txt:175
+
+  when parsing string
+
+    ✅ Added ${list(LENGTH RUBBERBAND_SOURCES)} Rubber Band source files
+
+  Invalid character ('(') in a variable name: 'list'
+
+
+-- Configuring incomplete, errors occurred!
+marselmacevans@iMac-Marsel atmrs % 
