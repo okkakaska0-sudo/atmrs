@@ -4,17 +4,14 @@
 #include <cmath>
 #include <future>
 #include <memory>
+#include <mutex>
+#include <thread>
+#include <vector>
 
-#ifdef JUCE_HEADER
-#include JUCE_HEADER
-#else
 #include <juce_core/juce_core.h>
-#include <juce_audio_utils/juce_audio_utils.h>
 #include <juce_audio_basics/juce_audio_basics.h>
-#endif
-
-using namespace juce;
-using namespace std;
+#include <juce_audio_utils/juce_audio_utils.h>
+#include <juce_audio_formats/juce_audio_formats.h>
 
 // PIMPL implementation to hide complex AI model details
 struct AIModelLoader::Impl
@@ -46,9 +43,9 @@ struct AIModelLoader::Impl
                 float correlation = 0.0f;
                 int count = 0;
                 
-                for (size_t i = 0; i < audio.size() - static_cast<size_t>(period); ++i)
+                for (int i = 0; i < static_cast<int>(audio.size()) - period; ++i)
                 {
-                    correlation += audio[i] * audio[i + period];
+                    correlation += audio[static_cast<size_t>(i)] * audio[static_cast<size_t>(i + period)];
                     count++;
                 }
                 
@@ -66,7 +63,7 @@ struct AIModelLoader::Impl
             if (bestPeriod > 0 && maxCorrelation > 0.3f)
             {
                 result.frequency = sampleRate / bestPeriod;
-                result.confidence = jmin<float>(maxCorrelation * 2.0f, 1.0f);
+                result.confidence = std::min<float>(maxCorrelation * 2.0f, 1.0f);
                 result.voicing = result.confidence;
                 
                 // Mock harmonic analysis
@@ -126,7 +123,7 @@ struct AIModelLoader::Impl
                 // Apply loudness
                 sampleValue *= params.loudness;
                 
-                output[sample] = jlimit<float>(-1.0f, 1.0f, sampleValue);
+                output[sample] = std::max(-1.0f, std::min(1.0f, sampleValue));
             }
             
             return output;
@@ -140,10 +137,10 @@ struct AIModelLoader::Impl
 };
 
 AIModelLoader::AIModelLoader()
-    : pImpl(make_unique<Impl>()),
+    : pImpl(std::make_unique<Impl>()),
       currentQuality(ProcessingQuality::Standard),
       useMultiThreading(true),
-      maxThreads(thread::hardware_concurrency()),
+      maxThreads(std::thread::hardware_concurrency()),
       threadPool(maxThreads),
       lastProcessingTime(0.0f),
       averageProcessingTime(0.0f),
@@ -172,13 +169,13 @@ AIModelLoader::~AIModelLoader()
     unloadModels();
 }
 
-bool AIModelLoader::loadCrepeModel(const File& modelFile)
+bool AIModelLoader::loadCrepeModel(const juce::File& modelFile)
 {
-    ScopedLock lock(modelLock);
+    std::lock_guard<std::mutex> lock(modelLock);
     
     if (!validateModelFile(modelFile, "crepe"))
     {
-        lastError = AIError(AIError::ModelNotFound, "CREPE model file not found or invalid");
+        lastError = AIError(AIError::ModelNotFound, juce::String("CREPE model file not found or invalid"));
         return false;
     }
     
@@ -198,18 +195,18 @@ bool AIModelLoader::loadCrepeModel(const File& modelFile)
     }
     catch (const std::exception& e)
     {
-        lastError = AIError(AIError::ModelLoadFailed, "Failed to load CREPE model: " + String(e.what()));
+        lastError = AIError(AIError::ModelLoadFailed, juce::String("Failed to load CREPE model: ") + juce::String(e.what()));
         return false;
     }
 }
 
-bool AIModelLoader::loadDDSPModel(const File& modelFile)
+bool AIModelLoader::loadDDSPModel(const juce::File& modelFile)
 {
-    ScopedLock lock(modelLock);
+    std::lock_guard<std::mutex> lock(modelLock);
     
     if (!validateModelFile(modelFile, "ddsp"))
     {
-        lastError = AIError(AIError::ModelNotFound, "DDSP model file not found or invalid");
+        lastError = AIError(AIError::ModelNotFound, juce::String("DDSP model file not found or invalid"));
         return false;
     }
     
@@ -228,7 +225,7 @@ bool AIModelLoader::loadDDSPModel(const File& modelFile)
     }
     catch (const std::exception& e)
     {
-        lastError = AIError(AIError::ModelLoadFailed, "Failed to load DDSP model: " + String(e.what()));
+        lastError = AIError(AIError::ModelLoadFailed, juce::String("Failed to load DDSP model: ") + juce::String(e.what()));
         return false;
     }
 }
@@ -242,20 +239,20 @@ AIModelLoader::PitchPrediction AIModelLoader::predictPitch(const float* audioBuf
 {
     if (!pImpl->crepeModel.loaded)
     {
-        lastError = AIError(AIError::ProcessingError, "CREPE model not loaded");
+        lastError = AIError(AIError::ProcessingError, juce::String("CREPE model not loaded"));
         return PitchPrediction();
     }
     
-    auto startTime = Time::getCurrentTime();
+    auto startTime = juce::Time::getCurrentTime();
     
     // Preprocess audio for CREPE
-    vector<float> preprocessed = preprocessAudioForCrepe(audioBuffer, numSamples, sampleRate);
+    std::vector<float> preprocessed = preprocessAudioForCrepe(audioBuffer, numSamples, sampleRate);
     
     // Predict using mock CREPE model
     PitchPrediction result = pImpl->crepeModel.predict(preprocessed);
     
     // Update performance metrics
-    auto endTime = Time::getCurrentTime();
+    auto endTime = juce::Time::getCurrentTime();
     lastProcessingTime = static_cast<float>((endTime - startTime).inMilliseconds());
     updatePerformanceMetrics();
     
@@ -301,7 +298,7 @@ std::vector<float> AIModelLoader::synthesizeAudio(const SynthesisParams& params,
 {
     if (!pImpl->ddspModel.loaded)
     {
-        lastError = AIError(AIError::ProcessingError, "DDSP model not loaded");
+        lastError = AIError(AIError::ProcessingError, juce::String("DDSP model not loaded"));
         return std::vector<float>(numSamples, 0.0f);
     }
     
@@ -326,7 +323,7 @@ bool AIModelLoader::processWithDDSP(const float* inputBuffer, float* outputBuffe
 {
     if (!pImpl->ddspModel.loaded)
     {
-        lastError = AIError(AIError::ProcessingError, "DDSP model not loaded");
+        lastError = AIError(AIError::ProcessingError, juce::String("DDSP model not loaded"));
         return false;
     }
     
