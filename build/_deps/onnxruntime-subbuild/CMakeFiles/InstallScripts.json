@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/Users/marselmacevans/Downloads/MusicSynth/build/_deps/onnxruntime-subbuild/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

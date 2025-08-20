@@ -7,7 +7,7 @@ if(CMAKE_VERSION VERSION_LESS "2.8.3")
    message(FATAL_ERROR "CMake >= 2.8.3 required")
 endif()
 cmake_policy(PUSH)
-cmake_policy(VERSION 2.8.3...3.29)
+cmake_policy(VERSION 2.8.3...3.30)
 #----------------------------------------------------------------
 # Generated CMake target import file.
 #----------------------------------------------------------------
@@ -52,7 +52,7 @@ add_executable(juce_tools::juceaide IMPORTED)
 # Import target "juce_tools::juceaide" for configuration "Debug"
 set_property(TARGET juce_tools::juceaide APPEND PROPERTY IMPORTED_CONFIGURATIONS DEBUG)
 set_target_properties(juce_tools::juceaide PROPERTIES
-  IMPORTED_LOCATION_DEBUG "/home/runner/workspace/build/_deps/juce-build/tools/extras/Build/juceaide/juceaide_artefacts/Debug/juceaide"
+  IMPORTED_LOCATION_DEBUG "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-build/tools/extras/Build/juceaide/juceaide_artefacts/Debug/juceaide"
   )
 
 # This file does not depend on other imported targets which have

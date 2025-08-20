@@ -1,8 +1,8 @@
-# Install script for directory: /home/runner/workspace/build/_deps/juce-src/modules
+# Install script for directory: /Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/var/empty/local")
+  set(CMAKE_INSTALL_PREFIX "/usr/local")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -27,11 +27,6 @@ if(NOT CMAKE_INSTALL_COMPONENT)
   endif()
 endif()
 
-# Install shared libraries without execute permission?
-if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
-  set(CMAKE_INSTALL_SO_NO_EXE "1")
-endif()
-
 # Is this installation the result of a crosscompile?
 if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
@@ -39,96 +34,96 @@ endif()
 
 # Set path to fallback-tool for dependency-resolution.
 if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-14.2.1.20250322/bin/objdump")
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_analytics")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_analytics")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_audio_basics")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_audio_basics")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_audio_devices")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_audio_devices")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_audio_formats")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_audio_formats")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_audio_plugin_client")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_audio_plugin_client")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_audio_processors")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_audio_processors")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_audio_utils")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_audio_utils")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_box2d")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_box2d")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_core")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_core")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_cryptography")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_cryptography")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_data_structures")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_data_structures")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_dsp")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_dsp")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_events")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_events")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_graphics")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_graphics")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_gui_basics")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_gui_basics")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_gui_extra")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_gui_extra")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_midi_ci")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_midi_ci")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_opengl")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_opengl")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_osc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_osc")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_product_unlocking")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_product_unlocking")
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/home/runner/workspace/build/_deps/juce-src/modules/juce_video")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/JUCE-7.0.9/modules" TYPE DIRECTORY FILES "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-src/modules/juce_video")
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
 if(CMAKE_INSTALL_LOCAL_ONLY)
-  file(WRITE "/home/runner/workspace/build/_deps/juce-build/tools/modules/install_local_manifest.txt"
+  file(WRITE "/Users/marselmacevans/Downloads/MusicSynth/build/_deps/juce-build/tools/modules/install_local_manifest.txt"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")
 endif()
