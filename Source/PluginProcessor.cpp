@@ -46,33 +46,10 @@ AutoTuneAudioProcessor::~AutoTuneAudioProcessor()
 
 const juce::String AutoTuneAudioProcessor::getName() const
 {
-    return JucePlugin_Name;
+    return juce::String(JucePlugin_Name);
 }
 
-bool AutoTuneAudioProcessor::acceptsMidi() const
-{
-    return false;
-}
-
-bool AutoTuneAudioProcessor::producesMidi() const
-{
-    return false;
-}
-
-bool AutoTuneAudioProcessor::isMidiEffect() const
-{
-    return false;
-}
-
-double AutoTuneAudioProcessor::getTailLengthSeconds() const
-{
-    return 0.0;
-}
-
-int AutoTuneAudioProcessor::getNumPrograms()
-{
-    return 1;
-}
+// Methods moved to header as inline functions
 
 int AutoTuneAudioProcessor::getCurrentProgram()
 {

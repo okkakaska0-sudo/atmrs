@@ -2,6 +2,7 @@
 
 #include <juce_dsp/juce_dsp.h>
 #include <juce_core/juce_core.h>
+#include <memory>
 #include <vector>
 #include <complex>
 
