@@ -4,7 +4,7 @@ project(AutoTunePlugin VERSION 1.0.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15" CACHE STRING "Minimum macOS deployment version")
+set(CMAKE_OSX_DEPLOYMENT_TARGET "11.0" CACHE STRING "Minimum macOS deployment version")
 
 message(STATUS "Building AutoTune Plugin with available macOS functionality")
 
@@ -39,19 +39,20 @@ find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
         /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Headers
 )
 
-# Find ONNX Runtime - using correct Homebrew paths
+# Find ONNX Runtime - enhanced search for Intel Mac
 find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
     PATHS 
         /usr/local/opt/onnxruntime/include
+        /usr/local/include/onnxruntime
         /usr/local/include
         /usr/local/Cellar/onnxruntime/*/include
         /opt/homebrew/opt/onnxruntime/include
+        /opt/homebrew/include/onnxruntime
         /opt/homebrew/include
         /opt/homebrew/Cellar/onnxruntime/*/include
-    NO_DEFAULT_PATH
 )
 find_library(ONNXRUNTIME_LIB onnxruntime
-    NAMES onnxruntime libonnxruntime
+    NAMES onnxruntime libonnxruntime onnxruntime.dylib libonnxruntime.dylib
     PATHS 
         /usr/local/opt/onnxruntime/lib
         /usr/local/lib
@@ -59,7 +60,6 @@ find_library(ONNXRUNTIME_LIB onnxruntime
         /opt/homebrew/opt/onnxruntime/lib
         /opt/homebrew/lib
         /opt/homebrew/Cellar/onnxruntime/*/lib
-    NO_DEFAULT_PATH
 )
 
 # Find Rubber Band - using discovered paths
@@ -188,7 +188,7 @@ target_link_libraries(AutoTunePlugin
     PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_lto_flags
-        juce::juce_recommended_warning_flags
+        # juce::juce_recommended_warning_flags  # Disabled for compatibility
 )
 
 if(HAS_ONNX)

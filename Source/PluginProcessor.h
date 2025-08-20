@@ -61,9 +61,9 @@ public:
     AIModelLoader& getAIModelLoader() { return aiModelLoader; }
 
 private:
-    // Core components
+    // Core components - ORDER MATTERS for initialization!
+    Parameters pluginParameters;                       // Must be initialized BEFORE parameters
     juce::AudioProcessorValueTreeState parameters;
-    Parameters pluginParameters;
     PresetManager presetManager;
     PitchCorrectionEngine pitchEngine;
     ModeSelector modeSelector;

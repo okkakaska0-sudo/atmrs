@@ -26,6 +26,11 @@ public:
         bool useRubberBand;
         float latencyMs;
         
+        // Default constructor needed for std::array
+        ModeConfig() : name(""), description(""), defaultSpeed(50.0f), defaultAmount(50.0f),
+                      useFormantPreservation(false), useAdvancedPitchDetection(false),
+                      useRubberBand(false), latencyMs(10.0f) {}
+        
         ModeConfig(const juce::String& modeName, const juce::String& desc, 
                   float speed, float amount, bool formants = false, 
                   bool advanced = false, bool rubberband = false, float latency = 10.0f)
