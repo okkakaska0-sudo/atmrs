@@ -129,11 +129,12 @@ FetchContent_Declare(
     GIT_SHALLOW TRUE
 )
 
-# Configure libsamplerate build
+# Configure libsamplerate build - fix CMake compatibility
 set(LIBSAMPLERATE_EXAMPLES OFF CACHE BOOL "" FORCE)
 set(LIBSAMPLERATE_TESTS OFF CACHE BOOL "" FORCE)
 set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
 set(CMAKE_POLICY_DEFAULT_CMP0077 NEW)
+set(CMAKE_POLICY_VERSION_MINIMUM 3.5)
 
 FetchContent_MakeAvailable(libsamplerate)
 
