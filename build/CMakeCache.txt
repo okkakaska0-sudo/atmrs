@@ -153,8 +153,8 @@ CMAKE_OBJDUMP:FILEPATH=/nix/store/a0d7m3zn9p2dfa1h7ag9h2wzzr2w25sn-gcc-wrapper-1
 //No help, variable specified on the command line.
 CMAKE_OSX_ARCHITECTURES:UNINITIALIZED=arm64;x86_64
 
-//No help, variable specified on the command line.
-CMAKE_OSX_DEPLOYMENT_TARGET:UNINITIALIZED=10.15
+//Minimum macOS deployment version
+CMAKE_OSX_DEPLOYMENT_TARGET:STRING=10.15
 
 //Value Computed by CMake
 CMAKE_PROJECT_DESCRIPTION:STATIC=
@@ -276,7 +276,7 @@ JUCE_BUILD_HELPER_TOOLS:BOOL=OFF
 
 //Whether or not plugins should be installed to the system after
 // building
-JUCE_COPY_PLUGIN_AFTER_BUILD:BOOL=OFF
+JUCE_COPY_PLUGIN_AFTER_BUILD:BOOL=ON
 
 //Show all module sources in IDE projects
 JUCE_ENABLE_MODULE_SOURCE_GROUPS:BOOL=OFF

@@ -4,20 +4,11 @@ project(AutoTunePlugin VERSION 1.0.0)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15" CACHE STRING "Minimum macOS deployment version")
 
-# Force macOS environment completely - no Linux detection
-set(CMAKE_SYSTEM_NAME Darwin)
-set(CMAKE_SYSTEM_PROCESSOR x86_64)
-set(APPLE TRUE)
-set(MACOS_BUILD TRUE)
+message(STATUS "Building AutoTune Plugin with FULL functionality for macOS")
 
-message(STATUS "Building AutoTune Plugin for macOS ONLY - Full Features")
-
-# Set macOS deployment target
-set(CMAKE_OSX_ARCHITECTURES "x86_64;arm64")
-set(CMAKE_OSX_DEPLOYMENT_TARGET "10.15")
-
-# Add JUCE - download as archive
+# Add JUCE
 include(FetchContent)
 FetchContent_Declare(
     JUCE
@@ -25,139 +16,79 @@ FetchContent_Declare(
     DOWNLOAD_EXTRACT_TIMESTAMP true
 )
 
-# Configure JUCE for macOS headless mode - full functionality preserved
 set(JUCE_BUILD_EXTRAS OFF CACHE BOOL "" FORCE)
-set(JUCE_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE)
+set(JUCE_BUILD_EXAMPLES OFF CACHE BOOL "" FORCE) 
 set(JUCE_ENABLE_MODULE_SOURCE_GROUPS OFF CACHE BOOL "" FORCE)
 set(JUCE_BUILD_HELPER_TOOLS OFF CACHE BOOL "" FORCE)
-set(JUCE_COPY_PLUGIN_AFTER_BUILD OFF CACHE BOOL "" FORCE)
-
-# Force macOS headless mode while preserving all functionality
-add_compile_definitions(JUCE_HEADLESS=1)
-add_compile_definitions(JUCE_USE_XRANDR=0)
-add_compile_definitions(JUCE_USE_XINERAMA=0) 
-add_compile_definitions(JUCE_USE_XCURSOR=0)
-add_compile_definitions(JUCE_WEB_BROWSER=0)
-add_compile_definitions(JUCE_USE_CURL=0)
+set(JUCE_COPY_PLUGIN_AFTER_BUILD ON CACHE BOOL "" FORCE)
 
 FetchContent_MakeAvailable(JUCE)
 
-# Rubber Band Library - preserved but optional
+# Find installed dependencies
+find_package(PkgConfig REQUIRED)
+
+# Find Eigen3
+find_path(EIGEN3_INCLUDE_DIR Eigen/Dense
+    PATHS /usr/local/include/eigen3 /usr/local/opt/eigen/include/eigen3
+    REQUIRED
+)
+
+# Find ONNX Runtime
+find_path(ONNXRUNTIME_INCLUDE_DIR onnxruntime_cxx_api.h
+    PATHS /usr/local/opt/onnxruntime/include /usr/local/include
+    REQUIRED
+)
+find_library(ONNXRUNTIME_LIB onnxruntime
+    PATHS /usr/local/opt/onnxruntime/lib /usr/local/lib
+    REQUIRED
+)
+
+# Find Rubber Band
 find_path(RUBBERBAND_INCLUDE_DIR rubberband/RubberBandStretcher.h
-    PATHS /usr/local/include /opt/homebrew/include
+    PATHS /usr/local/opt/rubberband/include /usr/local/include
+    REQUIRED
 )
-find_library(RUBBERBAND_LIBRARY NAMES rubberband
-    PATHS /usr/local/lib /opt/homebrew/lib
-)
-
-if(RUBBERBAND_INCLUDE_DIR AND RUBBERBAND_LIBRARY)
-    message(STATUS "Rubber Band Library found: ${RUBBERBAND_LIBRARY}")
-    set(USE_RUBBERBAND ON)
-else()
-    message(STATUS "Rubber Band Library not found - using fallback algorithms")
-    set(USE_RUBBERBAND OFF)
-endif()
-
-# Add ONNX Runtime for AI models - macOS only, full AI functionality preserved
-FetchContent_Declare(
-    onnxruntime
-    URL https://github.com/microsoft/onnxruntime/releases/download/v1.16.3/onnxruntime-osx-universal2-1.16.3.tgz
-    DOWNLOAD_EXTRACT_TIMESTAMP true
+find_library(RUBBERBAND_LIB rubberband
+    PATHS /usr/local/opt/rubberband/lib /usr/local/lib
+    REQUIRED
 )
 
-FetchContent_GetProperties(onnxruntime)
-if(NOT onnxruntime_POPULATED)
-    message(STATUS "Fetching ONNX Runtime for AI functionality...")
-    FetchContent_MakeAvailable(onnxruntime)
-    set(ONNXRUNTIME_ROOT_PATH ${onnxruntime_SOURCE_DIR})
-    set(USE_ONNX ON)
-else()
-    set(USE_ONNX OFF)
-endif()
+message(STATUS "Found Eigen3: ${EIGEN3_INCLUDE_DIR}")
+message(STATUS "Found ONNX Runtime: ${ONNXRUNTIME_INCLUDE_DIR}")
+message(STATUS "Found Rubber Band: ${RUBBERBAND_INCLUDE_DIR}")
 
-# Add Eigen3 for mathematical operations - full math functionality preserved
-FetchContent_Declare(
-    eigen3
-    GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
-    GIT_TAG 3.4.0
-    GIT_SHALLOW TRUE
-)
-
-set(EIGEN_BUILD_TESTING OFF CACHE BOOL "" FORCE)
-set(EIGEN_BUILD_DOC OFF CACHE BOOL "" FORCE) 
-set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
-
-FetchContent_GetProperties(eigen3)
-if(NOT eigen3_POPULATED)
-    FetchContent_Populate(eigen3)
-    add_library(eigen3_headers INTERFACE)
-    target_include_directories(eigen3_headers INTERFACE ${eigen3_SOURCE_DIR})
-    add_library(Eigen3::Eigen ALIAS eigen3_headers)
-endif()
-
-# Add Kiss FFT - full FFT functionality preserved
-FetchContent_Declare(
-    kissfft
-    GIT_REPOSITORY https://github.com/mborgerding/kissfft.git
-    GIT_TAG 131.1.0
-    GIT_SHALLOW TRUE
-)
-
-set(KISSFFT_STATIC ON CACHE BOOL "" FORCE)
-set(KISSFFT_TEST OFF CACHE BOOL "" FORCE)
-set(KISSFFT_TOOLS OFF CACHE BOOL "" FORCE)
-
-FetchContent_MakeAvailable(kissfft)
-
-# Add libsamplerate - full sample rate conversion preserved
-FetchContent_Declare(
-    libsamplerate
-    GIT_REPOSITORY https://github.com/libsndfile/libsamplerate.git
-    GIT_TAG 0.2.2
-    GIT_SHALLOW TRUE
-)
-
-set(LIBSAMPLERATE_EXAMPLES OFF CACHE BOOL "" FORCE)
-set(LIBSAMPLERATE_TESTS OFF CACHE BOOL "" FORCE)
-set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
-
-FetchContent_MakeAvailable(libsamplerate)
-
-message(STATUS "All libraries integrated - FULL functionality preserved")
-
-# Plugin sources - complete set
-set(PLUGIN_SOURCES
+# Define ALL source files
+set(SOURCES
     Source/PluginProcessor.cpp
     Source/PluginEditor.cpp
     Source/PitchCorrectionEngine.cpp
     Source/Parameters.cpp
-    Source/Utils.cpp
-    Source/LookAndFeel.cpp
     Source/PresetManager.cpp
     Source/ModeSelector.cpp
+    Source/Utils.cpp
+    Source/LookAndFeel.cpp
     Source/AIModelLoader.cpp
 )
 
-# Create plugin target - VST3 only for macOS compatibility
+# Create the plugin with ALL formats
 juce_add_plugin(AutoTunePlugin
-    COMPANY_NAME "ProAudio"
+    COMPANY_NAME "ReplicaStudio"
     IS_SYNTH FALSE
     NEEDS_MIDI_INPUT FALSE
     NEEDS_MIDI_OUTPUT FALSE
     IS_MIDI_EFFECT FALSE
-    EDITOR_WANTS_KEYBOARD_FOCUS FALSE
-    COPY_PLUGIN_AFTER_BUILD FALSE
-    PLUGIN_MANUFACTURER_CODE Paud
-    PLUGIN_CODE Auto
-    FORMATS VST3
-    PRODUCT_NAME "ProAutoTune"
-    BUNDLE_ID "com.proaudio.proautotune"
+    EDITOR_WANTS_KEYBOARD_FOCUS TRUE
+    COPY_PLUGIN_AFTER_BUILD TRUE
+    PLUGIN_MANUFACTURER_CODE "Repl"
+    PLUGIN_CODE "ATun"
+    FORMATS VST3 AU Standalone
+    PRODUCT_NAME "AutoTune Plugin"
 )
 
-# Add all sources
-target_sources(AutoTunePlugin PRIVATE ${PLUGIN_SOURCES})
+# Add source files
+target_sources(AutoTunePlugin PRIVATE ${SOURCES})
 
-# macOS-specific compile definitions - headless but full functionality
+# Full compiler definitions with all features enabled
 target_compile_definitions(AutoTunePlugin
     PUBLIC
         JUCE_WEB_BROWSER=0
@@ -165,68 +96,39 @@ target_compile_definitions(AutoTunePlugin
         JUCE_VST3_CAN_REPLACE_VST2=0
         JUCE_DISPLAY_SPLASH_SCREEN=0
         JUCE_REPORT_APP_USAGE=0
-        JUCE_HEADLESS=1
-        JUCE_USE_XRANDR=0
-        JUCE_USE_XINERAMA=0
-        JUCE_USE_XCURSOR=0
-        JUCE_PLUGINHOST_VST3=0
-        JUCE_PLUGINHOST_AU=0
+        JUCE_STRICT_REFCOUNTEDPTR=1
+        USE_ONNX=1
+        USE_CREPE=1
+        USE_DDSP=1
+        USE_EIGEN=1
+        USE_RUBBERBAND=1
     PRIVATE
-        JUCE_MODULE_AVAILABLE_juce_opengl=0
+        JUCE_APPLICATION_NAME_STRING="$<TARGET_PROPERTY:AutoTunePlugin,JUCE_PLUGIN_NAME>"
+        JUCE_APPLICATION_VERSION_STRING="$<TARGET_PROPERTY:AutoTunePlugin,JUCE_PLUGIN_VERSION>"
 )
 
-# Link ALL libraries - preserve complete functionality
+# Include directories for all libraries
+target_include_directories(AutoTunePlugin PRIVATE 
+    Source
+    ${EIGEN3_INCLUDE_DIR}
+    ${ONNXRUNTIME_INCLUDE_DIR}
+    ${RUBBERBAND_INCLUDE_DIR}
+)
 
-# Rubber Band Library (if available)
-if(USE_RUBBERBAND)
-    target_compile_definitions(AutoTunePlugin PRIVATE USE_RUBBERBAND=1)
-    target_include_directories(AutoTunePlugin PRIVATE ${RUBBERBAND_INCLUDE_DIR})
-    target_link_libraries(AutoTunePlugin PRIVATE ${RUBBERBAND_LIBRARY})
-else()
-    target_compile_definitions(AutoTunePlugin PRIVATE USE_RUBBERBAND=0)
-endif()
-
-# Eigen3 mathematics library - full math preserved
-target_compile_definitions(AutoTunePlugin PRIVATE USE_EIGEN=1)
-target_link_libraries(AutoTunePlugin PRIVATE Eigen3::Eigen)
-
-# Kiss FFT library - full FFT preserved
-target_compile_definitions(AutoTunePlugin PRIVATE USE_KISSFFT=1)
-target_link_libraries(AutoTunePlugin PRIVATE kissfft)
-
-# libsamplerate - full resampling preserved
-target_compile_definitions(AutoTunePlugin PRIVATE USE_LIBSAMPLERATE=1)
-target_link_libraries(AutoTunePlugin PRIVATE samplerate)
-
-# ONNX Runtime - full AI functionality preserved
-if(USE_ONNX)
-    target_compile_definitions(AutoTunePlugin PRIVATE USE_ONNX=1)
-    target_include_directories(AutoTunePlugin PRIVATE ${ONNXRUNTIME_ROOT_PATH}/include)
-    target_link_libraries(AutoTunePlugin PRIVATE ${ONNXRUNTIME_ROOT_PATH}/lib/libonnxruntime.dylib)
-else()
-    target_compile_definitions(AutoTunePlugin PRIVATE USE_ONNX=0)
-endif()
-
-# Link JUCE modules - all audio processing preserved
+# Link ALL libraries
 target_link_libraries(AutoTunePlugin
     PRIVATE
         juce::juce_audio_utils
         juce::juce_audio_processors
         juce::juce_dsp
         juce::juce_gui_basics
+        juce::juce_core
+        ${ONNXRUNTIME_LIB}
+        ${RUBBERBAND_LIB}
     PUBLIC
         juce::juce_recommended_config_flags
         juce::juce_recommended_lto_flags
         juce::juce_recommended_warning_flags
 )
 
-# Optimization flags
-if(CMAKE_BUILD_TYPE STREQUAL "Release")
-    target_compile_options(AutoTunePlugin PRIVATE -O3 -ffast-math)
-endif()
-
-message(STATUS "✅ AutoTune Plugin configured with FULL functionality")
-message(STATUS "🎵 All audio processing libraries: PRESERVED")
-message(STATUS "🤖 AI models (ONNX/CREPE/DDSP): PRESERVED") 
-message(STATUS "🔧 All utilities and algorithms: PRESERVED")
-message(STATUS "🎯 Target: VST3 Plugin for macOS")
+message(STATUS "AutoTune Plugin configured with FULL macOS functionality")

@@ -11,8 +11,7 @@
 #endif
 
 #ifdef USE_EIGEN
-// Eigen3 headers - comment out for now to allow compilation
-// #include <Eigen/Dense>
+#include <Eigen/Dense>
 #endif
 
 class PitchCorrectionEngine

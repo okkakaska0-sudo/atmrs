@@ -1,0 +1,166 @@
+Last login: Wed Aug 20 12:17:42 on ttys000
+marselmacevans@iMac-Marsel ~ % # Install Homebrew if not present
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install all dependencies
+brew install eigen
+brew install onnxruntime
+brew install rubberband
+brew install pkg-config
+brew install cmake
+
+# Check installations
+echo "Eigen3: $(brew --prefix eigen)"
+echo "ONNX Runtime: $(brew --prefix onnxruntime)"
+echo "Rubber Band: $(brew --prefix rubberband)"
+zsh: command not found: #
+==> Checking for `sudo` access (which may request your password)...
+Password:
+==> This script will install:
+/usr/local/bin/brew
+/usr/local/share/doc/homebrew
+/usr/local/share/man/man1/brew.1
+/usr/local/share/zsh/site-functions/_brew
+/usr/local/etc/bash_completion.d/brew
+/usr/local/Homebrew
+
+Press RETURN/ENTER to continue or any other key to abort:
+==> /usr/bin/sudo /usr/sbin/chown -R marselmacevans:admin /usr/local/Homebrew
+==> Downloading and installing Homebrew...
+remote: Enumerating objects: 93, done.
+remote: Counting objects: 100% (64/64), done.
+remote: Compressing objects: 100% (7/7), done.
+remote: Total 93 (delta 57), reused 61 (delta 57), pack-reused 29 (from 2)
+==> Updating Homebrew...
+==> Installation successful!
+
+==> Homebrew has enabled anonymous aggregate formulae and cask analytics.
+Read the analytics documentation (and how to opt-out) here:
+  https://docs.brew.sh/Analytics
+No analytics data has been sent yet (nor will any be during this install run).
+
+==> Homebrew is run entirely by unpaid volunteers. Please consider donating:
+  https://github.com/Homebrew/brew#donations
+
+==> Next steps:
+- Run these commands in your terminal to add Homebrew to your PATH:
+    echo >> /Users/marselmacevans/.zprofile
+    echo 'eval "$(/usr/local/bin/brew shellenv)"' >> /Users/marselmacevans/.zprofile
+    eval "$(/usr/local/bin/brew shellenv)"
+- Run brew help to get started
+- Further documentation:
+    https://docs.brew.sh
+
+zsh: command not found: #
+==> Fetching downloads for: eigen
+==> Downloading https://ghcr.io/v2/homebrew/core/eigen/manifests/3.4.0_1-3
+######################################################################### 100.0%
+==> Fetching eigen
+==> Downloading https://ghcr.io/v2/homebrew/core/eigen/blobs/sha256:06503290dc3c
+######################################################################### 100.0%
+==> Pouring eigen--3.4.0_1.all.bottle.3.tar.gz
+🍺  /usr/local/Cellar/eigen/3.4.0_1: 546 files, 8.4MB
+==> Running `brew cleanup eigen`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> No outdated dependents to upgrade!
+==> Fetching downloads for: onnxruntime
+==> Downloading https://ghcr.io/v2/homebrew/core/onnxruntime/manifests/1.22.2_1
+######################################################################### 100.0%
+==> Fetching dependencies for onnxruntime: abseil, protobuf, onnx and re2
+==> Downloading https://ghcr.io/v2/homebrew/core/abseil/manifests/20250512.1
+######################################################################### 100.0%
+==> Fetching abseil
+==> Downloading https://ghcr.io/v2/homebrew/core/abseil/blobs/sha256:0f31cf70421
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/protobuf/manifests/32.0
+######################################################################### 100.0%
+==> Fetching protobuf
+==> Downloading https://ghcr.io/v2/homebrew/core/protobuf/blobs/sha256:1f47ab9a1
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/onnx/manifests/1.17.0_5
+######################################################################### 100.0%
+==> Fetching onnx
+==> Downloading https://ghcr.io/v2/homebrew/core/onnx/blobs/sha256:6e2677f5ddb1d
+######################################################################### 100.0%
+==> Downloading https://ghcr.io/v2/homebrew/core/re2/manifests/20250812
+######################################################################### 100.0%
+==> Fetching re2
+==> Downloading https://ghcr.io/v2/homebrew/core/re2/blobs/sha256:7b9f24faf1f35e
+######################################################################### 100.0%
+==> Fetching onnxruntime
+==> Downloading https://ghcr.io/v2/homebrew/core/onnxruntime/blobs/sha256:d6f6a1
+######################################################################### 100.0%
+==> Installing dependencies for onnxruntime: abseil, protobuf, onnx and re2
+==> Installing onnxruntime dependency: abseil
+==> Downloading https://ghcr.io/v2/homebrew/core/abseil/manifests/20250512.1
+Already downloaded: /Users/marselmacevans/Library/Caches/Homebrew/downloads/52b854d6406cec76e107ec9a3e17d3f2e916e2d3672aa331bad67b7c1f546d72--abseil-20250512.1.bottle_manifest.json
+==> Pouring abseil--20250512.1.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/abseil/20250512.1: 772 files, 8.4MB
+==> Installing onnxruntime dependency: protobuf
+==> Downloading https://ghcr.io/v2/homebrew/core/protobuf/manifests/32.0
+Already downloaded: /Users/marselmacevans/Library/Caches/Homebrew/downloads/8d11ccccd11e848c495ab0837ed908d4e24e99d12bbaa8c7777d97aaed0266a3--protobuf-32.0.bottle_manifest.json
+==> Pouring protobuf--32.0.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/protobuf/32.0: 361 files, 16MB
+==> Installing onnxruntime dependency: onnx
+==> Downloading https://ghcr.io/v2/homebrew/core/onnx/manifests/1.17.0_5
+Already downloaded: /Users/marselmacevans/Library/Caches/Homebrew/downloads/4bc163e0fed8f362630bf8e66aca67eedd27f6d344d23da5f459e05022c50c3f--onnx-1.17.0_5.bottle_manifest.json
+==> Pouring onnx--1.17.0_5.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/onnx/1.17.0_5: 105 files, 5.5MB
+==> Installing onnxruntime dependency: re2
+==> Downloading https://ghcr.io/v2/homebrew/core/re2/manifests/20250812
+Already downloaded: /Users/marselmacevans/Library/Caches/Homebrew/downloads/0f55a53cad2437bc3349f354ece1fa7999cab51e5c6d277aef264da709afd3ef--re2-20250812.bottle_manifest.json
+==> Pouring re2--20250812.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/re2/20250812: 18 files, 1.2MB
+==> Installing onnxruntime
+==> Pouring onnxruntime--1.22.2_1.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/onnxruntime/1.22.2_1: 23 files, 15.8MB
+==> Running `brew cleanup onnxruntime`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> No outdated dependents to upgrade!
+Warning: rubberband 4.0.0 is already installed and up-to-date.
+To reinstall 4.0.0, run:
+  brew reinstall rubberband
+==> Fetching downloads for: pkgconf
+==> Downloading https://ghcr.io/v2/homebrew/core/pkgconf/manifests/2.5.1
+######################################################################### 100.0%
+==> Fetching pkgconf
+==> Downloading https://ghcr.io/v2/homebrew/core/pkgconf/blobs/sha256:439e8e6389
+######################################################################### 100.0%
+==> Pouring pkgconf--2.5.1.sonoma.bottle.tar.gz
+🍺  /usr/local/Cellar/pkgconf/2.5.1: 28 files, 376.6KB
+==> Running `brew cleanup pkgconf`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+==> No outdated dependents to upgrade!
+cmake 4.0.3 is already installed but outdated (so it will be upgraded).
+==> Fetching downloads for: cmake
+==> Downloading https://ghcr.io/v2/homebrew/core/cmake/manifests/4.1.0
+######################################################################### 100.0%
+==> Fetching cmake
+==> Downloading https://ghcr.io/v2/homebrew/core/cmake/blobs/sha256:d619019c8847
+######################################################################### 100.0%
+==> Upgrading cmake
+  4.0.3 -> 4.1.0 
+==> Pouring cmake--4.1.0.sonoma.bottle.tar.gz
+==> Caveats
+To install the CMake documentation, run:
+  brew install cmake-docs
+==> Summary
+🍺  /usr/local/Cellar/cmake/4.1.0: 3,913 files, 61.5MB
+==> Running `brew cleanup cmake`...
+Disable this behaviour by setting `HOMEBREW_NO_INSTALL_CLEANUP=1`.
+Hide these hints with `HOMEBREW_NO_ENV_HINTS=1` (see `man brew`).
+Removing: /usr/local/Cellar/cmake/4.0.3... (3,870 files, 60.2MB)
+Removing: /Users/marselmacevans/Library/Caches/Homebrew/cmake_bottle_manifest--4.0.3... (15.3KB)
+Removing: /Users/marselmacevans/Library/Caches/Homebrew/cmake--4.0.3... (18.1MB)
+==> No outdated dependents to upgrade!
+==> Caveats
+Emacs Lisp files have been installed to:
+  /usr/local/share/emacs/site-lisp/cmake
+zsh: command not found: #
+Eigen3: /usr/local/opt/eigen
+ONNX Runtime: /usr/local/opt/onnxruntime
+Rubber Band: /usr/local/opt/rubberband
+marselmacevans@iMac-Marsel ~ % 

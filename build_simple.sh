@@ -1,10 +1,10 @@
 #!/bin/bash
 
-echo "🎵 Building AutoTune Plugin for Replit..."
+echo "🎵 Building AutoTune Plugin with FULL macOS functionality..."
 echo "📦 Configuring build system..."
 
-# Use final configuration with full macOS compatibility
-cp CMakeLists_final.txt CMakeLists.txt
+# Use full macOS configuration with all dependencies
+cp CMakeLists_macos_full.txt CMakeLists.txt
 
 # Create build directory
 mkdir -p build
