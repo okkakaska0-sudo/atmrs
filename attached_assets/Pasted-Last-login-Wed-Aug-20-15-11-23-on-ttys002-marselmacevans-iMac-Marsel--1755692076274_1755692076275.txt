@@ -1,0 +1,40 @@
+Last login: Wed Aug 20 15:11:23 on ttys002
+marselmacevans@iMac-Marsel ~ % # Проверяем все возможные локации Replit
+find ~/Library -name "*eplit*" -type d 2>/dev/null
+find ~/Documents -name "*eplit*" -type d 2>/dev/null
+find ~ -name "*eplit*" -type d 2>/dev/null | head -10
+
+# Проверяем containers приложения
+ls -la ~/Library/Containers/ | grep -i repl
+
+# Ищем по всей системе (осторожно, может быть медленно)
+find /Users/marselmacevans -name "*atmrs*" -type d 2>/dev/null | head -5
+zsh: command not found: #
+/Users/marselmacevans/Library/Application Support/Google/Chrome/Profile 1/IndexedDB/https_replit.com_0.indexeddb.leveldb
+/Users/marselmacevans/Library/Application Support/Google/Chrome/Default/IndexedDB/https_replit.com_0.indexeddb.leveldb
+/Users/marselmacevans/Library/Application Support/Google/Chrome/Profile 3/IndexedDB/https_replit.com_0.indexeddb.leveldb
+/Users/marselmacevans/Library/Application Support/Replit
+/Users/marselmacevans/Library/Application Support/Replit/IndexedDB/https_replit.com_0.indexeddb.leveldb
+/Users/marselmacevans/Library/Saved Application State/com.electron.replit.savedState
+/Users/marselmacevans/Library/HTTPStorages/com.electron.replit
+/Users/marselmacevans/Library/Logs/Replit
+/Users/marselmacevans/Library/Caches/com.electron.replit
+/Users/marselmacevans/Library/Caches/com.electron.replit.ShipIt
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance базовый сатуратор клипер/.local/state/replit
+/Users/marselmacevans/Desktop/сатураторы проекты/AudioEnhance базовый сатуратор клипер/.git/refs/replit
+/Users/marselmacevans/Library/Application Support/Google/Chrome/Profile 1/IndexedDB/https_replit.com_0.indexeddb.leveldb
+/Users/marselmacevans/Library/Application Support/Google/Chrome/Default/IndexedDB/https_replit.com_0.indexeddb.leveldb
+/Users/marselmacevans/Library/Application Support/Google/Chrome/Profile 3/IndexedDB/https_replit.com_0.indexeddb.leveldb
+/Users/marselmacevans/Library/Application Support/Replit
+/Users/marselmacevans/Library/Application Support/Replit/IndexedDB/https_replit.com_0.indexeddb.leveldb
+/Users/marselmacevans/Library/Saved Application State/com.electron.replit.savedState
+/Users/marselmacevans/Library/HTTPStorages/com.electron.replit
+/Users/marselmacevans/Library/Logs/Replit
+zsh: command not found: #
+drwx------@   4 marselmacevans  staff    128  5 май 04:36 com.apple.SmartReplies.SmartRepliesMLRuntimePlugin
+drwx------@   5 marselmacevans  staff    160  5 май 01:30 com.apple.messages.ReplyExtension
+drwx------@   5 marselmacevans  staff    160  5 май 04:36 com.apple.replayKit.RPBroadcastActivityExtension-macOS
+drwx------@   5 marselmacevans  staff    160  5 май 04:36 com.apple.replayKit.RPVideoEditorExtension-macOS
+zsh: unknown file attribute: ^
+/Users/marselmacevans/Downloads/atmrs
+marselmacevans@iMac-Marsel ~ % 
