@@ -7,24 +7,3 @@ channel = "stable-25_05"
 packages = ["cmake", "gcc", "pkg-config", "xorg.libX11", "xorg.libXinerama", "xorg.libXrandr", "xorg.libXcursor", "freetype", "alsa-lib", "mesa", "gnumake", "curl", "freeglut", "libjack2", "git", "wget", "unzip", "xorg.libXext", "eigen", "onnxruntime", "gtk3"]
 
 [workflows]
-runButton = "Project"
-
-[[workflows.workflow]]
-name = "Project"
-mode = "parallel"
-author = "agent"
-
-[[workflows.workflow.tasks]]
-task = "workflow.run"
-args = "Build AutoTune Plugin"
-
-[[workflows.workflow]]
-name = "Build AutoTune Plugin"
-author = "agent"
-
-[workflows.workflow.metadata]
-outputType = "console"
-
-[[workflows.workflow.tasks]]
-task = "shell.exec"
-args = "./build_replit_macos_info.sh"

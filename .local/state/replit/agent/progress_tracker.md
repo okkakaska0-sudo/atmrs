@@ -16,3 +16,7 @@
 [x] 16. ⭐ MODERN UI: Updated to professional dark theme with neon accents  
 [x] 17. ⭐ REAL ALGORITHMS: Replaced fake pitch correction with true synthesis
 [x] 18. ⭐ COMPLETE: Ready for professional use with working autotune!
+[x] 19. Migration from Replit Agent to standard Replit completed
+[x] 20. Environment configured for macOS-only development workflow
+[x] 21. Removed unnecessary build workflow (builds only on Mac)
+[x] 22. Project ready for code editing in Replit, manual copy to Mac for builds
