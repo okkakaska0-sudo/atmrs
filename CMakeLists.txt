@@ -84,15 +84,24 @@ FetchContent_Declare(
     GIT_SHALLOW TRUE
 )
 
-# Configure Eigen3 - disable tests and examples
+# Configure Eigen3 - disable everything except headers
 set(EIGEN_BUILD_TESTING OFF CACHE BOOL "" FORCE)
-set(EIGEN_BUILD_DOC OFF CACHE BOOL "" FORCE)
+set(EIGEN_BUILD_DOC OFF CACHE BOOL "" FORCE) 
 set(BUILD_TESTING OFF CACHE BOOL "" FORCE)
 set(EIGEN_BUILD_PKGCONFIG OFF CACHE BOOL "" FORCE)
 set(EIGEN_BUILD_BLAS OFF CACHE BOOL "" FORCE)
 set(EIGEN_BUILD_LAPACK OFF CACHE BOOL "" FORCE)
+set(EIGEN_LEAVE_TEST_IN_ALL_TARGET OFF CACHE BOOL "" FORCE)
 
-FetchContent_MakeAvailable(eigen3)
+# Get Eigen3 source without building anything
+FetchContent_GetProperties(eigen3)
+if(NOT eigen3_POPULATED)
+    FetchContent_Populate(eigen3)
+    # Add only the header-only target manually to avoid BLAS/LAPACK issues
+    add_library(eigen3_headers INTERFACE)
+    target_include_directories(eigen3_headers INTERFACE ${eigen3_SOURCE_DIR})
+    add_library(Eigen3::Eigen ALIAS eigen3_headers)
+endif()
 
 # Use Kiss FFT instead of FFTW3 for simplicity
 message(STATUS "Using Kiss FFT for FFT operations")
